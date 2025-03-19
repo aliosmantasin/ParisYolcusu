@@ -1,0 +1,31 @@
+{
+  "Navbar": {
+    "HomePage": "Ana Sayfa",
+    "Services": "Hizmetler",
+    "span1": "Dijital Dönüşüm Kutusu",
+    "descrition1": "Dijital Pazarlama da Hedeflerinize Ulaşmanın Planlı ve Ekonomik Yolu",
+    "link1": "/dijital-pazarlama-donusum-kutusu",
+
+    "span2": "Meta Yönetimi",
+    "description2": "MiniBox-Meta - MegaBox-Meta - ProBox-Meta olarak hizmet kutularımızı inceleyerek ihtiyacınız olan hizmeti seçebilirsiniz.",
+    "link2": "/instagram-sponsorlu-reklam",
+    "span3": "Google Yönetimi",
+    "description3": "MiniBox-Google - MegaBox-Google - ProBox-Google olarak hizmet kutularımızı inceleyerek ihtiyacınız olan hizmeti seçebilirsiniz.",
+    "link3": "/google-ads-reklam-yonetimi",
+    "span4": "Web Tasarım Hizmeti",
+    "description4": "MiniWeb - MegaWeb olarak hizmet kutularımızı inceleyerek ihtiyacınız olan hizmeti seçebilirsiniz.",
+    "link4": "/web-sitesi-yaptirma",
+
+    "Referance": "Referanslar",
+    "refLink": "/settobox-referanslar",
+    "light": "Aydınlık Mod",
+    "dark": "Karanlık Mod",
+    "Guide": "Başlangıç Klavuzu",
+    "guideLink": "/dijital-pazarlama-baslagic-kilavuzu",
+    "menu": "Menü"
+  },
+
+  "HomePage": {
+    "title": "Burası Ana Sayfa"
+  }
+}

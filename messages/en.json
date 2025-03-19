@@ -1,0 +1,30 @@
+{
+    "Navbar": {
+        "HomePage": "Home Page",
+        "Services": "Services",
+        "span1": "Dijital Conversion Boxes",
+        "descrition1": "The Planned and Economical Way to Reach Your Goals in Digital Marketing ",
+        "link1": "/digital-marketing-conversion-box",
+    
+        "span2": "Meta Manage",
+        "description2": "You can choose the service you need by examining our MiniBox-Meta - MegaBox-Meta - ProBox-Meta service boxes.",
+        "link2": "/instagram-sponsored-ads",
+        "span3": "Google Manage",
+        "description3": "By examining our service boxes as MiniBox-Google - MegaBox-Google - ProBox-Google, it includes the service you need.",
+        "link3": "/google-ads-management",
+        "span4": "Web Design Services",
+        "description4": "As MiniWeb - MegaWeb, you can choose the service you need by examining our service boxes.",
+        "link4": "/website-development",
+    
+        "Referance": "Referance",
+        "refLink":"/settobox-references",
+        "light": "Light Mode",
+        "dark": "Dark Mode",
+        "Guide": "Beginner's Guide",
+        "guideLink":"/digital-marketing-beginner-guide",
+        "menu": "Menu"
+      },
+    "HomePage":{
+        "title": "This is Home Page"
+    }
+}

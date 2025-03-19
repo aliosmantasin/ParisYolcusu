@@ -2,20 +2,310 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+body {
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Quicksand', Arial, Helvetica, sans-serif;
+}
+
+@layer base {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: 0 0% 100%; /* Beyaz */
+    --foreground: 240 10% 3.9%; /* Çok koyu gri */
+    --card: 0 0% 100%; /* Beyaz */
+    --card-foreground: 240 10% 3.9%; /* Çok koyu gri */
+    --popover: 0 0% 100%; /* Beyaz */
+    --popover-foreground: 240 10% 3.9%; /* Çok koyu gri */
+    --primary: 240 5.9% 10%; /* Siyah */
+    --primary-foreground: 0 0% 98%; /* Çok açık gri */
+    --secondary: 240 4.8% 95.9%; /* Çok açık gri */
+    --secondary-foreground: 240 5.9% 10%; /* Siyah */
+    --muted: 240 4.8% 95.9%; /* Çok açık gri */
+    --muted-foreground: 240 3.8% 46.1%; /* Orta gri */
+    --accent: 240 4.8% 95.9%; /* Çok açık gri */
+    --accent-foreground: 240 5.9% 10%; /* Siyah */
+    --destructive: 0 84.2% 60.2%; /* Kırmızı */
+    --destructive-foreground: 0 0% 98%; /* Çok açık gri */
+    --border: 240 5.9% 90%; /* Açık gri */
+    --input: 240 5.9% 90%; /* Açık gri */
+    --ring: 240 10% 3.9%; /* Çok koyu gri */
+    --chart-1: 12 76% 61%; /* Turuncu */
+    --chart-2: 173 58% 39%; /* Yeşil */
+    --chart-3: 197 37% 24%; /* Koyu mavi */
+    --chart-4: 43 74% 66%; /* Açık yeşil */
+    --chart-5: 27 87% 67%; /* Açık sarı */
+    --radius: 0.5rem; /* Kenar yuvarlama */
+  }
+  
+  .dark {
+    --background: 240 10% 4%; /* Çok koyu gri */
+    --foreground: 0 0% 98%; /* Çok açık gri */
+    --card: 240 10% 3.9%; /* Çok koyu gri */
+    --card-foreground: 0 0% 98%; /* Çok açık gri */
+    --popover: 240 10% 3.9%; /* Çok koyu gri */
+    --popover-foreground: 0 0% 98%; /* Çok açık gri */
+    --primary: 0 0% 98%; /* Çok açık gri */
+    --primary-foreground: 240 5.9% 10%; /* Siyah */
+    --secondary: 240 3.7% 15.9%; /* Orta koyu gri */
+    --secondary-foreground: 0 0% 98%; /* Çok açık gri */
+    --muted: 240 3.7% 15.9%; /* Orta koyu gri */
+    --muted-foreground: 240 5% 64.9%; /* Açık gri */
+    --accent: 240 3.7% 15.9%; /* Orta koyu gri */
+    --accent-foreground: 0 0% 98%; /* Çok açık gri */
+    --destructive: 0 62.8% 30.6%; /* Koyu kırmızı */
+    --destructive-foreground: 0 0% 98%; /* Çok açık gri */
+    --border: 240 3.7% 15.9%; /* Orta koyu gri */
+    --input: 240 3.7% 15.9%; /* Orta koyu gri */
+    --ring: 240 4.9% 83.9%; /* Açık mavi */
+    --chart-1: 220 70% 50%; /* Mavi */
+    --chart-2: 160 60% 45%; /* Yeşil */
+    --chart-3: 30 80% 55%; /* Turuncu */
+    --chart-4: 280 65% 60%; /* Mor */
+    --chart-5: 340 75% 55%; /* Pembe */
   }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+/* Arka plan ve metin rengi için tema sınıfı */
+.theme {
+  @apply bg-[hsl(var(--background))] text-[hsl(var(--foreground))];
+}
+
+.dark .theme {
+  @apply bg-[hsl(var(--background))] text-[hsl(var(--foreground))];
+}
+
+
+/*Card Bg Colors */
+@layer base {
+  .cardBgColor {
+    @apply border border-gray-400/35;
+  }
+  .dark .cardBgColor {
+    @apply border border-slate-800;
+  }
+  .cardHover {
+    @apply  hover:bg-gray-400/10;
+  }
+  .dark .cardHover {
+    @apply  hover:bg-slate-800/50;
+  }
+
+  .ocean-Cardshadow {
+    box-shadow: rgba(93, 198, 255, 0.247) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  }
+
+}
+
+
+
+@layer base {
+  .bg-info {
+   @apply bg-blue-50 rounded-lg text-blue-800
+  }
+
+  .dark .bg-info {
+    @apply dark:bg-gray-800 rounded-lg dark:text-blue-400
+  }
+  
+  .bg-success {
+    @apply text-green-800 rounded-lg bg-green-50 
+  }
+
+  .dark .bg-success {
+    @apply dark:bg-gray-800 rounded-lg dark:text-green-400
+  }
+  
+
+  .bg-warning {
+    @apply bg-yellow-50 rounded-lg text-yellow-500
+  }
+
+  .dark .bg-warning {
+    @apply dark:bg-gray-800 rounded-lg dark:text-yellow-300
+  }
+  
+  .bg-danger {
+    @apply bg-red-50 rounded-lg text-red-500 
+  }
+
+  .dark .bg-danger {
+    @apply dark:bg-gray-800 rounded-lg dark:text-red-400
+  }
+}
+/* BG */
+@layer base {
+  .bgprimary {
+    @apply bg-[#067481] rounded-lg text-white 
+  }
+
+  .dark .bgprimary {
+    @apply bg-[#151515] rounded-lg text-white 
+  }
+
+}
+
+@layer base {
+  .primary {
+    color: #067481;
+  }
+
+  .primary-light {
+    color: #d7eae5;
+  }
+
+  .secondary {
+    color: #fece47;
+  }
+}
+
+/*Product Colors*/
+@layer base {
+  .productBgColor {
+    @apply border border-[#88c4f4] bg-[#f5f9ff];
+  }
+  .dark .productBgColor {
+    @apply border-none bg-black 
+  }
+}
+
+@layer base {
+  .productBgBodyColor {
+    @apply border border-gray-200 bg-white;
+  }
+  .dark .productBgBodyColor {
+    @apply border-none bg-black;
+  }
+}
+
+@layer base {
+  .productListColor {
+    @apply bg-[#f4f7f8];
+  }
+
+  .dark .productListColor {
+    @apply border-blue-300  bg-blue-50 dark:bg-gray-800 dark:text-blue-400 dark:border-blue-800;
+  }
+}
+
+@layer base {
+  .ocean-shadow {
+    box-shadow: rgba(93, 198, 255, 0.247) 0px 20px 20px -20px;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply bg-background text-foreground;
+  }
+
+  /* Footer Renk Dark Mode */
+  .footerBg {
+    @apply bg-background;
+  }
+  
+  .dark .footerBg {
+    @apply bg-foreground;
+  }
+
+  .footerHeaderColor {
+    @apply text-gray-500;
+  }
+  
+  .dark .footerHeaderColor {
+    @apply text-foreground;
+  }
+
+  .footerTextColor {
+    @apply text-blue-600;
+  }
+  
+  .dark .footerTextColor {
+    @apply text-gray-300;
+  }
+
+  .footerIconColor {
+    @apply text-gray-400;
+  }
+  .dark .footerIconColor {
+    @apply text-gray-300;
+  }
+
+  /* FirstGlancComponent */
+  .styled-h1 {
+    @apply flex justify-center text-3xl text-center;
+    background: -webkit-linear-gradient(#d459c1, #46d6ef);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .styled-paragraph {
+    @apply text-center text-lg max-w-3xl leading-7 tracking-widest my-4 mx-auto;
+  }
+
+  /* BUTTON */
+  .BgColorGradient {
+    @apply flex items-center justify-center text-white rounded-lg text-lg cursor-pointer;
+    background-image: linear-gradient(144deg, #af40ff, #5b42f3 50%, #29d9e6);
+    box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+    padding: 10px 15px;
+    min-width: 140px;
+    max-width: 100%;
+  }
+}
+
+
+/* Scroll To Top İcon Color */
+.scrollTopColor {
+  @apply text-white;
+ 
+}
+.dark .scrollTopColor {
+  @apply text-black;
+}
+
+
+/* Grid Box Styles */
+@layer base {
+  .gridBox {
+    background-image: url(/svg/gridlines.svg);
+  }
+
+ .dark .gridBox {
+    background-image: url(/svg/dark-gridline.svg);
+  }
+
+  .boxContent {
+    width: 100%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: space-between;
+    z-index: -10;
+  }
+  
+  .boxBlueContent {
+    width: 100%;
+    height: 200px;
+    background-image: linear-gradient(to right, #74e9f4, white);
+    filter: brightness(0) saturate(49%) invert(80%) sepia(46%) saturate(88)
+      hue-rotate(203deg) brightness(112%) contrast(74%) blur(90px);
+    opacity: 0.7;
+  }
+  
+  .boxPurpleContent {
+    width: 100%;
+    height: 200px;
+    background-image: linear-gradient(to right, #ec77d47a, white);
+    filter: brightness(0) saturate(49%) invert(80%) sepia(4%) saturate(88)
+    hue-rotate(203deg) brightness(112%) contrast(74%) blur(90px);
+    opacity: 1;
+  }
+  
 }
