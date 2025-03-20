@@ -8,46 +8,50 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-
-const testimonials = [
-  {
-    name: "Bonnie Green",
-    role: "CTO at Flowbite",
-    image: "/images/placeholder1.png",
-    quote: "Flowbite is just awesome. It contains tons of predesigned components and pages starting from login screen to complex dashboard. Perfect choice for your next SaaS application.",
-  },
-  {
-    name: "John Doe",
-    role: "CEO at TechCorp",
-    image: "/images/placeholder1.png",
-    quote: "This product has changed the way we work. The efficiency and speed are unmatched. Highly recommended!",
-  },
-  {
-    name: "Alice Smith",
-    role: "Product Manager at WebX",
-    image: "/images/placeholder1.png",
-    quote: "A must-have tool for any serious development team. The user experience is top-notch!",
-  },
-  {
-    name: "Michael Brown",
-    role: "Lead Designer at Creatives",
-    image: "/images/placeholder1.png",
-    quote: "The design and ease of use are incredible. We've received so many positive reviews from our clients!",
-  },
-];
+import { useTranslations } from 'next-intl';
 
 const Testimonials = () => {
+  const t = useTranslations("Testimonials");
+
+  const testimonials = [
+    {
+      name: "Ahmet Yıldırım",
+      image: "/images/placeholder2.webp",
+      quote: t("testimonial1"),
+    },
+    {
+      name: "Marie Dubois",
+      image: "/images/placeholder2.webp",
+      quote: t("testimonial2"),
+    },
+    {
+      name: "John Doe",
+      image: "/images/placeholder2.webp",
+      quote: t("testimonial3"),
+    },
+    {
+      name: "Burak Demirtaş",
+      image: "/images/placeholder2.webp",
+      quote: t("testimonial4"),
+    },
+    {
+      name: "Alice Smith",
+      image: "/images/placeholder2.webp",
+      quote: t("testimonial5"),
+    },
+  ];
+
   return (
     <section className='my-20 p-2 bg-slate-50 dark:bg-black'>
-        <div className='w-full text-center p-2'>
-          <h2 className='text-[#067481] font-bold text-3xl my-3'>Müşteri Yorumları</h2>
-        </div>
+      <div className='w-full text-center p-2'>
+        <h2 className='text-[#067481] font-bold text-3xl my-3'>{t("title")}</h2>
+      </div>
       <Carousel className='max-w-screen-2xl mx-auto'>
         <CarouselContent className='max-w-lg min-h-[550px] '>
           {testimonials.map((testimonial, index) => (
             <CarouselItem key={index} className='mx-auto flex px-5 '>
-              <Card className="flex h-[500] max-h-[550px] items-center justify-center bg-slate-50 dark:bg-black p-10 m-auto">
-                <CardContent className=''>
+              <Card className="flex h-[500px] max-h-[550px] items-center justify-center bg-slate-50 dark:bg-black p-10 m-auto">
+                <CardContent>
                   <figure className="max-w-screen-md text-center">
                     <div className="flex items-center justify-center mb-4 text-yellow-300">
                       {[...Array(5)].map((_, i) => (
@@ -63,7 +67,6 @@ const Testimonials = () => {
                       <Image width={50} height={50} className="w-12 h-12 rounded-full" src={testimonial.image} alt={testimonial.name} />
                       <div className="flex items-center divide-x-2 divide-gray-300 dark:divide-gray-700">
                         <cite className="pe-3 font-medium text-gray-900 dark:text-white">{testimonial.name}</cite>
-                        <cite className="ps-3 text-sm text-gray-500 dark:text-gray-400">{testimonial.role}</cite>
                       </div>
                     </figcaption>
                   </figure>

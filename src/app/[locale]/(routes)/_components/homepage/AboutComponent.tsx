@@ -1,58 +1,51 @@
-import Image from 'next/image'
-import React from 'react'
+import Image from 'next/image';
+import { useTranslations } from 'next-intl';
+import React from 'react';
 
 const AboutComponent = () => {
+  const t = useTranslations("AboutUs");
+
   return (
-    <section className='my-10 p-2' id='about'>
-        <div className='container flex flex-wrap mx-auto'>
+    <section className='my-10 p-5' id='about'>
+      <div className='container flex flex-wrap mx-auto'>
 
-              <div className='w-full text-center p-2'>
-                  <h2 className='text-[#067481] font-bold text-3xl my-3'> Hakkımızda</h2>
-              </div>
-
-        <div className='flex w-full sm:w-2/4 justify-center'>
-            <Image src="/images/placeholder1.png" alt='' width={400} height={400}></Image>
+        {/* Başlık */}
+        <div className='w-full text-center p-2'>
+          <h2 className='text-[#067481] font-bold text-3xl my-3'>{t("title")}</h2>
         </div>
 
-        <div className='flex w-full sm:w-2/4 justify-center'>
-          <div className=' m-auto'>
-            <p className=' my-2 text-xl font-medium text-gray-500 dark:text-gray-400'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Hic, neque.
-            </p>
+        {/* Görsel Alanı */}
+        <div className='flex w-full sm:w-3/5 md:w-6/12 justify-center relative mx-auto'>
+          <div className='absolute hidden xl:flex sm:w-[500] sm:h-[500]   bg-[#fece47] rounded-full z-0 top-0'></div>
+          <Image 
+            src="/images/paris-yolcusu.webp" 
+            alt='Paris Yolcusu' 
+            width={500} 
+            height={500} 
+            className='relative w-300 sm:w-[350] md:w-auto md-h-auto z-10 rounded-xl shadow-lg object-contain '
+          />
+          <div className='absolute hidden xl:flex sm:w-[500] sm:h-[500] bg-[#067481] rounded-full z-0 bottom-0'></div>
+        </div>
 
+        {/* Açıklama Alanı */}
+        <div className='flex w-full sm:w-3/5 md:w-6/12 justify-center mx-auto'>
+          <div className='m-auto p-5'>
+            <p className='my-2 text-xl font-medium text-gray-500 dark:text-gray-400'>{t("description")}</p>
+
+            {/* Öne Çıkan Hizmetler */}
             <ul className="space-y-4 text-gray-500 list-disc list-inside dark:text-gray-400">
-              <li>
-                List item one
-                <ol className="ps-5 mt-2 space-y-1 list-decimal list-inside">
-                  <li>You might feel like you are being really &quot;organized&quot; o</li>
-                  <li>Nested navigation in UIs is a bad idea too, keep things as flat as possible.</li>
-                  <li>Nesting tons of folders in your source code is also not helpful.</li>
-                </ol>
-              </li>
-              <li>
-                List item two
-                <ul className="ps-5 mt-2 space-y-1 list-decimal list-inside">
-                  <li>Im not sure if we&quot;ll bother styling more than two levels deep.</li>
-                  <li>Two is already too much, three is guaranteed to be a bad idea.</li>
-                  <li>If you nest four levels deep you belong in prison.</li>
-                </ul>
-              </li>
-              <li>
-                List item three
-                <ul className="ps-5 mt-2 space-y-1 list-decimal list-inside">
-                  <li>Again please don&apos;t nest lists if you want</li>
-                  <li>Nobody wants to look at this.</li>
-                  <li>I&apos;m upset that we even have to bother styling this.</li>
-                </ul>
-              </li>
+              <li><strong>{t("feature1.title")}</strong>: {t("feature1.description")}</li>
+              <li><strong>{t("feature2.title")}</strong>: {t("feature2.description")}</li>
+              <li><strong>{t("feature3.title")}</strong>: {t("feature3.description")}</li>
+              <li><strong>{t("feature4.title")}</strong>: {t("feature4.description")}</li>
+              <li><strong>{t("feature5.title")}</strong>: {t("feature5.description")}</li>
             </ul>
-
           </div>
         </div>
-        </div>
 
-
+      </div>
     </section>
-  )
-}
+  );
+};
 
-export default AboutComponent
+export default AboutComponent;

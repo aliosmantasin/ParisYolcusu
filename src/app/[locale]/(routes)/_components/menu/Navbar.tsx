@@ -17,8 +17,6 @@ const Navbar = () => {
             <Logo/>
             <BigScreenMenu/>
             <Settings/>
-          
-           
         </div>
    </header>
    </>

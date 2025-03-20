@@ -34,7 +34,7 @@ export async function POST(req: NextRequest) {
     // Mail gönderme
     const mailOptions = {
       from: process.env.EMAIL,
-      to: `ali.osman.tasin@gmail.com, info@settobox.com`,
+      to: `ali.osman.tasin@gmail.com, paris.yolcusu.info@gmail.com`,
       subject: 'Yeni Bilgi Alma Formu',
       text: `Yeni bir başvuru alındı:\nAdı: ${firstName} ${lastName}\nEmail: ${email}\nTelefon: ${phone}\nHizmet Türü: ${service}`,
       html: `

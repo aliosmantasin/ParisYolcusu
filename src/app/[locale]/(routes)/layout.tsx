@@ -15,8 +15,8 @@ import { MdKeyboardArrowUp } from "react-icons/md";
 const locales = ["tr", "en"];
 
 export const metadata: Metadata = {
-  title: "Taslak Web Sitesi",
-  description: "Bu site taslak web sitesidir. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Saepe neque magnam necessitatibus mollitia maiores voluptate.",
+  title: "Paris Havalimanı Transfer & Özel Şoför Hizmeti | Paris Yolcusu",
+  description: "Paris’te konforlu ve güvenilir VIP transfer hizmeti! Paris Yolcusu olarak, lüks araçlarımız ve profesyonel şoförlerimizle havalimanı transferi, özel şehir turları ve otel transferleri sunuyoruz. Hemen rezervasyon yapın ve rahat bir yolculuğun tadını çıkarın!",
   verification: {
     google: "buraya code gelecek",
   },

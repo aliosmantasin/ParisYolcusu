@@ -1,31 +1,166 @@
 {
   "Navbar": {
-    "HomePage": "Ana Sayfa",
-    "Services": "Hizmetler",
-    "span1": "Dijital Dönüşüm Kutusu",
-    "descrition1": "Dijital Pazarlama da Hedeflerinize Ulaşmanın Planlı ve Ekonomik Yolu",
-    "link1": "/dijital-pazarlama-donusum-kutusu",
-
-    "span2": "Meta Yönetimi",
-    "description2": "MiniBox-Meta - MegaBox-Meta - ProBox-Meta olarak hizmet kutularımızı inceleyerek ihtiyacınız olan hizmeti seçebilirsiniz.",
-    "link2": "/instagram-sponsorlu-reklam",
-    "span3": "Google Yönetimi",
-    "description3": "MiniBox-Google - MegaBox-Google - ProBox-Google olarak hizmet kutularımızı inceleyerek ihtiyacınız olan hizmeti seçebilirsiniz.",
-    "link3": "/google-ads-reklam-yonetimi",
-    "span4": "Web Tasarım Hizmeti",
-    "description4": "MiniWeb - MegaWeb olarak hizmet kutularımızı inceleyerek ihtiyacınız olan hizmeti seçebilirsiniz.",
-    "link4": "/web-sitesi-yaptirma",
-
-    "Referance": "Referanslar",
-    "refLink": "/settobox-referanslar",
-    "light": "Aydınlık Mod",
-    "dark": "Karanlık Mod",
-    "Guide": "Başlangıç Klavuzu",
-    "guideLink": "/dijital-pazarlama-baslagic-kilavuzu",
-    "menu": "Menü"
+    "HomePageNabar": "Ana Sayfa",
+    "Services": "Hizmetlerimiz",
+    "About": "Hakkımızda",
+    "CTA":"Whatsaap İletişim",
+    "Light":"Aydınlık mod",
+    "Dark":"Karanlık mod"
   },
 
+  "Settings":{
+    "CTA":"Rezervasyon",
+    "CTAURL":"/basvuru-yap"
+  },
+
+  "Footer": {
+    "contact":"İletişim",
+    "about":"Hakkımızda",
+    "brandName":"Paris Yolcusu",
+    "span":"Tüm Hakları Saklıdır."
+  },
+
+
   "HomePage": {
-    "title": "Burası Ana Sayfa"
+    "firstGlance": {
+      "brandNameX": "Paris",
+      "brandnameY": "Yolcusu",
+      "title": "Pariste Konforlu ve Güvenli Transfer Hizmetleri",
+      "span": "VİP Hizmet"
+    }
+  },
+
+  "Services": {
+    "title": "Özel Şoför İle Pariste Yolculuk Hizmetleri",
+    "description":"Paris’te havalimanı transferi, özel şoförlü araç kiralama ve şehir içi gezi turlarında profesyonel hizmet sunuyoruz. Konforlu ve güvenli ulaşım için bizi tercih edebilirsiniz!",
+    
+    "subtitle1": "Paris Havalimanı Transfer ",
+    "p1":"Yolcularımızı Paris havalimanlarından karşılıyor ulaşmak istedikleri yere konforlu bir şekilde ulaşmalarını sağlayoruz.",
+    "subtitle2": "Paris Gezi Turları",
+    "p2":"Pariste gezilecek çok yer var! Bizde de hem ulaşım hem rehber var!",
+    "subtitle3": "Paris'te Özel Şoför",
+    "p3":"Paris içerisinde vip hizmet ile istediğiniz bölgeye araçlarımızla yolculuk edebilirsin",
+    "moreInfo":"Daha Fazla Bilgi",
+    "moreInfoLink":"/hizmet-sayfasi1",
+    "applyButton":"Rezervasyon Yap",
+    "apllyLink":"/basvuru-yap"
+  },
+
+  "FeaturesBrand": {
+    "title": "Özellikler ve Avantajlar",
+    
+    "feature1": {
+      "title": "Konforlu ve Güvenli Transfer",
+      "description1": "Son model, konforlu ve klimalı araçlarla rahat bir yolculuk deneyimi sunuyoruz.",
+      "description2": "Profesyonel ve deneyimli şoförlerimizle güvenli bir yolculuk yapabilirsiniz."
+
+    },
+    "feature2": {
+      "title": "Havalimanı Transfer Hizmeti",
+      "description1": "Charles de Gaulle (CDG), Orly (ORY) ve Beauvais (BVA) havalimanlarından şehir merkezine ve otelinize doğrudan transfer.",
+      "description2": "Uçağınızın iniş saatine göre esnek karşılama ve bekleme süresi."
+    },
+    "feature3": {
+      "title": "Özel Şoförlü Gezi Turları",
+      "description1": "Paris’in ikonik noktalarını keşfetmek için özel şoförlü VIP turlar.",
+      "description2": "Eyfel Kulesi, Louvre Müzesi, Şanzelize Caddesi ve diğer turistik noktalara özel rotalar."
+    },
+    "feature4": {
+      "title": "Zamanında ve Kesintisiz Ulaşım",
+      "description1": "Planladığınız saatte şoförünüz sizi bekler, vakit kaybetmeden yola çıkabilirsiniz.",
+      "description2": "Trafik yoğunluğuna göre en hızlı ve en uygun güzergahlar belirlenir."
+    },
+    "feature5": {
+      "title": "Sabit ve Şeffaf Fiyat Politikası",
+      "description1": "Sürpriz ek ücretler olmadan, rezervasyon esnasında net fiyatlandırma.",
+      "description2": "Tüm ücretler önceden belirlenir, yolculuk sonunda ekstra ödeme ile karşılaşmazsınız."
+    },
+    "feature6": {
+      "title": "7/24 Müşteri Desteği",
+      "description1": "İhtiyaç duyduğunuz her an, Türkçe, Fransızca ve İngilizce destek sunuyoruz.",
+      "description2": "Rezervasyon değişiklikleri veya acil durumlar için kolayca iletişime geçebilirsiniz."
+    },
+
+    "feature7": {
+      "title": "Grup ve Özel Transfer Seçenekleri",
+      "description1": "Tek kişi, aile veya büyük gruplar için uygun araç alternatifleri.",
+      "description2": "VIP transfer, lüks araç seçenekleri ve özel etkinlikler için özel taşıma hizmetleri."
+    }
+  },
+
+  "Testimonials": {
+    "title": "Müşteri Yorumları",
+    "testimonial1": "Hizmet kalitesi gerçekten harika! Kesinlikle tavsiye ederim.",
+    "testimonial2": "Paris'teki en iyi deneyimdi! Teşekkür ederim.",
+    "testimonial3": "Very professional and efficient service, highly recommended!",
+    "testimonial4": "Her şey mükemmeldi, tekrar tercih edeceğim.",
+    "testimonial5": "Sadece bir hizmet almak değil, bir deneyim yaşadım. Beni anlayıp ihtiyaçlarımıza göre yönlendirdiler."
+  },
+
+  
+    "FAQ": {
+      "title": "Sıkça Sorulan Sorular - Merak Edilenler",
+      "question1": "Rezervasyon nasıl yapabilirim?",
+      "answer1": "Web sitemiz üzerinden whatsapp uygulaması üzerinden anlık bilgi alabilir ve rezervasyon yapabilirsiniz.",
+      "question2": "İptal politikası nedir?",
+      "answer2": "Rezervasyonunuzu 24 saat öncesine kadar ücretsiz iptal edebilirsiniz.",
+      "question3": "Ödeme seçenekleri nelerdir?",
+      "answer3": "Hizmet anında ödemeyi gerçekleştirebilirsiniz."
+    },
+
+ 
+      "AboutUs": {
+        "title": "Hakkımızda",
+        "description": "Paris Yolcusu olarak, 10 yılı aşkın deneyimimiz ve güler yüzlü ekibimizle Paris’te konforlu ve güvenilir ulaşım hizmetleri sunuyoruz. Lüks araçlarımızla havalimanı transferlerinden şehir turlarına kadar her ihtiyacınıza özel çözümler üretiyoruz.",
+        
+        "feature1": {
+          "title": "VIP Transfer Hizmetleri",
+          "description": "Lüks ve konforlu araçlarımızla havalimanı transferi, otel transferi ve özel transfer hizmetleri sunuyoruz."
+        },
+        "feature2": {
+          "title": "Özel Şoförlü Araçlar",
+          "description": "Deneyimli ve profesyonel şoförlerimizle Paris’te güvenli ve konforlu yolculuk yapabilirsiniz."
+        },
+        "feature3": {
+          "title": "Şehir İçi Gezi Turları",
+          "description": "Paris’in tarihi ve turistik mekanlarını keşfetmek için özel turlarımızdan faydalanabilirsiniz."
+        },
+        "feature4": {
+          "title": "7/24 Hizmet",
+          "description": "Her an yanınızdayız! Günün her saatinde ulaşım ihtiyaçlarınıza çözüm sunuyoruz."
+        },
+        "feature5": {
+          "title": "Uygun Fiyatlı ve Esnek Rezervasyon",
+          "description": "Önceden rezervasyon yaparak uygun fiyat avantajlarından faydalanabilir, esnek iptal seçeneklerinden yararlanabilirsiniz."
+        }
+      },
+
+      "CallToAction": {
+        "title": "Paris’te Konforlu ve Güvenilir Transfer Hizmeti!",
+        "description": "Lüks araçlarımız ve profesyonel şoförlerimizle Paris’te sizi istediğiniz noktaya güvenle ulaştırıyoruz. VIP havalimanı transferi, otel transferi ve özel şehir turları için bizimle hemen iletişime geçin!",
+        "whatsapp": "Whatsapp İletişim!"
+      },
+ 
+
+  
+    "CleanCar":{
+      "title":"Transfer Araçlarımızın Kontrolu ve Temizlik Aşaması",
+        "p1":"Şoför ve yolcu arasında hava akımını sıfıra indirecek araç yapısı",
+        "p2":"Araç içi hijyen kiti",
+        "p3":"Belirli aralıklarda temizlenen hava filtreleri",
+        "p4":"Her transferde bagaj dezenfeksiyonu",
+        "p5":"Her transfer öncesi araç dezenfeksiyonu",
+        "p6":"Profesiyonel sürücü ve personel takip sistemi"
+    },
+
+
+
+
+
+
+  "BottomNavigation": {
+    "span1":"Ana Sayfa",
+    "span2":"Telefon",
+    "span3":"Whatsapp"
   }
 }

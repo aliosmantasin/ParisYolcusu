@@ -13,10 +13,13 @@ import {
 
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu"
+import { useTranslations } from "next-intl"
 
 
 
 export function BigScreenMenu() {
+  const t = useTranslations("Navbar")
+
   return (
     <NavigationMenu className="hidden sm:flex ">
       <NavigationMenuList>
@@ -25,7 +28,7 @@ export function BigScreenMenu() {
         <NavigationMenuItem>
           <Link href="/" legacyBehavior passHref>
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-              Ana Sayfa
+              {t("HomePageNabar")}
             </NavigationMenuLink>
           </Link>
         </NavigationMenuItem>
@@ -33,7 +36,7 @@ export function BigScreenMenu() {
         <NavigationMenuItem>
           <Link href="#hizmetlerimiz" legacyBehavior passHref>
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-              Hizmetlerimiz
+            {t("Services")}
             </NavigationMenuLink>
           </Link>
         </NavigationMenuItem>
@@ -41,7 +44,7 @@ export function BigScreenMenu() {
         <NavigationMenuItem>
           <Link href="#about" legacyBehavior passHref>
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-              Hakkımızda
+            {t("About")}
             </NavigationMenuLink>
           </Link>
         </NavigationMenuItem>

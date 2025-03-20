@@ -1,30 +1,157 @@
 {
-    "Navbar": {
-        "HomePage": "Home Page",
-        "Services": "Services",
-        "span1": "Dijital Conversion Boxes",
-        "descrition1": "The Planned and Economical Way to Reach Your Goals in Digital Marketing ",
-        "link1": "/digital-marketing-conversion-box",
-    
-        "span2": "Meta Manage",
-        "description2": "You can choose the service you need by examining our MiniBox-Meta - MegaBox-Meta - ProBox-Meta service boxes.",
-        "link2": "/instagram-sponsored-ads",
-        "span3": "Google Manage",
-        "description3": "By examining our service boxes as MiniBox-Google - MegaBox-Google - ProBox-Google, it includes the service you need.",
-        "link3": "/google-ads-management",
-        "span4": "Web Design Services",
-        "description4": "As MiniWeb - MegaWeb, you can choose the service you need by examining our service boxes.",
-        "link4": "/website-development",
-    
-        "Referance": "Referance",
-        "refLink":"/settobox-references",
-        "light": "Light Mode",
-        "dark": "Dark Mode",
-        "Guide": "Beginner's Guide",
-        "guideLink":"/digital-marketing-beginner-guide",
-        "menu": "Menu"
-      },
-    "HomePage":{
-        "title": "This is Home Page"
+  "Navbar": {
+    "HomePageNabar": "Home Page",
+    "Services": "Our Services",
+    "About": "About Us",
+    "CTA": "Contact Whatsaap",
+    "Light": "Light mode",
+    "Dark": "Dark mode"
+  },
+
+  "Settings":{
+    "CTA":"Reservation",
+    "CTAURL":"/basvuru-yap"
+  },
+
+  "Footer": {
+    "contact": "Contact",
+    "about": "About Us",
+    "brandName": "Paris Yolcusu",
+    "span": "All Rights Reserved."
+  },
+
+  "HomePage": {
+    "firstGlance": {
+      "brandNameX": "Paris",
+      "brandnameY": "Passenger",
+      "title": "Comfortable and Safe Transfer Services in Paris",
+      "span": "VİP Service"
     }
+  },
+  "Services": {
+    "title": "Private Chauffeur Travel Services in Paris",
+    "description": "We offer professional service in airport transfer, private chauffeur car rental and city tours in Paris. You can choose us for comfortable and safe transportation!",
+
+    "subtitle1": "Paris Airport Transfer ",
+    "p1": "We meet our passengers at Paris airports and ensure that they reach their destinations comfortably.",
+    "subtitle2": "Paris Travel Tours",
+    "p2": "There are many places to visit in Paris! We also have both transportation and a guide!",
+    "subtitle3": "Private Chauffeur in Paris",
+    "p3": "You can travel to the region you want with our vehicles in Paris with VIP service",
+    "moreInfo": "More Information",
+    "moreInfoLink": "/hizmet-sayfasi1",
+    "applyButton": "Make a Reservation",
+    "apllyLink": "/basvuru-yap"
+  },
+
+  "FeaturesBrand": {
+    "title": "Features and Benefits",
+
+    "feature1": {
+      "title": "Comfortable and Safe Transfer",
+      "description1": "We offer a comfortable travel experience with the latest model, comfortable and air-conditioned vehicles.",
+      "description2": "You can have a safe journey with our professional and experienced drivers."
+    },
+    "feature2": {
+      "title": "Airport Transfer Service",
+      "description1": "Direct transfer from Charles de Gaulle (CDG), Orly (ORY) and Beauvais (BVA) airports to the city center and your hotel.",
+      "description2": "Flexible welcome and waiting time according to your plane's landing time."
+    },
+    "feature3": {
+      "title": "Private Chauffeured Tours",
+      "description1": "Private chauffeured VIP tours to discover iconic Parisian landmarks.",
+      "description2": "Special routes to the Eiffel Tower, Louvre Museum, Champs-Elysées and other touristic spots."
+    },
+    "feature4": {
+      "title": "On-time and Uninterrupted Transportation",
+      "description1": "Your driver will be waiting for you at the scheduled time, you can hit the road without wasting any time.",
+      "description2": "The fastest and most suitable routes are determined according to traffic density."
+    },
+    "feature5": {
+      "title": "Fixed and Transparent Price Policy",
+      "description1": "Clear pricing at the time of booking, without any surprise additional fees.",
+      "description2": "All prices are determined in advance, you will not encounter any extra payments at the end of the trip."
+    },
+    "feature6": {
+      "title": "24/7 Customer Support",
+      "description1": "We offer support in Turkish, French and English whenever you need it.",
+      "description2": "You can easily contact us for reservation changes or emergencies."
+    },
+
+    "feature7": {
+      "title": "Group and Private Transfer Options",
+      "description1": "Suitable vehicle alternatives for single persons, families or large groups.",
+      "description2": "VIP transfer, luxury vehicle options and special transportation services for special events."
+    }
+  },
+
+  "Testimonials": {
+    "title": "Customer Testimonials",
+    "testimonial1": "The service quality is truly amazing! I highly recommend it.",
+    "testimonial2": "It was the best experience in Paris! Thank you.",
+    "testimonial3": "Very professional and efficient service, highly recommended!",
+    "testimonial4": "Everything was perfect, I will definitely choose them again.",
+    "testimonial5": "It wasn’t just a service, it was an experience. They understood us and guided us according to our needs."
+  },
+
+
+
+  "FAQ": {
+    "title": "Frequently Asked Questions",
+    "question1": "How can I make a reservation?",
+    "answer1": "You can get instant information and make a reservation via whatsapp application on our website.",
+    "question2": "What is the cancellation policy?",
+    "answer2": "You can cancel your reservation free of charge up to 24 hours in advance.",
+    "question3": "What are the payment options?",
+    "answer3": "You can make the payment at the time of the service."
+  },
+
+  
+    "AboutUs": {
+      "title": "About Us",
+      "description": "As Paris Yolcusu, we provide comfortable and reliable transportation services in Paris with over 10 years of experience and a friendly team. From airport transfers to city tours, we offer customized solutions with our luxury vehicles.",
+  
+      "feature1": {
+        "title": "VIP Transfer Services",
+        "description": "We offer luxurious and comfortable transfers, including airport, hotel, and private transportation."
+      },
+      "feature2": {
+        "title": "Private Chauffeur Services",
+        "description": "Travel safely and comfortably in Paris with our experienced and professional drivers."
+      },
+      "feature3": {
+        "title": "City Tours",
+        "description": "Discover the historical and tourist attractions of Paris with our exclusive tours."
+      },
+      "feature4": {
+        "title": "24/7 Service",
+        "description": "We are here for you at all times! We provide solutions for your transportation needs around the clock."
+      },
+      "feature5": {
+        "title": "Affordable and Flexible Booking",
+        "description": "Take advantage of our competitive pricing and flexible cancellation options by booking in advance."
+      }
+    },
+  
+    "CallToAction": {
+    "title": "Comfortable and Reliable Transfer Service in Paris!",
+    "description": "With our luxury vehicles and professional chauffeurs, we safely take you to your destination in Paris. Contact us now for VIP airport transfers, hotel transfers, and private city tours!",
+    "whatsapp": "WhatsApp Contact!"
+  },
+
+  "CleanCar": {
+    "title":"Control and Cleaning Phase of Our Transfer Vehicles",
+    "p1": "Vehicle structure that reduces air flow between driver and passenger to zero",
+    "p2": "In-vehicle hygiene kit",
+    "p3":"Air filters cleaned at regular intervals",
+    "p4": "Baggage disinfection at every transfer",
+    "p5": "Vehicle disinfection before every transfer",
+    "p6": "Professional driver and personnel tracking system"
+  },
+
+  "BottomNavigation": {
+    "span1": "Home Page",
+    "span2": "Phone",
+    "span3": "Whatsapp"
+  }
 }

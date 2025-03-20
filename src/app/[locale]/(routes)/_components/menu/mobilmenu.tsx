@@ -12,11 +12,12 @@ import {
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu"
 import { ModeToggle } from "@/components/ModeToggle"
+import { useTranslations } from "next-intl"
 
 export function MobilMenu() {
   const [open, setOpen] = React.useState(false);
-
   const handleClose = () => setOpen(false);
+  const t = useTranslations("Navbar")
 
   // 📌 Hash linke tıklandığında ilgili bölüme scroll yap
   const handleScrollToSection = (id: string) => {
@@ -44,7 +45,7 @@ export function MobilMenu() {
             </div>
             <Link href="/dijital-pazarlama-baslagic-kilavuzu">
               <Button onClick={handleClose} className="min-w-36 animate-pulse">
-                CTA Button
+                {t("CTA")}
               </Button>
             </Link>
           </div>
@@ -60,7 +61,7 @@ export function MobilMenu() {
                     )}
                     onClick={handleClose}
                   >
-                    Ana Sayfa
+                    {t("HomePageNabar")}
                   </NavigationMenuLink>
                 </Link>
               </NavigationMenuItem>
@@ -74,7 +75,7 @@ export function MobilMenu() {
                   )}
                   onClick={() => handleScrollToSection("hizmetlerimiz")}
                 >
-                  <span>Hizmetlerimiz</span>
+                  <span>{t("Services")}</span>
                 </NavigationMenuLink>
               </NavigationMenuItem>
 
@@ -87,7 +88,7 @@ export function MobilMenu() {
                   )}
                   onClick={() => handleScrollToSection("about")}
                 >
-                  <span>Hakkımızda</span>
+                  <span> <span>{t("About")}</span></span>
                 </NavigationMenuLink>
               </NavigationMenuItem>
             </NavigationMenuList>
