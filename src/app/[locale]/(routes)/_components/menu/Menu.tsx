@@ -4,6 +4,7 @@ import * as React from "react"
 import Link from "next/link"
 import { cn } from "@/lib/utils"
 
+
 import {
   NavigationMenu,
 
@@ -34,7 +35,7 @@ export function BigScreenMenu() {
         </NavigationMenuItem>
 
         <NavigationMenuItem>
-          <Link href="#hizmetlerimiz" legacyBehavior passHref>
+          <Link href="/#hizmetlerimiz" legacyBehavior passHref>
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
             {t("Services")}
             </NavigationMenuLink>
@@ -42,7 +43,7 @@ export function BigScreenMenu() {
         </NavigationMenuItem>
 
         <NavigationMenuItem>
-          <Link href="#about" legacyBehavior passHref>
+          <Link href="/#about" legacyBehavior passHref>
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
             {t("About")}
             </NavigationMenuLink>

@@ -10,11 +10,11 @@ export function QuestionsSSS() {
   const t = useTranslations("FAQ");
 
   return (
-    <section className="my-20 bg-slate-50 dark:bg-black p-2">
+    <section className="my-20 p-20  bg-slate-50 dark:bg-black ">
       <div className="w-full text-center p-2">
         <h2 className="text-[#067481] font-bold text-3xl my-3">{t("title")}</h2>
       </div>
-      <div className="max-w-2xl flex mx-auto">
+      <div className="max-w-2xl flex mx-auto HeadStyle">
         <Accordion type="single" collapsible className="w-full">
           <AccordionItem value="item-1">
             <AccordionTrigger>{t("question1")}</AccordionTrigger>

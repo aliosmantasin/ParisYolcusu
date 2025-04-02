@@ -4,6 +4,7 @@ import nodemailer from 'nodemailer';
 export async function POST(req: NextRequest) {
   try {
     const { email, firstName, lastName, phone, service, recaptchaToken } = await req.json();
+    console.log("📨 Gelen form verisi:", { email, firstName, lastName, phone, service, recaptchaToken });
 
     // reCAPTCHA doğrulaması
     const recaptchaResponse = await fetch(
@@ -34,12 +35,12 @@ export async function POST(req: NextRequest) {
     // Mail gönderme
     const mailOptions = {
       from: process.env.EMAIL,
-      to: `ali.osman.tasin@gmail.com, paris.yolcusu.info@gmail.com`,
+      to: `sosyalsettobox@gmail.com`,
       subject: 'Yeni Bilgi Alma Formu',
       text: `Yeni bir başvuru alındı:\nAdı: ${firstName} ${lastName}\nEmail: ${email}\nTelefon: ${phone}\nHizmet Türü: ${service}`,
       html: `
         <div style="font-family: Arial, sans-serif; line-height: 1.6;">
-          <h2 style="color: #1e74bd;">Yeni Bilgi Alma Formu</h2>
+          <h2 style="color: #1e74bd;">Yeni Rezervasyon Formu</h2>
           <p><strong>Adı:</strong> ${firstName} ${lastName}</p>
           <p><strong>Email:</strong> ${email}</p>
           <p><strong>Telefon:</strong> ${phone}</p>
@@ -58,24 +59,3 @@ export async function POST(req: NextRequest) {
 }
 
 
-// import { NextResponse } from 'next/server';
-
-// export async function GET() {
-//   return NextResponse.json({ message: "API Çalışıyor" });
-// }
-
-
-// import { NextResponse } from 'next/server';
-// import type { NextRequest } from 'next/server';
-
-// export async function POST(req: NextRequest) {
-//   try {
-//     const data = await req.json();
-//     console.log("📩 Gelen Veri:", data);
-
-//     return NextResponse.json({ message: "POST isteği başarıyla alındı!", receivedData: data });
-//   } catch (error) {
-//     console.error("❌ Hata:", error);
-//     return NextResponse.json({ message: "Bir hata oluştu", error: String(error) }, { status: 500 });
-//   }
-// }

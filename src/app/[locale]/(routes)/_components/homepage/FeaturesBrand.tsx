@@ -2,7 +2,6 @@ import React from 'react';
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/components/ui/accordion";
-// import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
 
 const FeaturesBrand = () => {
   const t = useTranslations("FeaturesBrand");
@@ -32,21 +31,18 @@ const FeaturesBrand = () => {
       description1: t("feature4.description1"),
       description2: t("feature4.description2")
     },
-
     {
       img: "",
       title: t("feature5.title"),
       description1: t("feature5.description1"),
       description2: t("feature5.description2")
     },
-
     {
       img: "",
       title: t("feature6.title"),
       description1: t("feature6.description1"),
       description2: t("feature6.description2")
     },
-
     {
       img: "",
       title: t("feature7.title"),
@@ -57,44 +53,59 @@ const FeaturesBrand = () => {
 
   return (
     <section className="py-10 px-4">
-  
-      <div className="container flex flex-wrap mx-auto ">
+      <div className="container flex flex-wrap mx-auto">
         
-      <div className='w-full flex w-150 sm:w-3/5 md:w-5/12 item-center justify-center mx-auto mb-0 sm:mb-10 relative'>
-    
+        {/* Görsel Alanı */}
+        <div className="flex w-full sm:w-3/5 md:w-5/12 items-center justify-center mx-auto mb-10 sm:mb-0">
 
-      <div className='absolute sm:w-[250] sm:h-[250] bg-[#fece47] rounded-full z-0 top-0 left-36 blur-2xl animate-pulse'></div>
 
-                <Image 
-                  src="/images/features.webp" 
-                  alt="Paris Yolcusu" 
-                  width={500} 
-                  height={500} 
-                  className="mx-atuo w-[350] mb-5 sm:w-auto relative z-10 rounded-xl shadow-lg"
-                />
-     
-     <div className='absolute sm:w-[250] sm:h-[250] bg-[#067481] rounded-full z-0 bottom-0 right-36 blur-2xl animate-pulse'></div>
-       
-      </div>
-      
+        <div className='relative'>
+
+          {/* Üst Sarı Blur Daire */}
+          <div className="absolute bg-[#fece47] rounded-full blur-2xl animate-pulse z-0 
+            w-[150px] h-[150px] sm:w-[200px] sm:h-[200px] md:w-[250px] md:h-[250px] 
+            top-0 left-10 sm:left-36">
+          </div>
+
+          {/* Görsel */}
+          <Image 
+            src="/images/features.webp" 
+            alt="Paris Yolcusu" 
+            width={600} 
+            height={350} 
+            className="w-[350px] sm:w-[350px] md:w-[400px] lg:w-[500px] 
+              relative z-10 rounded-xl "
+          />
+
+          {/* Alt Mavi Blur Daire */}
+          <div className="absolute bg-[#067481] rounded-full blur-2xl animate-pulse z-0 
+            w-[150px] h-[150px] sm:w-[200px] sm:h-[200px] md:w-[250px] md:h-[250px] 
+            bottom-0 right-10 sm:right-36">
+          </div>
+        </div>
+
+
+
+        </div>
 
         {/* Açılır Alan */}
-        <div className="flexw-full sm:w-3/5 md:w-5/12 mx-auto">
-        <h2 className="text-[#067481] font-bold text-3xl mb-6">{t("title")}</h2>
+        <div className="flex flex-col w-full sm:w-3/5 md:w-5/12 mx-auto">
+          <h2 className="text-[#067481] text-3xl mb-6">{t("title")}</h2>
           <Accordion type="single" collapsible>
             {features.map((feature, index) => (
               <AccordionItem key={index} value={`feature-${index}`}>
-                <AccordionTrigger className="text-lg font-semibold text-gray-700">
+                <AccordionTrigger className="text-lg font-semibold HeadStyle">
                   {feature.title}
                 </AccordionTrigger>
                 <AccordionContent>
-                  <p className="text-gray-600">{feature.description1}</p>
-                  <p className="text-gray-500">{feature.description2}</p>
+                  <p className="paragraphStyle">{feature.description1}</p>
+                  <p className="paragraphStyle">{feature.description2}</p>
                 </AccordionContent>
               </AccordionItem>
             ))}
           </Accordion>
         </div>
+
       </div>
     </section>
   );

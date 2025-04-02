@@ -1,0 +1,8 @@
+{
+  "ThankYou": {
+    "title": "Rezervasyonunuz Alındı!",
+    "message": "Rezervasyonunuz başarıyla alınmıştır. En kısa sürede sizinle iletişime geçeceğiz.",
+    "emailSent": "Rezervasyon detaylarınız e-posta adresinize gönderilmiştir.",
+    "backToHome": "Ana Sayfaya Dön"
+  }
+} 

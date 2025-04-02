@@ -8,9 +8,9 @@
     "Dark": "Dark mode"
   },
 
-  "Settings":{
-    "CTA":"Reservation",
-    "CTAURL":"/basvuru-yap"
+  "Settings": {
+    "CTA": "Reservation",
+    "CTAURL": "/reservation-form"
   },
 
   "Footer": {
@@ -24,24 +24,55 @@
     "firstGlance": {
       "brandNameX": "Paris",
       "brandnameY": "Passenger",
-      "title": "Comfortable and Safe Transfer Services in Paris",
+      "title": "Comfortable and Safe Airport Transfer Services in Paris",
       "span": "VİP Service"
     }
   },
   "Services": {
     "title": "Private Chauffeur Travel Services in Paris",
-    "description": "We offer professional service in airport transfer, private chauffeur car rental and city tours in Paris. You can choose us for comfortable and safe transportation!",
+    "description": "We offer professional service in Paris airport transfer, private chauffeur car rental and city tours. You can choose us for comfortable and safe transportation!",
 
     "subtitle1": "Paris Airport Transfer ",
-    "p1": "We meet our passengers at Paris airports and ensure that they reach their destinations comfortably.",
+
+    "p1": "We welcome our passengers from Paris airports and ensure that they reach their destinations comfortably.",
+    "moreInfo1": "More Information",
+    "moreInfoLink1": "/information-form",
+    "detailedReview": "Detailed Review",
+    "detailedReviewLink": "/paris-airport-transfer",
+
     "subtitle2": "Paris Travel Tours",
-    "p2": "There are many places to visit in Paris! We also have both transportation and a guide!",
+    "p2": "There are many places to visit in Paris! We have both transportation and a guide!",
+    "moreInfo2": "More Information",
+    "moreInfoLink2": "/information-form",
+    "reservationButton2": "Detailed Review",
+    "reservationForm2": "/paris-sightseeing-tours",
+
     "subtitle3": "Private Chauffeur in Paris",
-    "p3": "You can travel to the region you want with our vehicles in Paris with VIP service",
-    "moreInfo": "More Information",
-    "moreInfoLink": "/hizmet-sayfasi1",
-    "applyButton": "Make a Reservation",
-    "apllyLink": "/basvuru-yap"
+    "p3": "You can travel to any region you want with our vehicles in Paris with vip service",
+    "moreInfo3": "More Information",
+    "moreInfoLink3": "/information-form",
+    "reservationButton3": "Make a Reservation",
+    "reservationForm3": "/reservation-formu"
+  },
+
+  "OurVehicles": {
+    "title": "Our Vehicles",
+    "description": "For your comfortable and safe journeys, our vehicles are customized according to the number of our guests and the number of luggage.",
+    "passengers": "Passenger",
+    "luggage": "Baggage",
+    "reserve_now": "Book Now",
+    "vehicle1": {
+      "name": "Mercedes-Benz Classe E",
+      "description": "Combining luxury and comfort, the Mercedes-Benz Classe E stands out with its stylish design and superior performance."
+    },
+    "vehicle2": {
+      "name": "Mercedes-Benz Classe V",
+      "description": "With its spacious interior and high comfort, the Mercedes-Benz Classe V is the ideal choice for group transfers."
+    },
+    "vehicle3": {
+      "name": "Mercedes-Benz Classe S",
+      "description": "The ultra-luxurious Mercedes-Benz Classe S offers the highest level of comfort and prestige."
+    }
   },
 
   "FeaturesBrand": {
@@ -53,7 +84,7 @@
       "description2": "You can have a safe journey with our professional and experienced drivers."
     },
     "feature2": {
-      "title": "Airport Transfer Service",
+      "title": "Paris Airport Transfer Service",
       "description1": "Direct transfer from Charles de Gaulle (CDG), Orly (ORY) and Beauvais (BVA) airports to the city center and your hotel.",
       "description2": "Flexible welcome and waiting time according to your plane's landing time."
     },
@@ -85,16 +116,32 @@
     }
   },
 
+  "ParisAirportTransfer": {
+    "title": "Paris Airport Transfer Services",
+    "description": "We offer a luxurious, comfortable and professional <strong>airport transfer service in Paris</strong>. Reach your hotel or desired address safely from the airport with our chauffeur-driven vehicles.",
+    "linkAirport":"/paris-airport-transfer",
+    "cdg": {
+      "name": "Charles de Gaulle Airport Transfer (CDG)",
+      "description": "The largest airport in Paris, approximately 30 km from the city center. We provide direct access to popular destinations such as Disneyland, the Champs-Élysées and the Eiffel Tower."
+    },
+    "ory": {
+      "name": "Orly Airport Transfer (ORY)",
+      "description": "Comfortable transfer from the airport located in the south of Paris to the city center and touristic spots such as the Palace of Versailles."
+    },
+    "bva": {
+      "name": "Beauvais Airport Transfer (BVA)",
+      "description": "We offer the fastest and most comfortable solutions for transportation from Beauvais airport, which is 87 km away from Paris city center."
+    }
+  },
+
   "Testimonials": {
-    "title": "Customer Testimonials",
+    "title": "Guest Comments",
     "testimonial1": "The service quality is truly amazing! I highly recommend it.",
     "testimonial2": "It was the best experience in Paris! Thank you.",
     "testimonial3": "Very professional and efficient service, highly recommended!",
     "testimonial4": "Everything was perfect, I will definitely choose them again.",
     "testimonial5": "It wasn’t just a service, it was an experience. They understood us and guided us according to our needs."
   },
-
-
 
   "FAQ": {
     "title": "Frequently Asked Questions",
@@ -106,44 +153,43 @@
     "answer3": "You can make the payment at the time of the service."
   },
 
-  
-    "AboutUs": {
-      "title": "About Us",
-      "description": "As Paris Yolcusu, we provide comfortable and reliable transportation services in Paris with over 10 years of experience and a friendly team. From airport transfers to city tours, we offer customized solutions with our luxury vehicles.",
-  
-      "feature1": {
-        "title": "VIP Transfer Services",
-        "description": "We offer luxurious and comfortable transfers, including airport, hotel, and private transportation."
-      },
-      "feature2": {
-        "title": "Private Chauffeur Services",
-        "description": "Travel safely and comfortably in Paris with our experienced and professional drivers."
-      },
-      "feature3": {
-        "title": "City Tours",
-        "description": "Discover the historical and tourist attractions of Paris with our exclusive tours."
-      },
-      "feature4": {
-        "title": "24/7 Service",
-        "description": "We are here for you at all times! We provide solutions for your transportation needs around the clock."
-      },
-      "feature5": {
-        "title": "Affordable and Flexible Booking",
-        "description": "Take advantage of our competitive pricing and flexible cancellation options by booking in advance."
-      }
+  "AboutUs": {
+    "title": "About Us",
+    "description": "As Paris Yolcusu, we provide comfortable and reliable transportation services in Paris with over 10 years of experience and a friendly team. From airport transfers to city tours, we offer customized solutions with our luxury vehicles.",
+
+    "feature1": {
+      "title": "VIP Transfer Services",
+      "description": "We offer luxurious and comfortable transfers, including airport, hotel, and private transportation."
     },
-  
-    "CallToAction": {
+    "feature2": {
+      "title": "Private Chauffeur Services",
+      "description": "Travel safely and comfortably in Paris with our experienced and professional drivers."
+    },
+    "feature3": {
+      "title": "City Tours",
+      "description": "Discover the historical and tourist attractions of Paris with our exclusive tours."
+    },
+    "feature4": {
+      "title": "24/7 Service",
+      "description": "We are here for you at all times! We provide solutions for your transportation needs around the clock."
+    },
+    "feature5": {
+      "title": "Affordable and Flexible Booking",
+      "description": "Take advantage of our competitive pricing and flexible cancellation options by booking in advance."
+    }
+  },
+
+  "CallToAction": {
     "title": "Comfortable and Reliable Transfer Service in Paris!",
     "description": "With our luxury vehicles and professional chauffeurs, we safely take you to your destination in Paris. Contact us now for VIP airport transfers, hotel transfers, and private city tours!",
     "whatsapp": "WhatsApp Contact!"
   },
 
   "CleanCar": {
-    "title":"Control and Cleaning Phase of Our Transfer Vehicles",
+    "title": "Control and Cleaning Phase of Our Transfer Vehicles",
     "p1": "Vehicle structure that reduces air flow between driver and passenger to zero",
     "p2": "In-vehicle hygiene kit",
-    "p3":"Air filters cleaned at regular intervals",
+    "p3": "Air filters cleaned at regular intervals",
     "p4": "Baggage disinfection at every transfer",
     "p5": "Vehicle disinfection before every transfer",
     "p6": "Professional driver and personnel tracking system"
@@ -153,5 +199,155 @@
     "span1": "Home Page",
     "span2": "Phone",
     "span3": "Whatsapp"
+  },
+
+  "Apply": {
+    "applyForm": "İnformation Form",
+    "name": "Your Name",
+    "surname": "Your Surname",
+    "phone": "Telephone",
+    "email": "Email",
+    "selectService": "Select Service",
+    "select": "Select",
+    "AirplaneTransfer": "Airport Transfer",
+    "ParisTravelTours": "Paris Sightseeing Tour",
+    "PrivateChauffeur": "Private Chauffeur in Paris",
+    "SendForm":"Send Form"
+  },
+
+  "NotFound404": {
+    "title": "This page does not exist",
+    "span": "Sorry, we could not find the page you were looking for.",
+    "button": "Go to Home Page"
+  },
+
+  "Reservation": {
+    "reservationForm": "Reservation Form",
+    "name": "First Name",
+    "surname": "Last Name",
+    "phone": "Phone",
+    "email": "Email",
+    "dateTime": "Date and Time",
+    "passengers": "Number of Passengers",
+    "vehicleType": "Vehicle Type",
+    "selectVehicle": "Select Vehicle",
+    "pickupLocation": "Pickup Location",
+    "enterPickupLocation": "Enter pickup location",
+    "dropoffLocation": "Dropoff Location",
+    "enterDropoffLocation": "Enter dropoff location",
+    "submitReservation": "Make Reservation",
+    "submitting": "Submitting...",
+    "close": "Close",
+    "loadingMap": "Loading map..."
+  },
+
+  "ThankYou": {
+    "title": "Thank You",
+    "message": "We will contact you as soon as possible via WhatsApp to confirm your reservation.",
+    "emailSent": "Information has been sent to your email.",
+    "backToHome": "Back to Home"
+  },
+  
+
+  "ParisHavalimanı": {
+    "firstGlance": {
+      "title": "Paris Airports Transfer Services",
+      "span": "Comfortable and reliable transportation"
+    },
+
+    "CDGairport": {
+      "title": "Charles de Gaulle Airport Transfer (CDG)",
+      "description1": "Paris' largest and busiest airport, <strong>Charles de Gaulle Airport (CDG)</strong>, is approximately 25 km from the city center. We offer a private airport transfer service to get you from CDG Airport to your hotel, business meeting or tourist destination quickly and comfortably.",
+      "table": {
+        "route": "Route",
+        "distance": "Distance",
+        "duration": "Duration",
+        "vehicle": "Vehicle",
+        "price": "Price (€)"
+      },
+      "routes": {
+        "route1": {
+          "name": "CDG → Paris City Center",
+          "distance": "25 km",
+          "duration": "45-60 min",
+          "vehicle": "Mercedes E-Class",
+          "price": "90€ → 70€"
+        },
+        "route2": {
+          "name": "CDG → Disneyland Paris",
+          "distance": "45 km",
+          "duration": "35-50 min",
+          "vehicle": "Mercedes E-Class",
+          "price": "100€ → 80€"
+        },
+        "route3": {
+          "name": "CDG → Palace of Versailles",
+          "distance": "50 km",
+          "duration": "50-70 min",
+          "vehicle": "Mercedes E-Class",
+          "price": "110€ → 90€"
+        }
+      }
+    },
+
+    "BVAairport": {
+      "title": "Beauvais Havalimanı Transfer (BVA)",
+      "description1": "Beauvais Havalimanı'ndan Charles de Gaulle Havalimanı’na ulaşım için otobüs, tren ve özel transfer hizmetleri mevcuttur.",
+      "description2": "BVA Havalimanı'ndan Paris şehir merkezine en hızlı ulaşım seçeneği özel transfer hizmetimizdir."
+    },
+
+    "ORLYairport": {
+      "title": "Orly Airport Transfer (ORY)",
+      "description1": "Comfortable transfer from the airport located in the south of Paris to the city center and touristic spots such as the Palace of Versailles.",
+      "description2": "How to get from Orly Airport to Paris city center? Transfer options include private car, taxi, tram and bus.",
+      "description3": "We offer a direct transfer service from Orly Airport to Disneyland Paris."
+    }
+  },
+
+  "ParisGeziTurlari": {
+    "HeroSection": {
+      "title": "Paris Sightseeing Tours",
+      "description": "Discover the most beautiful places of Paris with our private chauffeur and professional guides. We are waiting for you for a comfortable and unforgettable experience."
+    },
+
+    "PopularAttractions": {
+      "title": "Most Popular Places in Paris",
+      "eiffel": {
+        "title": "Eiffel Tower",
+        "description": "Visit the Eiffel Tower, the symbol of Paris, and enjoy the magnificent view."
+      },
+      "louvre": {
+        "title": "Louvre Museum",
+        "description": "See the most valuable works of art at the Louvre, one of the world's largest museums."
+      },
+      "notreDame": {
+        "title": "Notre-Dame Cathedral",
+        "description": "Visit Notre-Dame, one of the most beautiful examples of Gothic architecture."
+      },
+      "versailles": {
+        "title": "Versailles Palace",
+        "description": "Discover the most magnificent palace in France and its magnificent gardens."
+      }
+    },
+
+    "ServiceFeatures": {
+      "title": "Why Choose Us?",
+      "privateDriver": {
+        "title": "Private Chauffeur Service",
+        "description": "A comfortable travel experience with our experienced and professional chauffeurs."
+      },
+      "professionalGuide": {
+        "title": "Professional Guide",
+        "description": "Discover all the beauties of Paris with our expert guides."
+      },
+      "customRoutes": {
+        "title": "Customized Routes",
+        "description": "An unforgettable experience with customized travel routes."
+      },
+      "hotelTransfer": {
+        "title": "Hotel Transfer Service",
+        "description": "A service where you are picked up from your hotel and dropped back to your hotel after your travels."
+      }
+    }
   }
 }

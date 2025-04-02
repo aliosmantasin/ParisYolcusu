@@ -20,12 +20,12 @@ const Testimonials = () => {
       quote: t("testimonial1"),
     },
     {
-      name: "Marie Dubois",
+      name: "Meryem Öz",
       image: "/images/placeholder2.webp",
       quote: t("testimonial2"),
     },
     {
-      name: "John Doe",
+      name: "Can Demir",
       image: "/images/placeholder2.webp",
       quote: t("testimonial3"),
     },
@@ -35,14 +35,15 @@ const Testimonials = () => {
       quote: t("testimonial4"),
     },
     {
-      name: "Alice Smith",
+      name: "Elif Şahin",
       image: "/images/placeholder2.webp",
       quote: t("testimonial5"),
     },
+
   ];
 
   return (
-    <section className='my-20 p-2 bg-slate-50 dark:bg-black'>
+    <section className='my-20 p-2'>
       <div className='w-full text-center p-2'>
         <h2 className='text-[#067481] font-bold text-3xl my-3'>{t("title")}</h2>
       </div>
@@ -61,12 +62,12 @@ const Testimonials = () => {
                       ))}
                     </div>
                     <blockquote>
-                      <p className="text-2xl font-semibold text-gray-900 dark:text-white">&quot;{testimonial.quote}&quot;</p>
+                      <p className="text-2xl font-semibold HeadStyle">&quot;{testimonial.quote}&quot;</p>
                     </blockquote>
                     <figcaption className="flex items-center justify-center mt-6 space-x-3">
                       <Image width={50} height={50} className="w-12 h-12 rounded-full" src={testimonial.image} alt={testimonial.name} />
                       <div className="flex items-center divide-x-2 divide-gray-300 dark:divide-gray-700">
-                        <cite className="pe-3 font-medium text-gray-900 dark:text-white">{testimonial.name}</cite>
+                        <cite className="pe-3 font-medium HeadStyle">{testimonial.name}</cite>
                       </div>
                     </figcaption>
                   </figure>

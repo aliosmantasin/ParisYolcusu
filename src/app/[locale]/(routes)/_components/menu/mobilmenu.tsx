@@ -23,13 +23,39 @@ export function MobilMenu() {
   const handleScrollToSection = (id: string) => {
     setOpen(false); // Menü kapat
 
+    // Check if we're on the home page
+    const isHomePage = window.location.pathname === '/';
+
+    if (!isHomePage) {
+      // If not on home page, first navigate to home page
+      window.location.href = '/';
+      // Store the section ID in localStorage to scroll after navigation
+      localStorage.setItem('scrollToSection', id);
+      return;
+    }
+
+    // If already on home page, just scroll to the section
     setTimeout(() => {
       const section = document.getElementById(id);
       if (section) {
         section.scrollIntoView({ behavior: "smooth", block: "start" });
       }
-    }, 300); // Menünün kapanmasını beklemek için 300ms gecikme
+    }, 300);
   };
+
+  // Add effect to handle scroll after navigation
+  React.useEffect(() => {
+    const sectionToScroll = localStorage.getItem('scrollToSection');
+    if (sectionToScroll) {
+      setTimeout(() => {
+        const section = document.getElementById(sectionToScroll);
+        if (section) {
+          section.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+      }, 500);
+      localStorage.removeItem('scrollToSection');
+    }
+  }, []);
 
   return (
     <div className="flex sm:hidden space-y-5">
@@ -43,7 +69,7 @@ export function MobilMenu() {
             <div>
               <ModeToggle />
             </div>
-            <Link href="/dijital-pazarlama-baslagic-kilavuzu">
+            <Link href="https://wa.me/33651150547?text=Merhabalar%20Paris%20Yolcusu%20web%20sitesinden%20iletişime%20geçiyorum..">
               <Button onClick={handleClose} className="min-w-36 animate-pulse">
                 {t("CTA")}
               </Button>
@@ -65,8 +91,9 @@ export function MobilMenu() {
                   </NavigationMenuLink>
                 </Link>
               </NavigationMenuItem>
-
+           
               <NavigationMenuItem className="flex w-full max-w-96">
+      
                 <NavigationMenuLink
                   asChild
                   className={cn(
@@ -75,10 +102,13 @@ export function MobilMenu() {
                   )}
                   onClick={() => handleScrollToSection("hizmetlerimiz")}
                 >
+                   
                   <span>{t("Services")}</span>
+             
                 </NavigationMenuLink>
+  
               </NavigationMenuItem>
-
+           
               <NavigationMenuItem className="flex w-full max-w-96">
                 <NavigationMenuLink
                   asChild
