@@ -1,4 +1,3 @@
-"use client";
 import { useTranslations } from "next-intl";
 import { FaCar, FaUserTie, FaMapMarkedAlt, FaHotel } from "react-icons/fa";
 

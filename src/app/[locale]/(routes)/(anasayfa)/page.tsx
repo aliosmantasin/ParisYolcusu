@@ -12,15 +12,13 @@ import { seoData } from "@/lib/seo";
 import { Metadata } from "next";
 
 type Props = {
-  params: Promise<{ locale?: string }>; // ✅ params artık Promise olarak tanımlandı
+  params: Promise<{ locale?: string }>
 };
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const resolvedParams = await params; // ✅ Promise olan params'ı çöz
-  const locale = resolvedParams.locale ?? "tr"; // ✅ Varsayılan dili "tr" yap
+  const locale = (await params).locale ?? "tr";
   const pagePath = `/${locale}`;
 
-  console.log("📌 Gelen params:", resolvedParams);
   console.log("📌 Kullanılan dil:", locale);
 
   const seo = seoData[pagePath] || {
@@ -31,12 +29,18 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: seo.title,
     description: seo.description,
+    openGraph: {
+      title: seo.title,
+      description: seo.description,
+    },
+    twitter: {
+      title: seo.title,
+      description: seo.description,
+    },
   };
 }
 
-
 export default function Home() {
-
   return (
     <>
       <FirstGlance/>
@@ -52,4 +56,11 @@ export default function Home() {
       <CallToActionComponent/>
     </>
   );
+}
+
+export async function generateStaticParams() {
+  return [
+    { locale: 'tr' },
+    { locale: 'en' }
+  ]
 }

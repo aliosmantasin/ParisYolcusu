@@ -13,9 +13,9 @@ export const seoData: Record<string, { title: string; description: string }> = {
   },
   // Diğer Sayfalar
     "paris-havalimanlari-transfer": {
-    title: "Paris Merkeze Nasıl Gidilir | Paris Yolcusu",
+    title: "Paris Havalimanı Transferleri | Paris Yolcusu",
     description:
-      "Luxury and comfortable transfer service from Paris airports (CDG, ORY, BVA) to the city center and Disneyland! Safe transportation with private chauffeur-driven vehicles. Book now.",
+      "Paris havaalanlarından (CDG, ORY, BVA) şehir merkezine ve Disneyland'a lüks ve konforlu transfer hizmeti! Özel şoförlü araçlarla güvenli ulaşım. Hemen rezervasyon yapın.",
   },
 
   "paris-airport-transfer": {

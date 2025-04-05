@@ -1,60 +1,46 @@
-"use client"
-
 import * as React from "react"
 import Link from "next/link"
 import { cn } from "@/lib/utils"
 
-
 import {
   NavigationMenu,
-
   NavigationMenuItem,
   NavigationMenuLink,
   NavigationMenuList,
-
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu"
 import { useTranslations } from "next-intl"
 
-
-
 export function BigScreenMenu() {
   const t = useTranslations("Navbar")
 
+  
   return (
     <NavigationMenu className="hidden sm:flex ">
       <NavigationMenuList>
-    
-
         <NavigationMenuItem>
-          <Link href="/" legacyBehavior passHref>
-            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-              {t("HomePageNabar")}
-            </NavigationMenuLink>
+          <Link href="/" className={navigationMenuTriggerStyle()}>
+            {t("HomePageNabar")}
           </Link>
         </NavigationMenuItem>
 
         <NavigationMenuItem>
-          <Link href="/#hizmetlerimiz" legacyBehavior passHref>
-            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+          <Link href="/#hizmetlerimiz" className={navigationMenuTriggerStyle()}>
             {t("Services")}
-            </NavigationMenuLink>
           </Link>
         </NavigationMenuItem>
 
         <NavigationMenuItem>
-          <Link href="/#about" legacyBehavior passHref>
-            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+          <Link href="/#about" className={navigationMenuTriggerStyle()}>
             {t("About")}
-            </NavigationMenuLink>
           </Link>
         </NavigationMenuItem>
 
+    
       </NavigationMenuList>
     </NavigationMenu>
   )
 }
-
 const ListItem = React.forwardRef<
   React.ElementRef<"a">,
   React.ComponentPropsWithoutRef<"a">
@@ -80,3 +66,4 @@ const ListItem = React.forwardRef<
   )
 })
 ListItem.displayName = "ListItem"
+

@@ -62,7 +62,7 @@
     "luggage": "Baggage",
     "reserve_now": "Book Now",
     "vehicle1": {
-      "name": "Mercedes-Benz Classe E",
+      "name": "Standart Vehicle",
       "description": "Combining luxury and comfort, the Mercedes-Benz Classe E stands out with its stylish design and superior performance."
     },
     "vehicle2": {
@@ -197,7 +197,8 @@
 
   "BottomNavigation": {
     "span1": "Home Page",
-    "span2": "Phone",
+    "span2": "Rezervasyon Yap",
+    "span2Link":"/reservation-form",
     "span3": "Whatsapp"
   },
 

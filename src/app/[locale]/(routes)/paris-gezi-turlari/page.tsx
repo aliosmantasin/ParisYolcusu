@@ -1,22 +1,33 @@
+import { Metadata } from 'next';
 import HeroSection from '../_components/ParisGeziTurları/HeroSection';
 import PopularAttractions from '../_components/ParisGeziTurları/PopularAttractions';
 import ServiceFeatures from '../_components/ParisGeziTurları/ServiceFeatures';
-import CTASection from '../_components/ParisGeziTurları/CTASection';
+import CallToActionComponent from '../_components/homepage/CallToActionComponent';
+
 import OurVehicles from '../_components/homepage/OurVehicles';
 import { seoData } from '@/lib/seo';
+import { getLocalizedPath } from '@/lib/i18n';
 
+type Props = {
+  params: Promise<{ locale: 'tr' | 'en' }> | { locale: 'tr' | 'en' }
+};
 
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  // params'ı bekle
+  const resolvedParams = await Promise.resolve(params);
+  const locale = resolvedParams.locale;
+  
+  // Doğru sayfa yolunu oluştur
+  const pageKey = getLocalizedPath('paris-havalimanlari-transfer', locale);
+  const pagePath = pageKey;
 
-export async function generateMetadata() {
-  const pagePath = "paris-gezi-turlari"; // Sayfanın adı belirleniyor
-  console.log("generateMetadata Çalışıyor! Sayfa:", pagePath);
+  console.log("📌 Kullanılan dil:", locale);
+  console.log("📌 Sayfa yolu:", pagePath);
 
   const seo = seoData[pagePath] || {
     title: "Varsayılan Başlık",
     description: "Varsayılan Açıklama",
   };
-
-  console.log("Bulunan SEO:", seo);
 
   return {
     title: seo.title,
@@ -31,7 +42,6 @@ export async function generateMetadata() {
     },
   };
 }
-
 export default function ParisGeziTurlar() {
   return (
     <main>
@@ -39,7 +49,13 @@ export default function ParisGeziTurlar() {
       <PopularAttractions />
       <ServiceFeatures />
       <OurVehicles/>
-      <CTASection />
+      <CallToActionComponent/>
     </main>
   );
+}
+
+export async function generateStaticParams() {
+  return [
+    { locale: 'tr', slug: 'paris-gezi-turlari' },
+  ]
 }

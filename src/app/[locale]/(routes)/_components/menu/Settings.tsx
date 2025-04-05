@@ -8,15 +8,12 @@ import Link from "next/link";
 import { MobilMenu } from "./mobilmenu";
 import { useTranslations } from "next-intl";
 
-
-
 const Settings = () => {
   const router = useRouter();
   const pathname = usePathname(); 
   const currentLocale = pathname.startsWith("/en") ? "en" : "tr";
 
   const t = useTranslations("Settings")
-
   
   const changeLanguage = (newLocale: "tr" | "en") => {
     if (pathname === "/tr" || pathname === "/en") {
@@ -25,28 +22,26 @@ const Settings = () => {
     }
   
     const cleanPath = pathname.replace(/^\/(tr|en)(\/|$)/, "");
-  
+    
     if (!cleanPath) {
       router.push(`/${newLocale}`);
       return;
     }
-  
-    // Önce doğrudan `urlMap` içinde arama yap
-    let newPageSlug = urlMap[cleanPath]?.[newLocale];
-  
-    // Eğer doğrudan eşleşme yoksa, ters çeviri yaparak sayfayı bulmaya çalış
-    if (!newPageSlug) {
-      const matchedKey = Object.keys(urlMap).find(
-        (key) => urlMap[key as keyof typeof urlMap][currentLocale] === cleanPath
-      );
-      if (matchedKey) {
-        newPageSlug = urlMap[matchedKey as keyof typeof urlMap][newLocale];
-      }
+    
+    // URL haritasında bu yol var mı kontrol et
+    const mappedPath = Object.keys(urlMap).find(key => 
+      urlMap[key][currentLocale] === cleanPath || 
+      urlMap[key][newLocale] === cleanPath
+    );
+    
+    if (mappedPath) {
+      router.push(`/${newLocale}/${urlMap[mappedPath][newLocale]}`);
+      return;
     }
-  
-    router.push(`/${newLocale}/${newPageSlug || cleanPath}`);
+    
+    // Eğer haritada yoksa, doğrudan yolu kullan
+    router.push(`/${newLocale}/${cleanPath}`);
   };
-  
   
   return (
     <div className="flex items-center space-x-3 relative">
@@ -62,7 +57,6 @@ const Settings = () => {
           </SelectGroup>
         </SelectContent>
       </Select>
-
 
       <div className="hidden sm:flex mx-auto items-cSettingsenter">
         <ModeToggle/>

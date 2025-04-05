@@ -3,12 +3,6 @@ import Logo from './Logo'
 import { BigScreenMenu } from './Menu'
 import Settings from './Settings'
 
-
-
-
-
-
-
 const Navbar = () => {
   return (
    <>

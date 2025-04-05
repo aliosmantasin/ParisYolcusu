@@ -14,7 +14,7 @@ const OurVehicles = () => {
       id: 1,
       name: t("vehicle1.name"),
       description: t("vehicle1.description"),
-      image: "/images/MercedesBenzClasseE.png",
+      image: "/images/carPalholder.webp",
       capacity: "3",
       link: "/rezervasyon-formu?vehicle=mercedes-benz-classe-e"
     },
@@ -47,10 +47,10 @@ const OurVehicles = () => {
           </div>
         </div>
                 
-        <div className='max-w-7xl flex gap-10 overflow-x-auto scrollbar-custom pb-5 mx-0 sm:mx-auto'>
+        <div className='max-w-7xl block sm:flex gap-10 sm:overflow-x-auto sm:scrollbar-custom pb-5 mx-0 sm:mx-auto'>
           {vehicles.map((vehicle) => (
             <div key={vehicle.id} className='w-full sm:w-1/2 lg:w-2/7 cursor-pointer'>
-              <div className='cardBgColor cardHover max-w-md flex justify-center bg-slate-50 dark:bg-black min-h-[450px]'>
+              <div className='mb-3 sm:mb-0 cardBgColor cardHover max-w-md flex justify-center bg-slate-50 dark:bg-black min-h-[450px]'>
                 <div className='mx-auto p-10'>
                   <span className='paragraphStyle text-2xl font-semibold text-center my-4 flex justify-center'>{vehicle.name}</span>
                   <div className='paragraphStyle font-semibold text-center my-4 flex justify-center'>

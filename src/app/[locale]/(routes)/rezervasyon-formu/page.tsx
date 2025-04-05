@@ -343,7 +343,7 @@ const ReservationForm = () => {
                 <SelectValue placeholder={t("selectVehicle")} />
               </SelectTrigger>
               <SelectContent>
-                <SelectItem value="mercedes-benz-classe-s">Mercedes-Benz Classe E | 3 Yolcu</SelectItem>
+                <SelectItem value="mercedes-benz-classe-s">Sedan Araç | 3 Yolcu</SelectItem>
                 <SelectItem value="mercedes-benz-classe-v">Mercedes-Benz Classe V | 7 Yolcu</SelectItem>
                 <SelectItem value="mercedes-benz-classe-e">Mercedes-Benz Classe S | 3 Yolcu</SelectItem>
                 

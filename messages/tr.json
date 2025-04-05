@@ -62,7 +62,7 @@
     "luggage": "Bagaj",
     "reserve_now": "Şimdi Rezervasyon Yap",
     "vehicle1": {
-      "name": "Mercedes-Benz Classe E",
+      "name": "Sedan Araç",
       "description": "Lüks ve konforu bir araya getiren Mercedes-Benz Classe E, şık tasarımı ve üstün performansıyla öne çıkıyor."
     },
     "vehicle2": {
@@ -196,7 +196,8 @@
 
   "BottomNavigation": {
     "span1": "Ana Sayfa",
-    "span2": "Telefon",
+    "span2": "Rezervasyon Yap",
+    "span2Link":"/rezervasyon-formu",
     "span3": "Whatsapp"
   },
 

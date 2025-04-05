@@ -196,7 +196,7 @@ export async function POST(req: NextRequest) {
               <p>Saygılarımızla,<br><strong>Paris Yolcusu</strong></p>
               <div class="contact-info">
                 <p>Email: info@parisyolcusu.com<br>
-                Tel: +33 1 23 45 67 89</p>
+                Tel: +33 651 150 547</p>
               </div>
             </div>
           </div>
@@ -208,7 +208,7 @@ export async function POST(req: NextRequest) {
     // Şirkete gönderilecek email
     const companyEmail = {
       from: `"Paris Yolcusu" <${process.env.EMAIL}>`,
-      to: `sosyalsettobox@gmail.com`,
+      to: `sosyalsettobox@gmail.com, paris.yolcusu.info@gmail.com`,
       subject: "Yeni Rezervasyon Talebi",
       html: `
         <!DOCTYPE html>

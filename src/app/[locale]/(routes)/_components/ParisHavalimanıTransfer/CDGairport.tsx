@@ -1,4 +1,3 @@
-"use client";
 import Image from "next/image";
 import React from "react";
 import { useTranslations } from "next-intl";
@@ -30,8 +29,8 @@ const CDGairport = () => {
         </div>
       </div>
 
-      <div className="container mx-auto mt-5">
-        <div className="relative overflow-x-auto">
+      {/* <div className="container mx-auto mt-5 ">
+        <div className="relative overflow-x-auto scrollbar-custom">
           <table className="container text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
             <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
               <tr>
@@ -73,7 +72,7 @@ const CDGairport = () => {
             </tbody>
           </table>
         </div>
-      </div>
+      </div> */}
     </section>
   );
 };

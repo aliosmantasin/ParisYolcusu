@@ -1,4 +1,3 @@
-"use client";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 
@@ -22,16 +21,16 @@ const HeroSection = () => {
           src="/images/mobilKapakGezi.jpg"
           alt={t("HeroSection.title")}
           fill
-          className="flex sm:hidden object-cover p-5 brightness-100 dark:brightness-50"
+          className="flex sm:hidden object-cover  brightness-100 dark:brightness-50"
           priority
         />
       </div>
 
-      <div className="absolute bottom-7 sm:bottom-4 left-1/2 -translate-x-1/2 text-center p-4 w-[400px] sm:w-auto">
+      <div className="absolute bottom-0 sm:bottom-4 left-1/2 -translate-x-1/2 text-center p-4 w-[360px] sm:w-auto">
         <h1 className="mb-4 text-3xl font-bold md:text-3xl font-[Caveat]">
           {t("HeroSection.title")}
         </h1>
-        <p className="max-w-2xl text-lg md:text-xl font-[Caveat]">
+        <p className="max-w-4xl text-lg md:text-xl font-[Caveat] p-2">
           {t("HeroSection.description")}
         </p>
       </div>

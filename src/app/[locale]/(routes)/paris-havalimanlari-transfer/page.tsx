@@ -1,24 +1,32 @@
 import React from 'react'
-import FirstGlanceAirPort from '../_components/ParisHavalimanıTransfer/FirstGlance'
+import FirstGlanceAirPort from '../_components/ParisHavalimanıTransfer/FirstGlanceAirPort'
 import CDGairport from '../_components/ParisHavalimanıTransfer/CDGairport'
-
-
-import { seoData } from '@/lib/seo'
 import OurVehicles from '../_components/homepage/OurVehicles'
 import CallToActionComponent from '../_components/homepage/CallToActionComponent'
+import { seoData } from '@/lib/seo'
+import { Metadata } from 'next'
+import { getLocalizedPath } from '@/lib/i18n'
 
+type Props = {
+  params: Promise<{ locale: 'tr' | 'en' }> | { locale: 'tr' | 'en' }
+};
 
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  // params'ı bekle
+  const resolvedParams = await Promise.resolve(params);
+  const locale = resolvedParams.locale;
+  
+  // Doğru sayfa yolunu oluştur
+  const pageKey = getLocalizedPath('paris-havalimanlari-transfer', locale);
+  const pagePath = pageKey;
 
-export async function generateMetadata() {
-  const pagePath = "paris-havalimanlari-transfer"; // Sayfanın adı belirleniyor
-  console.log("generateMetadata Çalışıyor! Sayfa:", pagePath);
+  console.log("📌 Kullanılan dil:", locale);
+  console.log("📌 Sayfa yolu:", pagePath);
 
   const seo = seoData[pagePath] || {
     title: "Varsayılan Başlık",
     description: "Varsayılan Açıklama",
   };
-
-  console.log("Bulunan SEO:", seo);
 
   return {
     title: seo.title,
@@ -49,3 +57,10 @@ const ParisAirPortsTransfer = () => {
 }
 
 export default ParisAirPortsTransfer
+
+export async function generateStaticParams() {
+  return [
+    { locale: 'tr'},
+    { locale: 'en'},
+  ]
+}

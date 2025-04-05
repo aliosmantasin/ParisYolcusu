@@ -7,34 +7,35 @@ import { cn } from "@/lib/utils"
 import {
   NavigationMenu,
   NavigationMenuItem,
-  NavigationMenuLink,
   NavigationMenuList,
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu"
 import { ModeToggle } from "@/components/ModeToggle"
-import { useTranslations } from "next-intl"
+import { useTranslations, useLocale } from "next-intl"
 
 export function MobilMenu() {
   const [open, setOpen] = React.useState(false);
   const handleClose = () => setOpen(false);
   const t = useTranslations("Navbar")
+  const locale = useLocale()
+  const [mounted, setMounted] = React.useState(false)
+
+  React.useEffect(() => {
+    setMounted(true)
+  }, [])
 
   // 📌 Hash linke tıklandığında ilgili bölüme scroll yap
   const handleScrollToSection = (id: string) => {
-    setOpen(false); // Menü kapat
+    setOpen(false);
 
-    // Check if we're on the home page
     const isHomePage = window.location.pathname === '/';
 
     if (!isHomePage) {
-      // If not on home page, first navigate to home page
       window.location.href = '/';
-      // Store the section ID in localStorage to scroll after navigation
       localStorage.setItem('scrollToSection', id);
       return;
     }
 
-    // If already on home page, just scroll to the section
     setTimeout(() => {
       const section = document.getElementById(id);
       if (section) {
@@ -43,7 +44,6 @@ export function MobilMenu() {
     }, 300);
   };
 
-  // Add effect to handle scroll after navigation
   React.useEffect(() => {
     const sectionToScroll = localStorage.getItem('scrollToSection');
     if (sectionToScroll) {
@@ -57,8 +57,12 @@ export function MobilMenu() {
     }
   }, []);
 
+  if (!mounted) {
+    return null
+  }
+
   return (
-    <div className="flex sm:hidden space-y-5">
+    <div className="flex sm:hidden space-y-5" key={`mobile-menu-${locale}`}>
       <Sheet open={open} onOpenChange={setOpen}>
         <SheetTrigger asChild>
           <Button variant="outline">Menu</Button>
@@ -79,47 +83,27 @@ export function MobilMenu() {
           <NavigationMenu className="flex justify-start w-full max-w-96">
             <NavigationMenuList className="flex flex-col space-y-5 mt-8 w-full">
               <NavigationMenuItem className="flex w-full max-w-96">
-                <Link href="/" legacyBehavior passHref>
-                  <NavigationMenuLink
-                    className={cn(
-                      navigationMenuTriggerStyle(),
-                      "bg-transparent hover:bg-transparent text-[1rem]"
-                    )}
-                    onClick={handleClose}
-                  >
-                    {t("HomePageNabar")}
-                  </NavigationMenuLink>
+                <Link href="/" className={cn(navigationMenuTriggerStyle(), "bg-transparent hover:bg-transparent text-[1rem]")} onClick={handleClose}>
+                  {t("HomePageNabar")}
                 </Link>
               </NavigationMenuItem>
            
               <NavigationMenuItem className="flex w-full max-w-96">
-      
-                <NavigationMenuLink
-                  asChild
-                  className={cn(
-                    navigationMenuTriggerStyle(),
-                    "bg-transparent hover:bg-transparent text-[1rem] cursor-pointer"
-                  )}
+                <button
+                  className={cn(navigationMenuTriggerStyle(), "bg-transparent hover:bg-transparent text-[1rem] cursor-pointer")}
                   onClick={() => handleScrollToSection("hizmetlerimiz")}
                 >
-                   
-                  <span>{t("Services")}</span>
-             
-                </NavigationMenuLink>
-  
+                  {t("Services")}
+                </button>
               </NavigationMenuItem>
            
               <NavigationMenuItem className="flex w-full max-w-96">
-                <NavigationMenuLink
-                  asChild
-                  className={cn(
-                    navigationMenuTriggerStyle(),
-                    "bg-transparent hover:bg-transparent text-[1rem] cursor-pointer"
-                  )}
+                <button
+                  className={cn(navigationMenuTriggerStyle(), "bg-transparent hover:bg-transparent text-[1rem] cursor-pointer")}
                   onClick={() => handleScrollToSection("about")}
                 >
-                  <span> <span>{t("About")}</span></span>
-                </NavigationMenuLink>
+                  {t("About")}
+                </button>
               </NavigationMenuItem>
             </NavigationMenuList>
           </NavigationMenu>
