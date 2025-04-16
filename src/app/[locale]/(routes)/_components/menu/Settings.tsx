@@ -11,17 +11,17 @@ import { useTranslations } from "next-intl";
 const Settings = () => {
   const router = useRouter();
   const pathname = usePathname(); 
-  const currentLocale = pathname.startsWith("/en") ? "en" : "tr";
+  const currentLocale = pathname.startsWith("/en") ? "en" : pathname.startsWith("/fr") ? "fr" : "tr";
 
   const t = useTranslations("Settings")
   
-  const changeLanguage = (newLocale: "tr" | "en") => {
-    if (pathname === "/tr" || pathname === "/en") {
+  const changeLanguage = (newLocale: "tr" | "en" | "fr") => {
+    if (pathname === "/tr" || pathname === "/en" || pathname === "/fr") {
       router.push(`/${newLocale}`);
       return;
     }
   
-    const cleanPath = pathname.replace(/^\/(tr|en)(\/|$)/, "");
+    const cleanPath = pathname.replace(/^\/(tr|en|fr)(\/|$)/, "");
     
     if (!cleanPath) {
       router.push(`/${newLocale}`);
@@ -54,6 +54,7 @@ const Settings = () => {
           <SelectGroup>
             <SelectItem value="tr">Türkçe 🇹🇷</SelectItem>
             <SelectItem value="en">English 🇬🇧</SelectItem>
+            <SelectItem value="fr">Français 🇫🇷</SelectItem>
           </SelectGroup>
         </SelectContent>
       </Select>

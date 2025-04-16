@@ -8,12 +8,12 @@ import { Metadata } from 'next'
 import { getLocalizedPath } from '@/lib/i18n'
 
 type Props = {
-  params: Promise<{ locale: 'tr' | 'en' }> | { locale: 'tr' | 'en' }
+  params: Promise<{ locale: 'tr' | 'en' | 'fr' }>
 };
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   // params'ı bekle
-  const resolvedParams = await Promise.resolve(params);
+  const resolvedParams = await params;
   const locale = resolvedParams.locale;
   
   // Doğru sayfa yolunu oluştur
@@ -62,5 +62,6 @@ export async function generateStaticParams() {
   return [
     { locale: 'tr'},
     { locale: 'en'},
+    { locale: 'fr'},
   ]
 }

@@ -7,7 +7,12 @@ export function LanguageProvider() {
   const pathname = usePathname();
   
   useEffect(() => {
-    const locale = pathname.startsWith("/en") ? "en" : "tr";
+    let locale = "tr";
+    if (pathname.startsWith("/en")) {
+      locale = "en";
+    } else if (pathname.startsWith("/fr")) {
+      locale = "fr";
+    }
     document.documentElement.lang = locale;
   }, [pathname]);
 

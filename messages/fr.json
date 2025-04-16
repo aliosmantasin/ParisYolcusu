@@ -1,0 +1,357 @@
+{
+  "Navbar": {
+    "HomePageNabar": "Accueil",
+    "Services": "Nos Services",
+    "About": "À Propos",
+    "CTA": "Contact WhatsApp",
+    "Light": "Mode clair",
+    "Dark": "Mode sombre"
+  },
+
+  "Settings": {
+    "CTA": "Réservation",
+    "CTAURL": "/reservation-form"
+  },
+
+  "Footer": {
+    "contact": "Contact",
+    "about": "À Propos",
+    "brandName": "Paris Yolcusu",
+    "span": "Tous Droits Réservés."
+  },
+
+  "HomePage": {
+    "firstGlance": {
+      "brandNameX": "Paris",
+      "brandnameY": "Passager",
+      "title": "Services de Transfert Aéroport Confortables et Sûrs à Paris",
+      "span": "Service VIP"
+    }
+  },
+
+  "Services": {
+    "title": "Services de Transport VIP avec Chauffeur et Visites à Paris",
+    "description": "Vous recherchez une expérience de transport luxueuse à Paris ? Des transferts aéroport aux visites guidées de la ville, notre service de véhicule avec chauffeur professionnel vous offre confort, sécurité et prestige à Paris.",
+
+    "subtitle1": "Service de Transfert Aéroport de Paris",
+    "p1": "Nous vous accueillons aux aéroports de Paris Charles de Gaulle (CDG), Orly (ORY) et Beauvais (BVA) et vous assurons un transfert confortable, sûr et ponctuel vers votre hôtel, vos réunions professionnelles ou le centre-ville. Nos chauffeurs sont professionnels et nos véhicules sont récents et bien équipés.",
+    "moreInfo1": "Envoyer le Formulaire d'Information",
+    "moreInfoLink1": "/information-form",
+    "detailedReview": "Examiner en Détail",
+    "detailedReviewLink": "/paris-airport-transfer",
+
+    "subtitle2": "Visites et Tours Culturels de Paris",
+    "p2": "Voulez-vous découvrir l'atmosphère historique et romantique de Paris ? Visitez la Tour Eiffel, le Musée du Louvre, la Cathédrale Notre-Dame et plus encore avec nos guides professionnels et nos véhicules confortables. Nos tours de Paris offrent des itinéraires personnalisés et une expérience sur mesure.",
+    "moreInfo2": "Envoyer le Formulaire d'Information",
+    "moreInfoLink2": "/information-form",
+    "reservationButton2": "Examiner en Détail",
+    "reservationForm2": "/paris-sightseeing-tours",
+
+    "subtitle3": "Location de Véhicule avec Chauffeur à Paris",
+    "p3": "Pour vos voyages d'affaires ou occasions spéciales à Paris, profitez d'une location de véhicule VIP avec chauffeur privé pour un voyage confortable. Nos véhicules avec chauffeur, disponibles à l'heure ou à la journée, rendent vos déplacements en ville sans stress et prestigieux.",
+    "moreInfo3": "Envoyer le Formulaire d'Information",
+    "moreInfoLink3": "/information-form",
+    "reservationButton3": "Réserver",
+    "reservationForm3": "/reservation-form",
+
+    "subtitle4": "Service de Transport vers Disneyland Paris",
+    "p4": "Vous prévoyez de visiter Disneyland Paris en famille ? Nous assurons un transport direct et confortable du centre-ville de Paris vers Disneyland avec nos véhicules sûrs et adaptés aux enfants. Choisissez-nous pour ajouter du confort à vos vacances !",
+    "moreInfo4": "Envoyer le Formulaire d'Information",
+    "moreInfoLink4": "/information-form",
+    "reservationButton4": "Réserver",
+    "reservationForm4": "/reservation-form"
+  },
+
+  "OurVehicles": {
+    "title": "Nos Véhicules",
+    "description": "Pour vos voyages confortables et sûrs, nos véhicules sont personnalisés selon le nombre de passagers et de bagages.",
+    "passengers": "Passager",
+    "luggage": "Bagage",
+    "reserve_now": "Réserver Maintenant",
+    "vehicle1": {
+      "name": "Véhicule Standard",
+      "description": "Combinant luxe et confort, la Mercedes-Benz Classe E se distingue par son design élégant et ses performances supérieures."
+    },
+    "vehicle2": {
+      "name": "Mercedes-Benz Classe V",
+      "description": "Avec son intérieur spacieux et son confort élevé, la Mercedes-Benz Classe V est le choix idéal pour les transferts de groupe."
+    },
+    "vehicle3": {
+      "name": "Mercedes-Benz Classe S",
+      "description": "L'ultra-luxueuse Mercedes-Benz Classe S offre le plus haut niveau de confort et de prestige."
+    }
+  },
+
+  "FeaturesBrand": {
+    "title": "Caractéristiques et Avantages",
+
+    "feature1": {
+      "title": "Transfert Confortable et Sûr",
+      "description1": "Nous offrons une expérience de voyage confortable avec des véhicules récents, confortables et climatisés.",
+      "description2": "Vous pouvez voyager en toute sécurité avec nos chauffeurs professionnels et expérimentés."
+    },
+    "feature2": {
+      "title": "Service de Transfert Aéroport de Paris",
+      "description1": "Transfert direct des aéroports Charles de Gaulle (CDG), Orly (ORY) et Beauvais (BVA) vers le centre-ville et votre hôtel.",
+      "description2": "Accueil et temps d'attente flexibles selon l'heure d'atterrissage de votre avion."
+    },
+    "feature3": {
+      "title": "Tours avec Chauffeur Privé",
+      "description1": "Tours VIP avec chauffeur privé pour découvrir les monuments emblématiques de Paris.",
+      "description2": "Itinéraires spéciaux vers la Tour Eiffel, le Musée du Louvre, les Champs-Élysées et autres sites touristiques."
+    },
+    "feature4": {
+      "title": "Transport Ponctuel et Sans Interruption",
+      "description1": "Votre chauffeur vous attendra à l'heure prévue, vous pouvez partir sans perdre de temps.",
+      "description2": "Les itinéraires les plus rapides et les plus appropriés sont déterminés selon la densité du trafic."
+    },
+    "feature5": {
+      "title": "Politique de Prix Fixe et Transparente",
+      "description1": "Tarification claire au moment de la réservation, sans frais supplémentaires surprises.",
+      "description2": "Tous les prix sont déterminés à l'avance, vous ne rencontrerez aucun paiement supplémentaire à la fin du voyage."
+    },
+    "feature6": {
+      "title": "Support Client 24/7",
+      "description1": "Nous offrons un support en turc, français et anglais à tout moment.",
+      "description2": "Vous pouvez facilement nous contacter pour les modifications de réservation ou les urgences."
+    },
+    "feature7": {
+      "title": "Service de Transport vers Disneyland Paris",
+      "description1": "Transport direct et confortable du centre-ville de Paris vers Disneyland avec nos véhicules sûrs et adaptés aux enfants.",
+      "description2": "Choisissez-nous pour ajouter du confort à vos vacances en famille à Disneyland Paris."
+    }
+  },
+
+  "CallToAction": {
+    "title": "Service de Transfert Confortable et Fiable à Paris !",
+    "description": "Avec nos véhicules de luxe et nos chauffeurs professionnels, nous vous transportons en toute sécurité vers votre destination à Paris. Contactez-nous maintenant pour les transferts aéroport VIP, les transferts hôtel et les visites guidées privées de la ville !",
+    "whatsapp": "Contact WhatsApp !"
+  },
+
+  "CleanCar": {
+    "title": "Phase de Contrôle et de Nettoyage de Nos Véhicules de Transfert",
+    "p1": "Structure du véhicule qui réduit à zéro le flux d'air entre le chauffeur et le passager",
+    "p2": "Kit d'hygiène à bord",
+    "p3": "Filtres à air nettoyés régulièrement",
+    "p4": "Désinfection des bagages à chaque transfert",
+    "p5": "Désinfection du véhicule avant chaque transfert",
+    "p6": "Système de suivi des chauffeurs et du personnel professionnel"
+  },
+
+  "BottomNavigation": {
+    "span1": "Accueil",
+    "span2": "Réserver",
+    "span2Link": "/reservation-form",
+    "span3": "WhatsApp"
+  },
+
+  "Apply": {
+    "applyForm": "Formulaire d'Information",
+    "name": "Votre Nom",
+    "surname": "Votre Prénom",
+    "phone": "Téléphone",
+    "email": "Email",
+    "selectService": "Sélectionnez le Service",
+    "select": "Sélectionner",
+    "AirplaneTransfer": "Transfert Aéroport",
+    "ParisTravelTours": "Tour de Paris",
+    "PrivateChauffeur": "Chauffeur Privé à Paris",
+    "SendForm": "Envoyer le Formulaire"
+  },
+
+  "NotFound404": {
+    "title": "Cette page n'existe pas",
+    "span": "Désolé, nous n'avons pas trouvé la page que vous recherchiez.",
+    "button": "Aller à l'Accueil"
+  },
+
+  "Reservation": {
+    "reservationForm": "Formulaire de Réservation",
+    "name": "Prénom",
+    "surname": "Nom",
+    "phone": "Téléphone",
+    "email": "E-mail",
+    "dateTime": "Date et Heure",
+    "passengers": "Nombre de Passagers",
+    "vehicleType": "Type de Véhicule",
+    "selectVehicle": "Sélectionner un Véhicule",
+    "pickupLocation": "Lieu de Prise en Charge",
+    "enterPickupLocation": "Entrez le lieu de prise en charge",
+    "dropoffLocation": "Lieu de Dépose",
+    "enterDropoffLocation": "Entrez le lieu de dépose",
+    "submitReservation": "Effectuer la Réservation",
+    "submitting": "Envoi en cours...",
+    "close": "Fermer",
+    "loadingMap": "Chargement de la carte..."
+  },
+
+  "ThankYou": {
+    "title": "Merci",
+    "message": "Nous vous contacterons dès que possible via WhatsApp pour confirmer votre réservation.",
+    "emailSent": "Les informations ont été envoyées à votre e-mail.",
+    "backToHome": "Retour à l'Accueil"
+  },
+
+  "ServiceFeatures": {
+    "title": "Pourquoi Nous Choisir ?",
+    "privateDriver": {
+      "title": "Service de Chauffeur Privé",
+      "description": "Une expérience de voyage confortable avec nos chauffeurs expérimentés et professionnels."
+    },
+    "professionalGuide": {
+      "title": "Guide Professionnel",
+      "description": "Découvrez toutes les beautés de Paris avec nos guides experts."
+    },
+    "customRoutes": {
+      "title": "Itinéraires Personnalisés",
+      "description": "Une expérience inoubliable avec des itinéraires de voyage personnalisés."
+    },
+    "hotelTransfer": {
+      "title": "Service de Transfert Hôtel",
+      "description": "Un service où vous êtes pris en charge depuis votre hôtel et ramené à votre hôtel après vos voyages."
+    }
+  },
+
+  "ParisAirportTransfer": {
+    "title": "Service de Transfert Aéroport de Paris",
+    "description": "Nous vous accueillons aux aéroports de Paris Charles de Gaulle (CDG), Orly (ORY) et Beauvais (BVA) et vous assurons un transfert confortable, sûr et ponctuel vers votre hôtel, vos réunions professionnelles ou le centre-ville.",
+    "cdg": {
+      "name": "Transfert depuis l'Aéroport Charles de Gaulle (CDG)",
+      "description": "L'aéroport Charles de Gaulle (CDG) est le plus grand aéroport de France et l'un des plus importants d'Europe. Nous vous assurons un transfert confortable et sûr depuis CDG vers votre destination à Paris."
+    },
+    "ory": {
+      "name": "Transfert depuis l'Aéroport Orly (ORY)",
+      "description": "L'aéroport Orly (ORY) est le deuxième aéroport de Paris. Nous vous assurons un transfert confortable et sûr depuis Orly vers votre destination à Paris."
+    },
+    "bva": {
+      "name": "Transfert depuis l'Aéroport Beauvais (BVA)",
+      "description": "L'aéroport Beauvais (BVA) est situé à environ 80 km au nord de Paris. Nous vous assurons un transfert confortable et sûr depuis Beauvais vers votre destination à Paris."
+    }
+  },
+
+  "Testimonials": {
+    "title": "Ce que disent nos clients",
+    "testimonial1": "Service exceptionnel ! Le chauffeur était ponctuel, professionnel et très aimable. La voiture était confortable et propre. Je recommande vivement leurs services pour les transferts aéroport.",
+    "testimonial2": "Nous avons utilisé leurs services pour un tour de Paris et c'était incroyable ! Le guide était très bien informé et nous a montré tous les sites importants. La voiture était luxueuse et confortable.",
+    "testimonial3": "Transfert parfait depuis l'aéroport CDG. Le chauffeur nous attendait avec un panneau à notre nom, la voiture était spacieuse et confortable. Service haut de gamme que je recommande.",
+    "testimonial4": "Tout était parfait, je les choisirai à nouveau sans hésiter.",
+    "testimonial5": "Ce n'était pas seulement un service, c'était une expérience. Ils nous ont compris et nous ont guidés selon nos besoins."
+  },
+
+  "FAQ": {
+    "title": "Questions Fréquemment Posées",
+    "description": "Trouvez des réponses aux questions les plus courantes sur nos services de transfert et de tourisme à Paris.",
+    "question1": "Comment puis-je réserver un service de transfert ?",
+    "answer1": "Vous pouvez réserver nos services en remplissant le formulaire de réservation sur notre site web, en nous contactant par téléphone ou en nous envoyant un message WhatsApp.",
+    "question2": "Quels sont les modes de paiement acceptés ?",
+    "answer2": "Nous acceptons les paiements par carte de crédit, virement bancaire et espèces. Les détails de paiement vous seront communiqués lors de la confirmation de votre réservation.",
+    "question3": "Combien de temps à l'avance dois-je réserver ?",
+    "answer3": "Nous recommandons de réserver au moins 24 heures à l'avance pour garantir la disponibilité. Cependant, nous pouvons également organiser des transferts de dernière minute si des véhicules sont disponibles.",
+    "question4": "Que se passe-t-il si mon vol est retardé ?",
+    "answer4": "Nous suivons l'état de votre vol et ajustons l'heure de prise en charge en conséquence. Notre service de transfert est flexible et s'adapte aux retards de vol sans frais supplémentaires.",
+    "question5": "Proposez-vous des services de guide touristique ?",
+    "answer5": "Oui, nous proposons des services de guide touristique professionnel pour des visites guidées de Paris. Nos guides sont expérimentés et peuvent vous faire découvrir les sites touristiques les plus importants de la ville."
+  },
+
+  "AboutUs": {
+    "title": "À Propos de Nous",
+    "description": "Paris Yolcusu est votre partenaire de confiance pour les services de transfert VIP et les visites guidées à Paris.",
+    "feature1": {
+      "title": "Services de Transfert VIP",
+      "description": "Nous offrons des transferts aéroport, hôtel et privés avec nos véhicules luxueux et confortables."
+    },
+    "feature2": {
+      "title": "Véhicules avec Chauffeur Privé",
+      "description": "Voyagez en toute sécurité et confort à Paris avec nos chauffeurs expérimentés et professionnels."
+    },
+    "feature3": {
+      "title": "Tours de la Ville",
+      "description": "Découvrez les sites historiques et touristiques de Paris avec nos tours exclusifs."
+    },
+    "feature4": {
+      "title": "Service 24/7",
+      "description": "Nous sommes là pour vous à tout moment ! Nous proposons des solutions pour vos besoins de transport 24h/24."
+    },
+    "feature5": {
+      "title": "Réservation Abordable et Flexible",
+      "description": "Profitez de nos tarifs compétitifs et de nos options d'annulation flexibles en réservant à l'avance."
+    }
+  },
+
+  "ParisHavalimanı": {
+    "firstGlance": {
+      "title": "Service de Transfert Aéroport de Paris",
+      "span": "Service VIP"
+    },
+    "CDGairport": {
+      "title": "Transfert depuis l'Aéroport Charles de Gaulle (CDG)",
+      "description1": "L'aéroport Charles de Gaulle (CDG) est le plus grand aéroport de France et l'un des plus importants d'Europe. Nous vous assurons un transfert confortable et sûr depuis CDG vers votre destination à Paris."
+    },
+    "ORLYairport": {
+      "title": "Transfert depuis l'Aéroport Orly (ORY)",
+      "description1": "L'aéroport Orly (ORY) est le deuxième aéroport de Paris. Nous vous assurons un transfert confortable et sûr depuis Orly vers votre destination à Paris."
+    },
+    "BVAairport": {
+      "title": "Transfert depuis l'Aéroport Beauvais (BVA)",
+      "description1": "L'aéroport Beauvais (BVA) est situé à environ 80 km au nord de Paris. Nous vous assurons un transfert confortable et sûr depuis Beauvais vers votre destination à Paris."
+    }
+  },
+
+  "ParisGeziTurlari": {
+    "HeroSection": {
+      "title": "Visites Guidées de Paris",
+      "description": "Découvrez la magie de Paris avec nos visites guidées personnalisées"
+    },
+    "ServiceFeatures": {
+      "title": "Pourquoi Nous Choisir ?",
+      "privateDriver": {
+        "title": "Service de Chauffeur Privé",
+        "description": "Une expérience de voyage confortable avec nos chauffeurs expérimentés et professionnels."
+      },
+      "professionalGuide": {
+        "title": "Guide Professionnel",
+        "description": "Découvrez toutes les beautés de Paris avec nos guides experts."
+      },
+      "customRoutes": {
+        "title": "Itinéraires Personnalisés",
+        "description": "Une expérience inoubliable avec des itinéraires de voyage personnalisés."
+      },
+      "hotelTransfer": {
+        "title": "Service de Transfert Hôtel",
+        "description": "Un service où vous êtes pris en charge depuis votre hôtel et ramené à votre hôtel après vos voyages."
+      }
+    },
+    "PopularAttractions": {
+      "title": "Attractions Populaires",
+      "eiffel": {
+        "title": "Tour Eiffel",
+        "description": "Le symbole emblématique de Paris, offrant une vue panoramique sur la ville."
+      },
+      "louvre": {
+        "title": "Musée du Louvre",
+        "description": "Le plus grand musée d'art du monde, abritant la Joconde et d'autres chefs-d'œuvre."
+      },
+      "notreDame": {
+        "title": "Cathédrale Notre-Dame",
+        "description": "Un chef-d'œuvre de l'architecture gothique française, situé sur l'île de la Cité."
+      },
+      "versailles": {
+        "title": "Château de Versailles",
+        "description": "L'ancien palais royal, connu pour ses jardins magnifiques et son opulence."
+      }
+    }
+  },
+
+  "BotProtection": {
+    "welcome": "Bienvenue",
+    "description": "Veuillez répondre à la question ci-dessous et compléter la vérification pour accéder à notre site.",
+    "question": "Quelle est la capitale de la France ?",
+    "answerPlaceholder": "Entrez votre réponse ici",
+    "verifyButton": "Vérifier et Continuer",
+    "validation": {
+      "answerRequired": "Veuillez répondre à la question",
+      "answerIncorrect": "Réponse incorrecte. La capitale de la France est Paris.",
+      "recaptchaRequired": "Veuillez compléter la vérification reCAPTCHA"
+    }
+  }
+} 

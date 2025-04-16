@@ -28,31 +28,38 @@
       "span": "VİP Service"
     }
   },
+  
   "Services": {
-    "title": "Private Chauffeur Travel Services in Paris",
-    "description": "We offer professional service in Paris airport transfer, private chauffeur car rental and city tours. You can choose us for comfortable and safe transportation!",
+    "title": "Paris'te Özel Şoförlü VIP Ulaşım ve Gezi Hizmetleri",
+    "description": "Paris'te lüks ulaşım deneyimi mi arıyorsunuz? Havalimanı transferlerinden özel şehir turlarına kadar, profesyonel şoförlü araç hizmetimizle Paris'te konfor, güvenlik ve prestiji bir arada sunuyoruz.",
 
-    "subtitle1": "Paris Airport Transfer ",
+    "subtitle1": "Paris Havalimanı Transfer Hizmeti",
+    "p1": "Paris Charles de Gaulle (CDG), Orly (ORY) ve Beauvais (BVA) havalimanlarından sizi karşılıyor ve otelinize, iş toplantılarınıza veya şehir merkezine konforlu, güvenli ve zamanında ulaşmanızı sağlıyoruz. Şoförlerimiz profesyonel, araçlarımız ise son model ve donanımlıdır.",
+    "moreInfo1": "Bilgi Alma Formu Yolla",
+    "moreInfoLink1": "/bilgi-alma-formu",
+    "detailedReview": "Detaylı İncele",
+    "detailedReviewLink": "/paris-havalimanlari-transfer",
 
-    "p1": "We welcome our passengers from Paris airports and ensure that they reach their destinations comfortably.",
-    "moreInfo1": "More Information",
-    "moreInfoLink1": "/information-form",
-    "detailedReview": "Detailed Review",
-    "detailedReviewLink": "/paris-airport-transfer",
+    "subtitle2": "Paris Gezi ve Kültür Turları",
+    "p2": "Paris'in tarihi ve romantik atmosferini keşfetmek ister misiniz? Eyfel Kulesi, Louvre Müzesi, Notre-Dame Katedrali ve daha fazlasını profesyonel rehber eşliğinde ve konforlu araçlarımızla gezebilirsiniz. Paris turlarımız, özel rota ve kişiselleştirilmiş deneyim sunar.",
+    "moreInfo2": "Bilgi Alma Formu Yolla",
+    "moreInfoLink2": "/bilgi-alma-formu",
+    "reservationButton2": "Detaylı İncele",
+    "reservationForm2": "/paris-gezi-turlari",
 
-    "subtitle2": "Paris Travel Tours",
-    "p2": "There are many places to visit in Paris! We have both transportation and a guide!",
-    "moreInfo2": "More Information",
-    "moreInfoLink2": "/information-form",
-    "reservationButton2": "Detailed Review",
-    "reservationForm2": "/paris-sightseeing-tours",
+    "subtitle3": "Paris'te Özel Şoförlü Araç Kiralama",
+    "p3": "İş gezilerinizde veya özel günlerinizde Paris'te VIP araç kiralama ve özel şoför hizmeti ile konforlu yolculuk yapabilirsiniz. Saatlik veya günlük seçeneklerle hizmet veren şoförlü araçlarımız, şehir içi ulaşımınızı stressiz ve prestijli hâle getirir.",
+    "moreInfo3": "Bilgi Alma Formu Yolla",
+    "moreInfoLink3": "/bilgi-alma-formu",
+    "reservationButton3": "Rezervasyon Yap",
+    "reservationForm3": "/rezervasyon-formu",
 
-    "subtitle3": "Private Chauffeur in Paris",
-    "p3": "You can travel to any region you want with our vehicles in Paris with vip service",
-    "moreInfo3": "More Information",
-    "moreInfoLink3": "/information-form",
-    "reservationButton3": "Make a Reservation",
-    "reservationForm3": "/reservation-formu"
+    "subtitle4": "Paris Disneyland Ulaşım Hizmeti",
+    "p4": "Ailenizle birlikte Disneyland Paris'e gitmeyi mi planlıyorsunuz? Konforlu, güvenli ve çocuk dostu araçlarımızla Paris şehir merkezinden Disneyland'a direkt ulaşım sağlıyoruz. Tatil keyfinize keyif katmak için bizi tercih edin!",
+    "moreInfo4": "Bilgi Alma Formu Yolla",
+    "moreInfoLink4": "/bilgi-alma-formu",
+    "reservationButton4": "Rezervasyon Yap",
+    "reservationForm4": "/rezervasyon-formu"
   },
 
   "OurVehicles": {
@@ -62,7 +69,7 @@
     "luggage": "Baggage",
     "reserve_now": "Book Now",
     "vehicle1": {
-      "name": "Standart Vehicle",
+      "name": "Tesla Model Y",
       "description": "Combining luxury and comfort, the Mercedes-Benz Classe E stands out with its stylish design and superior performance."
     },
     "vehicle2": {
@@ -119,7 +126,7 @@
   "ParisAirportTransfer": {
     "title": "Paris Airport Transfer Services",
     "description": "We offer a luxurious, comfortable and professional <strong>airport transfer service in Paris</strong>. Reach your hotel or desired address safely from the airport with our chauffeur-driven vehicles.",
-    "linkAirport":"/paris-airport-transfer",
+    "linkAirport": "/paris-airport-transfer",
     "cdg": {
       "name": "Charles de Gaulle Airport Transfer (CDG)",
       "description": "The largest airport in Paris, approximately 30 km from the city center. We provide direct access to popular destinations such as Disneyland, the Champs-Élysées and the Eiffel Tower."
@@ -140,7 +147,7 @@
     "testimonial2": "It was the best experience in Paris! Thank you.",
     "testimonial3": "Very professional and efficient service, highly recommended!",
     "testimonial4": "Everything was perfect, I will definitely choose them again.",
-    "testimonial5": "It wasn’t just a service, it was an experience. They understood us and guided us according to our needs."
+    "testimonial5": "It wasn't just a service, it was an experience. They understood us and guided us according to our needs."
   },
 
   "FAQ": {
@@ -197,9 +204,9 @@
 
   "BottomNavigation": {
     "span1": "Home Page",
-    "span2": "Rezervasyon Yap",
-    "span2Link":"/reservation-form",
-    "span3": "Whatsapp"
+    "span2": "Rezervation",
+    "span2Link": "/reservation-form",
+    "span3": "WhatsApp"
   },
 
   "Apply": {
@@ -213,7 +220,7 @@
     "AirplaneTransfer": "Airport Transfer",
     "ParisTravelTours": "Paris Sightseeing Tour",
     "PrivateChauffeur": "Private Chauffeur in Paris",
-    "SendForm":"Send Form"
+    "SendForm": "Send Form"
   },
 
   "NotFound404": {
@@ -248,7 +255,6 @@
     "emailSent": "Information has been sent to your email.",
     "backToHome": "Back to Home"
   },
-  
 
   "ParisHavalimanı": {
     "firstGlance": {
@@ -293,7 +299,7 @@
 
     "BVAairport": {
       "title": "Beauvais Havalimanı Transfer (BVA)",
-      "description1": "Beauvais Havalimanı'ndan Charles de Gaulle Havalimanı’na ulaşım için otobüs, tren ve özel transfer hizmetleri mevcuttur.",
+      "description1": "Beauvais Havalimanı'ndan Charles de Gaulle Havalimanı'na ulaşım için otobüs, tren ve özel transfer hizmetleri mevcuttur.",
       "description2": "BVA Havalimanı'ndan Paris şehir merkezine en hızlı ulaşım seçeneği özel transfer hizmetimizdir."
     },
 
@@ -349,6 +355,19 @@
         "title": "Hotel Transfer Service",
         "description": "A service where you are picked up from your hotel and dropped back to your hotel after your travels."
       }
+    }
+  },
+
+  "BotProtection": {
+    "welcome": "Welcome",
+    "description": "Please answer the question below and complete the verification to access our site.",
+    "question": "What is the capital of France?",
+    "answerPlaceholder": "Enter your answer here",
+    "verifyButton": "Verify and Continue",
+    "validation": {
+      "answerRequired": "Please answer the question",
+      "answerIncorrect": "Incorrect answer. The capital of France is Paris.",
+      "recaptchaRequired": "Please complete the reCAPTCHA verification"
     }
   }
 }

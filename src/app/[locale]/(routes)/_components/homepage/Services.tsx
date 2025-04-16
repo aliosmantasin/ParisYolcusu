@@ -33,6 +33,15 @@ const Services = () => {
     moreInfoUrl: t("moreInfoLink3"),
     applyButtonText: null,
     applyButtonLink: null,
+  },
+  {
+    img1: "/images/disneyland.webp",
+    title: t("subtitle4"),
+    description: t("p4"),
+    moreInfoText: t("moreInfo4"),
+    moreInfoUrl: t("moreInfoLink4"),
+    applyButtonText: null,
+    applyButtonLink: null,
   }
 ];
       
@@ -54,7 +63,7 @@ const Services = () => {
              <div className="flex flex-col items-center pb-10">
                  <Image className='w-24 h-24 mb-3 rounded-xl shadow-lg p-2 border border-[#fece47] object-contain' src={feature.img1 ?? "/images/default-image.jpg"} alt='gorsel1' width={200} height={200} />
 
-                 <h5 className="mb-1 text-xl font-medium text-gray-900 dark:text-white">{feature.title}</h5>
+                 <h5 className="mb-1 text-xl font-medium text-gray-900 dark:text-white text-center">{feature.title}</h5>
                  <span className="text-sm text-center text-gray-500 dark:text-gray-400">{feature.description}</span>
                  
                   <div className="flex mt-4 md:mt-6">

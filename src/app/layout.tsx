@@ -8,14 +8,16 @@ import { LanguageProvider } from "../components/LanguageProvider";
 // 🌍 Tüm çeviri dosyalarını içe aktar
 import trMessages from "../../messages/tr.json";
 import enMessages from "../../messages/en.json";
+import frMessages from "../../messages/fr.json";
 
 // 🌍 Desteklenen diller
-const locales = ["tr", "en"];
+const locales = ["tr", "en", "fr"];
 
 // 🌍 Çeviri mesajlarını haritaya ekle
 const messagesMap = {
   tr: trMessages,
   en: enMessages,
+  fr: frMessages,
 };
 
 export default async function RootLayout({

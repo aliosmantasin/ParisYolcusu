@@ -9,16 +9,16 @@ import { seoData } from '@/lib/seo';
 import { getLocalizedPath } from '@/lib/i18n';
 
 type Props = {
-  params: Promise<{ locale: 'tr' | 'en' }> | { locale: 'tr' | 'en' }
+  params: Promise<{ locale: 'tr' | 'en' | 'fr' }>
 };
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   // params'ı bekle
-  const resolvedParams = await Promise.resolve(params);
+  const resolvedParams = await params;
   const locale = resolvedParams.locale;
   
   // Doğru sayfa yolunu oluştur
-  const pageKey = getLocalizedPath('paris-havalimanlari-transfer', locale);
+  const pageKey = getLocalizedPath('paris-gezi-turlari', locale);
   const pagePath = pageKey;
 
   console.log("📌 Kullanılan dil:", locale);
@@ -56,6 +56,8 @@ export default function ParisGeziTurlar() {
 
 export async function generateStaticParams() {
   return [
-    { locale: 'tr', slug: 'paris-gezi-turlari' },
+    { locale: 'tr' },
+    { locale: 'en' },
+    { locale: 'fr' },
   ]
 }

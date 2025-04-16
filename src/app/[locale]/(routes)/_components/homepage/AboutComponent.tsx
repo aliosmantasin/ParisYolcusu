@@ -26,7 +26,6 @@ const AboutComponent = () => {
               alt='Paris Yolcusu' 
               width={600} 
               height={300} 
-              layout='intrinsic' 
               className='relative rounded-xl object-contain'
             />
 

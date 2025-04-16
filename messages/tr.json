@@ -30,29 +30,36 @@
   },
 
   "Services": {
-    "title": "Özel Şoför İle Pariste Yolculuk Hizmetleri",
-    "description": "Paris’te havalimanı transferi, özel şoförlü araç kiralama ve şehir içi gezi turlarında profesyonel hizmet sunuyoruz. Konforlu ve güvenli ulaşım için bizi tercih edebilirsiniz!",
+    "title": "Paris'te Özel Şoförlü VIP Ulaşım ve Gezi Hizmetleri",
+    "description": "Paris'te lüks ulaşım deneyimi mi arıyorsunuz? Havalimanı transferlerinden özel şehir turlarına kadar, profesyonel şoförlü araç hizmetimizle Paris’te konfor, güvenlik ve prestiji bir arada sunuyoruz.",
 
-    "subtitle1": "Paris Havalimanı Transfer ",
-    "p1": "Yolcularımızı Paris havalimanlarından karşılıyor ulaşmak istedikleri yere konforlu bir şekilde ulaşmalarını sağlayoruz.",
+    "subtitle1": "Paris Havalimanı Transfer Hizmeti",
+    "p1": "Paris Charles de Gaulle (CDG), Orly (ORY) ve Beauvais (BVA) havalimanlarından sizi karşılıyor ve otelinize, iş toplantılarınıza veya şehir merkezine konforlu, güvenli ve zamanında ulaşmanızı sağlıyoruz. Şoförlerimiz profesyonel, araçlarımız ise son model ve donanımlıdır.",
     "moreInfo1": "Bilgi Alma Formu Yolla",
     "moreInfoLink1": "/bilgi-alma-formu",
     "detailedReview": "Detaylı İncele",
     "detailedReviewLink": "/paris-havalimanlari-transfer",
 
-    "subtitle2": "Paris Gezi Turları",
-    "p2": "Pariste gezilecek çok yer var! Bizde de hem ulaşım hem rehber var!",
+    "subtitle2": "Paris Gezi ve Kültür Turları",
+    "p2": "Paris’in tarihi ve romantik atmosferini keşfetmek ister misiniz? Eyfel Kulesi, Louvre Müzesi, Notre-Dame Katedrali ve daha fazlasını profesyonel rehber eşliğinde ve konforlu araçlarımızla gezebilirsiniz. Paris turlarımız, özel rota ve kişiselleştirilmiş deneyim sunar.",
     "moreInfo2": "Bilgi Alma Formu Yolla",
     "moreInfoLink2": "/bilgi-alma-formu",
     "reservationButton2": "Detaylı İncele",
     "reservationForm2": "/paris-gezi-turlari",
 
-    "subtitle3": "Paris'te Özel Şoför",
-    "p3": "Paris içerisinde vip hizmet ile istediğiniz bölgeye araçlarımızla yolculuk edebilirsin",
+    "subtitle3": "Paris’te Özel Şoförlü Araç Kiralama",
+    "p3": "İş gezilerinizde veya özel günlerinizde Paris’te VIP araç kiralama ve özel şoför hizmeti ile konforlu yolculuk yapabilirsiniz. Saatlik veya günlük seçeneklerle hizmet veren şoförlü araçlarımız, şehir içi ulaşımınızı stressiz ve prestijli hâle getirir.",
     "moreInfo3": "Bilgi Alma Formu Yolla",
     "moreInfoLink3": "/bilgi-alma-formu",
     "reservationButton3": "Rezervasyon Yap",
-    "reservationForm3": "/rezervasyon-formu"
+    "reservationForm3": "/rezervasyon-formu",
+
+    "subtitle4": "Paris Disneyland Ulaşım Hizmeti",
+    "p4": "Ailenizle birlikte Disneyland Paris'e gitmeyi mi planlıyorsunuz? Konforlu, güvenli ve çocuk dostu araçlarımızla Paris şehir merkezinden Disneyland’a direkt ulaşım sağlıyoruz. Tatil keyfinize keyif katmak için bizi tercih edin!",
+    "moreInfo4": "Bilgi Alma Formu Yolla",
+    "moreInfoLink4": "/bilgi-alma-formu",
+    "reservationButton4": "Rezervasyon Yap",
+    "reservationForm4": "/rezervasyon-formu"
   },
 
   "OurVehicles": {
@@ -62,7 +69,7 @@
     "luggage": "Bagaj",
     "reserve_now": "Şimdi Rezervasyon Yap",
     "vehicle1": {
-      "name": "Sedan Araç",
+      "name": "Tesla Model Y",
       "description": "Lüks ve konforu bir araya getiren Mercedes-Benz Classe E, şık tasarımı ve üstün performansıyla öne çıkıyor."
     },
     "vehicle2": {
@@ -119,7 +126,7 @@
   "ParisAirportTransfer": {
     "title": "Paris Havalimanlarından Transfer Hizmetleri",
     "description": "Paris’te lüks, konforlu ve profesyonel bir <strong>havalimanı transfer hizmeti</strong> sunuyoruz. Özel şoförlü araçlarımızla havalimanından otelinize veya dilediğiniz adrese güvenle ulaşın.",
-    "linkAirport":"/paris-havalimanlari-transfer",
+    "linkAirport": "/paris-havalimanlari-transfer",
     "cdg": {
       "name": "Charles de Gaulle Havalimanı Transfer (CDG)",
       "description": "Paris’in en büyük havalimanı, şehir merkezine yaklaşık 30 km uzaklıktadır. Disneyland, Champs-Élysées ve Eyfel Kulesi gibi popüler noktalara doğrudan ulaşım sağlıyoruz."
@@ -196,9 +203,9 @@
 
   "BottomNavigation": {
     "span1": "Ana Sayfa",
-    "span2": "Rezervasyon Yap",
-    "span2Link":"/rezervasyon-formu",
-    "span3": "Whatsapp"
+    "span2": "Rezervasyon",
+    "span2Link": "/rezervasyon-formu",
+    "span3": "WhatsApp"
   },
 
   "Apply": {
@@ -212,7 +219,7 @@
     "AirplaneTransfer": "Havalimanı Transfer",
     "ParisTravelTours": "Paris Gezi Turu",
     "PrivateChauffeur": "Pariste Özel Şoför",
-    "SendForm":"Form Gönder"
+    "SendForm": "Form Gönder"
   },
 
   "NotFound404": {
@@ -288,7 +295,7 @@
         }
       }
     },
-    
+
     "BVAairport": {
       "title": "Beauvais Airport Transfer (BVA)",
       "description1": "There are bus, train and private transfer services available for transportation from Beauvais Airport to Charles de Gaulle Airport.",
@@ -303,51 +310,63 @@
     }
   },
 
-    "ParisGeziTurlari": {
-      "HeroSection": {
-        "title": "Paris Gezi Turları",
-        "description": "Özel şoför ve profesyonel rehberlerimizle Paris’in en güzel yerlerini keşfedin. Konforlu ve unutulmaz bir deneyim için sizi bekliyoruz."
-      },
+  "ParisGeziTurlari": {
+    "HeroSection": {
+      "title": "Paris Gezi Turları",
+      "description": "Özel şoför ve profesyonel rehberlerimizle Paris’in en güzel yerlerini keşfedin. Konforlu ve unutulmaz bir deneyim için sizi bekliyoruz."
+    },
 
-      "PopularAttractions": {
-        "title": "Paris'in En Popüler Yerleri",
-        "eiffel": {
-          "title": "Eyfel Kulesi",
-          "description": "Paris'in simgesi olan Eyfel Kulesi'ni ziyaret edin ve muhteşem manzaranın keyfini çıkarın."
-        },
-        "louvre": {
-          "title": "Louvre Müzesi",
-          "description": "Dünyanın en büyük müzelerinden biri olan Louvre'da sanatın en değerli eserlerini görün."
-        },
-        "notreDame": {
-          "title": "Notre-Dame Katedrali",
-          "description": "Gotik mimarinin en güzel örneklerinden biri olan Notre-Dame'ı ziyaret edin."
-        },
-        "versailles": {
-          "title": "Versay Sarayı",
-          "description": "Fransa'nın en görkemli sarayını ve muhteşem bahçelerini keşfedin."
-        }
+    "PopularAttractions": {
+      "title": "Paris'in En Popüler Yerleri",
+      "eiffel": {
+        "title": "Eyfel Kulesi",
+        "description": "Paris'in simgesi olan Eyfel Kulesi'ni ziyaret edin ve muhteşem manzaranın keyfini çıkarın."
       },
+      "louvre": {
+        "title": "Louvre Müzesi",
+        "description": "Dünyanın en büyük müzelerinden biri olan Louvre'da sanatın en değerli eserlerini görün."
+      },
+      "notreDame": {
+        "title": "Notre-Dame Katedrali",
+        "description": "Gotik mimarinin en güzel örneklerinden biri olan Notre-Dame'ı ziyaret edin."
+      },
+      "versailles": {
+        "title": "Versay Sarayı",
+        "description": "Fransa'nın en görkemli sarayını ve muhteşem bahçelerini keşfedin."
+      }
+    },
 
-      "ServiceFeatures": {
-        "title": "Neden Bizi Seçmelisiniz?",
-        "privateDriver": {
-          "title": "Özel Şoför Hizmeti",
-          "description": "Deneyimli ve profesyonel şoförlerimizle konforlu bir seyahat deneyimi."
-        },
-        "professionalGuide": {
-          "title": "Profesyonel Rehber",
-          "description": "Alanında uzman rehberlerimizle Paris’in tüm güzelliklerini keşfedin."
-        },
-        "customRoutes": {
-          "title": "Özelleştirilmiş Rotalar",
-          "description": "İsteğinize göre özelleştirilmiş gezi rotaları ile unutulmaz bir deneyim."
-        },
-        "hotelTransfer": {
-          "title": "Otel Transfer Hizmeti",
-          "description": "Otelinizden alınıp, gezileriniz sonrası tekrar otelinize bırakılma hizmeti."
-        }
+    "ServiceFeatures": {
+      "title": "Neden Bizi Seçmelisiniz?",
+      "privateDriver": {
+        "title": "Özel Şoför Hizmeti",
+        "description": "Deneyimli ve profesyonel şoförlerimizle konforlu bir seyahat deneyimi."
+      },
+      "professionalGuide": {
+        "title": "Profesyonel Rehber",
+        "description": "Alanında uzman rehberlerimizle Paris’in tüm güzelliklerini keşfedin."
+      },
+      "customRoutes": {
+        "title": "Özelleştirilmiş Rotalar",
+        "description": "İsteğinize göre özelleştirilmiş gezi rotaları ile unutulmaz bir deneyim."
+      },
+      "hotelTransfer": {
+        "title": "Otel Transfer Hizmeti",
+        "description": "Otelinizden alınıp, gezileriniz sonrası tekrar otelinize bırakılma hizmeti."
       }
     }
+  },
 
+  "BotProtection": {
+    "welcome": "Hoş Geldiniz",
+    "description": "Sitemize erişmek için lütfen aşağıdaki soruyu cevaplayınız ve doğrulamayı yapınız.",
+    "question": "Fransa'nın başkenti neresidir?",
+    "answerPlaceholder": "Cevabınızı buraya yazın",
+    "verifyButton": "Doğrula ve Devam Et",
+    "validation": {
+      "answerRequired": "Lütfen soruyu cevaplayınız",
+      "answerIncorrect": "Cevap yanlış. Fransanın başkenti Paris'tir.",
+      "recaptchaRequired": "Lütfen reCAPTCHA doğrulamasını yapın"
+    }
+  }
 }

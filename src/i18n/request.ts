@@ -1,7 +1,7 @@
 import { getRequestConfig } from "next-intl/server";
 import { routing } from "./routing";
 
-type Locale = "tr" | "en"; // ✅ Doğru locale tanımları
+type Locale = "tr" | "en" | "fr";
 
 export default getRequestConfig(async ({ requestLocale }) => {
   // ✅ Promise'i çözmek için await kullanıyoruz

@@ -40,7 +40,7 @@ export async function POST(req: NextRequest) {
       text: `Yeni bir başvuru alındı:\nAdı: ${firstName} ${lastName}\nEmail: ${email}\nTelefon: ${phone}\nHizmet Türü: ${service}`,
       html: `
         <div style="font-family: Arial, sans-serif; line-height: 1.6;">
-          <h2 style="color: #1e74bd;">Yeni Rezervasyon Formu</h2>
+          <h2 style="color: #1e74bd;">Yeni Bilgi Alma Formu</h2>
           <p><strong>Adı:</strong> ${firstName} ${lastName}</p>
           <p><strong>Email:</strong> ${email}</p>
           <p><strong>Telefon:</strong> ${phone}</p>
