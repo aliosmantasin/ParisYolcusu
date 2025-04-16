@@ -152,7 +152,7 @@ const InfoForm = () => {
 
           <div className="mb-4">
             <ReCAPTCHA
-              sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY || ""}
+              sitekey={process.env.RECAPTCHA_SITE_KEY || ""}
               onChange={(token) => setValue("recaptchaToken", token || "")}
             />
             {errors.recaptchaToken && <p className="text-red-500">{errors.recaptchaToken.message}</p>}
