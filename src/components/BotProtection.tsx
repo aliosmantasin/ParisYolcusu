@@ -39,8 +39,10 @@ export function BotProtection() {
 
   useEffect(() => {
     setIsClient(true);
-    console.log('BotProtection - isClient:', true);
-    console.log('BotProtection - siteKey:', process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY);
+    // Environment variable test logları
+    console.log('Environment Variables Test:');
+    console.log('NEXT_PUBLIC_RECAPTCHA_SITE_KEY:', process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY);
+    console.log('All env variables:', process.env);
   }, []);
 
   // Debug: Log the current locale
