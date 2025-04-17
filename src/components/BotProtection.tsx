@@ -39,6 +39,8 @@ export function BotProtection() {
 
   useEffect(() => {
     setIsClient(true);
+    console.log('BotProtection - isClient:', true);
+    console.log('BotProtection - siteKey:', process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY);
   }, []);
 
   // Debug: Log the current locale
@@ -83,7 +85,7 @@ export function BotProtection() {
     setValue("recaptchaToken", token || "", { shouldValidate: true });
   };
 
-  if (!showModal || isVerified || !isClient) {
+  if (!showModal || isVerified) {
     return null;
   }
 
@@ -124,9 +126,9 @@ export function BotProtection() {
               </div>
               
               <div className="mb-6">
-                {isClient && process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY && (
+                {isClient && (
                   <ReCAPTCHA
-                    sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}
+                    sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY || ""}
                     onChange={onRecaptchaChange}
                   />
                 )}

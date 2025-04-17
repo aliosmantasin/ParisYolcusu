@@ -108,6 +108,8 @@ export function LocaleAwareBotProtection() {
 
   useEffect(() => {
     setIsClient(true);
+    console.log('LocaleAwareBotProtection - isClient:', true);
+    console.log('LocaleAwareBotProtection - siteKey:', process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY);
   }, []);
 
   useEffect(() => {
@@ -147,7 +149,7 @@ export function LocaleAwareBotProtection() {
     setValue("recaptchaToken", token || "", { shouldValidate: true });
   };
 
-  if (!showModal || isVerified || !isClient) {
+  if (!showModal || isVerified) {
     return null;
   }
 
@@ -188,9 +190,9 @@ export function LocaleAwareBotProtection() {
               </div> */}
               
               <div className="mb-6">
-                {isClient && process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY && (
+                {isClient && (
                   <ReCAPTCHA
-                    sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}
+                    sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY || ""}
                     onChange={onRecaptchaChange}
                   />
                 )}
