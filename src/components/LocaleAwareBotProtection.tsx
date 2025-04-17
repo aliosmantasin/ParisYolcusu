@@ -1,12 +1,18 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import ReCAPTCHA from "react-google-recaptcha";
+import dynamic from 'next/dynamic';
 import { useForm } from "react-hook-form";
 import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { useLocale } from "next-intl";
 import { usePathname } from "next/navigation";
+
+// Dinamik olarak ReCAPTCHA'yı import et
+const ReCAPTCHA = dynamic(() => import('react-google-recaptcha'), {
+  ssr: false,
+  loading: () => <div>Loading...</div>
+});
 
 // Translations for different languages
 const translations = {
@@ -68,6 +74,7 @@ type FormData = {
 export function LocaleAwareBotProtection() {
   const [showModal, setShowModal] = useState(false);
   const [isVerified, setIsVerified] = useState(false);
+  const [isClient, setIsClient] = useState(false);
   const locale = useLocale();
   const pathname = usePathname();
   
@@ -98,6 +105,10 @@ export function LocaleAwareBotProtection() {
     },
     mode: "onChange"
   });
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
 
   useEffect(() => {
     // Check if user is already verified and verification hasn't expired
@@ -136,7 +147,7 @@ export function LocaleAwareBotProtection() {
     setValue("recaptchaToken", token || "", { shouldValidate: true });
   };
 
-  if (!showModal || isVerified) {
+  if (!showModal || isVerified || !isClient) {
     return null;
   }
 
@@ -177,10 +188,12 @@ export function LocaleAwareBotProtection() {
               </div> */}
               
               <div className="mb-6">
-                <ReCAPTCHA
-                  sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY || ""}
-                  onChange={onRecaptchaChange}
-                />
+                {isClient && process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY && (
+                  <ReCAPTCHA
+                    sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}
+                    onChange={onRecaptchaChange}
+                  />
+                )}
                 {errors.recaptchaToken && (
                   <p className="mt-1 text-sm text-red-500">
                     {t.validation[errors.recaptchaToken.message as keyof typeof t.validation]}

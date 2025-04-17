@@ -1,11 +1,17 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import ReCAPTCHA from "react-google-recaptcha";
+import dynamic from 'next/dynamic';
 import { useForm } from "react-hook-form";
 import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { useTranslations, useLocale } from "next-intl";
+
+// Dinamik olarak ReCAPTCHA'yı import et
+const ReCAPTCHA = dynamic(() => import('react-google-recaptcha'), {
+  ssr: false,
+  loading: () => <div>Loading...</div>
+});
 
 // Validasyon şeması
 const formSchema = yup.object().shape({
@@ -27,8 +33,13 @@ type FormData = {
 export function BotProtection() {
   const [showModal, setShowModal] = useState(false);
   const [isVerified, setIsVerified] = useState(false);
+  const [isClient, setIsClient] = useState(false);
   const locale = useLocale();
   const t = useTranslations("BotProtection");
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
 
   // Debug: Log the current locale
   console.log("Current locale:", locale);
@@ -72,7 +83,7 @@ export function BotProtection() {
     setValue("recaptchaToken", token || "", { shouldValidate: true });
   };
 
-  if (!showModal || isVerified) {
+  if (!showModal || isVerified || !isClient) {
     return null;
   }
 
@@ -113,10 +124,12 @@ export function BotProtection() {
               </div>
               
               <div className="mb-6">
-                <ReCAPTCHA
-                  sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY || ""}
-                  onChange={onRecaptchaChange}
-                />
+                {isClient && process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY && (
+                  <ReCAPTCHA
+                    sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}
+                    onChange={onRecaptchaChange}
+                  />
+                )}
                 {errors.recaptchaToken && (
                   <p className="mt-1 text-sm text-red-500">
                     {t(errors.recaptchaToken.message as string)}
