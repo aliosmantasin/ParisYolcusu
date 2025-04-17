@@ -100,8 +100,8 @@ export const metadata: Metadata = {
   },
   
   verification: {
-    google: "nojSoW1CdLhiYDQ8XnjhXKsGckcs3RSKFx2QQckxgO", 
-    // nojSoW1CdLhiYDQ8XnjhXKsGckcs3RSKFx2QQc
+    google: "nojSoW1CdLhiYDQ8XnjhXKsGckcs3RSKFx2QQckxgOc", 
+    
   },
   icons: {
     icon: [
