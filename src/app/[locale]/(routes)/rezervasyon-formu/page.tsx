@@ -149,7 +149,7 @@ const ReservationForm = () => {
   });
 
   const { isLoaded } = useJsApiLoader({
-    googleMapsApiKey: process.env.GOOGLE_MAPS_API_KEY!,
+    googleMapsApiKey: process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY!,
     libraries: ["places"],
   });
 
@@ -432,7 +432,7 @@ const ReservationForm = () => {
 
           <div className="my-4">
             <ReCAPTCHA
-              sitekey={process.env.RECAPTCHA_SITE_KEY || ""}
+              sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY || ""}
               onChange={(token) => setValue("recaptchaToken", token || "")}
             />
             {errors.recaptchaToken && <p className="text-red-500 text-sm">{errors.recaptchaToken.message}</p>}
