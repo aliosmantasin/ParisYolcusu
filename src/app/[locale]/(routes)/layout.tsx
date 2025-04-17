@@ -98,8 +98,10 @@ export const metadata: Metadata = {
     title: "Paris Havalimanı Transfer Hizmeti | Paris Yolcusu",
     description: "Paris'te konforlu ve güvenilir VIP transfer hizmeti!",
   },
+  
   verification: {
-    google: "nojSoW1CdLhiYDQ8XnjhXKsGckcs3RSKFx2QQc",
+    google: "nojSoW1CdLhiYDQ8XnjhXKsGckcs3RSKFx2QQckxgO", 
+    // nojSoW1CdLhiYDQ8XnjhXKsGckcs3RSKFx2QQc
   },
   icons: {
     icon: [
