@@ -28,38 +28,39 @@
       "span": "VİP Service"
     }
   },
-  
+
   "Services": {
-    "title": "Paris'te Özel Şoförlü VIP Ulaşım ve Gezi Hizmetleri",
-    "description": "Paris'te lüks ulaşım deneyimi mi arıyorsunuz? Havalimanı transferlerinden özel şehir turlarına kadar, profesyonel şoförlü araç hizmetimizle Paris'te konfor, güvenlik ve prestiji bir arada sunuyoruz.",
+    "title": "Private Chauffeur VIP Transportation and Tour Services in Paris",
+    "description": "Are you looking for a luxury transportation experience in Paris? From airport transfers to private city tours, we offer comfort, safety and prestige together in Paris with our professional chauffeur-driven car service.",
 
-    "subtitle1": "Paris Havalimanı Transfer Hizmeti",
-    "p1": "Paris Charles de Gaulle (CDG), Orly (ORY) ve Beauvais (BVA) havalimanlarından sizi karşılıyor ve otelinize, iş toplantılarınıza veya şehir merkezine konforlu, güvenli ve zamanında ulaşmanızı sağlıyoruz. Şoförlerimiz profesyonel, araçlarımız ise son model ve donanımlıdır.",
-    "moreInfo1": "Bilgi Alma Formu Yolla",
+    "subtitle1": "Paris Airport Transfer Service",
+    "p1": "We welcome you from Paris Charles de Gaulle (CDG), Orly (ORY) and Beauvais (BVA) airports and ensure that you arrive at your hotel, business meetings or the city center in comfort, safety and on time. Our drivers are professional and our vehicles are the latest model and equipped.",
+    "moreInfo1": "Send Information Form",
     "moreInfoLink1": "/bilgi-alma-formu",
-    "detailedReview": "Detaylı İncele",
-    "detailedReviewLink": "/paris-havalimanlari-transfer",
+    "detailedReview": "Detailed Review",
+    "detailedReviewLink": "/paris-airports-transfer",
 
-    "subtitle2": "Paris Gezi ve Kültür Turları",
-    "p2": "Paris'in tarihi ve romantik atmosferini keşfetmek ister misiniz? Eyfel Kulesi, Louvre Müzesi, Notre-Dame Katedrali ve daha fazlasını profesyonel rehber eşliğinde ve konforlu araçlarımızla gezebilirsiniz. Paris turlarımız, özel rota ve kişiselleştirilmiş deneyim sunar.",
-    "moreInfo2": "Bilgi Alma Formu Yolla",
+    "subtitle2": "Paris Travel and Cultural Tours",
+    "p2": "Would you like to discover the historical and romantic atmosphere of Paris? You can visit the Eiffel Tower, Louvre Museum, Notre-Dame Cathedral and more with our professional guides and comfortable vehicles. Our Paris tours offer a special route and personalized experience.",
+    "moreInfo2": "Send Information Form",
     "moreInfoLink2": "/bilgi-alma-formu",
-    "reservationButton2": "Detaylı İncele",
-    "reservationForm2": "/paris-gezi-turlari",
+    "reservationButton2": "View in Detail",
+    "reservationForm2": "/paris-travel-turlari",
 
-    "subtitle3": "Paris'te Özel Şoförlü Araç Kiralama",
-    "p3": "İş gezilerinizde veya özel günlerinizde Paris'te VIP araç kiralama ve özel şoför hizmeti ile konforlu yolculuk yapabilirsiniz. Saatlik veya günlük seçeneklerle hizmet veren şoförlü araçlarımız, şehir içi ulaşımınızı stressiz ve prestijli hâle getirir.",
-    "moreInfo3": "Bilgi Alma Formu Yolla",
-    "moreInfoLink3": "/bilgi-alma-formu",
-    "reservationButton3": "Rezervasyon Yap",
-    "reservationForm3": "/rezervasyon-formu",
+    "subtitle3": "Car Rental with Private Driver in Paris",
+    "p3": "You can travel comfortably with VIP car rental and private chauffeur service in Paris on your business trips or special days. Our chauffeured vehicles, which provide hourly or daily service, make your city transportation stress-free and prestigious.",
 
-    "subtitle4": "Paris Disneyland Ulaşım Hizmeti",
-    "p4": "Ailenizle birlikte Disneyland Paris'e gitmeyi mi planlıyorsunuz? Konforlu, güvenli ve çocuk dostu araçlarımızla Paris şehir merkezinden Disneyland'a direkt ulaşım sağlıyoruz. Tatil keyfinize keyif katmak için bizi tercih edin!",
-    "moreInfo4": "Bilgi Alma Formu Yolla",
-    "moreInfoLink4": "/bilgi-alma-formu",
-    "reservationButton4": "Rezervasyon Yap",
-    "reservationForm4": "/rezervasyon-formu"
+    "moreInfo3": "Send Information Form",
+    "moreInfoLink3": "/information-alert-formu",
+    "reservationButton3": "Make a Reservation",
+    "reservationForm3": "/reservation-formu",
+
+    "subtitle4": "Paris Disneyland Transportation Service",
+    "p4": "Are you planning to go to Disneyland Paris with your family? We provide direct transportation from Paris city center to Disneyland with our comfortable, safe and child-friendly vehicles. Choose us to add joy to your holiday!",
+    "moreInfo4": "Send Information Form",
+    "moreInfoLink4": "/information-alert-formu",
+    "reservationButton4": "Make a Reservation",
+    "reservationForm4": "/reservation-formu"
   },
 
   "OurVehicles": {
