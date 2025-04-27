@@ -13,11 +13,14 @@
     "CTAURL": "/rezervasyon-formu"
   },
 
-  "Footer": {
+  "FooterLinks": {
     "contact": "İletişim",
     "about": "Hakkımızda",
     "brandName": "Paris Yolcusu",
-    "span": "Tüm Hakları Saklıdır."
+    "span": "Tüm Hakları Saklıdır.",
+    "cookiePolicy": "Çerez Politikası",
+    "cookiePolicyUrl": "/cerez-politikasi",
+    "savePreferences": "Tercihleri Kaydet"
   },
 
   "HomePage": {
@@ -31,7 +34,7 @@
 
   "Services": {
     "title": "Paris'te Özel Şoförlü VIP Ulaşım ve Gezi Hizmetleri",
-    "description": "Paris'te lüks ulaşım deneyimi mi arıyorsunuz? Havalimanı transferlerinden özel şehir turlarına kadar, profesyonel şoförlü araç hizmetimizle Paris’te konfor, güvenlik ve prestiji bir arada sunuyoruz.",
+    "description": "Paris'te lüks ulaşım deneyimi mi arıyorsunuz? Havalimanı transferlerinden özel şehir turlarına kadar, profesyonel şoförlü araç hizmetimizle Paris'te konfor, güvenlik ve prestiji bir arada sunuyoruz.",
 
     "subtitle1": "Paris Havalimanı Transfer Hizmeti",
     "p1": "Paris Charles de Gaulle (CDG), Orly (ORY) ve Beauvais (BVA) havalimanlarından sizi karşılıyor ve otelinize, iş toplantılarınıza veya şehir merkezine konforlu, güvenli ve zamanında ulaşmanızı sağlıyoruz. Şoförlerimiz profesyonel, araçlarımız ise son model ve donanımlıdır.",
@@ -41,21 +44,21 @@
     "detailedReviewLink": "/paris-havalimanlari-transfer",
 
     "subtitle2": "Paris Gezi ve Kültür Turları",
-    "p2": "Paris’in tarihi ve romantik atmosferini keşfetmek ister misiniz? Eyfel Kulesi, Louvre Müzesi, Notre-Dame Katedrali ve daha fazlasını profesyonel rehber eşliğinde ve konforlu araçlarımızla gezebilirsiniz. Paris turlarımız, özel rota ve kişiselleştirilmiş deneyim sunar.",
+    "p2": "Paris'in tarihi ve romantik atmosferini keşfetmek ister misiniz? Eyfel Kulesi, Louvre Müzesi, Notre-Dame Katedrali ve daha fazlasını profesyonel rehber eşliğinde ve konforlu araçlarımızla gezebilirsiniz. Paris turlarımız, özel rota ve kişiselleştirilmiş deneyim sunar.",
     "moreInfo2": "Bilgi Alma Formu Yolla",
     "moreInfoLink2": "/bilgi-alma-formu",
     "reservationButton2": "Detaylı İncele",
     "reservationForm2": "/paris-gezi-turlari",
 
-    "subtitle3": "Paris’te Özel Şoförlü Araç Kiralama",
-    "p3": "İş gezilerinizde veya özel günlerinizde Paris’te VIP araç kiralama ve özel şoför hizmeti ile konforlu yolculuk yapabilirsiniz. Saatlik veya günlük seçeneklerle hizmet veren şoförlü araçlarımız, şehir içi ulaşımınızı stressiz ve prestijli hâle getirir.",
+    "subtitle3": "Paris'te Özel Şoförlü Araç Kiralama",
+    "p3": "İş gezilerinizde veya özel günlerinizde Paris'te VIP araç kiralama ve özel şoför hizmeti ile konforlu yolculuk yapabilirsiniz. Saatlik veya günlük seçeneklerle hizmet veren şoförlü araçlarımız, şehir içi ulaşımınızı stressiz ve prestijli hâle getirir.",
     "moreInfo3": "Bilgi Alma Formu Yolla",
     "moreInfoLink3": "/bilgi-alma-formu",
     "reservationButton3": "Rezervasyon Yap",
     "reservationForm3": "/rezervasyon-formu",
 
     "subtitle4": "Paris Disneyland Ulaşım Hizmeti",
-    "p4": "Ailenizle birlikte Disneyland Paris'e gitmeyi mi planlıyorsunuz? Konforlu, güvenli ve çocuk dostu araçlarımızla Paris şehir merkezinden Disneyland’a direkt ulaşım sağlıyoruz. Tatil keyfinize keyif katmak için bizi tercih edin!",
+    "p4": "Ailenizle birlikte Disneyland Paris'e gitmeyi mi planlıyorsunuz? Konforlu, güvenli ve çocuk dostu araçlarımızla Paris şehir merkezinden Disneyland'a direkt ulaşım sağlıyoruz. Tatil keyfinize keyif katmak için bizi tercih edin!",
     "moreInfo4": "Bilgi Alma Formu Yolla",
     "moreInfoLink4": "/bilgi-alma-formu",
     "reservationButton4": "Rezervasyon Yap",
@@ -97,7 +100,7 @@
     },
     "feature3": {
       "title": "Özel Şoförlü Gezi Turları",
-      "description1": "Paris’in ikonik noktalarını keşfetmek için özel şoförlü VIP turlar.",
+      "description1": "Paris'in ikonik noktalarını keşfetmek için özel şoförlü VIP turlar.",
       "description2": "Eyfel Kulesi, Louvre Müzesi, Şanzelize Caddesi ve diğer turistik noktalara özel rotalar."
     },
     "feature4": {
@@ -125,19 +128,19 @@
 
   "ParisAirportTransfer": {
     "title": "Paris Havalimanlarından Transfer Hizmetleri",
-    "description": "Paris’te lüks, konforlu ve profesyonel bir <strong>havalimanı transfer hizmeti</strong> sunuyoruz. Özel şoförlü araçlarımızla havalimanından otelinize veya dilediğiniz adrese güvenle ulaşın.",
+    "description": "Paris'te lüks, konforlu ve profesyonel bir <strong>havalimanı transfer hizmeti</strong> sunuyoruz. Özel şoförlü araçlarımızla havalimanından otelinize veya dilediğiniz adrese güvenle ulaşın.",
     "linkAirport": "/paris-havalimanlari-transfer",
     "cdg": {
       "name": "Charles de Gaulle Havalimanı Transfer (CDG)",
-      "description": "Paris’in en büyük havalimanı, şehir merkezine yaklaşık 30 km uzaklıktadır. Disneyland, Champs-Élysées ve Eyfel Kulesi gibi popüler noktalara doğrudan ulaşım sağlıyoruz."
+      "description": "Paris'in en büyük havalimanı, şehir merkezine yaklaşık 30 km uzaklıktadır. Disneyland, Champs-Élysées ve Eyfel Kulesi gibi popüler noktalara doğrudan ulaşım sağlıyoruz."
     },
     "ory": {
       "name": "Orly Havalimanı Transfer (ORY)",
-      "description": "Paris’in güneyinde yer alan havalimanından şehir merkezine ve Versay Sarayı gibi turistik noktalara konforlu transfer."
+      "description": "Paris'in güneyinde yer alan havalimanından şehir merkezine ve Versay Sarayı gibi turistik noktalara konforlu transfer."
     },
     "bva": {
       "name": "Beauvais Havalimanı Transfer (BVA)",
-      "description": "Paris şehir merkezine 87 km uzaklıkta olan Beauvais havalimanından Paris’e ulaşım konusunda en hızlı ve rahat çözümleri sunuyoruz."
+      "description": "Paris şehir merkezine 87 km uzaklıkta olan Beauvais havalimanından Paris'e ulaşım konusunda en hızlı ve rahat çözümleri sunuyoruz."
     }
   },
 
@@ -162,7 +165,7 @@
 
   "AboutUs": {
     "title": "Hakkımızda",
-    "description": "Paris Yolcusu olarak, 10 yılı aşkın deneyimimiz ve güler yüzlü ekibimizle Paris’te konforlu ve güvenilir ulaşım hizmetleri sunuyoruz. Lüks araçlarımızla havalimanı transferlerinden şehir turlarına kadar her ihtiyacınıza özel çözümler üretiyoruz.",
+    "description": "Paris Yolcusu olarak, 10 yılı aşkın deneyimimiz ve güler yüzlü ekibimizle Paris'te konforlu ve güvenilir ulaşım hizmetleri sunuyoruz. Lüks araçlarımızla havalimanı transferlerinden şehir turlarına kadar her ihtiyacınıza özel çözümler üretiyoruz.",
 
     "feature1": {
       "title": "VIP Transfer Hizmetleri",
@@ -170,11 +173,11 @@
     },
     "feature2": {
       "title": "Özel Şoförlü Araçlar",
-      "description": "Deneyimli ve profesyonel şoförlerimizle Paris’te güvenli ve konforlu yolculuk yapabilirsiniz."
+      "description": "Deneyimli ve profesyonel şoförlerimizle Paris'te güvenli ve konforlu yolculuk yapabilirsiniz."
     },
     "feature3": {
       "title": "Şehir İçi Gezi Turları",
-      "description": "Paris’in tarihi ve turistik mekanlarını keşfetmek için özel turlarımızdan faydalanabilirsiniz."
+      "description": "Paris'in tarihi ve turistik mekanlarını keşfetmek için özel turlarımızdan faydalanabilirsiniz."
     },
     "feature4": {
       "title": "7/24 Hizmet",
@@ -187,8 +190,8 @@
   },
 
   "CallToAction": {
-    "title": "Paris’te Konforlu ve Güvenilir Transfer Hizmeti!",
-    "description": "Lüks araçlarımız ve profesyonel şoförlerimizle Paris’te sizi istediğiniz noktaya güvenle ulaştırıyoruz. VIP havalimanı transferi, otel transferi ve özel şehir turları için bizimle hemen iletişime geçin!",
+    "title": "Paris'te Konforlu ve Güvenilir Transfer Hizmeti!",
+    "description": "Lüks araçlarımız ve profesyonel şoförlerimizle Paris'te sizi istediğiniz noktaya güvenle ulaştırıyoruz. VIP havalimanı transferi, otel transferi ve özel şehir turları için bizimle hemen iletişime geçin!",
     "whatsapp": "Whatsapp İletişim!"
   },
   "CleanCar": {
@@ -304,16 +307,16 @@
 
     "ORLYairport": {
       "title": "Orly Havalimanı Transfer (ORY)",
-      "description1": "Paris’in güneyinde yer alan havalimanından şehir merkezine ve Versay Sarayı gibi turistik noktalara konforlu transfer.",
+      "description1": "Paris'in güneyinde yer alan havalimanından şehir merkezine ve Versay Sarayı gibi turistik noktalara konforlu transfer.",
       "description2": "Orly Havalimanı'ndan Paris şehir merkezine nasıl gidilir? Transfer seçenekleri arasında özel araç, taksi, tramvay ve otobüs bulunur.",
-      "description3": "Orly Havalimanı'ndan direkt olarak Disneyland Paris’e transfer hizmetimiz mevcuttur."
+      "description3": "Orly Havalimanı'ndan direkt olarak Disneyland Paris'e transfer hizmetimiz mevcuttur."
     }
   },
 
   "ParisGeziTurlari": {
     "HeroSection": {
       "title": "Paris Gezi Turları",
-      "description": "Özel şoför ve profesyonel rehberlerimizle Paris’in en güzel yerlerini keşfedin. Konforlu ve unutulmaz bir deneyim için sizi bekliyoruz."
+      "description": "Özel şoför ve profesyonel rehberlerimizle Paris'in en güzel yerlerini keşfedin. Konforlu ve unutulmaz bir deneyim için sizi bekliyoruz."
     },
 
     "PopularAttractions": {
@@ -344,7 +347,7 @@
       },
       "professionalGuide": {
         "title": "Profesyonel Rehber",
-        "description": "Alanında uzman rehberlerimizle Paris’in tüm güzelliklerini keşfedin."
+        "description": "Alanında uzman rehberlerimizle Paris'in tüm güzelliklerini keşfedin."
       },
       "customRoutes": {
         "title": "Özelleştirilmiş Rotalar",
@@ -368,5 +371,73 @@
       "answerIncorrect": "Cevap yanlış. Fransanın başkenti Paris'tir.",
       "recaptchaRequired": "Lütfen reCAPTCHA doğrulamasını yapın"
     }
+  },
+
+  "CookiePolicy": {
+    "title": "Çerez Politikası",
+    "aboutCookies": "Çerezler Hakkında",
+    "aboutCookiesText": "Çerezler (cookies), web sitemizi ziyaret ettiğinizde tarayıcınız aracılığıyla cihazınıza kaydedilen küçük metin dosyalarıdır. Bu dosyalar, web sitemizi kullandığınızda sizin hakkınızda bilgi toplar ve deneyiminizi iyileştirmemize yardımcı olur.",
+    "cookieTypes": "Kullandığımız Çerez Türleri",
+    "mandatoryCookies": "Zorunlu Çerezler",
+    "mandatoryCookiesText": "Bu çerezler, web sitesinin temel işlevleri için gereklidir ve devre dışı bırakılamazlar. Bunlar genellikle yalnızca siz tarayıcınızda çerezleri devre dışı bırakma gibi bir eylemde bulunduğunuzda ayarlanır. Bu çerezler, gizlilik tercihlerinizi kaydetme, giriş yapma veya form doldurma gibi hizmetleri sağlamak için gereklidir.",
+    "functionalCookies": "Fonksiyonel Çerezler",
+    "functionalCookiesText": "Bu çerezler, web sitesinin gelişmiş işlevsellik ve kişiselleştirme özellikleri sunmasına olanak tanır. Bunlar tarafımızca veya sitemize eklediğimiz üçüncü taraf hizmetleri tarafından ayarlanabilir. Bu çerezlere izin vermezseniz, bu hizmetlerin bazıları veya tamamı düzgün çalışmayabilir.",
+    "analyticalCookies": "Analitik Çerezler",
+    "analyticalCookiesText": "Bu çerezler, ziyaretçilerin web sitesini nasıl kullandığına dair bilgileri toplar. Bu bilgiler, web sitesinin performansını iyileştirmemize yardımcı olur. Örneğin, bu çerezler hangi sayfaların en popüler olduğunu ve ziyaretçilerin sitede nasıl gezindiğini anlamamıza yardımcı olur.",
+    "marketingCookies": "Pazarlama Çerezleri",
+    "marketingCookiesText": "Bu çerezler, size ilgi alanlarınıza yönelik reklamlar sunmak için kullanılır. Ayrıca, reklamların etkinliğini ölçmemize ve iyileştirmemize yardımcı olurlar. Bu çerezler genellikle üçüncü taraf reklam ağları tarafından ayarlanır. Ziyaret ettiğiniz siteleri hatırlar ve bu bilgileri reklamverenlere ve diğer kuruluşlara aktarabilirler.",
+    "manageCookies": "Çerez Tercihlerinizi Yönetme",
+    "manageCookiesText1": "Çerez tercihlerinizi istediğiniz zaman değiştirebilirsiniz. Sitenin alt kısmında bulunan \"Çerez Tercihleri\" bağlantısına tıklayarak çerez ayarlarınızı güncelleyebilirsiniz.",
+    "manageCookiesText2": "Ayrıca, çoğu web tarayıcısı çerezleri yönetmenize olanak tanır. Tarayıcı ayarlarınızdan çerezleri engelleyebilir veya çerezler ayarlandığında bildirim alabilirsiniz. Ancak, çerezleri engellerseniz, web sitemizin bazı özellikleri düzgün çalışmayabilir.",
+    "thirdPartyCookies": "Üçüncü Taraf Çerezleri",
+    "thirdPartyCookiesText": "Web sitemizde, aşağıdaki üçüncü taraf hizmetleri tarafından ayarlanan çerezler de kullanılmaktadır:",
+    "googleAnalytics": "Google Analytics: Ziyaretçi istatistiklerini toplamak ve analiz etmek için",
+    "googleTagManager": "Google Tag Manager: Çeşitli etiketleri yönetmek için",
+    "facebookPixel": "Facebook Pixel: Reklam kampanyalarının etkinliğini ölçmek ve hedeflenmiş reklamlar sunmak için",
+    "microsoftClarity": "Microsoft Clarity: Kullanıcı deneyimini analiz etmek için",
+    "contact": "İletişim",
+    "contactText": "Çerez politikamız hakkında sorularınız varsa, lütfen bizimle iletişime geçin:",
+    "email": "E-posta",
+    "backToHome": "Ana Sayfaya Dön"
+  },
+
+  "CookieBanner": {
+    "title": "Çerez Bildirimi",
+    "description": "Bu sitede deneyiminizi kişiselleştirmek, analiz yapmak ve pazarlama faaliyetleri için çerezler kullanıyoruz. GDPR düzenlemeleri kapsamında, bu çerezlerin kullanımı için izninizi istiyoruz.",
+    "rejectAll": "Hepsini Reddet",
+    "preferences": "Tercihleri Ayarla",
+    "acceptAll": "Hepsini Kabul Et"
+  },
+
+  "CookiePreferences": {
+    "title": "Çerez Tercihleri",
+    "close": "Kapat",
+    "description": "Çerezler, web sitesinin çalışması ve deneyiminizi kişiselleştirmek için kullanılır. Aşağıdaki seçenekleri kullanarak farklı çerez kategorilerini kabul edebilir veya reddedebilirsiniz.",
+    "manageInfo": "Burada çerez tercihlerinizi yönetebilirsiniz. Tercihlerinizi değiştirirseniz, web sitesi işlevselliği etkilenebilir.",
+    "necessary": {
+      "title": "Zorunlu Çerezler",
+      "description": "Bu çerezler, web sitesinin temel işlevleri için gereklidir ve devre dışı bırakılamazlar.",
+      "required": "Gerekli"
+    },
+    "functional": {
+      "title": "Fonksiyonel Çerezler",
+      "description": "Bu çerezler, web sitesinin gelişmiş işlevsellik ve kişiselleştirme özellikleri sunmasına olanak tanır."
+    },
+    "analytics": {
+      "title": "Analitik Çerezler",
+      "description": "Bu çerezler, ziyaretçilerin web sitesini nasıl kullandığına dair bilgileri toplar. Bu bilgiler, web sitesinin performansını iyileştirmemize yardımcı olur."
+    },
+    "marketing": {
+      "title": "Pazarlama Çerezleri",
+      "description": "Bu çerezler, size ilgi alanlarınıza yönelik reklamlar sunmak için kullanılır. Ayrıca, reklamların etkinliğini ölçmemize ve iyileştirmemize yardımcı olurlar."
+    },
+    "rejectAll": "Hepsini Reddet",
+    "acceptAll": "Hepsini Kabul Et",
+    "savePreferences": "Tercihleri Kaydet",
+    "openLabel": "Çerez Tercihlerini Aç",
+    "closeLabel": "Çerez Tercihlerini Kapat",
+    "onText": "Açık",
+    "offText": "Kapalı",
+    "developedBy": "Tarafından Geliştirildi"
   }
 }

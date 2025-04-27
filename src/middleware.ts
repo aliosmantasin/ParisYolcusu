@@ -25,6 +25,11 @@ const pathnames = {
     en: '/information-form',
     fr: '/formulaire-information'
   },
+   '/cerez-politikasi': {
+    tr: '/cerez-politikasi',
+    en: '/cookie-policy',
+    fr: '/politique-cookies'
+  },
 };
 
 // Desteklenen diller

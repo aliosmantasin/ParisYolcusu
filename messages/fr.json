@@ -13,11 +13,14 @@
     "CTAURL": "/reservation-form"
   },
 
-  "Footer": {
+  "FooterLinks": {
     "contact": "Contact",
     "about": "À Propos",
     "brandName": "Paris Yolcusu",
-    "span": "Tous Droits Réservés."
+    "span": "Tous Droits Réservés.",
+    "cookiePolicy": "Politique des Cookies",
+     "cookiePolicyUrl": "/politique-cookies",
+     "savePreferences": "Enregistrer les Préférences"
   },
 
   "HomePage": {
@@ -353,5 +356,73 @@
       "answerIncorrect": "Réponse incorrecte. La capitale de la France est Paris.",
       "recaptchaRequired": "Veuillez compléter la vérification reCAPTCHA"
     }
+  },
+
+  "CookiePolicy": {
+    "title": "Politique relative aux cookies",
+    "aboutCookies": "À propos des cookies",
+    "aboutCookiesText": "Les cookies sont de petits fichiers texte stockés sur votre appareil via votre navigateur lorsque vous visitez notre site web. Ces fichiers collectent des informations sur vous lorsque vous utilisez notre site et nous aident à améliorer votre expérience.",
+    "cookieTypes": "Types de cookies que nous utilisons",
+    "mandatoryCookies": "Cookies obligatoires",
+    "mandatoryCookiesText": "Ces cookies sont nécessaires aux fonctions de base du site web et ne peuvent pas être désactivés. Ils sont généralement définis uniquement lorsque vous prenez des mesures telles que la désactivation des cookies dans votre navigateur. Ces cookies sont nécessaires pour fournir des services tels que l'enregistrement de vos préférences de confidentialité, la connexion ou le remplissage de formulaires.",
+    "functionalCookies": "Cookies fonctionnels",
+    "functionalCookiesText": "Ces cookies permettent au site web de fournir des fonctionnalités et des options de personnalisation améliorées. Ils peuvent être définis par nous ou par des services tiers que nous avons ajoutés à notre site. Si vous n'autorisez pas ces cookies, certains ou tous ces services peuvent ne pas fonctionner correctement.",
+    "analyticalCookies": "Cookies analytiques",
+    "analyticalCookiesText": "Ces cookies collectent des informations sur la façon dont les visiteurs utilisent le site web. Ces informations nous aident à améliorer les performances du site. Par exemple, ces cookies nous aident à comprendre quelles pages sont les plus populaires et comment les visiteurs naviguent sur le site.",
+    "marketingCookies": "Cookies marketing",
+    "marketingCookiesText": "Ces cookies sont utilisés pour diffuser des publicités pertinentes pour vos intérêts. Ils nous aident également à mesurer et à améliorer l'efficacité des publicités. Ces cookies sont généralement définis par des réseaux publicitaires tiers. Ils se souviennent des sites que vous visitez et peuvent partager ces informations avec des annonceurs et d'autres organisations.",
+    "manageCookies": "Gestion de vos préférences en matière de cookies",
+    "manageCookiesText1": "Vous pouvez modifier vos préférences en matière de cookies à tout moment. Vous pouvez mettre à jour vos paramètres de cookies en cliquant sur le lien \"Préférences de cookies\" au bas du site.",
+    "manageCookiesText2": "De plus, la plupart des navigateurs web vous permettent de gérer les cookies. Vous pouvez bloquer les cookies à partir des paramètres de votre navigateur ou recevoir des notifications lorsque des cookies sont définis. Cependant, si vous bloquez les cookies, certaines fonctionnalités de notre site web peuvent ne pas fonctionner correctement.",
+    "thirdPartyCookies": "Cookies tiers",
+    "thirdPartyCookiesText": "Notre site web utilise également des cookies définis par les services tiers suivants :",
+    "googleAnalytics": "Google Analytics : Pour collecter et analyser les statistiques des visiteurs",
+    "googleTagManager": "Google Tag Manager : Pour gérer diverses balises",
+    "facebookPixel": "Facebook Pixel : Pour mesurer l'efficacité des campagnes publicitaires et diffuser des publicités ciblées",
+    "microsoftClarity": "Microsoft Clarity : Pour analyser l'expérience utilisateur",
+    "contact": "Contact",
+    "contactText": "Si vous avez des questions concernant notre politique en matière de cookies, veuillez nous contacter :",
+    "email": "E-mail",
+    "backToHome": "Retour à l'accueil"
+  },
+
+  "CookieBanner": {
+    "title": "Avis sur les Cookies",
+    "description": "Nous utilisons des cookies sur ce site pour personnaliser votre expérience, effectuer des analyses et pour des activités de marketing. Conformément aux réglementations RGPD, nous demandons votre autorisation pour l'utilisation de ces cookies.",
+    "rejectAll": "Tout Refuser",
+    "preferences": "Définir les Préférences",
+    "acceptAll": "Tout Accepter"
+  },
+
+  "CookiePreferences": {
+    "title": "Préférences de Cookies",
+    "close": "Fermer",
+    "description": "Les cookies sont utilisés pour faire fonctionner le site Web et personnaliser votre expérience. Vous pouvez accepter ou rejeter différentes catégories de cookies à l'aide des options ci-dessous.",
+    "manageInfo": "Vous pouvez gérer vos préférences de cookies ici. Si vous modifiez vos préférences, les fonctionnalités du site Web peuvent être affectées.",
+    "necessary": {
+      "title": "Cookies Nécessaires",
+      "description": "Ces cookies sont essentiels pour les fonctions de base du site Web et ne peuvent pas être désactivés.",
+      "required": "Obligatoire"
+    },
+    "functional": {
+      "title": "Cookies Fonctionnels",
+      "description": "Ces cookies permettent au site Web de fournir des fonctionnalités améliorées et des fonctionnalités de personnalisation."
+    },
+    "analytics": {
+      "title": "Cookies Analytiques",
+      "description": "Ces cookies collectent des informations sur la façon dont les visiteurs utilisent le site Web. Ces informations nous aident à améliorer les performances du site Web."
+    },
+    "marketing": {
+      "title": "Cookies Marketing",
+      "description": "Ces cookies sont utilisés pour diffuser des annonces pertinentes à vos intérêts. Ils nous aident également à mesurer et à améliorer l'efficacité des publicités."
+    },
+    "rejectAll": "Tout Rejeter",
+    "acceptAll": "Tout Accepter",
+    "savePreferences": "Enregistrer les Préférences",
+    "openLabel": "Ouvrir les Préférences de Cookies",
+    "closeLabel": "Fermer les Préférences de Cookies",
+    "onText": "Activé",
+    "offText": "Désactivé",
+    "developedBy": "Développé Par"
   }
 } 

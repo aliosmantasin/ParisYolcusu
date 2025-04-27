@@ -3,10 +3,13 @@ import { Metadata } from "next";
 import Navbar from "./_components/menu/Navbar";
 import Footer from "./_components/menu/Footer";
 import ScrollTop from "./_components/lib/ScrollTop/ScrollTop";
-import { GoogleTagManager } from "@next/third-parties/google";
-import BottomNavigation from "./_components/homepage/BottomNavigation";
 import { MdKeyboardArrowUp } from "react-icons/md";
-import { LocaleAwareBotProtection } from "../../../components/LocaleAwareBotProtection";
+import BottomNavigation from "./_components/homepage/BottomNavigation";
+// import { LocaleAwareBotProtection } from "../../../components/LocaleAwareBotProtection";
+import { CookieConsentProvider } from "../../../context/CookieConsentContext";
+import CookieConsentBanner from "../../../components/CookieConsent/CookieConsentBanner";
+import ConditionalScripts from "../../../components/CookieConsent/ConditionalScripts";
+import CookieCleaner from "../../../components/CookieConsent/CookieCleaner";
 
 // Organization JSON-LD
 const organizationJsonLd = {
@@ -133,10 +136,11 @@ export default async function RoutesLayout({
   children: ReactNode;
 }) {
   return (
-    <>
-      <LocaleAwareBotProtection />
+    <CookieConsentProvider>
+      {/* <LocaleAwareBotProtection /> */}
       <Navbar/>
-      <GoogleTagManager gtmId="GTM-NJC2MR8S"/>
+      <CookieCleaner />
+      <ConditionalScripts />
       <div>
         {children} 
       </div>
@@ -145,7 +149,8 @@ export default async function RoutesLayout({
       </ScrollTop>
       <BottomNavigation/>
       <Footer/>
-    </>
+      <CookieConsentBanner />
+    </CookieConsentProvider>
   );
 }
 

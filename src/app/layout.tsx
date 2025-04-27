@@ -1,6 +1,5 @@
 import { ThemeProvider } from "@/components/theme-provider";
 import "./globals.css";
-import { GoogleTagManager } from "@next/third-parties/google";
 import { NextIntlClientProvider } from "next-intl";
 import { notFound } from "next/navigation";
 import { LanguageProvider } from "../components/LanguageProvider";
@@ -40,7 +39,6 @@ export default async function RootLayout({
 
   return (
     <html lang={locale} suppressHydrationWarning>
-      <GoogleTagManager gtmId="GTM-NJC2MR8S"/>
       <body className="scroll-smooth">
         <NextIntlClientProvider locale={locale} messages={messages}>
           <ThemeProvider

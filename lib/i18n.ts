@@ -24,6 +24,12 @@ export const urlMap: Record<string, { tr: string; en: string; fr: string }> = {
       en: "reservation-form",
       fr: "formulaire-reservation"
     },
+
+    "/cerez-politikasi": {
+      tr: '/cerez-politikasi',
+      en: '/cookie-policy',
+      fr: '/politique-cookies'
+    },
   };
 
 // Dil bazlı URL yolu alma fonksiyonu

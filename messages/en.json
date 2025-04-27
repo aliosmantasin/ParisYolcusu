@@ -13,11 +13,14 @@
     "CTAURL": "/reservation-form"
   },
 
-  "Footer": {
+  "FooterLinks": {
     "contact": "Contact",
     "about": "About Us",
     "brandName": "Paris Yolcusu",
-    "span": "All Rights Reserved."
+    "span": "All Rights Reserved.",
+    "cookiePolicy": "Cookie Policy",
+    "cookiePolicyUrl": "/cookie-policy",
+    "savePreferences": "Save Preferences"
   },
 
   "HomePage": {
@@ -370,5 +373,73 @@
       "answerIncorrect": "Incorrect answer. The capital of France is Paris.",
       "recaptchaRequired": "Please complete the reCAPTCHA verification"
     }
+  },
+
+  "CookiePolicy": {
+    "title": "Cookie Policy",
+    "aboutCookies": "About Cookies",
+    "aboutCookiesText": "Cookies are small text files that are stored on your device through your browser when you visit our website. These files collect information about you when you use our website and help us improve your experience.",
+    "cookieTypes": "Types of Cookies We Use",
+    "mandatoryCookies": "Mandatory Cookies",
+    "mandatoryCookiesText": "These cookies are necessary for the basic functions of the website and cannot be disabled. They are usually only set when you take actions such as disabling cookies in your browser. These cookies are required to provide services such as saving your privacy preferences, logging in, or filling out forms.",
+    "functionalCookies": "Functional Cookies",
+    "functionalCookiesText": "These cookies allow the website to provide enhanced functionality and personalization features. They may be set by us or by third-party services we have added to our site. If you do not allow these cookies, some or all of these services may not function properly.",
+    "analyticalCookies": "Analytical Cookies",
+    "analyticalCookiesText": "These cookies collect information about how visitors use the website. This information helps us improve the performance of the website. For example, these cookies help us understand which pages are the most popular and how visitors navigate the site.",
+    "marketingCookies": "Marketing Cookies",
+    "marketingCookiesText": "These cookies are used to serve advertisements relevant to your interests. They also help us measure and improve the effectiveness of advertisements. These cookies are usually set by third-party advertising networks. They remember the sites you visit and can share this information with advertisers and other organizations.",
+    "manageCookies": "Managing Your Cookie Preferences",
+    "manageCookiesText1": "You can change your cookie preferences at any time. You can update your cookie settings by clicking on the \"Cookie Preferences\" link at the bottom of the site.",
+    "manageCookiesText2": "Additionally, most web browsers allow you to manage cookies. You can block cookies from your browser settings or receive notifications when cookies are set. However, if you block cookies, some features of our website may not work properly.",
+    "thirdPartyCookies": "Third-Party Cookies",
+    "thirdPartyCookiesText": "Our website also uses cookies set by the following third-party services:",
+    "googleAnalytics": "Google Analytics: For collecting and analyzing visitor statistics",
+    "googleTagManager": "Google Tag Manager: For managing various tags",
+    "facebookPixel": "Facebook Pixel: For measuring the effectiveness of advertising campaigns and serving targeted advertisements",
+    "microsoftClarity": "Microsoft Clarity: For analyzing user experience",
+    "contact": "Contact",
+    "contactText": "If you have any questions about our cookie policy, please contact us:",
+    "email": "Email",
+    "backToHome": "Back to Home"
+  },
+
+  "CookieBanner": {
+    "title": "Cookie Notice",
+    "description": "We use cookies on this site to personalize your experience, perform analytics, and for marketing activities. Under GDPR regulations, we request your permission for the use of these cookies.",
+    "rejectAll": "Reject All",
+    "preferences": "Set Preferences",
+    "acceptAll": "Accept All"
+  },
+
+  "CookiePreferences": {
+    "title": "Cookie Preferences",
+    "close": "Close",
+    "description": "Cookies are used to make the website work and to personalize your experience. By using the options below, you can accept or reject different cookie categories.",
+    "manageInfo": "You can manage your cookie preferences here. If you change your preferences, website functionality may be affected.",
+    "necessary": {
+      "title": "Necessary Cookies",
+      "description": "These cookies are essential for the basic functions of the website and cannot be disabled.",
+      "required": "Required"
+    },
+    "functional": {
+      "title": "Functional Cookies",
+      "description": "These cookies allow the website to provide enhanced functionality and personalization features."
+    },
+    "analytics": {
+      "title": "Analytical Cookies",
+      "description": "These cookies collect information about how visitors use the website. This information helps us improve the website's performance."
+    },
+    "marketing": {
+      "title": "Marketing Cookies",
+      "description": "These cookies are used to deliver advertisements relevant to your interests. They also help us measure and improve the effectiveness of advertisements."
+    },
+    "rejectAll": "Reject All",
+    "acceptAll": "Accept All",
+    "savePreferences": "Save Preferences",
+    "openLabel": "Open Cookie Preferences",
+    "closeLabel": "Close Cookie Preferences",
+    "onText": "On",
+    "offText": "Off",
+    "developedBy": "Developed By"
   }
 }
