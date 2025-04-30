@@ -32,7 +32,7 @@ interface AnimatedFirstGlanceContentProps {
 
 const AnimatedFirstGlanceContent = ({ brandNameX, brandnameY, title, span, isMobile = false }: AnimatedFirstGlanceContentProps) => {
   return (
-    <div className="relative z-10 w-full sm:w-2/5 md:w-4/9 m-auto border-[#d7eae5] dark:border-[#067481] text-white">
+    <div className="relative w-full sm:w-2/5 md:w-4/9 m-auto border-[#d7eae5] dark:border-[#067481] text-white">
       {/* Başlıklar Animasyonlu */}
       <motion.div initial="hidden" animate="visible" custom={0} variants={textVariants}>
         <p className="text-center text-md sm:text-xl font-semibold uppercase tracking-[.15em] text-[#ceaa6a]">
@@ -60,7 +60,7 @@ const AnimatedFirstGlanceContent = ({ brandNameX, brandnameY, title, span, isMob
         initial="hidden"
         animate="visible"
         variants={clipPathVariants}
-        className="absolute z-10 bottom-7 left-1/2 -translate-x-1/2 w-full h-5 bg-[#fece47]"
+        className="absolute bottom-7 left-1/2 -translate-x-1/2 w-full h-5 bg-[#fece47]"
       ></motion.div>
 
       {/* Alt Yazı Animasyonlu */}

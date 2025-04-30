@@ -1,6 +1,7 @@
 import { useTranslations } from "next-intl";
 import ClientCookieBanner from "./ClientCookieBanner";
 import CookiePreferencesModal from "./CookiePreferencesModal";
+import CookieOverlay from "./CookieOverlay";
 
 export default function CookieConsentBanner() {
   const t = useTranslations("CookieBanner");
@@ -15,6 +16,7 @@ export default function CookieConsentBanner() {
 
   return (
     <>
+      <CookieOverlay />
       <ClientCookieBanner translations={translations} />
       <CookiePreferencesModal />
     </>

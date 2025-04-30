@@ -74,7 +74,7 @@ const FeaturesBrand = () => {
             width={600} 
             height={350} 
             className="w-[350px] sm:w-[350px] md:w-[400px] lg:w-[500px] 
-              relative z-10 rounded-xl "
+              relative rounded-xl "
           />
 
           {/* Alt Mavi Blur Daire */}
