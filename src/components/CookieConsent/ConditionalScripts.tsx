@@ -6,6 +6,16 @@ import { GoogleTagManager } from "@next/third-parties/google";
 import { useEffect } from "react";
 import { GoogleAnalyticsScript } from "./GoogleAnalyticsScript";
 
+// Google Consent Mode sinyali gönderen yardımcı fonksiyon
+function sendGtagConsent(consent: { analytics: boolean; marketing: boolean }) {
+  if (typeof window !== "undefined" && typeof window.gtag === "function") {
+    window.gtag('consent', 'update', {
+      'ad_storage': consent.marketing ? 'granted' : 'denied',
+      'analytics_storage': consent.analytics ? 'granted' : 'denied'
+    });
+  }
+}
+
 export default function ConditionalScripts() {
   const { consent, hasInteracted } = useCookieConsent();
   
@@ -32,11 +42,32 @@ export default function ConditionalScripts() {
       // Enable GA if consent given
       window['ga-disable-G-X8BS5XMQ68'] = false;
     }
-  }, [consent.analytics, hasInteracted]);
+    // Kullanıcı etkileşimi sonrası Google'a güncel consent sinyali gönder
+    if (hasInteracted) {
+      sendGtagConsent(consent);
+    }
+  }, [consent.analytics, consent.marketing, hasInteracted]);
   
   // Don't load any scripts if the user hasn't interacted with the banner
   if (!hasInteracted) {
-    return null;
+    return (
+      <>
+        <Script
+          id="gtag-consent-default"
+          strategy="beforeInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('consent', 'default', {
+                'ad_storage': 'denied',
+                'analytics_storage': 'denied'
+              });
+            `
+          }}
+        />
+      </>
+    );
   }
 
   return (
