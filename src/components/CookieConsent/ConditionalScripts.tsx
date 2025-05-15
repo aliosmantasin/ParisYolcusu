@@ -48,36 +48,29 @@ export default function ConditionalScripts() {
     }
   }, [consent.analytics, consent.marketing, hasInteracted]);
   
-  // Don't load any scripts if the user hasn't interacted with the banner
-  if (!hasInteracted) {
-    return (
-      <>
-        <Script
-          id="gtag-consent-default"
-          strategy="beforeInteractive"
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('consent', 'default', {
-                'ad_storage': 'denied',
-                'analytics_storage': 'denied'
-              });
-            `
-          }}
-        />
-      </>
-    );
-  }
-
+  // Consent Mode default sinyalini her zaman gönder
+  // (Google Analytics ve Tag Manager scriptlerinden önce çalışmalı)
   return (
     <>
-      {/* Google Tag Manager - Load only if analytics OR marketing consent is granted */}
-      {(consent.analytics || consent.marketing) && (
-        <GoogleTagManager gtmId="GTM-NJC2MR8S" />
-      )}
-      
-      {/* Google Analytics - Yeni bileşen üzerinden yükleniyor */}
+      <Script
+        id="gtag-consent-default"
+        strategy="beforeInteractive"
+        dangerouslySetInnerHTML={{
+          __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('consent', 'default', {
+              'ad_storage': 'denied',
+              'analytics_storage': 'denied'
+            });
+          `
+        }}
+      />
+
+      {/* Google Tag Manager - Her zaman yüklenir */}
+      <GoogleTagManager gtmId="GTM-NJC2MR8S" />
+
+      {/* Google Analytics - Her zaman yüklenir */}
       <GoogleAnalyticsScript />
       
       {/* Microsoft Clarity - Analytics */}
