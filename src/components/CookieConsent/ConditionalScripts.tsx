@@ -4,7 +4,6 @@ import Script from "next/script";
 import { useCookieConsent } from "../../context/CookieConsentContext";
 import { GoogleTagManager } from "@next/third-parties/google";
 import { useEffect } from "react";
-import { GoogleAnalyticsScript } from "./GoogleAnalyticsScript";
 
 // Google Consent Mode sinyali gönderen yardımcı fonksiyon
 function sendGtagConsent(consent: { analytics: boolean; marketing: boolean }) {
@@ -53,8 +52,8 @@ export default function ConditionalScripts() {
   return (
     <>
       <Script
-        id="gtag-consent-default"
-        strategy="beforeInteractive"
+        id="gtag-init"
+        strategy="afterInteractive"
         dangerouslySetInnerHTML={{
           __html: `
             window.dataLayer = window.dataLayer || [];
@@ -71,7 +70,25 @@ export default function ConditionalScripts() {
       <GoogleTagManager gtmId="GTM-NJC2MR8S" />
 
       {/* Google Analytics - Her zaman yüklenir */}
-      <GoogleAnalyticsScript />
+      <Script
+        id="google-analytics"
+        strategy="afterInteractive"
+        src="https://www.googletagmanager.com/gtag/js?id=G-X8BS5XMQ68"
+      />
+      
+      <Script
+        id="gtag-config"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{
+          __html: `
+            gtag('js', new Date());
+            gtag('config', 'G-X8BS5XMQ68', {
+              'anonymize_ip': true,
+              'cookie_flags': 'SameSite=None;Secure'
+            });
+          `
+        }}
+      />
       
       {/* Microsoft Clarity - Analytics */}
       {consent.analytics && (
