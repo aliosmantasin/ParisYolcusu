@@ -61,7 +61,10 @@ const ClientFooter = ({ locale, translations }: ClientFooterProps) => {
                 </ul>
               </div>
               <hr className="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
-              <span className="block text-sm text-gray-500 sm:text-center dark:text-gray-400 text-center my-2">© 2025 <a href="http://parisyolcusu.com/" className="hover:underline primary">Paris Yolcusu | </a>{translations.span}</span>
+              <div className="text-sm text-gray-500 sm:text-center dark:text-gray-400 text-center my-2">
+                <span className="block">© 2025 <a href="http://parisyolcusu.com/" className="hover:underline primary">Paris Yolcusu | </a>{translations.span}</span>
+                <span className="block mt-2">Website by <a href="http://settobox.com/" target="_blank" rel="noopener noreferrer" className="hover:underline text-[#067481]">Settobox Digital Marketing</a></span>
+              </div>
           </div>
 
           <div className='w-full flex justify-center'>
