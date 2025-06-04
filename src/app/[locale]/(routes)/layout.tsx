@@ -5,7 +5,7 @@ import Footer from "./_components/menu/Footer";
 import ScrollTop from "./_components/lib/ScrollTop/ScrollTop";
 import { MdKeyboardArrowUp } from "react-icons/md";
 import BottomNavigation from "./_components/homepage/BottomNavigation";
-// import { LocaleAwareBotProtection } from "../../../components/LocaleAwareBotProtection";
+import { LocaleAwareBotProtection } from "../../../components/LocaleAwareBotProtection";
 import { CookieConsentProvider } from "../../../context/CookieConsentContext";
 import CookieConsentBanner from "../../../components/CookieConsent/CookieConsentBanner";
 import ConditionalScripts from "../../../components/CookieConsent/ConditionalScripts";
@@ -137,7 +137,7 @@ export default async function RoutesLayout({
 }) {
   return (
     <CookieConsentProvider>
-      {/* <LocaleAwareBotProtection /> */}
+      <LocaleAwareBotProtection />
       <Navbar/>
       <CookieCleaner />
       <ConditionalScripts />
