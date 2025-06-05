@@ -40,6 +40,9 @@ export default async function RootLayout({
 
   return (
     <html lang={locale} suppressHydrationWarning>
+        <head>
+        <meta name="facebook-domain-verification" content="8e31me7fwh1ux38rp50z2b4g752sgo" />
+      </head>
       <body className="scroll-smooth">
         <NextIntlClientProvider locale={locale} messages={messages}>
           <ThemeProvider
