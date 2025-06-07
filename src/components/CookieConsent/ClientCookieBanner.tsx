@@ -1,7 +1,13 @@
 "use client";
 
 import { useEffect } from "react";
-import { useCookieConsent } from "../../context/CookieConsentContext";
+import { useCookieConsent } from "./CookieConsentContext";
+
+declare global {
+  interface Window {
+    'ga-disable-G-X8BS5XMQ68': boolean;
+  }
+}
 
 interface ClientCookieBannerProps {
   translations: {

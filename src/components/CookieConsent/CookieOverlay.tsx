@@ -1,6 +1,7 @@
 "use client";
 
-import { useCookieConsent } from "../../context/CookieConsentContext";
+import { useCookieConsent } from "./CookieConsentContext";
+
 
 export default function CookieOverlay() {
   const { hasInteracted } = useCookieConsent();

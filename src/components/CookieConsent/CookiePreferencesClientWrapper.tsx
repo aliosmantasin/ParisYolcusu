@@ -1,7 +1,7 @@
 "use client";
 
-import { useCookieConsent } from "../../context/CookieConsentContext";
 import ClientCookiePreferencesModal from "./ClientCookiePreferencesModal";
+import { useCookieConsent } from "./CookieConsentContext";
 
 interface CookiePreferencesClientWrapperProps {
   translations: {

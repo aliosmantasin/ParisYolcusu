@@ -1,62 +1,85 @@
 "use client";
 
 import { useEffect } from "react";
-import { useCookieConsent } from "../../context/CookieConsentContext";
+import { useCookieConsent } from "./CookieConsentContext";
+
+// Temizlenecek çerezlerin listesi
+const COOKIE_PATTERNS = {
+  analytics: [
+    '_ga',      // Google Analytics
+    '_gid',     // Google Analytics
+    '_gat',     // Google Analytics
+    '_clck',    // Microsoft Clarity
+    '_clsk',    // Microsoft Clarity
+  ],
+  marketing: [
+    '_fbp',     // Facebook Pixel
+    '_fbc',     // Facebook Pixel
+    '_tt_',     // TikTok Pixel
+    'IDE',      // Google DoubleClick
+    '_gcl_',    // Google Ads
+  ],
+  functional: [
+    // Fonksiyonel çerezler buraya eklenebilir
+  ]
+};
 
 export default function CookieCleaner() {
   const { consent, hasInteracted } = useCookieConsent();
 
   useEffect(() => {
-    // Kullanıcı reddetmişse veya henüz etkileşimde bulunmamışsa çerezleri temizle
-    if (!hasInteracted || !consent.analytics) {
-      // Google Analytics için devre dışı bırakma bayrağını ayarla
-      window['ga-disable-G-X8BS5XMQ68'] = true;
-    }
+    if (!hasInteracted) return; // Henüz etkileşim yoksa hiçbir şey yapma
 
-    // Kullanıcı reddetmişse veya henüz etkileşimde bulunmamışsa çerezleri temizle
-    if (hasInteracted && !consent.analytics) {
-      // Google Analytics Çerezleri
-      cleanupCookies(['_ga', '_gid', '_gat']);
-    }
+    // Her bir consent tipi için çerezleri kontrol et
+    Object.entries(consent).forEach(([type, isAllowed]) => {
+      if (!isAllowed && COOKIE_PATTERNS[type as keyof typeof COOKIE_PATTERNS]) {
+        cleanupCookies(COOKIE_PATTERNS[type as keyof typeof COOKIE_PATTERNS]);
+      }
+    });
 
-    if (hasInteracted && !consent.marketing) {
-      // Facebook Pixel Çerezleri
-      cleanupCookies(['_fbp', '_fbc']);
-    }
-
-    if (hasInteracted && !consent.functional) {
-      // Fonksiyonel Çerezler (eğer varsa)
-      // ...
-    }
   }, [consent, hasInteracted]);
 
   // Çerezleri temizleme fonksiyonu
   const cleanupCookies = (cookiePrefixes: string[]) => {
+    if (typeof document === 'undefined') return;
+
     const allCookies = document.cookie.split(';');
+    const domains = getDomainLevels(window.location.hostname);
     
     for (const cookie of allCookies) {
       const cookieName = cookie.split('=')[0].trim();
       
       // Eğer çerez verilen öneklerden biriyle başlıyorsa sil
       if (cookiePrefixes.some(prefix => cookieName.startsWith(prefix))) {
-        // Çerezi temel yolda sil
-        document.cookie = `${cookieName}=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;`;
-        
-        // Çerezi ana alan adında sil
-        document.cookie = `${cookieName}=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=.${window.location.hostname};`;
-        
-        // Üst seviye alan adında da sil
-        const domain = window.location.hostname.split('.');
-        if (domain.length > 2) {
-          const topLevelDomain = domain.slice(domain.length - 2).join('.');
-          document.cookie = `${cookieName}=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=.${topLevelDomain};`;
+        // Tüm olası path ve domain kombinasyonlarında çerezi sil
+        for (const domain of domains) {
+          for (const path of ['/', '/*/']) {
+            document.cookie = `${cookieName}=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=${path}${domain}`;
+          }
         }
         
-        console.log(`Çerez temizlendi: ${cookieName}`);
+        console.log(`[CookieCleaner] Removed: ${cookieName}`);
       }
     }
   };
 
-  // Bu bir görünmez bileşendir, hiçbir şey render etmez
+  // Domain seviyelerini alma
+  const getDomainLevels = (hostname: string): string[] => {
+    const parts = hostname.split('.');
+    const domains = [''];
+    
+    if (parts.length > 2) {
+      // Alt alan adları için
+      for (let i = 1; i < parts.length - 1; i++) {
+        domains.push(`domain=.${parts.slice(i).join('.')};`);
+      }
+    }
+    
+    // Ana domain için
+    domains.push(`domain=.${hostname};`);
+    
+    return domains;
+  };
+
   return null;
 } 

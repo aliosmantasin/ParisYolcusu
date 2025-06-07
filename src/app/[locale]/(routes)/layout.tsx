@@ -6,10 +6,12 @@ import ScrollTop from "./_components/lib/ScrollTop/ScrollTop";
 import { MdKeyboardArrowUp } from "react-icons/md";
 import BottomNavigation from "./_components/homepage/BottomNavigation";
 import { LocaleAwareBotProtection } from "../../../components/LocaleAwareBotProtection";
-import { CookieConsentProvider } from "../../../context/CookieConsentContext";
+
 import CookieConsentBanner from "../../../components/CookieConsent/CookieConsentBanner";
 import ConditionalScripts from "../../../components/CookieConsent/ConditionalScripts";
-import CookieCleaner from "../../../components/CookieConsent/CookieCleaner";
+
+import { CookieConsentProvider } from "@/src/components/CookieConsent/CookieConsentContext";
+import CookieCleaner from "@/src/components/CookieConsent/CookieCleaner";
 
 // Organization JSON-LD
 const organizationJsonLd = {

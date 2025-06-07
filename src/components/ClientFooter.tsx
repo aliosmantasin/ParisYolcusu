@@ -4,8 +4,9 @@ import Link from 'next/link'
 import React from 'react'
 
 import { useTheme } from "next-themes";
-import { useCookieConsent } from '../context/CookieConsentContext'
+
 import { MdCookie } from 'react-icons/md';
+import { useCookieConsent } from './CookieConsent/CookieConsentContext';
 
 interface ClientFooterProps {
   locale: string;

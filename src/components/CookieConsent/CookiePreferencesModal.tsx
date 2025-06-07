@@ -2,6 +2,7 @@ import { useTranslations } from "next-intl";
 import CookiePreferencesClientWrapper from "./CookiePreferencesClientWrapper";
 
 
+
 export default function CookiePreferencesModal() {
   const t = useTranslations("CookiePreferences");
   

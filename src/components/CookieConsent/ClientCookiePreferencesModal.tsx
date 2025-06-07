@@ -1,8 +1,8 @@
 "use client";
 
 import Link from "next/link";
-import { useCookieConsent } from "../../context/CookieConsentContext";
 import { useEffect, useState } from "react";
+import { useCookieConsent } from "./CookieConsentContext";
 
 interface ClientCookiePreferencesModalProps {
   translations: {

@@ -1,6 +1,6 @@
 "use client";
 
-import { useCookieConsent } from "../context/CookieConsentContext";
+import { useCookieConsent } from "./CookieConsent/CookieConsentContext";
 import { useTranslations } from "next-intl";
 
 export default function CookieConsentManager() {
