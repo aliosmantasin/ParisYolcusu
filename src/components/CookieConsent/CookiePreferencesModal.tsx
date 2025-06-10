@@ -16,6 +16,11 @@ export default function CookiePreferencesModal() {
       description: t("necessary.description"),
       required: t("necessary.required"),
     },
+    security: {
+      title: t("security.title"),
+      description: t("security.description"),
+      required: t("security.required"),
+    },
     functional: {
       title: t("functional.title"),
       description: t("functional.description"),
@@ -27,6 +32,10 @@ export default function CookiePreferencesModal() {
     marketing: {
       title: t("marketing.title"),
       description: t("marketing.description"),
+    },
+    personalization: {
+      title: t("personalization.title"),
+      description: t("personalization.description"),
     },
     rejectAll: t("rejectAll"),
     acceptAll: t("acceptAll"),

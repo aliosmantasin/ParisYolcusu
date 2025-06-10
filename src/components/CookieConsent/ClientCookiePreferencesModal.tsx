@@ -27,6 +27,15 @@ interface ClientCookiePreferencesModalProps {
       title: string;
       description: string;
     };
+    personalization: {
+      title: string;
+      description: string;
+    };
+    security: {
+      title: string;
+      description: string;
+      required: string;
+    };
     rejectAll: string;
     acceptAll: string;
     savePreferences: string;
@@ -128,6 +137,23 @@ export default function ClientCookiePreferencesModal({ translations }: ClientCoo
               </div>
             </div>
 
+            {/* Güvenlik Çerezleri - Her zaman aktif, kullanıcı değiştiremez */}
+            <div className="border rounded-lg overflow-hidden">
+              <div className="p-3 bg-gray-50 border-b">
+                <div className="flex items-center justify-between">
+                  <h3 className="font-semibold text-gray-900">{translations.security.title}</h3>
+                  <div className="bg-blue-100 text-blue-800 px-2.5 py-1 rounded text-xs font-medium">
+                    {translations.security.required}
+                  </div>
+                </div>
+              </div>
+              <div className="p-3">
+                <p className="text-sm text-gray-600">
+                  {translations.security.description}
+                </p>
+              </div>
+            </div>
+
             {/* Fonksiyonel Çerezler */}
             <div className="border rounded-lg overflow-hidden">
               <div className="p-3 bg-gray-50 border-b">
@@ -214,6 +240,36 @@ export default function ClientCookiePreferencesModal({ translations }: ClientCoo
               <div className="p-3">
                 <p className="text-sm text-gray-600">
                   {translations.marketing.description}
+                </p>
+              </div>
+            </div>
+
+            {/* Kişiselleştirme Çerezleri */}
+            <div className="border rounded-lg overflow-hidden">
+              <div className="p-3 bg-gray-50 border-b">
+                <div className="flex items-center justify-between">
+                  <h3 className="font-semibold text-gray-900">{translations.personalization.title}</h3>
+                  <div className="flex items-center bg-gray-200 rounded-full p-1">
+                    <button 
+                      type="button"
+                      onClick={() => updateConsent({ personalization: false })}
+                      className={`px-3 py-1 text-xs font-medium rounded-full transition-all ${!consent.personalization ? 'bg-gray-800 text-white' : 'text-gray-700'}`}
+                    >
+                      {translations.offText}
+                    </button>
+                    <button 
+                      type="button"
+                      onClick={() => updateConsent({ personalization: true })}
+                      className={`px-3 py-1 text-xs font-medium rounded-full transition-all ${consent.personalization ? 'bg-blue-600 text-white' : 'text-gray-700'}`}
+                    >
+                      {translations.onText}
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div className="p-3">
+                <p className="text-sm text-gray-600">
+                  {translations.personalization.description}
                 </p>
               </div>
             </div>

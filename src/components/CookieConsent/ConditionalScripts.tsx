@@ -23,7 +23,7 @@ type GtagConsentArg = [
   ConsentUpdate & { wait_for_update?: number; region?: string[] }
 ];
 
-type DataLayerEvent = ConsentUpdate & {
+type DataLayerEvent = Partial<ConsentUpdate> & {
   event?: string;
   'gtm.start'?: number;
   'gtm.js'?: boolean;
@@ -54,12 +54,12 @@ function sendGtagConsent(consent: { analytics: boolean; marketing: boolean }) {
       security_storage: 'granted'
     };
 
-    // GTM için consent_update eventi
-    const dataLayerEvent: DataLayerEvent = {
+    // GTM için consent_update eventi - sadece gerekli alanları gönder
+    window.dataLayer.push({
       event: 'consent_update',
-      ...consentUpdate
-    };
-    window.dataLayer.push(dataLayerEvent);
+      analytics_storage: consent.analytics ? 'granted' : 'denied',
+      ad_storage: consent.marketing ? 'granted' : 'denied'
+    });
 
     // Google Consent Mode için doğrudan güncelleme
     if (window.gtag) {

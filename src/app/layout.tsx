@@ -3,7 +3,7 @@ import "./globals.css";
 import { NextIntlClientProvider } from "next-intl";
 import { notFound } from "next/navigation";
 import { LanguageProvider } from "../components/LanguageProvider";
-import { SecurityProvider } from "../components/SecurityProvider";
+// import { SecurityProvider } from "../components/SecurityProvider";
 
 // 🌍 Tüm çeviri dosyalarını içe aktar
 import trMessages from "../../messages/tr.json";
@@ -52,7 +52,7 @@ export default async function RootLayout({
             disableTransitionOnChange
             storageKey="parisyolcusu-theme"
           >
-            <SecurityProvider />
+            {/* <SecurityProvider /> */}
             <LanguageProvider />
             {children}
           </ThemeProvider>

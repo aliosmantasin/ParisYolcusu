@@ -416,6 +416,15 @@
       "title": "Cookies Marketing",
       "description": "Ces cookies sont utilisés pour diffuser des annonces pertinentes à vos intérêts. Ils nous aident également à mesurer et à améliorer l'efficacité des publicités."
     },
+    "personalization": {
+      "title": "Cookies de Personnalisation",
+      "description": "Ces cookies permettent la personnalisation du site web et des publicités pour vous."
+    },
+    "security": {
+      "title": "Cookies de Sécurité",
+      "description": "Ces cookies sont essentiels pour la sécurité du site web et la protection contre la fraude.",
+      "required": "Obligatoire"
+    },
     "rejectAll": "Tout Rejeter",
     "acceptAll": "Tout Accepter",
     "savePreferences": "Enregistrer les Préférences",

@@ -433,6 +433,15 @@
       "title": "Marketing Cookies",
       "description": "These cookies are used to deliver advertisements relevant to your interests. They also help us measure and improve the effectiveness of advertisements."
     },
+    "personalization": {
+      "title": "Personalization Cookies",
+      "description": "These cookies enable the personalization of the website and advertisements for you."
+    },
+    "security": {
+      "title": "Security Cookies",
+      "description": "These cookies are essential for the security of the website and fraud protection.",
+      "required": "Required"
+    },
     "rejectAll": "Reject All",
     "acceptAll": "Accept All",
     "savePreferences": "Save Preferences",

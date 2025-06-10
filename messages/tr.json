@@ -431,6 +431,15 @@
       "title": "Pazarlama Çerezleri",
       "description": "Bu çerezler, size ilgi alanlarınıza yönelik reklamlar sunmak için kullanılır. Ayrıca, reklamların etkinliğini ölçmemize ve iyileştirmemize yardımcı olurlar."
     },
+    "personalization": {
+      "title": "Kişiselleştirme Çerezleri",
+      "description": "Bu çerezler, web sitesinin ve reklamların sizin için kişiselleştirilmesini sağlar."
+    },
+    "security": {
+      "title": "Güvenlik Çerezleri",
+      "description": "Bu çerezler, web sitesinin güvenliği ve sahtecilik koruması için gereklidir.",
+      "required": "Gerekli"
+    },
     "rejectAll": "Hepsini Reddet",
     "acceptAll": "Hepsini Kabul Et",
     "savePreferences": "Tercihleri Kaydet",
