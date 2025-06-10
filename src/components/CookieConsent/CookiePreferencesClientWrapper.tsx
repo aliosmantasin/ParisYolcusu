@@ -26,6 +26,15 @@ interface CookiePreferencesClientWrapperProps {
       title: string;
       description: string;
     };
+    personalization: {
+      title: string;
+      description: string;
+    };
+    security: {
+      title: string;
+      description: string;
+      required: string;
+    };
     rejectAll: string;
     acceptAll: string;
     savePreferences: string;
