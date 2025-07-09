@@ -113,13 +113,13 @@ export default function ConditionalScripts() {
               // Önce consent_default eventini gönder
               w[l].push({
                 'event': 'consent_default',
-                'ad_storage': 'denied',
-                'analytics_storage': 'denied',
+              'ad_storage': 'denied',
+              'analytics_storage': 'denied',
                 'ad_user_data': 'denied',
-                'ad_personalization': 'denied',
+              'ad_personalization': 'denied',
                 'functionality_storage': 'granted',
                 'security_storage': 'granted'
-              });
+            });
 
               // Sonra GTM'i yükle
               w[l].push({'gtm.start': new Date().getTime(), event:'gtm.js'});

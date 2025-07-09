@@ -141,8 +141,6 @@ export default async function RoutesLayout({
     <CookieConsentProvider>
       {/* <LocaleAwareBotProtection /> */}
       <Navbar/>
-      <CookieCleaner />
-      <ConditionalScripts />
       <div>
         {children} 
       </div>
@@ -151,6 +149,9 @@ export default async function RoutesLayout({
       </ScrollTop>
       <BottomNavigation/>
       <Footer/>
+      
+      <CookieCleaner />
+      <ConditionalScripts />
       <CookieConsentBanner />
     </CookieConsentProvider>
   );

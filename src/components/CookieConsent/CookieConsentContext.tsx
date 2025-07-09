@@ -27,7 +27,7 @@ interface CookieConsentContextType {
 const defaultConsent: ConsentType = {
   analytics: false,
   marketing: false,
-  functional: false,
+  functional: true,
   personalization: false,
   security: true, // Security her zaman true olmalı
 };
