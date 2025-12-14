@@ -27,8 +27,8 @@
     "firstGlance": {
       "brandNameX": "Paris",
       "brandnameY": "Passager",
-      "title": "Transfert Privé Aéroports de Paris - Service Premium",
-      "span": "Plus de 10 ans d'expérience"
+      "title": "Paris - Transfert Aéroport Disneyland",
+      "span": "Service VIP"
     }
   },
 
@@ -159,6 +159,7 @@
     "AirplaneTransfer": "Transfert Aéroport",
     "ParisTravelTours": "Tour de Paris",
     "PrivateChauffeur": "Chauffeur Privé à Paris",
+    "DisneylandTransfer": "Transfert Disneyland",
     "SendForm": "Envoyer le Formulaire"
   },
 

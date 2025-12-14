@@ -27,8 +27,8 @@
     "firstGlance": {
       "brandNameX": "Paris",
       "brandnameY": "Passenger",
-      "title": "Comfortable and Safe Airport Transfer Services in Paris",
-      "span": "VİP Service"
+      "title": "Paris - Disneyland Airport Transfer",
+      "span": "VIP Service"
     }
   },
 
@@ -224,6 +224,7 @@
     "AirplaneTransfer": "Airport Transfer",
     "ParisTravelTours": "Paris Sightseeing Tour",
     "PrivateChauffeur": "Private Chauffeur in Paris",
+    "DisneylandTransfer": "Disneyland Transfer",
     "SendForm": "Send Form"
   },
 

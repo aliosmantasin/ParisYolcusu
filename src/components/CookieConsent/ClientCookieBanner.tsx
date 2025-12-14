@@ -58,7 +58,7 @@ export default function ClientCookieBanner({ translations }: ClientCookieBannerP
   return (
     <>
       <div className="container mx-auto">
-          <div className="fixed bottom-0 left-0 right-0 z-50 p-4 bg-white shadow-2xl border-t border-gray-200" style={{ boxShadow: '0 -4px 20px rgba(0, 0, 0, 0.15)' }}>
+          <div className="fixed bottom-0 left-0 right-0 z-[9999] p-4 bg-white shadow-2xl border-t border-gray-200 pointer-events-auto" style={{ zIndex: 9999, boxShadow: '0 -4px 20px rgba(0, 0, 0, 0.15)' }}>
             <div className="max-w-7xl mx-auto">
               <div className="flex flex-col lg:flex-row items-start lg:items-center gap-5">
                 <div className="flex-1">

@@ -30,45 +30,33 @@ interface AnimatedFirstGlanceContentProps {
   isMobile?: boolean;
 }
 
-const AnimatedFirstGlanceContent = ({ brandNameX, brandnameY, title, span, isMobile = false }: AnimatedFirstGlanceContentProps) => {
+const AnimatedFirstGlanceContent = ({ title, span, isMobile = false }: AnimatedFirstGlanceContentProps) => {
   return (
-    <div className="relative w-full sm:w-2/5 md:w-4/9 m-auto border-[#d7eae5] dark:border-[#067481] text-white">
-      {/* Başlıklar Animasyonlu */}
-      <motion.div initial="hidden" animate="visible" custom={0} variants={textVariants}>
-        <p className="text-center text-md sm:text-xl font-semibold uppercase tracking-[.15em] text-[#ceaa6a]">
-          {brandNameX}
-        </p>
-      </motion.div>
-
-      <motion.div initial="hidden" animate="visible" custom={0.2} variants={textVariants}>
-        <p className="text-center text-md sm:text-xl font-semibold uppercase tracking-[.15em] text-[#ceaa6a]">
-          {brandnameY}
-        </p>
-      </motion.div>
-
+    <div className="relative z-10 w-full sm:w-3/5 md:w-6/12 m-auto border-[#d7eae5] dark:border-[#067481] text-white">
       {/* Orta Kısım Animasyonlu */}
-      <motion.div initial="hidden" animate="visible" custom={0.4} variants={textVariants} className="flex items-center justify-center relative">
-        {!isMobile && <MdOutlineArrowLeft className="mr-1 text-4xl min-w-8" />}
-        <h1 className="text-xl sm:text-3xl text-center font-semibold tracking-[.15em] p-10 leading-relaxed">
+      <motion.div initial="hidden" animate="visible" custom={0.4} variants={textVariants} className=" flex items-center justify-center relative">
+        {!isMobile && <MdOutlineArrowLeft className="mr-1 text-4xl min-w-8 drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]" />}
+        <h1 className="text-xl sm:text-4xl md:text-4xl text-center font-semibold tracking-[.15em] p-4 sm:p-10 leading-relaxed drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)]">
           {title}
         </h1>
-        {!isMobile && <MdOutlineArrowRight className="ml-1 text-4xl min-w-8" />}
+        {!isMobile && <MdOutlineArrowRight className="ml-1 text-4xl min-w-8 drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]" />}
       </motion.div>
-
-      {/* Clip-path için animasyon */}
-      <motion.div
-        initial="hidden"
-        animate="visible"
-        variants={clipPathVariants}
-        className="absolute bottom-7 left-1/2 -translate-x-1/2 w-full h-5 bg-[#fece47]"
-      ></motion.div>
 
       {/* Alt Yazı Animasyonlu */}
-      <motion.div initial="hidden" animate="visible" custom={0.6} variants={textVariants}>
-        <p className="text-center text-sm sm:text-xl font-extralight uppercase tracking-[.25em]">
-          {span}
-        </p>
-      </motion.div>
+      <div className="flex justify-center w-full">
+        <motion.div initial="hidden" animate="visible" custom={0.6} variants={textVariants} className="relative inline-block">
+          <p className="text-sm sm:text-xl md:text-2xl font-extralight uppercase tracking-[.25em] drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
+            {span}
+          </p>
+          {/* Clip-path için animasyon - VIP HİZMET altında */}
+          <motion.div
+            initial="hidden"
+            animate="visible"
+            variants={clipPathVariants}
+            className="absolute z-10 top-full mt-2 left-0 w-full h-2 bg-[#fece47]"
+          ></motion.div>
+        </motion.div>
+      </div>
     </div>
   );
 };

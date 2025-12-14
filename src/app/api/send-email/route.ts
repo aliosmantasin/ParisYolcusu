@@ -6,19 +6,21 @@ export async function POST(req: NextRequest) {
     const { email, firstName, lastName, phone, service, recaptchaToken } = await req.json();
     console.log("📨 Gelen form verisi:", { email, firstName, lastName, phone, service, recaptchaToken });
 
-    // reCAPTCHA doğrulaması
-    const recaptchaResponse = await fetch(
-      `https://www.google.com/recaptcha/api/siteverify`,
-      {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: `secret=${process.env.RECAPTCHA_SECRET_KEY}&response=${recaptchaToken}`,
-      }
-    );
-    const recaptchaResult = await recaptchaResponse.json();
+    // reCAPTCHA doğrulaması (sadece token varsa)
+    if (recaptchaToken) {
+      const recaptchaResponse = await fetch(
+        `https://www.google.com/recaptcha/api/siteverify`,
+        {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+          body: `secret=${process.env.RECAPTCHA_SECRET_KEY}&response=${recaptchaToken}`,
+        }
+      );
+      const recaptchaResult = await recaptchaResponse.json();
 
-    if (!recaptchaResult.success) {
-      return NextResponse.json({ message: 'reCAPTCHA doğrulaması başarısız' }, { status: 400 });
+      if (!recaptchaResult.success) {
+        return NextResponse.json({ message: 'reCAPTCHA doğrulaması başarısız' }, { status: 400 });
+      }
     }
 
     // Nodemailer yapılandırması

@@ -87,7 +87,7 @@ export default function ClientCookiePreferencesModal({ translations }: ClientCoo
   }, []);
 
   return (
-    <div className="fixed inset-0 z-[60] flex items-center justify-center m-auto bg-black overflow-y-auto p-5 sm:p-auto">
+    <div className="fixed inset-0 z-[9999] flex items-center justify-center m-auto bg-black overflow-y-auto p-5 sm:p-auto" style={{ zIndex: 9999 }}>
       <div 
         className="bg-white rounded-lg shadow-xl w-full max-w-2xl mx-4 flex flex-col"
         style={{ maxHeight: modalHeight }}

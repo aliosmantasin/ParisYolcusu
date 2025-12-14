@@ -27,7 +27,7 @@
     "firstGlance": {
       "brandNameX": "Paris",
       "brandnameY": "Yolcusu",
-      "title": "Pariste Konforlu ve Güvenli Havalimanı Transfer Hizmetleri",
+      "title": "Paris - Disneyland Havalimanı Transfer",
       "span": "VİP Hizmet"
     }
   },
@@ -222,6 +222,7 @@
     "AirplaneTransfer": "Havalimanı Transfer",
     "ParisTravelTours": "Paris Gezi Turu",
     "PrivateChauffeur": "Pariste Özel Şoför",
+    "DisneylandTransfer": "Disneyland Transfer",
     "SendForm": "Form Gönder"
   },
 

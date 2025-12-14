@@ -27,17 +27,23 @@ const COOKIE_PATTERNS = {
 export default function CookieCleaner() {
   const { consent, hasInteracted } = useCookieConsent();
 
-  useEffect(() => {
-    if (!hasInteracted) return; // Henüz etkileşim yoksa hiçbir şey yapma
-
-    // Her bir consent tipi için çerezleri kontrol et
-    Object.entries(consent).forEach(([type, isAllowed]) => {
-      if (!isAllowed && COOKIE_PATTERNS[type as keyof typeof COOKIE_PATTERNS]) {
-        cleanupCookies(COOKIE_PATTERNS[type as keyof typeof COOKIE_PATTERNS]);
+  // Domain seviyelerini alma
+  const getDomainLevels = (hostname: string): string[] => {
+    const parts = hostname.split('.');
+    const domains = [''];
+    
+    if (parts.length > 2) {
+      // Alt alan adları için
+      for (let i = 1; i < parts.length - 1; i++) {
+        domains.push(`domain=.${parts.slice(i).join('.')};`);
       }
-    });
-
-  }, [consent, hasInteracted]);
+    }
+    
+    // Ana domain için
+    domains.push(`domain=.${hostname};`);
+    
+    return domains;
+  };
 
   // Çerezleri temizleme fonksiyonu
   const cleanupCookies = (cookiePrefixes: string[]) => {
@@ -63,23 +69,17 @@ export default function CookieCleaner() {
     }
   };
 
-  // Domain seviyelerini alma
-  const getDomainLevels = (hostname: string): string[] => {
-    const parts = hostname.split('.');
-    const domains = [''];
-    
-    if (parts.length > 2) {
-      // Alt alan adları için
-      for (let i = 1; i < parts.length - 1; i++) {
-        domains.push(`domain=.${parts.slice(i).join('.')};`);
+  useEffect(() => {
+    if (!hasInteracted) return; // Henüz etkileşim yoksa hiçbir şey yapma
+
+    // Her bir consent tipi için çerezleri kontrol et
+    Object.entries(consent).forEach(([type, isAllowed]) => {
+      if (!isAllowed && COOKIE_PATTERNS[type as keyof typeof COOKIE_PATTERNS]) {
+        cleanupCookies(COOKIE_PATTERNS[type as keyof typeof COOKIE_PATTERNS]);
       }
-    }
-    
-    // Ana domain için
-    domains.push(`domain=.${hostname};`);
-    
-    return domains;
-  };
+    });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [consent, hasInteracted]);
 
   return null;
-} 
+}

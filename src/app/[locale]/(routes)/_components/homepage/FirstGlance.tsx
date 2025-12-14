@@ -1,6 +1,7 @@
 import React from "react";
 import { useTranslations } from "next-intl";
 import AnimatedFirstGlanceContent from "./AnimatedFirstGlanceContent";
+import BannerInfoForm from "./BannerInfoForm";
 
 const FirstGlance = () => {
   const t = useTranslations("HomePage");
@@ -8,34 +9,25 @@ const FirstGlance = () => {
   return (
     <section className="w-full bg-[#ffffff] dark:bg-black relative">
       {/* Masaüstü Görünümü */}
-      <div className="container hidden sm:flex flex-wrap justify-center items-center min-h-[60vh] border-2 mx-auto my-10 relative h-[775px] bg-[url(/images/banner.webp)] bg-cover bg-center">
+      <div className="min-h-[20vh] sm:flex flex-wrap justify-center items-center sm:min-h-[60vh] sm:border-2 mx-auto bg-[url(/images/Kapak.webp)] bg-cover bg-center relative sm:pb-32">
         {/* Koyu Katman */}
-        <div className="absolute inset-0 bg-black opacity-25"></div>
+        <div className="absolute inset-0 bg-black opacity-50"></div>
 
         {/* İçerik */}
         <AnimatedFirstGlanceContent
-          brandNameX={t("firstGlance.brandNameX")}
-          brandnameY={t("firstGlance.brandnameY")}
+          brandNameX=""
+          brandnameY=""
           title={t("firstGlance.title")}
           span={t("firstGlance.span")}
           isMobile={false}
         />
       </div>
 
-      {/* Mobil Görünüm */}
-      <div className="container flex sm:hidden flex-wrap justify-center items-center min-h-[60vh] border-2 mx-auto my-10 relative h-[auto] bg-[url(/images/banner2.webp)] bg-cover bg-center">
-        {/* Koyu Katman */}
-        <div className="absolute inset-0 bg-black opacity-50"></div>
-
-        {/* İçerik */}
-        <AnimatedFirstGlanceContent
-          brandNameX={t("firstGlance.brandNameX")}
-          brandnameY={t("firstGlance.brandnameY")}
-          title={t("firstGlance.title")}
-          span={t("firstGlance.span")}
-          isMobile={true}
-        />
+      {/* Banner Bilgi Alma Formu - Mobilde normal akış, masaüstünde absolute */}
+      <div className="relative px-4 mt-8 sm:absolute sm:bottom-0 sm:left-0 sm:right-0 sm:transform sm:translate-y-1/2 z-20">
+        <BannerInfoForm />
       </div>
+ 
     </section>
   );
 };

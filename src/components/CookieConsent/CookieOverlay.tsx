@@ -12,7 +12,8 @@ export default function CookieOverlay() {
 
   return (
     <div 
-      className="fixed inset-0 bg-black/80 z-40" 
+      className="fixed inset-0 bg-black/90 z-[9998] pointer-events-auto"
+      style={{ zIndex: 9998 }}
       aria-hidden="true"
     />
   );
