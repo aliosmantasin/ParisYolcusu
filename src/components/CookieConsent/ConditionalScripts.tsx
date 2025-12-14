@@ -81,7 +81,6 @@ export default function ConditionalScripts() {
     if (hasInteracted) {
       sendGtagConsent(consent);
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [consent.analytics, consent.marketing, hasInteracted]);
   
   return (

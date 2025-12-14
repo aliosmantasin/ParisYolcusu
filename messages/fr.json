@@ -72,8 +72,8 @@
     "luggage": "Bagage",
     "reserve_now": "Réserver Maintenant",
     "vehicle1": {
-      "name": "Véhicule Standard",
-      "description": "Combinant luxe et confort, la Mercedes-Benz Classe E se distingue par son design élégant et ses performances supérieures."
+      "name": "Véhicule Berline",
+      "description": "Nos véhicules berline se distinguent par leur design élégant et leurs performances supérieures, offrant une expérience de voyage confortable et luxueuse."
     },
     "vehicle2": {
       "name": "Mercedes-Benz Classe V",
@@ -159,7 +159,6 @@
     "AirplaneTransfer": "Transfert Aéroport",
     "ParisTravelTours": "Tour de Paris",
     "PrivateChauffeur": "Chauffeur Privé à Paris",
-    "DisneylandTransfer": "Transfert Disneyland",
     "SendForm": "Envoyer le Formulaire"
   },
 

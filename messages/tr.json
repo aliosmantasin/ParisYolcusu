@@ -72,8 +72,8 @@
     "luggage": "Bagaj",
     "reserve_now": "Şimdi Rezervasyon Yap",
     "vehicle1": {
-      "name": "Tesla Model Y",
-      "description": "Lüks ve konforu bir araya getiren Mercedes-Benz Classe E, şık tasarımı ve üstün performansıyla öne çıkıyor."
+      "name": "Sedan Araç",
+      "description": "Şık tasarımı ve üstün performansıyla öne çıkan sedan araçlarımız, konforlu ve lüks yolculuk deneyimi sunar."
     },
     "vehicle2": {
       "name": "Mercedes-Benz Classe V",
@@ -222,7 +222,6 @@
     "AirplaneTransfer": "Havalimanı Transfer",
     "ParisTravelTours": "Paris Gezi Turu",
     "PrivateChauffeur": "Pariste Özel Şoför",
-    "DisneylandTransfer": "Disneyland Transfer",
     "SendForm": "Form Gönder"
   },
 

@@ -161,9 +161,6 @@ const BannerInfoForm = () => {
                 <SelectItem value={translations.airplaneTransfer}>
                   {translations.airplaneTransfer}
                 </SelectItem>
-                <SelectItem value={translations.disneylandTransfer}>
-                  {translations.disneylandTransfer}
-                </SelectItem>
                 <SelectItem value={translations.parisTravelTours}>
                   {translations.parisTravelTours}
                 </SelectItem>

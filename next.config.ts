@@ -28,6 +28,7 @@ const nextConfig: NextConfig = {
   },
   poweredByHeader: false,
   reactStrictMode: true,
+  swcMinify: true,
   compress: true,
   generateEtags: true,
   onDemandEntries: {

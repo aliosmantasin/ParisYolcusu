@@ -1,22 +1,41 @@
 import { ThemeProvider } from "@/components/theme-provider";
 import "./globals.css";
 import { NextIntlClientProvider } from "next-intl";
+import { notFound } from "next/navigation";
 import { LanguageProvider } from "../components/LanguageProvider";
 // import { SecurityProvider } from "../components/SecurityProvider";
 
 // 🌍 Tüm çeviri dosyalarını içe aktar
 import trMessages from "../../messages/tr.json";
+import enMessages from "../../messages/en.json";
+import frMessages from "../../messages/fr.json";
+
+// 🌍 Desteklenen diller
+const locales = ["tr", "en", "fr"];
+
+// 🌍 Çeviri mesajlarını haritaya ekle
+const messagesMap = {
+  tr: trMessages,
+  en: enMessages,
+  fr: frMessages,
+};
 
 export default async function RootLayout({
   children,
+  params,
 }: {
   children: React.ReactNode;
 }) {
-  // Root layout'ta varsayılan locale kullan, gerçek locale [locale] layout'unda belirlenir
-  const locale = "tr";
+  const resolvedParams = await params;
+  const locale = resolvedParams?.locale || "tr";
   
-  // 📌 JSON dosyasını haritadan al (varsayılan olarak tr kullanılır, gerçek locale [locale] layout'unda set edilir)
-  const messages = trMessages;
+  // Eğer geçerli bir dil değilse 404 sayfasına yönlendir
+  if (!locales.includes(locale)) {
+    notFound();
+  }
+
+  // 📌 JSON dosyasını haritadan al
+  const messages = messagesMap[locale as keyof typeof messagesMap] || trMessages;
 
   return (
     <html lang={locale} suppressHydrationWarning>

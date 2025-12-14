@@ -78,8 +78,8 @@ export default function CookieCleaner() {
         cleanupCookies(COOKIE_PATTERNS[type as keyof typeof COOKIE_PATTERNS]);
       }
     });
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+
   }, [consent, hasInteracted]);
 
   return null;
-}
+} 

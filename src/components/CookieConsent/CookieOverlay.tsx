@@ -6,15 +6,6 @@ import { useCookieConsent } from "./CookieConsentContext";
 export default function CookieOverlay() {
   const { hasInteracted } = useCookieConsent();
 
-  if (hasInteracted) {
-    return null;
-  }
-
-  return (
-    <div 
-      className="fixed inset-0 bg-black/90 z-[9998] pointer-events-auto"
-      style={{ zIndex: 9998 }}
-      aria-hidden="true"
-    />
-  );
+  // Overlay kaldırıldı - artık dark arka plan yok
+  return null;
 } 

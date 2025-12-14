@@ -73,8 +73,8 @@
     "luggage": "Baggage",
     "reserve_now": "Book Now",
     "vehicle1": {
-      "name": "Tesla Model Y",
-      "description": "Combining luxury and comfort, the Mercedes-Benz Classe E stands out with its stylish design and superior performance."
+      "name": "Sedan Vehicle",
+      "description": "Our sedan vehicles stand out with their stylish design and superior performance, offering a comfortable and luxurious travel experience."
     },
     "vehicle2": {
       "name": "Mercedes-Benz Classe V",
@@ -224,7 +224,6 @@
     "AirplaneTransfer": "Airport Transfer",
     "ParisTravelTours": "Paris Sightseeing Tour",
     "PrivateChauffeur": "Private Chauffeur in Paris",
-    "DisneylandTransfer": "Disneyland Transfer",
     "SendForm": "Send Form"
   },
 

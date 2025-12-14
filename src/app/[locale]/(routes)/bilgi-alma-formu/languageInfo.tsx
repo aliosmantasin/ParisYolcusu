@@ -16,7 +16,6 @@ export function useFormTranslations() {
     airplaneTransfer: t("AirplaneTransfer"),
     parisTravelTours: t("ParisTravelTours"),
     privateChauffeur: t("PrivateChauffeur"),
-    disneylandTransfer: t("DisneylandTransfer"),
     sendForm: t("SendForm")
   };
 }
