@@ -1,38 +1,27 @@
 import { ThemeProvider } from "@/components/theme-provider";
 import "./globals.css";
 import { NextIntlClientProvider } from "next-intl";
-import { notFound } from "next/navigation";
 import { LanguageProvider } from "../components/LanguageProvider";
 // import { SecurityProvider } from "../components/SecurityProvider";
 
 // 🌍 Tüm çeviri dosyalarını içe aktar
 import trMessages from "../../messages/tr.json";
-import enMessages from "../../messages/en.json";
-import frMessages from "../../messages/fr.json";
-
-// 🌍 Desteklenen diller
-const locales = ["tr", "en", "fr"];
 
 // 🌍 Çeviri mesajlarını haritaya ekle
 const messagesMap = {
   tr: trMessages,
-  en: enMessages,
-  fr: frMessages,
+  en: trMessages, // Root layout'ta varsayılan olarak tr kullanılıyor
+  fr: trMessages, // Gerçek locale [locale] route group'unda yönetiliyor
 };
 
 export default async function RootLayout({
   children,
-  params,
 }: {
   children: React.ReactNode;
 }) {
-  const resolvedParams = await params;
-  const locale = resolvedParams?.locale || "tr";
-  
-  // Eğer geçerli bir dil değilse 404 sayfasına yönlendir
-  if (!locales.includes(locale)) {
-    notFound();
-  }
+  // Root layout'ta locale bilgisi yok, varsayılan olarak tr kullan
+  // Gerçek locale [locale] route group'undaki layout'ta yönetiliyor
+  const locale = "tr";
 
   // 📌 JSON dosyasını haritadan al
   const messages = messagesMap[locale as keyof typeof messagesMap] || trMessages;

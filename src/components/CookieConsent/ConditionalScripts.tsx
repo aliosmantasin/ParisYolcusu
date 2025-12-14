@@ -81,7 +81,7 @@ export default function ConditionalScripts() {
     if (hasInteracted) {
       sendGtagConsent(consent);
     }
-  }, [consent.analytics, consent.marketing, hasInteracted]);
+  }, [consent, hasInteracted]);
   
   return (
     <>

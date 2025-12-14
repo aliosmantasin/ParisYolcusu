@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useCallback } from "react";
 import { useCookieConsent } from "./CookieConsentContext";
 
 // Temizlenecek çerezlerin listesi
@@ -46,7 +46,7 @@ export default function CookieCleaner() {
   };
 
   // Çerezleri temizleme fonksiyonu
-  const cleanupCookies = (cookiePrefixes: string[]) => {
+  const cleanupCookies = useCallback((cookiePrefixes: string[]) => {
     if (typeof document === 'undefined') return;
 
     const allCookies = document.cookie.split(';');
@@ -67,7 +67,7 @@ export default function CookieCleaner() {
         console.log(`[CookieCleaner] Removed: ${cookieName}`);
       }
     }
-  };
+  }, []);
 
   useEffect(() => {
     if (!hasInteracted) return; // Henüz etkileşim yoksa hiçbir şey yapma
@@ -79,7 +79,7 @@ export default function CookieCleaner() {
       }
     });
 
-  }, [consent, hasInteracted]);
+  }, [consent, hasInteracted, cleanupCookies]);
 
   return null;
 } 
