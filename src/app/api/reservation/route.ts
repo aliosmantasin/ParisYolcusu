@@ -208,7 +208,7 @@ export async function POST(req: NextRequest) {
     // Şirkete gönderilecek email
     const companyEmail = {
       from: `"Paris Yolcusu" <${process.env.EMAIL}>`,
-      to: `sosyalsettobox@gmail.com`,
+      to: `parisyolcusu@gmail.com`,
       subject: "Yeni Rezervasyon Talebi",
       html: `
         <!DOCTYPE html>

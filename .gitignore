@@ -41,3 +41,10 @@ yarn-error.log*
 next-env.d.ts
 build.zip
 
+docs/RULES.md
+.gitignore
+docs/TASK.md
+YazilimTech/
+GDPR-COOKIE-CONSENT.md
+.gitignore
+CookieManage.md

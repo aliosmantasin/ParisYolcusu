@@ -52,6 +52,22 @@ type FormData = {
 
 const defaultCenter = { lat: 41.0082, lng: 28.9784 }; // Istanbul center
 
+// Place adresini formatla - havalimanları için name, diğerleri için formatted_address
+const getPlaceDisplayName = (place: google.maps.places.PlaceResult): string => {
+  // Havalimanları için name kullan (daha anlaşılır)
+  const isAirport = place.types?.some(type => 
+    type === 'airport' || 
+    (type === 'establishment' && place.name?.toLowerCase().includes('airport'))
+  );
+  
+  if (isAirport && place.name) {
+    return place.name;
+  }
+  
+  // Diğer yerler için formatted_address kullan
+  return place.formatted_address || place.name || "";
+};
+
 // Custom PhoneInput component with theme support
 interface PhoneInputFieldProps {
   setValue: UseFormSetValue<FormData>;
@@ -172,8 +188,8 @@ const ReservationForm = () => {
       });
 
       setDirections(results);
-      setValue("origin", originPlace.formatted_address || "");
-      setValue("destination", destinationPlace.formatted_address || "");
+      setValue("origin", getPlaceDisplayName(originPlace));
+      setValue("destination", getPlaceDisplayName(destinationPlace));
       
       // Mesafe ve süre bilgisini al
       const leg = results.routes[0].legs[0];
@@ -211,6 +227,12 @@ const ReservationForm = () => {
           const place = originAutocompleteRef.current?.getPlace();
           if (place) {
             setOriginPlace(place);
+            // Input değerini formatlanmış isim ile güncelle
+            const displayName = getPlaceDisplayName(place);
+            if (originRef.current) {
+              originRef.current.value = displayName;
+              setValue("origin", displayName);
+            }
           }
         });
       }
@@ -222,11 +244,17 @@ const ReservationForm = () => {
           const place = destinationAutocompleteRef.current?.getPlace();
           if (place) {
             setDestinationPlace(place);
+            // Input değerini formatlanmış isim ile güncelle
+            const displayName = getPlaceDisplayName(place);
+            if (destinationRef.current) {
+              destinationRef.current.value = displayName;
+              setValue("destination", displayName);
+            }
           }
         });
       }
     }
-  }, [isLoaded, map]);
+  }, [isLoaded, map, setValue]);
 
   useEffect(() => {
     if (vehicleType) {
