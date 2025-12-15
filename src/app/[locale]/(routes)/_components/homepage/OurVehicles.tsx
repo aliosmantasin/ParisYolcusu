@@ -16,7 +16,7 @@ const OurVehicles = () => {
       description: t("vehicle1.description"),
       image: "/images/carPalholder.webp",
       capacity: "3",
-      link: "/rezervasyon-formu?vehicle=sedan-vehicle"
+      link: "/rezervasyon-formu?vehicle=Sedan-Vehicle"
     },
     {
       id: 2,

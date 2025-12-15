@@ -148,13 +148,16 @@ const ReservationForm = () => {
     },
   });
 
-  const { isLoaded } = useJsApiLoader({
+  const originRegister = register("origin");
+  const destinationRegister = register("destination");
+
+  const { isLoaded, loadError } = useJsApiLoader({
     googleMapsApiKey: process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY!,
     libraries: ["places"],
   });
 
   const calculateRoute = useCallback(async () => {
-    if (!originPlace || !destinationPlace || !map) return;
+    if (!originPlace || !destinationPlace || !map || loadError) return;
 
     const directionsService = new google.maps.DirectionsService();
     try {
@@ -190,7 +193,7 @@ const ReservationForm = () => {
       console.error("Rota hesaplanırken hata oluştu:", error);
       setToastMessage("❌ Rota hesaplanırken bir hata oluştu");
     }
-  }, [map, setValue, originPlace, destinationPlace]);
+  }, [map, setValue, originPlace, destinationPlace, loadError]);
 
   // Rota otomatik hesaplama
   useEffect(() => {
@@ -262,8 +265,11 @@ const ReservationForm = () => {
   };
 
   const t = useTranslations("Reservation");
+  const tVehicles = useTranslations("OurVehicles");
 
-  if (!isLoaded) return <div className="flex items-center justify-center h-64">{t("loadingMap")}</div>;
+  if (!isLoaded && !loadError) {
+    return <div className="flex items-center justify-center h-64">{t("loadingMap")}</div>;
+  }
 
   return (
     <section className="flex items-center justify-center my-20">
@@ -343,9 +349,9 @@ const ReservationForm = () => {
                 <SelectValue placeholder={t("selectVehicle")} />
               </SelectTrigger>
               <SelectContent>
-                <SelectItem value="tesla-model-y">Tesla Model Y | 3 Yolcu</SelectItem>
-                <SelectItem value="mercedes-benz-classe-v">Mercedes-Benz Classe V | 7 Yolcu</SelectItem>
-                <SelectItem value="mercedes-benz-classe-s">Mercedes-Benz Classe S | 3 Yolcu</SelectItem>
+                <SelectItem value="Sedan-Vehicle">{tVehicles("vehicle1.name")} | 3 {tVehicles("passengers")}</SelectItem>
+                <SelectItem value="mercedes-benz-classe-v">{tVehicles("vehicle2.name")} | 7 {tVehicles("passengers")}</SelectItem>
+                <SelectItem value="mercedes-benz-classe-s">{tVehicles("vehicle3.name")} | 3 {tVehicles("passengers")}</SelectItem>
                 
               </SelectContent>
             </Select>
@@ -357,20 +363,38 @@ const ReservationForm = () => {
               <Label>{t("pickupLocation")}</Label>
               <Input 
                 type="text" 
-                ref={originRef}
-                placeholder={t("enterPickupLocation")}
+                {...originRegister}
+                ref={(e) => {
+                  originRegister.ref(e);
+                  originRef.current = e;
+                }}
+                placeholder={loadError ? "Örn: İstanbul Havalimanı" : t("enterPickupLocation")}
               />
               {errors.origin && <p className="text-red-500 text-sm">{errors.origin.message}</p>}
+              {loadError && (
+                <p className="text-amber-600 text-xs mt-1">
+                  ⚠️ Google Maps yüklenemediği için manuel adres girişi yapın
+                </p>
+              )}
             </div>
             
             <div>
               <Label>{t("dropoffLocation")}</Label>
               <Input 
                 type="text" 
-                ref={destinationRef}
-                placeholder={t("enterDropoffLocation")}
+                {...destinationRegister}
+                ref={(e) => {
+                  destinationRegister.ref(e);
+                  destinationRef.current = e;
+                }}
+                placeholder={loadError ? "Örn: Taksim Meydanı" : t("enterDropoffLocation")}
               />
               {errors.destination && <p className="text-red-500 text-sm">{errors.destination.message}</p>}
+              {loadError && (
+                <p className="text-amber-600 text-xs mt-1">
+                  ⚠️ Google Maps yüklenemediği için manuel adres girişi yapın
+                </p>
+              )}
             </div>
           </div>
 
@@ -386,48 +410,77 @@ const ReservationForm = () => {
           )}
 
           <div className="h-64 w-full rounded-lg overflow-hidden border">
-            <GoogleMap 
-              center={defaultCenter}
-              zoom={12}
-              mapContainerStyle={{ height: "100%", width: "100%" }}
-              options={{
-                streetViewControl: false,
-                mapTypeControl: false,
-                fullscreenControl: false,
-              }}
-              onLoad={map => setMap(map)}
-            >
-              {originPlace?.geometry?.location && (
-                <Marker
-                  position={originPlace.geometry.location}
-                  icon={{
-                    url: "https://maps.google.com/mapfiles/ms/icons/red-dot.png",
-                    scaledSize: new google.maps.Size(30, 30),
-                  }}
-                />
-              )}
-              {destinationPlace?.geometry?.location && (
-                <Marker
-                  position={destinationPlace.geometry.location}
-                  icon={{
-                    url: "https://maps.google.com/mapfiles/ms/icons/green-dot.png",
-                    scaledSize: new google.maps.Size(30, 30),
-                  }}
-                />
-              )}
-              {directions && (
-                <DirectionsRenderer 
-                  directions={directions}
-                  options={{
-                    suppressMarkers: true,
-                    polylineOptions: {
-                      strokeColor: "#2563eb",
-                      strokeWeight: 5,
-                    }
-                  }}
-                />
-              )}
-            </GoogleMap>
+            {loadError ? (
+              <div className="h-full w-full flex flex-col items-center justify-center bg-gray-50 p-6 text-center">
+                <div className="mb-4">
+                  <svg
+                    className="w-16 h-16 text-gray-400 mx-auto"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"
+                    />
+                  </svg>
+                </div>
+                <h3 className="text-lg font-semibold text-gray-700 mb-2">
+                  Harita Yüklenemedi
+                </h3>
+                <p className="text-sm text-gray-600 mb-4">
+                  Google Maps şu anda yüklenemiyor. Lütfen konum bilgilerinizi manuel olarak girin ve rezervasyonunuzu tamamlayın.
+                </p>
+                <p className="text-xs text-gray-500">
+                  Hata: {loadError.message || "Bilinmeyen hata"}
+                </p>
+              </div>
+            ) : (
+              <GoogleMap 
+                center={defaultCenter}
+                zoom={12}
+                mapContainerStyle={{ height: "100%", width: "100%" }}
+                options={{
+                  streetViewControl: false,
+                  mapTypeControl: false,
+                  fullscreenControl: false,
+                }}
+                onLoad={map => setMap(map)}
+              >
+                {originPlace?.geometry?.location && (
+                  <Marker
+                    position={originPlace.geometry.location}
+                    icon={{
+                      url: "https://maps.google.com/mapfiles/ms/icons/red-dot.png",
+                      scaledSize: new google.maps.Size(30, 30),
+                    }}
+                  />
+                )}
+                {destinationPlace?.geometry?.location && (
+                  <Marker
+                    position={destinationPlace.geometry.location}
+                    icon={{
+                      url: "https://maps.google.com/mapfiles/ms/icons/green-dot.png",
+                      scaledSize: new google.maps.Size(30, 30),
+                    }}
+                  />
+                )}
+                {directions && (
+                  <DirectionsRenderer 
+                    directions={directions}
+                    options={{
+                      suppressMarkers: true,
+                      polylineOptions: {
+                        strokeColor: "#2563eb",
+                        strokeWeight: 5,
+                      }
+                    }}
+                  />
+                )}
+              </GoogleMap>
+            )}
           </div>
 
           <div className="my-4">
@@ -441,7 +494,7 @@ const ReservationForm = () => {
           <Button 
             type="submit" 
             className="w-full" 
-            disabled={!directions || isSubmitting}
+            disabled={(!directions && !loadError) || isSubmitting}
           >
             {isSubmitting ? t("submitting") : t("submitReservation")}
           </Button>
