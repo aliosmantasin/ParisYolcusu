@@ -14,6 +14,7 @@ export function useFormTranslations() {
     selectService: t("selectService"),
     select: t("select"),
     airplaneTransfer: t("AirplaneTransfer"),
+    parisDisneyland: t("ParisDisneyland"),
     parisTravelTours: t("ParisTravelTours"),
     privateChauffeur: t("PrivateChauffeur"),
     sendForm: t("SendForm")
