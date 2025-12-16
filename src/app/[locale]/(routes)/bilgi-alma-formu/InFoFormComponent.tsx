@@ -143,6 +143,7 @@ const InfoForm = () => {
               </SelectTrigger>
               <SelectContent>
                 <SelectItem value={translations.airplaneTransfer}>{translations.airplaneTransfer}</SelectItem>
+                <SelectItem value={translations.parisDisneyland}>{translations.parisDisneyland}</SelectItem>
                 <SelectItem value={translations.parisTravelTours}>{translations.parisTravelTours}</SelectItem>
                 <SelectItem value={translations.privateChauffeur}>{translations.privateChauffeur}</SelectItem>
               </SelectContent>
