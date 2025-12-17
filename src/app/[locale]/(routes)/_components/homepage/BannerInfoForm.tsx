@@ -19,12 +19,14 @@ import { createPortal } from "react-dom";
 const formSchema = yup.object().shape({
   fullName: yup.string().min(3, "İsim soyisim en az 3 karakter olmalı").required("İsim soyisim zorunludur"),
   phone: yup.string().min(10, "Geçerli bir telefon numarası girin").required("Telefon numarası zorunludur"),
+  email: yup.string().email("Geçerli bir email adresi girin").required("Email zorunludur"),
   service: yup.string().required("Hizmet seçimi zorunludur"),
 });
 
 type FormData = {
   fullName: string;
   phone: string;
+  email: string;
   service: string;
 };
 
@@ -86,12 +88,13 @@ const BannerInfoForm = () => {
     defaultValues: {
       fullName: "",
       phone: "",
+      email: "",
       service: "",
     },
   });
 
   const formValues = watch();
-  const isFormValid = formValues.fullName && formValues.phone && formValues.service;
+  const isFormValid = formValues.fullName && formValues.phone && formValues.email && formValues.service;
 
   const sendEmail = async (data: FormData, token: string | null = null) => {
     try {
@@ -106,8 +109,8 @@ const BannerInfoForm = () => {
           firstName,
           lastName,
           phone: data.phone,
+          email: data.email,
           service: data.service,
-          email: "", // Banner formunda email yok
           recaptchaToken: token,
         },
         {
@@ -120,6 +123,7 @@ const BannerInfoForm = () => {
         // Formu temizle
         setValue("fullName", "");
         setValue("phone", "");
+        setValue("email", "");
         setValue("service", "");
         setSelectedService("");
         setRecaptchaToken(null);
@@ -180,6 +184,19 @@ const BannerInfoForm = () => {
           {/* Telefon */}
           <div className="flex-1 w-full sm:w-auto min-w-0">
             <PhoneInputField setValue={setValue} errors={errors} />
+          </div>
+
+          {/* Email */}
+          <div className="flex-1 w-full sm:w-auto min-w-0">
+            <Input
+              {...register("email")}
+              type="email"
+              placeholder={translations.email}
+              className="w-full h-11 border-gray-300 dark:border-gray-600"
+            />
+            {errors.email && (
+              <p className="text-red-500 text-xs mt-1">{errors.email.message}</p>
+            )}
           </div>
 
           {/* Hizmet Seçiniz */}
