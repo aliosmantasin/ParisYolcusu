@@ -20,7 +20,8 @@
     "span": "Tüm Hakları Saklıdır.",
     "cookiePolicy": "Çerez Politikası",
     "cookiePolicyUrl": "/cerez-politikasi",
-    "savePreferences": "Tercihleri Kaydet"
+    "savePreferences": "Tercihleri Kaydet",
+    "socialMedia": "Sosyal Medya"
   },
 
   "HomePage": {
@@ -449,5 +450,10 @@
     "onText": "Açık",
     "offText": "Kapalı",
     "developedBy": "Tarafından Geliştirildi"
+  },
+
+  "NewYearPromo": {
+    "discountTitle": "Yılbaşı Özel İndirimi!",
+    "earlyReservationWarning": "⚠️ Erken rezervasyon yaparak avantajlı fiyatlardan yararlanın!"
   }
 }

@@ -20,7 +20,8 @@
     "span": "Tous Droits Réservés.",
     "cookiePolicy": "Politique des Cookies",
      "cookiePolicyUrl": "/politique-cookies",
-     "savePreferences": "Enregistrer les Préférences"
+     "savePreferences": "Enregistrer les Préférences",
+     "socialMedia": "Réseaux Sociaux"
   },
 
   "HomePage": {
@@ -434,5 +435,10 @@
     "onText": "Activé",
     "offText": "Désactivé",
     "developedBy": "Développé Par"
+  },
+
+  "NewYearPromo": {
+    "discountTitle": "Réduction Spéciale Nouvel An !",
+    "earlyReservationWarning": "⚠️ Réservez tôt pour profiter de prix avantageux !"
   }
 } 

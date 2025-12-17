@@ -2,12 +2,16 @@ import React from "react";
 import { useTranslations } from "next-intl";
 import AnimatedFirstGlanceContent from "./AnimatedFirstGlanceContent";
 import BannerInfoForm from "./BannerInfoForm";
+import NewYearPromoBanner from "./NewYearPromoBanner";
 
 const FirstGlance = () => {
   const t = useTranslations("HomePage");
 
   return (
     <section className="w-full bg-[#ffffff] dark:bg-black relative">
+      {/* Yılbaşı İndirim ve Erken Rezervasyon Banner'ı */}
+      <NewYearPromoBanner />
+      
       {/* Masaüstü Görünümü */}
       <div className="min-h-[20vh] sm:flex flex-wrap justify-center items-center sm:min-h-[60vh] sm:border-2 mx-auto bg-[url(/images/Kapak.webp)] bg-cover bg-center relative sm:pb-32">
         {/* Koyu Katman */}
