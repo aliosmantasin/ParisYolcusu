@@ -12,6 +12,8 @@ import { Button } from "@/components/ui/button";
 import { useState, useEffect } from "react";
 import { useTheme } from "next-themes";
 import { useFormTranslations } from "../../bilgi-alma-formu/languageInfo";
+import ReCAPTCHA from "react-google-recaptcha";
+import { createPortal } from "react-dom";
 
 // Form Validasyonu (sadece gerekli alanlar)
 const formSchema = yup.object().shape({
@@ -69,7 +71,15 @@ const PhoneInputField = ({ setValue, errors }: { setValue: UseFormSetValue<FormD
 const BannerInfoForm = () => {
   const [selectedService, setSelectedService] = useState("");
   const [toastMessage, setToastMessage] = useState<string | null>(null);
+  const [showRecaptchaModal, setShowRecaptchaModal] = useState(false);
+  const [recaptchaToken, setRecaptchaToken] = useState<string | null>(null);
+  const [formDataToSubmit, setFormDataToSubmit] = useState<FormData | null>(null);
+  const [mounted, setMounted] = useState(false);
   const translations = useFormTranslations();
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   const { register, handleSubmit, setValue, formState: { errors, isSubmitting }, watch } = useForm({
     resolver: yupResolver(formSchema),
@@ -83,7 +93,7 @@ const BannerInfoForm = () => {
   const formValues = watch();
   const isFormValid = formValues.fullName && formValues.phone && formValues.service;
 
-  const sendEmail = async (data: FormData) => {
+  const sendEmail = async (data: FormData, token: string | null = null) => {
     try {
       // İsim soyisimi ayır
       const nameParts = data.fullName.trim().split(" ");
@@ -98,6 +108,7 @@ const BannerInfoForm = () => {
           phone: data.phone,
           service: data.service,
           email: "", // Banner formunda email yok
+          recaptchaToken: token,
         },
         {
           headers: { "Content-Type": "application/json" },
@@ -111,20 +122,45 @@ const BannerInfoForm = () => {
         setValue("phone", "");
         setValue("service", "");
         setSelectedService("");
+        setRecaptchaToken(null);
+        setShowRecaptchaModal(false);
         setTimeout(() => setToastMessage(null), 3000);
       } else {
         throw new Error();
       }
     } catch {
       setToastMessage("❌ Gönderilirken bir hata oluştu.");
+      setShowRecaptchaModal(false);
       setTimeout(() => setToastMessage(null), 3000);
     }
+  };
+
+  const handleFormSubmit = (data: FormData) => {
+    // Form doğrulandı, reCAPTCHA modal'ını aç
+    setFormDataToSubmit(data);
+    setShowRecaptchaModal(true);
+  };
+
+  const handleRecaptchaChange = (token: string | null) => {
+    setRecaptchaToken(token);
+  };
+
+  const handleVerifyAndSubmit = () => {
+    if (recaptchaToken && formDataToSubmit) {
+      sendEmail(formDataToSubmit, recaptchaToken);
+    }
+  };
+
+  const handleCloseModal = () => {
+    setShowRecaptchaModal(false);
+    setRecaptchaToken(null);
+    setFormDataToSubmit(null);
   };
 
   return (
     <div className="w-full max-w-5xl mx-auto">
       <form 
-        onSubmit={handleSubmit(sendEmail)} 
+        onSubmit={handleSubmit(handleFormSubmit)} 
         className="bg-white dark:bg-gray-800 rounded-xl shadow-xl p-4 sm:p-6 border border-gray-200 dark:border-gray-700"
       >
         {/* Yatay Form (Masaüstü) - Dikey Form (Mobil) */}
@@ -199,6 +235,76 @@ const BannerInfoForm = () => {
             ✕
           </button>
         </div>
+      )}
+
+      {/* reCAPTCHA Modal */}
+      {mounted && showRecaptchaModal && typeof window !== "undefined" && document.body && (
+        createPortal(
+          <div className="fixed inset-0 z-[9999] flex items-center justify-center bg-black/80 overflow-y-auto overflow-x-hidden" style={{ zIndex: 9999 }}>
+            <div className="relative p-4 w-full max-w-md max-h-full">
+              <div className="relative bg-white rounded-lg shadow-lg dark:bg-gray-800">
+                {/* Modal header */}
+                <div className="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-700 border-gray-200">
+                  <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
+                    Doğrulama
+                  </h3>
+                  <button
+                    onClick={handleCloseModal}
+                    className="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white"
+                  >
+                    <svg
+                      className="w-3 h-3"
+                      aria-hidden="true"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 14 14"
+                    >
+                      <path
+                        stroke="currentColor"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
+                        d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"
+                      />
+                    </svg>
+                  </button>
+                </div>
+
+                {/* Modal body */}
+                <div className="p-4 md:p-5 space-y-4">
+                  <p className="text-base leading-relaxed text-gray-500 dark:text-gray-400">
+                    Lütfen aşağıdaki reCAPTCHA&apos;yı tamamlayarak formu gönderin.
+                  </p>
+
+                  <div className="mb-6 flex justify-center">
+                    <ReCAPTCHA
+                      sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY || ""}
+                      onChange={handleRecaptchaChange}
+                    />
+                  </div>
+
+                  {/* Modal footer */}
+                  <div className="flex items-center justify-end gap-2 pt-4 border-t border-gray-200 rounded-b dark:border-gray-700">
+                    <button
+                      onClick={handleCloseModal}
+                      className="text-gray-500 bg-white hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-300 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10 dark:bg-gray-700 dark:text-gray-300 dark:border-gray-500 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-600"
+                    >
+                      İptal
+                    </button>
+                    <button
+                      onClick={handleVerifyAndSubmit}
+                      disabled={!recaptchaToken || isSubmitting}
+                      className="text-white bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 disabled:opacity-50 disabled:cursor-not-allowed"
+                    >
+                      {isSubmitting ? "Gönderiliyor..." : "Formu Gönder"}
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>,
+          document.body
+        )
       )}
     </div>
   );
