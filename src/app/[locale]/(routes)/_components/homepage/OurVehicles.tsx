@@ -37,7 +37,7 @@ const OurVehicles = () => {
   ];
 
   return (
-    <section className='bg-slate-50 dark:bg-black my-20'>
+    <section className=' dark:bg-black my-20'>
       <div className='container mx-auto p-5'>
         <div className='max-w-lg flex justify-center mx-auto'>
           <div>

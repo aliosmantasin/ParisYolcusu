@@ -3,34 +3,6 @@ import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
 
 // URL yönlendirme kuralları
-const pathnames = {
-  '/': '/',
-  '/paris-havalimanlari-transfer': {
-    tr: '/paris-havalimanlari-transfer',
-    en: '/paris-airport-transfer',
-    fr: '/transfert-aeroport-paris'
-  },
-  '/paris-gezi-turlari': {
-    tr: '/paris-gezi-turlari',
-    en: '/paris-sightseeing-tours',
-    fr: '/visites-guidees-paris'
-  },
-  '/rezervasyon-formu': {
-    tr: '/rezervasyon-formu',
-    en: '/reservation-form',
-    fr: '/formulaire-reservation'
-  },
-  '/bilgi-alma-formu': {
-    tr: '/bilgi-alma-formu',
-    en: '/information-form',
-    fr: '/formulaire-information'
-  },
-   '/cerez-politikasi': {
-    tr: '/cerez-politikasi',
-    en: '/cookie-policy',
-    fr: '/politique-cookies'
-  },
-};
 
 // Desteklenen diller
 const locales = ["tr", "en", "fr"] as const;
@@ -65,7 +37,7 @@ function getBrowserLocale(request: NextRequest): Locale {
 const middleware = createMiddleware({
   locales,
   defaultLocale: "tr",
-  pathnames,
+ 
   localePrefix: 'always',
   localeDetection: true,
 });

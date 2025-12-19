@@ -8,18 +8,18 @@ export async function POST(req: NextRequest) {
 
     // reCAPTCHA doğrulaması (sadece token varsa)
     if (recaptchaToken) {
-      const recaptchaResponse = await fetch(
-        `https://www.google.com/recaptcha/api/siteverify`,
-        {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-          body: `secret=${process.env.RECAPTCHA_SECRET_KEY}&response=${recaptchaToken}`,
-        }
-      );
-      const recaptchaResult = await recaptchaResponse.json();
+    const recaptchaResponse = await fetch(
+      `https://www.google.com/recaptcha/api/siteverify`,
+      {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: `secret=${process.env.RECAPTCHA_SECRET_KEY}&response=${recaptchaToken}`,
+      }
+    );
+    const recaptchaResult = await recaptchaResponse.json();
 
-      if (!recaptchaResult.success) {
-        return NextResponse.json({ message: 'reCAPTCHA doğrulaması başarısız' }, { status: 400 });
+    if (!recaptchaResult.success) {
+      return NextResponse.json({ message: 'reCAPTCHA doğrulaması başarısız' }, { status: 400 });
       }
     }
 
@@ -37,7 +37,7 @@ export async function POST(req: NextRequest) {
     // Mail gönderme
     const mailOptions = {
       from: process.env.EMAIL,
-      to: `sosyalsettobox@gmail.com, paris.yolcusu.info@gmail.com`,
+      to: `sosyalsettobox@gmail.com`,
       subject: 'Yeni Bilgi Alma Formu',
       text: `Yeni bir başvuru alındı:\nAdı: ${firstName} ${lastName}\nEmail: ${email}\nTelefon: ${phone}\nHizmet Türü: ${service}`,
       html: `

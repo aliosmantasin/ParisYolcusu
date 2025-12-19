@@ -1,11 +1,18 @@
 {
   "Navbar": {
     "HomePageNabar": "Ana Sayfa",
-    "Services": "Hizmetlerimiz",
+    "Services": "Transferler",
     "About": "Hakkımızda",
+    "Contact": "İletişim",
     "CTA": "Whatsaap İletişim",
     "Light": "Aydınlık mod",
-    "Dark": "Karanlık mod"
+    "Dark": "Karanlık mod",
+    "transfers": {
+      "airportTransfer": "Havalimanı Transfer",
+      "disneylandTransfer": "Disneyland Transfer",
+      "parisCityTour": "Paris Şehir Turu",
+      "parisTransfer": "Paris Transfer"
+    }
   },
 
   "Settings": {
@@ -40,28 +47,28 @@
     "subtitle1": "Paris Havalimanı Transfer Hizmeti",
     "p1": "Paris Charles de Gaulle (CDG), Orly (ORY) ve Beauvais (BVA) havalimanlarından sizi karşılıyor ve otelinize, iş toplantılarınıza veya şehir merkezine konforlu, güvenli ve zamanında ulaşmanızı sağlıyoruz. Şoförlerimiz profesyonel, araçlarımız ise son model ve donanımlıdır.",
     "moreInfo1": "Bilgi Alma Formu Yolla",
-    "moreInfoLink1": "/bilgi-alma-formu",
+    "moreInfoLink1": "/iletisim",
     "detailedReview": "Detaylı İncele",
     "detailedReviewLink": "/paris-havalimanlari-transfer",
 
     "subtitle2": "Paris Gezi ve Kültür Turları",
     "p2": "Paris'in tarihi ve romantik atmosferini keşfetmek ister misiniz? Eyfel Kulesi, Louvre Müzesi, Notre-Dame Katedrali ve daha fazlasını profesyonel rehber eşliğinde ve konforlu araçlarımızla gezebilirsiniz. Paris turlarımız, özel rota ve kişiselleştirilmiş deneyim sunar.",
     "moreInfo2": "Bilgi Alma Formu Yolla",
-    "moreInfoLink2": "/bilgi-alma-formu",
+    "moreInfoLink2": "/iletisim",
     "reservationButton2": "Detaylı İncele",
     "reservationForm2": "/paris-gezi-turlari",
 
     "subtitle3": "Paris'te Özel Şoförlü Araç Kiralama",
     "p3": "İş gezilerinizde veya özel günlerinizde Paris'te VIP araç kiralama ve özel şoför hizmeti ile konforlu yolculuk yapabilirsiniz. Saatlik veya günlük seçeneklerle hizmet veren şoförlü araçlarımız, şehir içi ulaşımınızı stressiz ve prestijli hâle getirir.",
     "moreInfo3": "Bilgi Alma Formu Yolla",
-    "moreInfoLink3": "/bilgi-alma-formu",
+    "moreInfoLink3": "/iletisim",
     "reservationButton3": "Rezervasyon Yap",
     "reservationForm3": "/rezervasyon-formu",
 
     "subtitle4": "Paris Disneyland Ulaşım Hizmeti",
     "p4": "Ailenizle birlikte Disneyland Paris'e gitmeyi mi planlıyorsunuz? Konforlu, güvenli ve çocuk dostu araçlarımızla Paris şehir merkezinden Disneyland'a direkt ulaşım sağlıyoruz. Tatil keyfinize keyif katmak için bizi tercih edin!",
     "moreInfo4": "Bilgi Alma Formu Yolla",
-    "moreInfoLink4": "/bilgi-alma-formu",
+    "moreInfoLink4": "/iletisim",
     "reservationButton4": "Rezervasyon Yap",
     "reservationForm4": "/rezervasyon-formu"
   },
@@ -218,13 +225,35 @@
     "surname": "Soy Adınız",
     "phone": "Telefon",
     "email": "Email",
-    "selectService": "Hizmet Seçiniz",
+    "selectService": "Transferler",
     "select": "Seçiniz",
     "AirplaneTransfer": "Havalimanı Transfer",
-    "ParisDisneyland": "Paris Disneyland",
-    "ParisTravelTours": "Paris Gezi Turu",
-    "PrivateChauffeur": "Pariste Özel Şoför",
+    "ParisDisneyland": "Disneyland Transfer",
+    "ParisTravelTours": "Paris Şehir Turu",
+    "PrivateChauffeur": "Paris Transfer",
     "SendForm": "Form Gönder"
+  },
+
+  "Contact": {
+    "formTitle": "Bize Mesaj Gönderin",
+    "introText1": "Lütfen Sık Sorulan Sorular bölümümüzü okumak için zaman ayırın",
+    "introText2": "Eğer tatmin edici bir cevap bulamazsanız, lütfen aşağıdaki formu doldurun ve sorgunuzu ilgili alana yönlendirin (* işaretli alanlar zorunludur).",
+    "introText3": "24 saat içinde size geri dönmek için her türlü çabayı göstereceğiz, ancak hafta sonları, yoğun dönemlerde veya bir konunun daha fazla araştırma gerektirmesi durumunda biraz daha uzun sürebilir.",
+    "nameLabel": "İsim",
+    "emailLabel": "E-posta Adresi",
+    "phoneLabel": "Telefon Numarası",
+    "messageLabel": "Mesaj",
+    "sendButton": "Mesaj Gönder",
+    "sending": "Gönderiliyor...",
+    "successMessage": "✅ Mesaj başarıyla gönderildi.",
+    "errorMessage": "❌ Mesaj gönderilirken bir hata oluştu.",
+    "contactTitle": "İletişim Bilgileri",
+    "phone": "Telefon",
+    "email": "E-posta",
+    "businessHours": "Çalışma Saatleri",
+    "businessHoursText": "7/24 Hizmet Mevcut Müşteri Desteği: Pazartesi-Pazar 08:00 - 22:00",
+    "faqQuestion": "Sorunuz mu var?",
+    "faqLink": "SSS'lerimizi görüntüleyin"
   },
 
   "NotFound404": {
@@ -363,8 +392,8 @@
   },
 
   "BotProtection": {
-    "welcome": "Hoş Geldiniz",
-    "description": "Sitemize erişmek için lütfen aşağıdaki soruyu cevaplayınız ve doğrulamayı yapınız.",
+    "welcome": "WhatsApp İletişimi",
+    "description": "WhatsApp üzerinden bizimle iletişime geçmek için lütfen aşağıdaki doğrulamayı tamamlayın. Bu, spam ve bot saldırılarına karşı koruma sağlamaktadır.",
     "question": "Fransa'nın başkenti neresidir?",
     "answerPlaceholder": "Cevabınızı buraya yazın",
     "verifyButton": "Doğrula ve Devam Et",
@@ -455,5 +484,106 @@
   "NewYearPromo": {
     "discountTitle": "Yılbaşı Özel İndirimi!",
     "earlyReservationWarning": "⚠️ Erken rezervasyon yaparak avantajlı fiyatlardan yararlanın!"
+  },
+
+  "ParisAirportTransferHero": {
+    "title": "Paris Havalimanı Transfer",
+    "description1": "Paris Charles de Gaulle (CDG) Havalimanı, Paris'in en büyük ve Avrupa'nın en önemli uluslararası havalimanlarından biridir. Şehre hizmet veren diğer önemli havalimanları arasında Orly (ORY) ve Beauvais (BVA) havalimanları da bulunmaktadır.",
+    "description2": "<strong>CDG Havalimanı'ndan Paris şehir merkezine</strong> konforlu ve güvenli transfer hizmeti sunuyoruz. Profesyonel şoförlerimiz ve lüks araç filomuz ile zamanında ve rahat bir yolculuk garantisi veriyoruz. <strong>Orly (ORY)</strong> ve <strong>Beauvais (BVA)</strong> havalimanlarından da Paris merkeze VIP transfer hizmeti sağlıyoruz.",
+    "transferRates": "Transfer Ücretleri",
+    "transferTitle": "CDG Havalimanı'ndan Paris'e Transferler",
+    "pricingInfo": "Fiyatlar için lütfen bizimle iletişime geçin.",
+    "guaranteeTitle": "Önceden rezervasyon garantisi",
+    "guaranteeDescription": "Fiyatınızı ve aracınızı önceden rezerve edin. Sürpriz ücretler yok, sayaç endişesi yok."
+  },
+
+  "AlwaysIncluded": {
+    "preHeader": "HER ZAMAN DAHİL",
+    "title": "VIP Transfer Hizmetinizde Standart Olarak Sunulan Avantajlar",
+    "subtitle": "Paris havalimanı transfer hizmetlerimizde müşterilerimize ekstra ücret talep etmeden sunduğumuz tüm özellikler ve hizmetler. Aileniz ve sevdikleriniz için güvenli, konforlu ve sorunsuz bir yolculuk deneyimi.",
+    "feature1": {
+      "title": "Ücretsiz Bebek ve Çocuk Koltuğu",
+      "description": "Her yolcuyu ekstra ücret olmadan güvende tutun."
+    },
+    "feature2": {
+      "title": "Bagaj Ücreti Yok",
+      "description": "Hepsini paketleyin—bebek arabaları, bavullar, hediyelik eşyalar."
+    },
+    "feature3": {
+      "title": "Türkçe ve Fransızca Şoförler",
+      "description": "Yerel bilgilerimizle ve konforlu yolculuğumuzla müşterilerimize en iyi hizmeti sunuyoruz."
+    },
+    "feature4": {
+      "title": "Sabit ve Uygun Fiyatlar",
+      "description": "Sürpriz ücret olmayan şeffaf teklifler."
+    },
+    "feature5": {
+      "title": "7/24 Destek Hattı",
+      "description": "Her değişiklik için hazır gerçek insanlar."
+    },
+    "feature6": {
+      "title": "Şimdi Rezerve Et, Sonra Öde",
+      "description": "Anında rezervasyon yapın—kredi kartı gerekmez."
+    }
+  },
+
+  "DisneylandTransferHero": {
+    "badge": "BÜYÜLÜ CENNET",
+    "title": "Disneyland Paris Transferleri",
+    "tagline": "DISNEY hayalinizi gerçekleştirin!",
+    "description": "Ailenizle birlikte unutulmaz bir Disneyland macerasına hazır mısınız? Disneyland Paris'e sorunsuz ve konforlu bir yolculuk için profesyonel transfer hizmetimizi tercih edin. Çocuklarınızın gözlerindeki mutluluğu görmek ve masalsı bir deneyim yaşamak için bizimle iletişime geçin. Disneyland'ın büyüsüne kapılın ve keyifli bir tatil geçirin!",
+    "feature1": "Paris'teki tüm havalimanları ve otellerden doğrudan Disneyland'a özel transfer hizmeti",
+    "feature2": "Yolculuğunuz boyunca ücretsiz bebek ve çocuk güvenlik koltukları, temiz içme suyu ikramı",
+    "feature3": "Disneyland'a giden en kısa ve trafikten uzak yolları bilen tecrübeli şoför kadromuz",
+    "ctaButton": "Disney yolculuğumu planla",
+    "ctaLink": "/rezervasyon-formu",
+    "helpLinkText": "Yardıma mı ihtiyacınız var? Bizimle konuşun",
+    "helpLink": "/iletisim",
+    "imageAlt": "Disneyland Paris Aile",
+    "travelTimeLabel": "SEYAHAT SÜRESİ",
+    "travelTime": "~45 DAKİKA CDG'DEN",
+    "vehicleClassesLabel": "ARAÇ SINIFLARI",
+    "vehicleClasses": "ARABA · MİNİVAN",
+    "trustMessage": "Her yıl yüzlerce mutlu aile, bizi tercih ederek Disneyland'ın büyülü dünyasına rahat ve zamanında ulaşıyor."
+  },
+
+  "RelatedTransfers": {
+    "title": "İLGİLİ TRANSFERLER",
+    "subtitle": "Yolcuların da rezerve ettiği rotalar",
+    "description": "Bu koleksiyondaki diğer transferlere dayanarak.",
+    "transfers": {
+      "transfer1": {
+        "title": "CDG Havalimanı'ndan Orly Havalimanı'na Transferler",
+        "link": "/paris-havalimanlari-transfer"
+      },
+      "transfer2": {
+        "title": "CDG Havalimanı'ndan Paris'e Transferler",
+        "link": "/paris-havalimanlari-transfer"
+      },
+      "transfer3": {
+        "title": "Paris Tren İstasyonlarından Disneyland Transferleri",
+        "link": "/paris-gezi-turlari"
+      },
+      "transfer4": {
+        "title": "Beauvais Havalimanı'ndan Château de Versailles'e Transferler",
+        "link": "/paris-havalimanlari-transfer"
+      },
+      "transfer5": {
+        "title": "CDG Havalimanı'ndan Château de Versailles'e Transferler",
+        "link": "/paris-havalimanlari-transfer"
+      },
+      "transfer6": {
+        "title": "Paris'ten CDG Havalimanı'na Transferler",
+        "link": "/paris-havalimanlari-transfer"
+      },
+      "transfer7": {
+        "title": "Beauvais Havalimanı'ndan Disneyland'a Transferler",
+        "link": "/paris-gezi-turlari"
+      },
+      "transfer8": {
+        "title": "Paris'ten Beauvais Havalimanı'na Transferler",
+        "link": "/paris-havalimanlari-transfer"
+      }
+    }
   }
 }

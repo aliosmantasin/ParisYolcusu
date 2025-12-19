@@ -1,13 +1,11 @@
-import CallToActionComponent from "../_components/homepage/CallToActionComponent";
-import FeaturesBrand from "../_components/homepage/FeaturesBrand";
+// import FeaturesBrand from "../_components/homepage/FeaturesBrand";
 import FirstGlance from "../_components/homepage/FirstGlance";
-import Services from "../_components/homepage/Services";
 // import Testimonials from "../_components/homepage/Testimonials";
-import { QuestionsSSS } from "../_components/homepage/QuestionsSSS";
-import AboutComponent from "../_components/homepage/AboutComponent";
-import CleanCar from "../_components/homepage/CleanCar";
 import OurVehicles from "../_components/homepage/OurVehicles";
-import ParisAirportTransfer from "../_components/homepage/ParisAirPort";
+import ParisAirportTransferHero from "../_components/homepage/ParisAirportTransferHero";
+import AlwaysIncluded from "../_components/homepage/AlwaysIncluded";
+import DisneylandTransferHero from "../_components/homepage/DisneylandTransferHero";
+import RelatedTransfers from "../_components/homepage/RelatedTransfers";
 import { seoData } from "@/lib/seo";
 import { Metadata } from "next";
 import Galery from "../_components/homepage/Galery";
@@ -157,18 +155,17 @@ export default function Home() {
       />
       
       <FirstGlance/>
-      <Services/>
+      <ParisAirportTransferHero/>
+      {/* <Services/> */}
+      <AlwaysIncluded/>
       <OurVehicles/>
       <Galery/>
-      <ParisAirportTransfer/>
-      <FeaturesBrand/>
+      {/* <ParisAirportTransfer/> */}
+      <DisneylandTransferHero/>
+      <RelatedTransfers/>
+      {/* <FeaturesBrand/> */}
       {/* <Referance/> */}
-  
       {/* <Testimonials/> */}
-      <QuestionsSSS/>
-      <CleanCar/>
-      <AboutComponent/>
-      <CallToActionComponent/>
     </>
   );
 }

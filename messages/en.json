@@ -1,11 +1,18 @@
 {
   "Navbar": {
     "HomePageNabar": "Home Page",
-    "Services": "Our Services",
+    "Services": "Transfers",
     "About": "About Us",
+    "Contact": "Contact",
     "CTA": "Contact Whatsaap",
     "Light": "Light mode",
-    "Dark": "Dark mode"
+    "Dark": "Dark mode",
+    "transfers": {
+      "airportTransfer": "Airport Transfer",
+      "disneylandTransfer": "Disneyland Transfer",
+      "parisCityTour": "Paris City Tour",
+      "parisTransfer": "Paris Transfer"
+    }
   },
 
   "Settings": {
@@ -40,14 +47,14 @@
     "subtitle1": "Paris Airport Transfer Service",
     "p1": "We welcome you from Paris Charles de Gaulle (CDG), Orly (ORY) and Beauvais (BVA) airports and ensure that you arrive at your hotel, business meetings or the city center in comfort, safety and on time. Our drivers are professional and our vehicles are the latest model and equipped.",
     "moreInfo1": "Send Information Form",
-    "moreInfoLink1": "/bilgi-alma-formu",
+    "moreInfoLink1": "/contact",
     "detailedReview": "Detailed Review",
     "detailedReviewLink": "/paris-airports-transfer",
 
     "subtitle2": "Paris Travel and Cultural Tours",
     "p2": "Would you like to discover the historical and romantic atmosphere of Paris? You can visit the Eiffel Tower, Louvre Museum, Notre-Dame Cathedral and more with our professional guides and comfortable vehicles. Our Paris tours offer a special route and personalized experience.",
     "moreInfo2": "Send Information Form",
-    "moreInfoLink2": "/bilgi-alma-formu",
+    "moreInfoLink2": "/contact",
     "reservationButton2": "View in Detail",
     "reservationForm2": "/paris-travel-turlari",
 
@@ -55,14 +62,14 @@
     "p3": "You can travel comfortably with VIP car rental and private chauffeur service in Paris on your business trips or special days. Our chauffeured vehicles, which provide hourly or daily service, make your city transportation stress-free and prestigious.",
 
     "moreInfo3": "Send Information Form",
-    "moreInfoLink3": "/bilgi-alma-formu",
+    "moreInfoLink3": "/contact",
     "reservationButton3": "Make a Reservation",
     "reservationForm3": "/reservation-formu",
 
     "subtitle4": "Paris Disneyland Transportation Service",
     "p4": "Are you planning to go to Disneyland Paris with your family? We provide direct transportation from Paris city center to Disneyland with our comfortable, safe and child-friendly vehicles. Choose us to add joy to your holiday!",
     "moreInfo4": "Send Information Form",
-    "moreInfoLink4": "/bilgi-alma-formu",
+    "moreInfoLink4": "/contact",
     "reservationButton4": "Make a Reservation",
     "reservationForm4": "/reservation-formu"
   },
@@ -220,13 +227,35 @@
     "surname": "Your Surname",
     "phone": "Telephone",
     "email": "Email",
-    "selectService": "Select Service",
+    "selectService": "Transfers",
     "select": "Select",
     "AirplaneTransfer": "Airport Transfer",
-    "ParisDisneyland": "Paris Disneyland",
-    "ParisTravelTours": "Paris Sightseeing Tour",
-    "PrivateChauffeur": "Private Chauffeur in Paris",
+    "ParisDisneyland": "Disneyland Transfer",
+    "ParisTravelTours": "Paris City Tour",
+    "PrivateChauffeur": "Paris Transfer",
     "SendForm": "Send Form"
+  },
+
+  "Contact": {
+    "formTitle": "Send Us a Message",
+    "introText1": "Please take the time to read our Frequently Asked Questions",
+    "introText2": "If you cannot find a satisfactory answer then please complete the form below directing your query to the relevant area (fields marked * are mandatory).",
+    "introText3": "Whilst we will make every effort to get back to you within 24 hours, at weekends, during busy periods or if a matter requires further investigation, it may take a little longer.",
+    "nameLabel": "Name",
+    "emailLabel": "Email Address",
+    "phoneLabel": "Telephone Number",
+    "messageLabel": "Message",
+    "sendButton": "Send Message",
+    "sending": "Sending...",
+    "successMessage": "✅ Message sent successfully.",
+    "errorMessage": "❌ An error occurred while sending the message.",
+    "contactTitle": "Contact Information",
+    "phone": "Phone",
+    "email": "Email",
+    "businessHours": "Business Hours",
+    "businessHoursText": "24/7 Service Available Customer Support: Mon-Sun 8:00 AM - 10:00 PM",
+    "faqQuestion": "Have a question?",
+    "faqLink": "View our FAQs"
   },
 
   "NotFound404": {
@@ -365,8 +394,8 @@
   },
 
   "BotProtection": {
-    "welcome": "Welcome",
-    "description": "Please answer the question below and complete the verification to access our site.",
+    "welcome": "WhatsApp Contact",
+    "description": "To contact us via WhatsApp, please complete the verification below. This provides protection against spam and bot attacks.",
     "question": "What is the capital of France?",
     "answerPlaceholder": "Enter your answer here",
     "verifyButton": "Verify and Continue",
@@ -457,5 +486,106 @@
   "NewYearPromo": {
     "discountTitle": "New Year Special Discount!",
     "earlyReservationWarning": "⚠️ Book early to take advantage of special prices!"
+  },
+
+  "ParisAirportTransferHero": {
+    "title": "Paris Airport Transfer",
+    "description1": "Paris Charles de Gaulle (CDG) Airport is Paris's largest and one of Europe's most important international airports. Other major airports serving the city include Orly (ORY) and Beauvais (BVA) airports.",
+    "description2": "We offer comfortable and safe transfer services <strong>from CDG Airport to Paris city center</strong>. With our professional drivers and luxury vehicle fleet, we guarantee an on-time and comfortable journey. We also provide VIP transfer services to Paris center from <strong>Orly (ORY)</strong> and <strong>Beauvais (BVA)</strong> airports.",
+    "transferRates": "Transfer Rates",
+    "transferTitle": "Transfers from CDG Airport to Paris",
+    "pricingInfo": "Please contact us for rates.",
+    "guaranteeTitle": "Pre-book guarantee",
+    "guaranteeDescription": "Lock in your rate and vehicle. No surprises, no meter worries."
+  },
+
+  "AlwaysIncluded": {
+    "preHeader": "ALWAYS INCLUDED",
+    "title": "Advantages Included as Standard in Your VIP Transfer Service",
+    "subtitle": "All features and services we provide to our customers at no extra charge in our Paris airport transfer services. A safe, comfortable and hassle-free travel experience for your family and loved ones.",
+    "feature1": {
+      "title": "Free Baby & Booster Seats",
+      "description": "Keep every traveler secure at no extra cost."
+    },
+    "feature2": {
+      "title": "No Luggage Fees",
+      "description": "Pack it all—strollers, suitcases, souvenirs."
+    },
+    "feature3": {
+      "title": "Turkish & French Drivers",
+      "description": "We provide the best service to our customers with our local knowledge and comfortable journey."
+    },
+    "feature4": {
+      "title": "Fixed & Fair Prices",
+      "description": "Transparent offers with no surprise fees."
+    },
+    "feature5": {
+      "title": "24/7 Hotline",
+      "description": "Real humans on standby for every change."
+    },
+    "feature6": {
+      "title": "Book Now, Pay Later",
+      "description": "Reserve instantly—no credit card required."
+    }
+  },
+
+  "DisneylandTransferHero": {
+    "badge": "MAGICAL PARADISE",
+    "title": "Disneyland Paris Transfers",
+    "tagline": "Make your DISNEY dream come true!",
+    "description": "Are you ready for an unforgettable Disneyland adventure with your family? Choose our professional transfer service for a seamless and comfortable journey to Disneyland Paris. Contact us to witness the joy in your children's eyes and experience a magical vacation. Immerse yourself in the enchantment of Disneyland and create lasting memories!",
+    "feature1": "Direct private transfer service from all Paris airports and hotels to Disneyland",
+    "feature2": "Complimentary infant and child safety seats throughout your journey, plus clean drinking water",
+    "feature3": "Our experienced driver team knows the shortest and traffic-free routes to Disneyland",
+    "ctaButton": "Plan my DISNEY ride",
+    "ctaLink": "/rezervasyon-formu",
+    "helpLinkText": "Need help? Talk to us",
+    "helpLink": "/contact",
+    "imageAlt": "Disneyland Paris Family",
+    "travelTimeLabel": "TRAVEL TIME",
+    "travelTime": "~45 MIN FROM CDG",
+    "vehicleClassesLabel": "VEHICLE CLASSES",
+    "vehicleClasses": "CAR · MINIVAN",
+    "trustMessage": "Every year, hundreds of happy families choose us to comfortably and punctually reach the magical world of Disneyland."
+  },
+
+  "RelatedTransfers": {
+    "title": "RELATED TRANSFERS",
+    "subtitle": "Routes travellers also book",
+    "description": "Based on other transfers in this collection.",
+    "transfers": {
+      "transfer1": {
+        "title": "Transfers from CDG Airport to Orly Airport",
+        "link": "/paris-havalimanlari-transfer"
+      },
+      "transfer2": {
+        "title": "Transfers from CDG Airport to Paris",
+        "link": "/paris-havalimanlari-transfer"
+      },
+      "transfer3": {
+        "title": "Paris Train Stations to Disneyland Transfers",
+        "link": "/paris-gezi-turlari"
+      },
+      "transfer4": {
+        "title": "Transfers from Beauvais Airport to Château de Versailles",
+        "link": "/paris-havalimanlari-transfer"
+      },
+      "transfer5": {
+        "title": "Transfers from CDG Airport to Château de Versailles",
+        "link": "/paris-havalimanlari-transfer"
+      },
+      "transfer6": {
+        "title": "Transfers from Paris to CDG Airport",
+        "link": "/paris-havalimanlari-transfer"
+      },
+      "transfer7": {
+        "title": "Transfers from Beauvais Airport to Disneyland",
+        "link": "/paris-gezi-turlari"
+      },
+      "transfer8": {
+        "title": "Transfers from Paris to Beauvais Airport",
+        "link": "/paris-havalimanlari-transfer"
+      }
+    }
   }
 }

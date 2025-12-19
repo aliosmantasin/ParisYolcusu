@@ -49,13 +49,13 @@ const AnimatedFirstGlanceContent = ({ title, span, isMobile = false }: AnimatedF
             {span}
           </p>
           {/* Clip-path için animasyon - VIP HİZMET altında */}
-          <motion.div
-            initial="hidden"
-            animate="visible"
-            variants={clipPathVariants}
+      <motion.div
+        initial="hidden"
+        animate="visible"
+        variants={clipPathVariants}
             className="absolute z-10 top-full mt-2 left-0 w-full h-2 bg-[#fece47]"
-          ></motion.div>
-        </motion.div>
+      ></motion.div>
+      </motion.div>
       </div>
     </div>
   );

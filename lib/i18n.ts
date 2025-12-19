@@ -13,10 +13,10 @@ export const urlMap: Record<string, { tr: string; en: string; fr: string }> = {
       fr: "visites-guidees-paris"
     },
 
-    '/bilgi-alma-formu': {
-      tr: '/bilgi-alma-formu',
-      en: '/information-form',
-      fr: '/formulaire-information'
+    '/iletisim': {
+      tr: '/iletisim',
+      en: '/contact',
+      fr: '/contact'
     },
 
     "rezervasyon-formu": { 

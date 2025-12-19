@@ -30,6 +30,27 @@ interface GalleryItem {
 // Gallery data structure for easy mapping
 const galleryData: GalleryItem[] = [
   {
+    id: 5,
+    type: 'image',
+    image: "/images/misafir/misafir1.webp",
+    alt: "Tarık bey paris CDG havalimanından Paris şehir merkezine yolculuğu sağlandı",
+    title: "Tarık bey Paris CDG havalimanından Paris şehir merkezine yolculuğu sağlandı"
+  },
+  {
+    id: 6,
+    type: 'image',
+    image: "/images/misafir/misafir2.webp",
+    alt: "Yaren hanım bizi tercih ettiği için teşekkürler",
+    title: "Yaren hanım bizi tercih ettiği için teşekkürler"
+  },
+  {
+    id: 7,
+    type: 'image',
+    image: "/images/misafir/misafir3.webp",
+    alt: "CDG havalimanı misafir karşılama",
+    title: "CDG havalimanı misafir karşılama"
+  },
+  {
     id: 1,
     type: 'image',
     image: "https://res.cloudinary.com/dppmtyact/image/upload/v1744625041/havalimaniGorsel3_cfyyk7.webp",

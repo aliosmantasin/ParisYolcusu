@@ -18,9 +18,8 @@ export function WhatsAppBotProtection({ whatsappUrl, onVerified, onClose }: What
 
   useEffect(() => {
     setMounted(true);
-    console.log("WhatsAppBotProtection mounted");
     return () => {
-      console.log("WhatsAppBotProtection unmounted");
+      setMounted(false);
     };
   }, []);
 
@@ -50,7 +49,7 @@ export function WhatsAppBotProtection({ whatsappUrl, onVerified, onClose }: What
   }
 
   const modalContent = (
-    <div className="fixed inset-0 z-[9999] flex items-center justify-center bg-black/80 overflow-y-auto overflow-x-hidden" style={{ zIndex: 9999 }}>
+    <div className="fixed inset-0 z-[99999] flex items-center justify-center bg-black/80 overflow-y-auto overflow-x-hidden" style={{ zIndex: 99999 }}>
       <div className="relative p-4 w-full max-w-md max-h-full">
         {/* Modal content */}
         <div className="relative bg-white rounded-lg shadow-lg dark:bg-gray-800">

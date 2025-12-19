@@ -12,7 +12,8 @@ const Footer = () => {
       about: t("about"),
       cookiePolicy: t("cookiePolicy"),
       cookiePolicyUrl: t("cookiePolicyUrl"),
-      span: t("span")
+      span: t("span"),
+      socialMedia: t("socialMedia")
     };
 
     return <ClientFooter locale={locale} translations={translations} />

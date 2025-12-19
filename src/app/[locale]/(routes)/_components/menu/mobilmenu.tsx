@@ -10,8 +10,15 @@ import {
   NavigationMenuList,
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu"
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion"
 import { ModeToggle } from "@/components/ModeToggle"
 import { useTranslations, useLocale } from "next-intl"
+import { ChevronDown } from "lucide-react"
 
 export function MobilMenu() {
   const [open, setOpen] = React.useState(false);
@@ -81,29 +88,63 @@ export function MobilMenu() {
           </div>
 
           <NavigationMenu className="flex justify-start w-full max-w-96">
-            <NavigationMenuList className="flex flex-col space-y-5 mt-8 w-full">
+            <NavigationMenuList className="flex flex-col space-y-2 mt-8 w-full">
               <NavigationMenuItem className="flex w-full max-w-96">
-                <Link href="/" className={cn(navigationMenuTriggerStyle(), "bg-transparent hover:bg-transparent text-[1rem]")} onClick={handleClose}>
+                <Link href="/" className={cn(navigationMenuTriggerStyle(), "bg-transparent hover:bg-transparent text-[1rem] w-full justify-start")} onClick={handleClose}>
                   {t("HomePageNabar")}
                 </Link>
               </NavigationMenuItem>
            
               <NavigationMenuItem className="flex w-full max-w-96">
-                <button
-                  className={cn(navigationMenuTriggerStyle(), "bg-transparent hover:bg-transparent text-[1rem] cursor-pointer")}
-                  onClick={() => handleScrollToSection("hizmetlerimiz")}
-                >
-                  {t("Services")}
-                </button>
+                <Accordion type="single" collapsible className="w-full">
+                  <AccordionItem value="transfers" className="border-none">
+                    <AccordionTrigger className={cn(navigationMenuTriggerStyle(), "bg-transparent hover:bg-transparent text-[1rem] w-full justify-between py-2 px-4")}>
+                      {t("Services")}
+                    </AccordionTrigger>
+                    <AccordionContent className="pl-4 pt-2 space-y-2">
+                      <Link
+                        href={`/${locale}/paris-havalimanlari-transfer`}
+                        className="block py-2 px-4 rounded-md hover:bg-accent hover:text-accent-foreground transition-colors text-sm"
+                        onClick={handleClose}
+                      >
+                        {t("transfers.airportTransfer")}
+                      </Link>
+                      <Link
+                        href={`/${locale}/paris-gezi-turlari`}
+                        className="block py-2 px-4 rounded-md hover:bg-accent hover:text-accent-foreground transition-colors text-sm"
+                        onClick={handleClose}
+                      >
+                        {t("transfers.disneylandTransfer")}
+                      </Link>
+                      <Link
+                        href={`/${locale}/paris-gezi-turlari`}
+                        className="block py-2 px-4 rounded-md hover:bg-accent hover:text-accent-foreground transition-colors text-sm"
+                        onClick={handleClose}
+                      >
+                        {t("transfers.parisCityTour")}
+                      </Link>
+                      <Link
+                        href={`/${locale}/paris-havalimanlari-transfer`}
+                        className="block py-2 px-4 rounded-md hover:bg-accent hover:text-accent-foreground transition-colors text-sm"
+                        onClick={handleClose}
+                      >
+                        {t("transfers.parisTransfer")}
+                      </Link>
+                    </AccordionContent>
+                  </AccordionItem>
+                </Accordion>
               </NavigationMenuItem>
            
               <NavigationMenuItem className="flex w-full max-w-96">
-                <button
-                  className={cn(navigationMenuTriggerStyle(), "bg-transparent hover:bg-transparent text-[1rem] cursor-pointer")}
-                  onClick={() => handleScrollToSection("about")}
-                >
+                <Link href="/hakkimizda" className={cn(navigationMenuTriggerStyle(), "bg-transparent hover:bg-transparent text-[1rem] w-full justify-start")} onClick={handleClose}>
                   {t("About")}
-                </button>
+                </Link>
+              </NavigationMenuItem>
+
+              <NavigationMenuItem className="flex w-full max-w-96">
+                <Link href="/iletisim" className={cn(navigationMenuTriggerStyle(), "bg-transparent hover:bg-transparent text-[1rem] w-full justify-start")} onClick={handleClose}>
+                  {t("Contact")}
+                </Link>
               </NavigationMenuItem>
             </NavigationMenuList>
           </NavigationMenu>

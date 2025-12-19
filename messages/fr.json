@@ -1,11 +1,18 @@
 {
   "Navbar": {
     "HomePageNabar": "Accueil",
-    "Services": "Nos Services",
+    "Services": "Transferts",
     "About": "À Propos",
+    "Contact": "Contact",
     "CTA": "Contact WhatsApp",
     "Light": "Mode clair",
-    "Dark": "Mode sombre"
+    "Dark": "Mode sombre",
+    "transfers": {
+      "airportTransfer": "Transfert Aéroport",
+      "disneylandTransfer": "Transfert Disneyland",
+      "parisCityTour": "Tour de Paris",
+      "parisTransfer": "Transfert Paris"
+    }
   },
 
   "Settings": {
@@ -155,13 +162,35 @@
     "surname": "Votre Prénom",
     "phone": "Téléphone",
     "email": "Email",
-    "selectService": "Sélectionnez le Service",
+    "selectService": "Transferts",
     "select": "Sélectionner",
     "AirplaneTransfer": "Transfert Aéroport",
-    "ParisDisneyland": "Paris Disneyland",
+    "ParisDisneyland": "Transfert Disneyland",
     "ParisTravelTours": "Tour de Paris",
-    "PrivateChauffeur": "Chauffeur Privé à Paris",
+    "PrivateChauffeur": "Transfert Paris",
     "SendForm": "Envoyer le Formulaire"
+  },
+
+  "Contact": {
+    "formTitle": "Envoyez-nous un message",
+    "introText1": "Veuillez prendre le temps de lire nos questions fréquemment posées",
+    "introText2": "Si vous ne trouvez pas de réponse satisfaisante, veuillez remplir le formulaire ci-dessous en dirigeant votre demande vers le domaine concerné (les champs marqués * sont obligatoires).",
+    "introText3": "Bien que nous fassions tous nos efforts pour vous répondre dans les 24 heures, les week-ends, pendant les périodes chargées ou si une question nécessite une enquête plus approfondie, cela peut prendre un peu plus de temps.",
+    "nameLabel": "Nom",
+    "emailLabel": "Adresse e-mail",
+    "phoneLabel": "Numéro de téléphone",
+    "messageLabel": "Message",
+    "sendButton": "Envoyer le message",
+    "sending": "Envoi en cours...",
+    "successMessage": "✅ Message envoyé avec succès.",
+    "errorMessage": "❌ Une erreur s'est produite lors de l'envoi du message.",
+    "contactTitle": "Informations de contact",
+    "phone": "Téléphone",
+    "email": "E-mail",
+    "businessHours": "Heures d'ouverture",
+    "businessHoursText": "Service disponible 24/7 Support client : Lun-Dim 8h00 - 22h00",
+    "faqQuestion": "Une question ?",
+    "faqLink": "Consultez nos FAQ"
   },
 
   "NotFound404": {
@@ -348,8 +377,8 @@
   },
 
   "BotProtection": {
-    "welcome": "Bienvenue",
-    "description": "Veuillez répondre à la question ci-dessous et compléter la vérification pour accéder à notre site.",
+    "welcome": "Contact WhatsApp",
+    "description": "Pour nous contacter via WhatsApp, veuillez compléter la vérification ci-dessous. Cela fournit une protection contre le spam et les attaques de bots.",
     "question": "Quelle est la capitale de la France ?",
     "answerPlaceholder": "Entrez votre réponse ici",
     "verifyButton": "Vérifier et Continuer",
@@ -440,5 +469,106 @@
   "NewYearPromo": {
     "discountTitle": "Réduction Spéciale Nouvel An !",
     "earlyReservationWarning": "⚠️ Réservez tôt pour profiter de prix avantageux !"
+  },
+
+  "ParisAirportTransferHero": {
+    "title": "Transfert Aéroport de Paris",
+    "description1": "L'aéroport Paris Charles de Gaulle (CDG) est le plus grand aéroport de Paris et l'un des aéroports internationaux les plus importants d'Europe. Parmi les autres aéroports majeurs desservant la ville figurent les aéroports d'Orly (ORY) et de Beauvais (BVA).",
+    "description2": "Nous proposons des services de transfert confortables et sûrs <strong>de l'aéroport CDG vers le centre-ville de Paris</strong>. Avec nos chauffeurs professionnels et notre flotte de véhicules de luxe, nous garantissons un voyage ponctuel et confortable. Nous proposons également des services de transfert VIP vers le centre de Paris depuis les aéroports d'<strong>Orly (ORY)</strong> et de <strong>Beauvais (BVA)</strong>.",
+    "transferRates": "Tarifs de Transfert",
+    "transferTitle": "Transferts de l'Aéroport CDG vers Paris",
+    "pricingInfo": "Veuillez nous contacter pour les tarifs.",
+    "guaranteeTitle": "Garantie de réservation anticipée",
+    "guaranteeDescription": "Verrouillez votre tarif et votre véhicule. Pas de surprises, pas de soucis de compteur."
+  },
+
+  "AlwaysIncluded": {
+    "preHeader": "TOUJOURS INCLUS",
+    "title": "Avantages Inclus en Standard dans Votre Service de Transfert VIP",
+    "subtitle": "Toutes les fonctionnalités et services que nous offrons à nos clients sans frais supplémentaires dans nos services de transfert aéroport de Paris. Une expérience de voyage sûre, confortable et sans tracas pour votre famille et vos proches.",
+    "feature1": {
+      "title": "Sièges Bébé et Réhausseur Gratuits",
+      "description": "Gardez chaque voyageur en sécurité sans frais supplémentaires."
+    },
+    "feature2": {
+      "title": "Pas de Frais de Bagage",
+      "description": "Emportez tout—poussettes, valises, souvenirs."
+    },
+    "feature3": {
+      "title": "Chauffeurs Turcs et Français",
+      "description": "Nous offrons le meilleur service à nos clients grâce à nos connaissances locales et à notre voyage confortable."
+    },
+    "feature4": {
+      "title": "Prix Fixes et Équitables",
+      "description": "Offres transparentes sans frais surprises."
+    },
+    "feature5": {
+      "title": "Ligne d'Assistance 24/7",
+      "description": "De vraies personnes en veille pour chaque changement."
+    },
+    "feature6": {
+      "title": "Réservez Maintenant, Payez Plus Tard",
+      "description": "Réservez instantanément—aucune carte de crédit requise."
+    }
+  },
+
+  "DisneylandTransferHero": {
+    "badge": "PARADIS MAGIQUE",
+    "title": "Transferts Disneyland Paris",
+    "tagline": "Réalisez votre rêve DISNEY !",
+    "description": "Êtes-vous prêt pour une aventure inoubliable à Disneyland en famille ? Optez pour notre service de transfert professionnel pour un voyage sans tracas et confortable vers Disneyland Paris. Contactez-nous pour voir la joie dans les yeux de vos enfants et vivre des vacances magiques. Plongez dans l'enchantement de Disneyland et créez des souvenirs durables !",
+    "feature1": "Service de transfert privé direct depuis tous les aéroports et hôtels de Paris vers Disneyland",
+    "feature2": "Sièges de sécurité pour bébés et enfants gratuits tout au long du trajet, plus eau potable propre",
+    "feature3": "Notre équipe de chauffeurs expérimentés connaît les itinéraires les plus courts et sans embouteillages vers Disneyland",
+    "ctaButton": "Planifiez mon trajet DISNEY",
+    "ctaLink": "/rezervasyon-formu",
+    "helpLinkText": "Besoin d'aide ? Parlez-nous",
+    "helpLink": "/contact",
+    "imageAlt": "Famille Disneyland Paris",
+    "travelTimeLabel": "TEMPS DE TRAJET",
+    "travelTime": "~45 MIN DEPUIS CDG",
+    "vehicleClassesLabel": "CLASSES DE VÉHICULES",
+    "vehicleClasses": "VOITURE · MINIVAN",
+    "trustMessage": "Chaque année, des centaines de familles heureuses nous choisissent pour atteindre confortablement et à l'heure le monde magique de Disneyland."
+  },
+
+  "RelatedTransfers": {
+    "title": "TRANSFERTS CONNEXES",
+    "subtitle": "Itinéraires que les voyageurs réservent également",
+    "description": "Basé sur d'autres transferts de cette collection.",
+    "transfers": {
+      "transfer1": {
+        "title": "Transferts de l'aéroport CDG vers l'aéroport d'Orly",
+        "link": "/paris-havalimanlari-transfer"
+      },
+      "transfer2": {
+        "title": "Transferts de l'aéroport CDG vers Paris",
+        "link": "/paris-havalimanlari-transfer"
+      },
+      "transfer3": {
+        "title": "Transferts des gares de Paris vers Disneyland",
+        "link": "/paris-gezi-turlari"
+      },
+      "transfer4": {
+        "title": "Transferts de l'aéroport de Beauvais vers le Château de Versailles",
+        "link": "/paris-havalimanlari-transfer"
+      },
+      "transfer5": {
+        "title": "Transferts de l'aéroport CDG vers le Château de Versailles",
+        "link": "/paris-havalimanlari-transfer"
+      },
+      "transfer6": {
+        "title": "Transferts de Paris vers l'aéroport CDG",
+        "link": "/paris-havalimanlari-transfer"
+      },
+      "transfer7": {
+        "title": "Transferts de l'aéroport de Beauvais vers Disneyland",
+        "link": "/paris-gezi-turlari"
+      },
+      "transfer8": {
+        "title": "Transferts de Paris vers l'aéroport de Beauvais",
+        "link": "/paris-havalimanlari-transfer"
+      }
+    }
   }
 } 

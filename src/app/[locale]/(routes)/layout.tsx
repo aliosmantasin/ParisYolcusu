@@ -2,9 +2,7 @@ import { ReactNode } from "react";
 import { Metadata } from "next";
 import Navbar from "./_components/menu/Navbar";
 import Footer from "./_components/menu/Footer";
-import ScrollTop from "./_components/lib/ScrollTop/ScrollTop";
-import { MdKeyboardArrowUp } from "react-icons/md";
-import BottomNavigation from "./_components/homepage/BottomNavigation";
+
 // import { LocaleAwareBotProtection } from "../../../components/LocaleAwareBotProtection";
 
 import CookieConsentBanner from "../../../components/CookieConsent/CookieConsentBanner";
@@ -12,6 +10,7 @@ import ConditionalScripts from "../../../components/CookieConsent/ConditionalScr
 
 import { CookieConsentProvider } from "@/src/components/CookieConsent/CookieConsentContext";
 import CookieCleaner from "@/src/components/CookieConsent/CookieCleaner";
+import WhatsAppButton from "../../../components/WhatsAppButton";
 
 // Organization JSON-LD
 const organizationJsonLd = {
@@ -144,10 +143,7 @@ export default async function RoutesLayout({
       <div>
         {children} 
       </div>
-      <ScrollTop>
-        <MdKeyboardArrowUp />
-      </ScrollTop>
-      <BottomNavigation/>
+      <WhatsAppButton/>
       <Footer/>
       
       <CookieCleaner />

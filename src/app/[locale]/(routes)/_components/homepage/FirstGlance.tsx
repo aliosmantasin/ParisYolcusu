@@ -13,7 +13,7 @@ const FirstGlance = () => {
       <NewYearPromoBanner />
       
       {/* Masaüstü Görünümü */}
-      <div className="min-h-[20vh] sm:flex flex-wrap justify-center items-center sm:min-h-[60vh] sm:border-2 mx-auto bg-[url(/images/Kapak.webp)] bg-cover bg-center relative sm:pb-32">
+      <div className="min-h-[20vh] sm:flex flex-wrap justify-center items-center sm:min-h-[60vh] mx-auto bg-[url(/images/Kapak.webp)] bg-cover bg-center relative sm:pb-32">
         {/* Koyu Katman */}
         <div className="absolute inset-0 bg-black opacity-50"></div>
 

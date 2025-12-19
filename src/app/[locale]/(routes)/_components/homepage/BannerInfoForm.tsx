@@ -11,7 +11,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger } from "@/components/u
 import { Button } from "@/components/ui/button";
 import { useState, useEffect } from "react";
 import { useTheme } from "next-themes";
-import { useFormTranslations } from "../../bilgi-alma-formu/languageInfo";
+import { useFormTranslations } from "../../iletisim/languageInfo";
 import ReCAPTCHA from "react-google-recaptcha";
 import { createPortal } from "react-dom";
 
@@ -199,7 +199,7 @@ const BannerInfoForm = () => {
             )}
           </div>
 
-          {/* Hizmet Seçiniz */}
+          {/* Transferler */}
           <div className="flex-1 w-full sm:w-auto min-w-0">
             <Select
               onValueChange={(value) => {
@@ -233,7 +233,7 @@ const BannerInfoForm = () => {
           {/* Gönder Butonu */}
           <Button
             type="submit"
-            className="w-full sm:w-auto bg-blue-600 hover:bg-blue-700 text-white px-6 sm:px-8 py-2.5 h-11 font-medium rounded-lg transition-colors"
+            className="w-full sm:w-auto bg-[#067481] hover:bg-[#056a77] text-white px-6 sm:px-8 py-2.5 h-11 font-medium rounded-lg transition-colors"
             disabled={!isFormValid || isSubmitting}
           >
             {isSubmitting ? "Gönderiliyor..." : translations.sendForm}
