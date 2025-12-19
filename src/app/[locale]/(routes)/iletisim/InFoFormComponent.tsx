@@ -115,11 +115,11 @@ const InfoForm = () => {
           {/* Sol Kolon - Form */}
           <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-8">
             <h2 className="text-3xl font-bold mb-4 text-gray-900 dark:text-white">{t("formTitle")}</h2>
-            <div className="space-y-4 mb-6 text-gray-600 dark:text-gray-400">
+            {/* <div className="space-y-4 mb-6 text-gray-600 dark:text-gray-400">
               <p>{t("introText1")}</p>
               <p>{t("introText2")}</p>
               <p>{t("introText3")}</p>
-            </div>
+            </div> */}
             <form onSubmit={handleSubmit(sendEmail)} id="formSubmission">
               <div className="mb-4">
                 <Label>{t("nameLabel")} *</Label>
@@ -182,7 +182,7 @@ const InfoForm = () => {
                 <MdEmail className="w-6 h-6 text-[#067481] flex-shrink-0 mt-1" />
                 <div>
                   <p className="font-semibold text-gray-900 dark:text-white mb-1">{t("email")}</p>
-                  <p className="text-gray-600 dark:text-gray-400">contact@parisyolcusu.com</p>
+                  <p className="text-gray-600 dark:text-gray-400">info@parisyolcusu.com</p>
                 </div>
               </div>
 
