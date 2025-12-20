@@ -30,6 +30,22 @@ const ThankYouPage = () => {
       setShowConfetti(false);
     }, 10000);
 
+    // Trigger GTM conversion for reservation thank you page
+    // Next.js client-side navigation'da GTM Page View trigger çalışmayabilir
+    // Bu yüzden custom event gönderiyoruz
+    if (typeof window !== 'undefined' && window.dataLayer) {
+      // Custom event gönder - GTM trigger'ında Custom Event tipi kullanın
+      window.dataLayer.push({
+        event: 'reservation_conversion',
+        page_location: window.location.href,
+        page_path: window.location.pathname,
+        page_title: document.title
+      } as Record<string, unknown>);
+      
+      console.log('[Reservation Conversion] Custom event "reservation_conversion" sent to GTM');
+      console.log('[Reservation Conversion] GTM trigger should be: Custom Event with event name "reservation_conversion"');
+    }
+
     return () => {
       window.removeEventListener('resize', handleResize);
       clearTimeout(timer);

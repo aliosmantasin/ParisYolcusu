@@ -38,6 +38,7 @@ export async function POST(req: NextRequest) {
     const mailOptions = {
       from: process.env.EMAIL,
       to: `paris.yolcusu.info@gmail.com`,
+      // to: `sosyalsettobox@gmail.com`,
       subject: 'Yeni Bilgi Alma Formu',
       text: `Yeni bir başvuru alındı:\nAdı: ${firstName} ${lastName}\nEmail: ${email}\nTelefon: ${phone}\nHizmet Türü: ${service}`,
       html: `

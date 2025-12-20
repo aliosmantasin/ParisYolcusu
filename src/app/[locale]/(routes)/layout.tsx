@@ -11,6 +11,7 @@ import ConditionalScripts from "../../../components/CookieConsent/ConditionalScr
 import { CookieConsentProvider } from "@/src/components/CookieConsent/CookieConsentContext";
 import CookieCleaner from "@/src/components/CookieConsent/CookieCleaner";
 import WhatsAppButton from "../../../components/WhatsAppButton";
+import TawkTo from "../../../components/TawkTo";
 
 // Organization JSON-LD
 const organizationJsonLd = {
@@ -146,6 +147,7 @@ export default async function RoutesLayout({
       <WhatsAppButton/>
       <Footer/>
       
+      <TawkTo />
       <CookieCleaner />
       <ConditionalScripts />
       <CookieConsentBanner />

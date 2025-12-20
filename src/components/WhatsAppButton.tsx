@@ -11,18 +11,40 @@ const WhatsAppButton = () => {
   const handleClick = (e: React.MouseEvent) => {
     e.preventDefault();
     e.stopPropagation();
+    
     // Check if already verified in this session
     const verified = sessionStorage.getItem("whatsapp_verified");
     if (verified === "true") {
-      window.open(whatsappUrl, "_blank");
+      // If verified, trigger GTM link click event and open WhatsApp
+      openWhatsAppWithGTMTracking();
     } else {
+      // If not verified, show ReCAPTCHA modal
       setShowRecaptcha(true);
     }
   };
 
+  // Function to open WhatsApp and trigger GTM tracking
+  const openWhatsAppWithGTMTracking = () => {
+    // Create a temporary anchor element to trigger GTM's automatic link click detection
+    const tempLink = document.createElement('a');
+    tempLink.href = whatsappUrl;
+    tempLink.target = '_blank';
+    tempLink.rel = 'noopener noreferrer';
+    tempLink.style.display = 'none';
+    document.body.appendChild(tempLink);
+    
+    // Trigger click event - GTM will automatically detect this as gtm.linkClick
+    tempLink.click();
+    
+    // Clean up
+    setTimeout(() => {
+      document.body.removeChild(tempLink);
+    }, 100);
+  };
+
   return (
     <>
-      <div style={{ position: 'fixed', bottom: '24px', right: '24px', zIndex: 99999 }}>
+      <div style={{ position: 'fixed', bottom: '24px', left: '24px', zIndex: 40 }}>
         <button
           type="button"
           onClick={handleClick}
@@ -59,6 +81,8 @@ const WhatsAppButton = () => {
           whatsappUrl={whatsappUrl}
           onVerified={() => {
             setShowRecaptcha(false);
+            // After verification, open WhatsApp with GTM tracking
+            openWhatsAppWithGTMTracking();
           }}
           onClose={() => {
             setShowRecaptcha(false);
@@ -70,3 +94,4 @@ const WhatsAppButton = () => {
 };
 
 export default WhatsAppButton;
+

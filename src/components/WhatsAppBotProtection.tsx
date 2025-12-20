@@ -31,9 +31,9 @@ export function WhatsAppBotProtection({ whatsappUrl, onVerified, onClose }: What
     if (recaptchaToken) {
       // Store verification in session storage
       sessionStorage.setItem("whatsapp_verified", "true");
-      // Open WhatsApp after verification
-      window.open(whatsappUrl, "_blank");
       setRecaptchaToken(null);
+      
+      // Close modal first, then let parent component handle WhatsApp opening with GTM tracking
       onVerified();
       onClose();
     }
@@ -119,3 +119,4 @@ export function WhatsAppBotProtection({ whatsappUrl, onVerified, onClose }: What
     ? createPortal(modalContent, document.body)
     : null;
 }
+

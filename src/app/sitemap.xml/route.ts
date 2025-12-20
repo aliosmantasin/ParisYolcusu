@@ -60,7 +60,7 @@ export async function GET() {
 
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
-${locales.flatMap(locale => 
+      ${locales.flatMap(locale => 
   pages.map(path => {
     const localizedPath = getLocalizedPath(path, locale);
     const isHomePage = path === '/';
@@ -69,7 +69,7 @@ ${locales.flatMap(locale =>
     
     return `  <url>
     <loc>${baseUrl}/${locale}${localizedPath === '/' ? '' : localizedPath}</loc>
-    <lastmod>${lastModifiedDate}</lastmod>
+              <lastmod>${lastModifiedDate}</lastmod>
     <changefreq>${changefreq}</changefreq>
     <priority>${priority}</priority>
     ${locales.map(altLocale => {
@@ -78,9 +78,9 @@ ${locales.flatMap(locale =>
       return `    <xhtml:link rel="alternate" hreflang="${altLocale}" href="${baseUrl}/${altLocale}${altPath === '/' ? '' : altPath}" />`;
     }).filter(Boolean).join('\n')}
   </url>`;
-  })
+        })
 ).join('\n')}
-</urlset>`;
+    </urlset>`;
 
   return new NextResponse(sitemap, {
     headers: {

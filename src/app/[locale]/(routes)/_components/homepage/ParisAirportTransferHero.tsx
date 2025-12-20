@@ -19,9 +19,13 @@ const ParisAirportTransferHero = () => {
               <p className="text-lg leading-relaxed">
                 {t("description1")}
               </p>
-              <div className="text-lg leading-relaxed">
-                <strong>CDG Havalimanı&apos;ndan Paris şehir merkezine</strong> konforlu ve güvenli transfer hizmeti sunuyoruz. Profesyonel şoförlerimiz ve lüks araç filomuz ile zamanında ve rahat bir yolculuk garantisi veriyoruz. <strong>Orly (ORY)</strong> ve <strong>Beauvais (BVA)</strong> havalimanlarından da Paris merkeze VIP transfer hizmeti sağlıyoruz.
-              </div>
+              <p className="text-lg leading-relaxed">
+                {t.raw("description2") ? (
+                  <span dangerouslySetInnerHTML={{ __html: t.raw("description2") as string }} />
+                ) : (
+                  t("description2")
+                )}
+              </p>
             </div>
           </div>
 
