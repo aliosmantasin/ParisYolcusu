@@ -183,7 +183,7 @@ const BannerInfoForm = () => {
           <div className="flex-1 w-full sm:w-auto min-w-0">
             <Input
               {...register("fullName")}
-              placeholder="İsim Soyisim"
+              placeholder={translations.name}
               className="w-full h-11 border-gray-300 dark:border-gray-600"
             />
             {errors.fullName && (
