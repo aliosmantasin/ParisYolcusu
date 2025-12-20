@@ -12,6 +12,7 @@ import { Button } from "@/components/ui/button";
 import { useState, useEffect } from "react";
 import { useTheme } from "next-themes";
 import { useFormTranslations } from "../../iletisim/languageInfo";
+import { useTranslations } from "next-intl";
 import ReCAPTCHA from "react-google-recaptcha";
 import { createPortal } from "react-dom";
 
@@ -78,6 +79,7 @@ const BannerInfoForm = () => {
   const [formDataToSubmit, setFormDataToSubmit] = useState<FormData | null>(null);
   const [mounted, setMounted] = useState(false);
   const translations = useFormTranslations();
+  const t = useTranslations("HomePage");
 
   useEffect(() => {
     setMounted(true);
@@ -163,10 +165,18 @@ const BannerInfoForm = () => {
 
   return (
     <div className="w-full max-w-5xl mx-auto">
+           {/* Form Başlık ve Açıklama */}
+           <div className="text-center mb-4 sm:mb-6"> 
+          <span className="text-black sm:text-gray-200 sm:dark:text-gray-100 text-sm sm:text-base">
+            {t("firstGlance.formDescription")}
+          </span>
+        </div>
       <form 
         onSubmit={handleSubmit(handleFormSubmit)} 
         className="bg-white dark:bg-gray-800 rounded-xl shadow-xl p-4 sm:p-6 border border-gray-200 dark:border-gray-700"
       >
+   
+
         {/* Yatay Form (Masaüstü) - Dikey Form (Mobil) */}
         <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 items-start sm:items-end">
           {/* İsim Soyisim */}
@@ -233,7 +243,7 @@ const BannerInfoForm = () => {
           {/* Gönder Butonu */}
           <Button
             type="submit"
-            className="w-full sm:w-auto bg-[#067481] hover:bg-[#056a77] text-white px-6 sm:px-8 py-2.5 h-11 font-medium rounded-lg transition-colors"
+            className="w-full sm:w-auto bg-blue-600 hover:bg-blue-700 text-white px-6 sm:px-8 py-2.5 h-11 font-medium rounded-lg transition-colors"
             disabled={!isFormValid || isSubmitting}
           >
             {isSubmitting ? "Gönderiliyor..." : translations.sendForm}

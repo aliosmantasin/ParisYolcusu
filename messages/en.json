@@ -36,7 +36,9 @@
       "brandNameX": "Paris",
       "brandnameY": "Passenger",
       "title": "Paris - Disneyland Airport Transfer",
-      "span": "VIP Service"
+      "span": "VIP Service",
+      "formTitle": "Information Request Form",
+      "formDescription": "Fill out the form to get quick and easy information"
     }
   },
 
