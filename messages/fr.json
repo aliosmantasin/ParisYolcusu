@@ -380,7 +380,7 @@
 
   "BotProtection": {
     "welcome": "Contact WhatsApp",
-    "description": "Pour nous contacter via WhatsApp, veuillez compléter la vérification ci-dessous. Cela fournit une protection contre le spam et les attaques de bots.",
+    "description": "Veuillez compléter la vérification pour la protection contre le spam.",
     "question": "Quelle est la capitale de la France ?",
     "answerPlaceholder": "Entrez votre réponse ici",
     "verifyButton": "Vérifier et Continuer",

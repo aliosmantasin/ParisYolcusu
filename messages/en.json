@@ -397,7 +397,7 @@
 
   "BotProtection": {
     "welcome": "WhatsApp Contact",
-    "description": "To contact us via WhatsApp, please complete the verification below. This provides protection against spam and bot attacks.",
+    "description": "Please complete the verification for spam protection.",
     "question": "What is the capital of France?",
     "answerPlaceholder": "Enter your answer here",
     "verifyButton": "Verify and Continue",

@@ -395,7 +395,7 @@
 
   "BotProtection": {
     "welcome": "WhatsApp İletişimi",
-    "description": "WhatsApp üzerinden bizimle iletişime geçmek için lütfen aşağıdaki doğrulamayı tamamlayın. Bu, spam ve bot saldırılarına karşı koruma sağlamaktadır.",
+    "description": "Spam koruması için lütfen doğrulamayı tamamlayın.",
     "question": "Fransa'nın başkenti neresidir?",
     "answerPlaceholder": "Cevabınızı buraya yazın",
     "verifyButton": "Doğrula ve Devam Et",
