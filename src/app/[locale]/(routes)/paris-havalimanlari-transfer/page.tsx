@@ -6,6 +6,7 @@ import CallToActionComponent from '../_components/homepage/CallToActionComponent
 import { seoData } from '@/lib/seo'
 import { Metadata } from 'next'
 import { getLocalizedPath } from '@/lib/i18n'
+import Gallery from '../_components/homepage/Galery'
 
 type Props = {
   params: Promise<{ locale: 'tr' | 'en' | 'fr' }>
@@ -51,6 +52,7 @@ const ParisAirPortsTransfer = () => {
     {/* <ORLYairport/> */}
     {/* <BVAairport/> */}
     <OurVehicles/>
+    <Gallery/>
     <CallToActionComponent/>
     </>
   )

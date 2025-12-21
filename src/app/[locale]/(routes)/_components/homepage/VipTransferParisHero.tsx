@@ -70,3 +70,4 @@ const VipTransferParisHero = () => {
 };
 
 export default VipTransferParisHero;
+

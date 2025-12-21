@@ -30,6 +30,20 @@ interface GalleryItem {
 // Gallery data structure for easy mapping
 const galleryData: GalleryItem[] = [
   {
+    id: 9,
+    type: 'image',
+    image: "/images/misafir/parisgezi2.webp",
+    alt: "Murat bey ve ailesi eyfe kulesi turu",
+    title: "Murat bey ve ailesi eyfe kulesi turu"
+  },
+  {
+    id: 8,
+    type: 'image',
+    image: "/images/misafir/parisgezi1.webp",
+    alt: "Paris Şehir Gezi Turu",
+    title: "Paris Şehir Gezi Turu"
+  },
+  {
     id: 5,
     type: 'image',
     image: "/images/misafir/misafir1.webp",
@@ -78,6 +92,8 @@ const galleryData: GalleryItem[] = [
     alt: "Aeroport Le Bourget Özel Jet Karşılama",
     title: "Aeroport Le Bourget Özel Jet Karşılama"
   },
+
+
 ];
 
 // JSON-LD structured data for SEO

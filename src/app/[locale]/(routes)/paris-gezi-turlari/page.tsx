@@ -7,6 +7,7 @@ import CallToActionComponent from '../_components/homepage/CallToActionComponent
 import OurVehicles from '../_components/homepage/OurVehicles';
 import { seoData } from '@/lib/seo';
 import { getLocalizedPath } from '@/lib/i18n';
+import Gallery from '../_components/homepage/Galery';
 
 type Props = {
   params: Promise<{ locale: 'tr' | 'en' | 'fr' }>
@@ -49,6 +50,7 @@ export default function ParisGeziTurlar() {
       <PopularAttractions />
       <ServiceFeatures />
       <OurVehicles/>
+      <Gallery/>
       <CallToActionComponent/>
     </main>
   );
