@@ -36,7 +36,7 @@
       "brandNameX": "Paris",
       "brandnameY": "Passager",
       "title": "Paris - Transfert Aéroport Disneyland",
-      "span": "Service VIP",
+      "span": "Chauffeur privé",
       "formTitle": "Formulaire de Demande d'Information",
       "formDescription": "Remplissez le formulaire pour obtenir des informations rapides et faciles"
     }
@@ -571,6 +571,23 @@
         "title": "Transferts de Paris vers l'aéroport de Beauvais",
         "link": "/paris-havalimanlari-transfer"
       }
+    }
+  },
+
+  "VipTransferParis": {
+    "firstGlance": {
+      "title": "Paris - Disneyland VIP Transfer",
+      "span": "Transfert Aéroport"
+    },
+    "hero": {
+      "title": "Transfert VIP Paris",
+      "description1": "Nous proposons des services de transfert VIP complets pour nos passagers venant de Turquie à Paris. Nous offrons un transport confortable et sûr vers chaque point de Paris, de vos visites d'affaires aux visites de musées, des transferts aéroport aux transports hôteliers.",
+      "description2": "Nous fournissons un service de transfert VIP vers les <strong>centres d'affaires</strong> du centre-ville de Paris pour vos visites d'affaires, vers <strong>divers musées</strong> (Louvre, Orsay, Versailles, etc.) et vers <strong>d'autres aéroports</strong> (CDG, ORY, BVA). Nous proposons également un service de transfert de luxe de porte à porte vers <strong>vos hôtels</strong> et vers <strong>n'importe quel point du centre-ville de Paris</strong>.",
+      "transferRates": "Tarifs de Transfert",
+      "transferTitle": "Transferts VIP Porte à Porte Paris",
+      "pricingInfo": "Veuillez nous contacter pour les tarifs.",
+      "guaranteeTitle": "Garantie de réservation anticipée",
+      "guaranteeDescription": "Verrouillez votre tarif et votre véhicule. Pas de surprises, pas de soucis de compteur."
     }
   }
 } 

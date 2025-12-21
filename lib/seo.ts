@@ -54,5 +54,24 @@ export const seoData: Record<string, { title: string; description: string }> = {
     description:
       "Vivez une expérience de découverte confortable et privilégiée avec nos visites guidées privées à Paris. Explorez les sites touristiques les plus populaires de Paris comme la Tour Eiffel, le Musée du Louvre, la Cathédrale Notre-Dame et le Château de Versailles avec des guides professionnels. Découvrez les richesses historiques et culturelles de Paris avec une qualité de service VIP grâce à nos visites guidées personnalisées.",
   },
+
+  // VIP Transfer Paris Sayfası
+  "/tr/vip-transfer-paris": {
+    title: "Paris Kapıdan Kapıya VIP Transfer | VIP Transfer Paris | Paris Yolcusu",
+    description:
+      "Paris Kapıdan Kapıya VIP Transfer hizmeti! Türkiye'den gelen yolcular için iş ziyaretleri, müzeler, havalimanları, oteller ve Paris şehir merkezi VIP transfer. Hemen rezervasyon yapın!",
+  },
+
+  "/en/vip-transfer-paris": {
+    title: "Paris Door to Door VIP Transfer | VIP Transfer Paris | Paris Traveler",
+    description:
+      "Paris Door to Door VIP Transfer service! VIP transfers for passengers from Turkey to business visits, museums, airports, hotels and Paris city center. Book now!",
+  },
+
+  "/fr/vip-transfer-paris": {
+    title: "Transfert VIP Porte à Porte Paris | Transfert VIP Paris | Paris Voyageur",
+    description:
+      "Service de transfert VIP porte à porte à Paris ! Transferts VIP pour les passagers de Turquie vers les visites d'affaires, musées, aéroports, hôtels et centre-ville de Paris. Réservez maintenant !",
+  },
 };
   

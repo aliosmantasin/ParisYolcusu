@@ -41,7 +41,7 @@ const OurVehicles = () => {
       <div className='container mx-auto p-5'>
         <div className='max-w-lg flex justify-center mx-auto'>
           <div>
-            <h3 className='my-4 text-4xl primary dark:text-slate-400 text-center tracking-widest'>{t("title")}</h3>
+            <h2 className='my-4 text-4xl primary dark:text-slate-400 text-center tracking-widest'>{t("title")}</h2>
             <hr className="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700"></hr>
             <p className='mb-6 text-lg paragraphStyle text-center'>{t("description")}</p>
           </div>

@@ -589,5 +589,22 @@
         "link": "/paris-havalimanlari-transfer"
       }
     }
+  },
+
+  "VipTransferParis": {
+    "firstGlance": {
+      "title": "Paris - Disneyland VIP Transfer",
+      "span": "Airport Transfer"
+    },
+    "hero": {
+      "title": "Vip Transfer Paris",
+      "description1": "We offer comprehensive VIP transfer services for our passengers coming from Turkey to Paris. We provide comfortable and safe transportation to every point in Paris, from your business visits to museum tours, from airport transfers to hotel transportation.",
+      "description2": "We provide VIP transfer service to <strong>business centers</strong> in Paris city center for your business visits, to <strong>various museums</strong> (Louvre, Orsay, Versailles, etc.) and to <strong>other airports</strong> (CDG, ORY, BVA). We also offer luxury door-to-door transfer service to <strong>your hotels</strong> and to <strong>any point in Paris city center</strong>.",
+      "transferRates": "Transfer Rates",
+      "transferTitle": "Paris Door to Door Vip Transfers",
+      "pricingInfo": "Please contact us for rates.",
+      "guaranteeTitle": "Pre-book guarantee",
+      "guaranteeDescription": "Lock in your rate and vehicle. No surprises, no meter worries."
+    }
   }
 }
