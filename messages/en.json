@@ -27,6 +27,8 @@
     "span": "All Rights Reserved.",
     "cookiePolicy": "Cookie Policy",
     "cookiePolicyUrl": "/cookie-policy",
+    "privacyPolicy": "Privacy Policy",
+    "privacyPolicyUrl": "/privacy-policy",
     "savePreferences": "Save Preferences",
     "socialMedia": "Social Media"
   },
@@ -606,5 +608,102 @@
       "guaranteeTitle": "Pre-book guarantee",
       "guaranteeDescription": "Lock in your rate and vehicle. No surprises, no meter worries."
     }
+  },
+
+  "PrivacyPolicy": {
+    "title": "Privacy Policy",
+    "lastUpdated": "Last Updated: December 21, 2025",
+    "intro": "This Privacy Policy explains how Paris Yolcusu collects, uses, and protects your personal data when you use our services.",
+    "section1": {
+      "title": "1. Personal Data We Collect",
+      "description": "We collect personal data when you interact with our website or services. The data we collect varies depending on the type of interaction:",
+      "contactForm": {
+        "title": "When You Fill Out Our Contact Form:",
+        "description": "When you contact us through our contact form, we collect the following information:",
+        "items": [
+          "Name and surname",
+          "Email address",
+          "Phone number",
+          "Message content"
+        ]
+      },
+      "reservationForm": {
+        "title": "When You Fill Out Reservation Forms:",
+        "description": "When you fill out our reservation form, we may collect the following information:",
+        "items": [
+          "Personal information (name, surname, email, phone)",
+          "Reservation details (date, time, departure and arrival points)",
+          "Number of passengers and special requirements",
+          "Payment information (through secure payment systems)"
+        ]
+      },
+      "automaticData": {
+        "title": "Automatically Collected Data:",
+        "description": "When you visit our website, we automatically collect the following data:",
+        "items": [
+          "Usage data (pages visited, time spent, clicks)",
+          "Technical data (IP address, browser type, device information, operating system)",
+          "Cookie data (see our Cookie Policy for details)"
+        ]
+      }
+    },
+    "section2": {
+      "title": "2. How We Use Your Personal Data",
+      "description": "We use your personal data for the following purposes:",
+      "items": [
+        "Providing and improving our VIP transfer services",
+        "Processing and managing your reservations",
+        "Communicating with you about our services",
+        "Processing your requests and applications",
+        "Analyzing website usage (with Google Analytics and Microsoft Clarity)",
+        "Measuring and optimizing advertising performance (with Google Ads and Meta advertising tracking tags)",
+        "Marketing and advertising optimization (only when you give explicit consent)",
+        "Complying with legal obligations"
+      ]
+    },
+    "section3": {
+      "title": "3. Data Protection",
+      "description": "We take appropriate technical and organizational measures to protect your personal data against unauthorized access, loss, destruction, or alteration."
+    },
+    "section4": {
+      "title": "4. Sharing of Personal Data",
+      "description": "We do not sell your personal data and do not share it with other companies without your explicit consent. We may only share your data with:",
+      "items": [
+        "Analytics service providers: Google Analytics and Microsoft Clarity (for website usage analysis)",
+        "Advertising platforms: Google Ads and Meta (Facebook/Instagram) - only when you give marketing cookie consent",
+        "Meta Conversion API: Your form submissions are sent to Meta only when you give marketing consent (email, phone, name-surname)",
+        "Form data: Deleted after use for communication purposes, not shared with other companies",
+        "Legal authorities (when legally required)"
+      ]
+    },
+    "section5": {
+      "title": "5. Your Rights",
+      "description": "Under GDPR and KVKK, you have the following rights:",
+      "items": [
+        "Right to access your personal data",
+        "Right to rectification of incorrect data",
+        "Right to erasure (right to be forgotten)",
+        "Right to restriction of processing",
+        "Right to data portability",
+        "Right to object to processing"
+      ],
+      "howToUse": "How to Exercise Your Rights:",
+      "howToUseText": "To exercise these rights regarding your personal data (form submissions, contact information, etc.), please send your request to info@parisyolcusu.com. For cookie preferences, you can use the cookie banner or the cookie preferences button in the footer."
+    },
+    "section6": {
+      "title": "6. Data Retention and Deletion",
+      "description": "Your form data is deleted after use for communication purposes. Analytics and advertising data (Google Analytics, Microsoft Clarity, Google Ads, Meta) are subject to these platforms' own retention policies. Data shared via Meta Conversion API is only sent when you give marketing consent and is subject to Meta's retention policies."
+    },
+    "section7": {
+      "title": "7. Cookies",
+      "description": "We use cookies and similar technologies on our website. For detailed information, please see our Cookie Policy."
+    },
+    "section8": {
+      "title": "8. Contact",
+      "description": "If you have questions about this Privacy Policy or wish to exercise your rights, please contact us:",
+      "email": "Email:",
+      "emailAddress": "info@parisyolcusu.com"
+    },
+    "backToHome": "Back to Home"
   }
 }

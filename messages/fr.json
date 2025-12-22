@@ -26,9 +26,11 @@
     "brandName": "Paris Yolcusu",
     "span": "Tous Droits Réservés.",
     "cookiePolicy": "Politique des Cookies",
-     "cookiePolicyUrl": "/politique-cookies",
-     "savePreferences": "Enregistrer les Préférences",
-     "socialMedia": "Réseaux Sociaux"
+    "cookiePolicyUrl": "/politique-cookies",
+    "privacyPolicy": "Politique de Confidentialité",
+    "privacyPolicyUrl": "/politique-confidentialite",
+    "savePreferences": "Enregistrer les Préférences",
+    "socialMedia": "Réseaux Sociaux"
   },
 
   "HomePage": {
@@ -589,5 +591,102 @@
       "guaranteeTitle": "Garantie de réservation anticipée",
       "guaranteeDescription": "Verrouillez votre tarif et votre véhicule. Pas de surprises, pas de soucis de compteur."
     }
+  },
+
+  "PrivacyPolicy": {
+    "title": "Politique de Confidentialité",
+    "lastUpdated": "Dernière mise à jour : 21 décembre 2025",
+    "intro": "Cette Politique de Confidentialité explique comment Paris Yolcusu collecte, utilise et protège vos données personnelles lorsque vous utilisez nos services.",
+    "section1": {
+      "title": "1. Données Personnelles que Nous Collectons",
+      "description": "Nous collectons des données personnelles lorsque vous interagissez avec notre site web ou nos services. Les données que nous collectons varient selon le type d'interaction :",
+      "contactForm": {
+        "title": "Lorsque Vous Remplissez Notre Formulaire de Contact :",
+        "description": "Lorsque vous nous contactez via notre formulaire de contact, nous collectons les informations suivantes :",
+        "items": [
+          "Nom et prénom",
+          "Adresse e-mail",
+          "Numéro de téléphone",
+          "Contenu du message"
+        ]
+      },
+      "reservationForm": {
+        "title": "Lorsque Vous Remplissez les Formulaires de Réservation :",
+        "description": "Lorsque vous remplissez notre formulaire de réservation, nous pouvons collecter les informations suivantes :",
+        "items": [
+          "Informations personnelles (nom, prénom, e-mail, téléphone)",
+          "Détails de la réservation (date, heure, points de départ et d'arrivée)",
+          "Nombre de passagers et besoins spéciaux",
+          "Informations de paiement (via des systèmes de paiement sécurisés)"
+        ]
+      },
+      "automaticData": {
+        "title": "Données Collectées Automatiquement :",
+        "description": "Lorsque vous visitez notre site web, nous collectons automatiquement les données suivantes :",
+        "items": [
+          "Données d'utilisation (pages visitées, temps passé, clics)",
+          "Données techniques (adresse IP, type de navigateur, informations sur l'appareil, système d'exploitation)",
+          "Données de cookies (voir notre Politique des Cookies pour plus de détails)"
+        ]
+      }
+    },
+    "section2": {
+      "title": "2. Comment Nous Utilisons Vos Données Personnelles",
+      "description": "Nous utilisons vos données personnelles aux fins suivantes :",
+      "items": [
+        "Fournir et améliorer nos services de transfert VIP",
+        "Traiter et gérer vos réservations",
+        "Communiquer avec vous concernant nos services",
+        "Traiter vos demandes et candidatures",
+        "Analyser l'utilisation du site web (avec Google Analytics et Microsoft Clarity)",
+        "Mesurer et optimiser les performances publicitaires (avec les balises de suivi publicitaire Google Ads et Meta)",
+        "Optimisation marketing et publicitaire (uniquement lorsque vous donnez votre consentement explicite)",
+        "Respecter les obligations légales"
+      ]
+    },
+    "section3": {
+      "title": "3. Protection des Données",
+      "description": "Nous prenons des mesures techniques et organisationnelles appropriées pour protéger vos données personnelles contre l'accès non autorisé, la perte, la destruction ou l'altération."
+    },
+    "section4": {
+      "title": "4. Partage des Données Personnelles",
+      "description": "Nous ne vendons pas vos données personnelles et ne les partageons pas avec d'autres entreprises sans votre consentement explicite. Nous ne pouvons partager vos données qu'avec :",
+      "items": [
+        "Fournisseurs de services d'analyse : Google Analytics et Microsoft Clarity (pour l'analyse de l'utilisation du site web)",
+        "Plateformes publicitaires : Google Ads et Meta (Facebook/Instagram) - uniquement lorsque vous donnez votre consentement aux cookies marketing",
+        "Meta Conversion API : Vos soumissions de formulaire sont envoyées à Meta uniquement lorsque vous donnez votre consentement marketing (e-mail, téléphone, nom-prénom)",
+        "Données de formulaire : Supprimées après utilisation à des fins de communication, non partagées avec d'autres entreprises",
+        "Autorités légales (lorsque légalement requis)"
+      ]
+    },
+    "section5": {
+      "title": "5. Vos Droits",
+      "description": "En vertu du RGPD et de la KVKK, vous disposez des droits suivants :",
+      "items": [
+        "Droit d'accès à vos données personnelles",
+        "Droit de rectification des données incorrectes",
+        "Droit à l'effacement (droit à l'oubli)",
+        "Droit à la limitation du traitement",
+        "Droit à la portabilité des données",
+        "Droit d'opposition au traitement"
+      ],
+      "howToUse": "Comment Exercer Vos Droits :",
+      "howToUseText": "Pour exercer ces droits concernant vos données personnelles (soumissions de formulaire, informations de contact, etc.), veuillez envoyer votre demande à info@parisyolcusu.com. Pour les préférences de cookies, vous pouvez utiliser la bannière de cookies ou le bouton de préférences de cookies dans le pied de page."
+    },
+    "section6": {
+      "title": "6. Conservation et Suppression des Données",
+      "description": "Vos données de formulaire sont supprimées après utilisation à des fins de communication. Les données d'analyse et publicitaires (Google Analytics, Microsoft Clarity, Google Ads, Meta) sont soumises aux politiques de conservation propres à ces plateformes. Les données partagées via Meta Conversion API ne sont envoyées que lorsque vous donnez votre consentement marketing et sont soumises aux politiques de conservation de Meta."
+    },
+    "section7": {
+      "title": "7. Cookies",
+      "description": "Nous utilisons des cookies et des technologies similaires sur notre site web. Pour plus d'informations, veuillez consulter notre Politique des Cookies."
+    },
+    "section8": {
+      "title": "8. Contact",
+      "description": "Si vous avez des questions concernant cette Politique de Confidentialité ou souhaitez exercer vos droits, veuillez nous contacter :",
+      "email": "E-mail :",
+      "emailAddress": "info@parisyolcusu.com"
+    },
+    "backToHome": "Retour à l'Accueil"
   }
 } 

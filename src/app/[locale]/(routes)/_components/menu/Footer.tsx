@@ -12,6 +12,8 @@ const Footer = () => {
       about: t("about"),
       cookiePolicy: t("cookiePolicy"),
       cookiePolicyUrl: t("cookiePolicyUrl"),
+      privacyPolicy: t("privacyPolicy"),
+      privacyPolicyUrl: t("privacyPolicyUrl"),
       span: t("span"),
       socialMedia: t("socialMedia")
     };

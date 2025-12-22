@@ -27,6 +27,8 @@
     "span": "Tüm Hakları Saklıdır.",
     "cookiePolicy": "Çerez Politikası",
     "cookiePolicyUrl": "/cerez-politikasi",
+    "privacyPolicy": "Gizlilik Politikası",
+    "privacyPolicyUrl": "/gizlilik-politikasi",
     "savePreferences": "Tercihleri Kaydet",
     "socialMedia": "Sosyal Medya"
   },
@@ -604,5 +606,102 @@
       "guaranteeTitle": "Önceden rezervasyon garantisi",
       "guaranteeDescription": "Fiyatınızı ve aracınızı önceden rezerve edin. Sürpriz ücretler yok, sayaç endişesi yok."
     }
+  },
+
+  "PrivacyPolicy": {
+    "title": "Gizlilik Politikası",
+    "lastUpdated": "Son Güncelleme: 21 Aralık 2025",
+    "intro": "Bu Gizlilik Politikası, Paris Yolcusu'nun hizmetlerimizi kullandığınızda kişisel verilerinizi nasıl topladığını, kullandığını ve koruduğunu açıklamaktadır.",
+    "section1": {
+      "title": "1. Topladığımız Kişisel Veriler",
+      "description": "Web sitemiz veya hizmetlerimizle etkileşime girdiğinizde kişisel veriler topluyoruz. Topladığımız veriler, etkileşim türüne göre değişiklik gösterir:",
+      "contactForm": {
+        "title": "İletişim Formunu Doldurduğunuzda:",
+        "description": "İletişim formumuz aracılığıyla bizimle iletişime geçtiğinizde şu bilgileri topluyoruz:",
+        "items": [
+          "Ad ve soyad",
+          "E-posta adresi",
+          "Telefon numarası",
+          "Mesaj içeriği"
+        ]
+      },
+      "reservationForm": {
+        "title": "Rezervasyon Formlarını Doldurduğunuzda:",
+        "description": "Rezervasyon formumuzu doldurduğunuzda şu bilgileri toplayabiliriz:",
+        "items": [
+          "Kişisel bilgiler (ad, soyad, e-posta, telefon)",
+          "Rezervasyon bilgileri (tarih, saat, kalkış ve varış noktaları)",
+          "Yolcu sayısı ve özel gereksinimler",
+          "Ödeme bilgileri (güvenli ödeme sistemleri üzerinden)"
+        ]
+      },
+      "automaticData": {
+        "title": "Otomatik Olarak Toplanan Veriler:",
+        "description": "Web sitemizi ziyaret ettiğinizde otomatik olarak şu verileri topluyoruz:",
+        "items": [
+          "Kullanım verileri (ziyaret edilen sayfalar, geçirilen süre, tıklamalar)",
+          "Teknik veriler (IP adresi, tarayıcı türü, cihaz bilgileri, işletim sistemi)",
+          "Çerez verileri (detaylar için Çerez Politikamıza bakın)"
+        ]
+      }
+    },
+    "section2": {
+      "title": "2. Kişisel Verilerinizi Nasıl Kullanıyoruz",
+      "description": "Kişisel verilerinizi aşağıdaki amaçlar için kullanıyoruz:",
+      "items": [
+        "VIP transfer hizmetlerimizi sunma ve iyileştirme",
+        "Rezervasyonlarınızı işleme ve yönetme",
+        "Hizmetlerimiz hakkında sizinle iletişim kurma",
+        "Taleplerinizi ve başvurularınızı işleme",
+        "Web sitesi kullanımını analiz etme (Google Analytics ve Microsoft Clarity ile)",
+        "Reklam performansını ölçme ve optimizasyon (Google Ads ve Meta reklam takip etiketleri ile)",
+        "Pazarlama ve reklam optimizasyonu (sadece açık rıza verdiğinizde)",
+        "Yasal yükümlülüklere uyma"
+      ]
+    },
+    "section3": {
+      "title": "3. Veri Koruma",
+      "description": "Kişisel verilerinizi yetkisiz erişime, kayba, yok edilmeye veya değiştirilmeye karşı korumak için uygun teknik ve organizasyonel önlemler alıyoruz."
+    },
+    "section4": {
+      "title": "4. Kişisel Verilerin Paylaşılması",
+      "description": "Kişisel verilerinizi satmıyoruz ve kullanıcının açık rızası olmadan başka şirketlerle paylaşmıyoruz. Verilerinizi yalnızca aşağıdakilerle paylaşabiliriz:",
+      "items": [
+        "Analitik hizmet sağlayıcıları: Google Analytics ve Microsoft Clarity (web sitesi kullanım analizi için)",
+        "Reklam platformları: Google Ads ve Meta (Facebook/Instagram) - sadece pazarlama çerez izni verdiğinizde",
+        "Meta Conversion API: Form gönderimleriniz sadece pazarlama izni verdiğinizde Meta'ya iletilir (email, telefon, ad-soyad)",
+        "Form verileri: İletişim amaçlı kullanıldıktan sonra silinir, başka şirketlerle paylaşılmaz",
+        "Yasal otoriteler (yasal olarak gerekli olduğunda)"
+      ]
+    },
+    "section5": {
+      "title": "5. Haklarınız",
+      "description": "GDPR ve KVKK kapsamında aşağıdaki haklara sahipsiniz:",
+      "items": [
+        "Kişisel verilerinize erişim hakkı",
+        "Hatalı verilerin düzeltilmesi hakkı",
+        "Silme hakkı (unutulma hakkı)",
+        "İşlemeyi kısıtlama hakkı",
+        "Veri taşınabilirliği hakkı",
+        "İşlemeye itiraz etme hakkı"
+      ],
+      "howToUse": "Haklarınızı Nasıl Kullanabilirsiniz:",
+      "howToUseText": "Kişisel verilerinizle ilgili bu hakları kullanmak için (form gönderimleri, iletişim bilgileri vb.) lütfen talebinizi info@parisyolcusu.com adresine gönderin. Çerez tercihleriniz için ise çerez banner'ı veya footer'daki çerez tercihleri butonunu kullanabilirsiniz."
+    },
+    "section6": {
+      "title": "6. Verilerin Saklanma Süresi ve Silinmesi",
+      "description": "Form verileriniz iletişim amaçlı kullanıldıktan sonra silinir. Analitik ve reklam verileri (Google Analytics, Microsoft Clarity, Google Ads, Meta) bu platformların kendi saklama politikalarına tabidir. Meta Conversion API ile paylaşılan veriler sadece pazarlama izni verdiğinizde gönderilir ve Meta'nın saklama politikalarına tabidir."
+    },
+    "section7": {
+      "title": "7. Çerezler",
+      "description": "Web sitemizde çerezler ve benzer teknolojiler kullanıyoruz. Detaylı bilgi için lütfen Çerez Politikamıza bakın."
+    },
+    "section8": {
+      "title": "8. İletişim",
+      "description": "Bu Gizlilik Politikası hakkında sorularınız varsa veya haklarınızı kullanmak istiyorsanız, lütfen bizimle iletişime geçin:",
+      "email": "E-posta:",
+      "emailAddress": "info@parisyolcusu.com"
+    },
+    "backToHome": "Ana Sayfaya Dön"
   }
 }

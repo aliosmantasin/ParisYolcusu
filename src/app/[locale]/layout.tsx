@@ -1,6 +1,6 @@
 import { ReactNode } from "react";
 import { notFound } from "next/navigation";
-import { NextIntlClientProvider } from "next-intl";
+import { NextIntlClientProvider, AbstractIntlMessages } from "next-intl";
 
 import trMessages from "../../../messages/tr.json";
 import enMessages from "../../../messages/en.json";
@@ -27,7 +27,7 @@ export default async function LocaleLayout({
 }) {
   const { locale } = await params;
   const typedLocale = locale as Locale;
-  const messages = messagesMap[typedLocale];
+  const messages = messagesMap[typedLocale] as unknown as AbstractIntlMessages;
 
   if (!messages) {
     notFound();

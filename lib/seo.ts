@@ -73,5 +73,24 @@ export const seoData: Record<string, { title: string; description: string }> = {
     description:
       "Service de transfert VIP porte à porte à Paris ! Transferts VIP pour les passagers de Turquie vers les visites d'affaires, musées, aéroports, hôtels et centre-ville de Paris. Réservez maintenant !",
   },
+
+  // Gizlilik Politikası Sayfası
+  "/tr/gizlilik-politikasi": {
+    title: "Gizlilik Politikası | Paris Yolcusu",
+    description:
+      "Paris Yolcusu gizlilik politikası. Kişisel verilerinizin nasıl toplandığını, kullanıldığını ve korunduğunu öğrenin. GDPR ve KVKK uyumlu gizlilik politikamız.",
+  },
+
+  "/en/privacy-policy": {
+    title: "Privacy Policy | Paris Traveler",
+    description:
+      "Paris Traveler privacy policy. Learn how your personal data is collected, used, and protected. Our GDPR and KVKK compliant privacy policy.",
+  },
+
+  "/fr/politique-confidentialite": {
+    title: "Politique de Confidentialité | Paris Voyageur",
+    description:
+      "Politique de confidentialité de Paris Voyageur. Découvrez comment vos données personnelles sont collectées, utilisées et protégées. Notre politique de confidentialité conforme au RGPD et à la KVKK.",
+  },
 };
   

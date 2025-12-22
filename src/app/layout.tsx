@@ -1,6 +1,6 @@
 import { ThemeProvider } from "@/components/theme-provider";
 import "./globals.css";
-import { NextIntlClientProvider } from "next-intl";
+import { NextIntlClientProvider, AbstractIntlMessages } from "next-intl";
 import { LanguageProvider } from "../components/LanguageProvider";
 // import { SecurityProvider } from "../components/SecurityProvider";
 
@@ -24,7 +24,7 @@ export default async function RootLayout({
   const locale = "tr";
 
   // 📌 JSON dosyasını haritadan al
-  const messages = messagesMap[locale as keyof typeof messagesMap] || trMessages;
+  const messages = (messagesMap[locale as keyof typeof messagesMap] || trMessages) as unknown as AbstractIntlMessages;
 
   return (
     <html lang={locale} suppressHydrationWarning>

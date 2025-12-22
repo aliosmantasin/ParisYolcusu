@@ -30,6 +30,12 @@ export const urlMap: Record<string, { tr: string; en: string; fr: string }> = {
       en: '/cookie-policy',
       fr: '/politique-cookies'
     },
+
+    "/gizlilik-politikasi": {
+      tr: '/gizlilik-politikasi',
+      en: '/privacy-policy',
+      fr: '/politique-confidentialite'
+    },
   };
 
 // Dil bazlı URL yolu alma fonksiyonu

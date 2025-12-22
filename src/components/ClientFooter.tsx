@@ -19,6 +19,8 @@ interface ClientFooterProps {
     about: string;
     cookiePolicy: string;
     cookiePolicyUrl: string;
+    privacyPolicy: string;
+    privacyPolicyUrl: string;
     span: string;
     socialMedia: string;
   }
@@ -84,6 +86,10 @@ const ClientFooter = ({ locale, translations }: ClientFooterProps) => {
                     
                     <li>
                         <Link href={`/${locale}${translations.cookiePolicyUrl}`} className="hover:underline mx-2 md:me-6">{translations.cookiePolicy}</Link>
+                    </li>
+                    
+                    <li>
+                        <Link href={`/${locale}${translations.privacyPolicyUrl}`} className="hover:underline mx-2 md:me-6">{translations.privacyPolicy}</Link>
                     </li>
                     
                     <li>
