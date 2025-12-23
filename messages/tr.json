@@ -395,6 +395,12 @@
     }
   },
 
+  "WhatsAppWidget": {
+    "tooltip": "Paris yolculuğunuz hakkında merak ettiklerinizi sorabilirsiniz!",
+    "ariaLabel": "WhatsApp iletişim",
+    "title": "WhatsApp ile hızlı soru sor"
+  },
+
   "BotProtection": {
     "welcome": "WhatsApp İletişimi",
     "description": "Spam koruması için lütfen doğrulamayı tamamlayın.",

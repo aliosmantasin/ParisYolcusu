@@ -237,7 +237,7 @@
     "ParisDisneyland": "Disneyland Transfer",
     "ParisTravelTours": "Paris City Tour",
     "PrivateChauffeur": "Paris Transfer",
-    "SendForm": "Get Information"
+    "SendForm": "Send Form"
   },
 
   "Contact": {
@@ -395,6 +395,12 @@
         "description": "A service where you are picked up from your hotel and dropped back to your hotel after your travels."
       }
     }
+  },
+
+  "WhatsAppWidget": {
+    "tooltip": "Feel free to ask anything about your Paris trip!",
+    "ariaLabel": "WhatsApp contact",
+    "title": "Ask a quick question via WhatsApp"
   },
 
   "BotProtection": {

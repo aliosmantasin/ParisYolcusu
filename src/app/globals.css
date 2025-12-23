@@ -272,15 +272,3 @@ img {
   user-drag: none;
 }
 
-/* Tawk.to widget z-index override - Cookie banner'ın altında olması için */
-#tawkchat-container,
-.tawk-chat-container,
-iframe[src*="tawk.to"] {
-  z-index: 30 !important;
-}
-
-/* Cookie banner en üstte olmalı */
-.cookie-banner {
-  z-index: 2000000001 !important;
-}
-  

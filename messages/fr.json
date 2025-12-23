@@ -26,11 +26,11 @@
     "brandName": "Paris Yolcusu",
     "span": "Tous Droits Réservés.",
     "cookiePolicy": "Politique des Cookies",
-    "cookiePolicyUrl": "/politique-cookies",
+     "cookiePolicyUrl": "/politique-cookies",
     "privacyPolicy": "Politique de Confidentialité",
     "privacyPolicyUrl": "/politique-confidentialite",
-    "savePreferences": "Enregistrer les Préférences",
-    "socialMedia": "Réseaux Sociaux"
+     "savePreferences": "Enregistrer les Préférences",
+     "socialMedia": "Réseaux Sociaux"
   },
 
   "HomePage": {
@@ -172,7 +172,7 @@
     "ParisDisneyland": "Transfert Disneyland",
     "ParisTravelTours": "Tour de Paris",
     "PrivateChauffeur": "Transfert Paris",
-    "SendForm": "Obtenir des Informations"
+    "SendForm": "Envoyer le Formulaire"
   },
 
   "Contact": {
@@ -378,6 +378,12 @@
         "description": "L'ancien palais royal, connu pour ses jardins magnifiques et son opulence."
       }
     }
+  },
+
+  "WhatsAppWidget": {
+    "tooltip": "N'hésitez pas à poser vos questions sur votre voyage à Paris !",
+    "ariaLabel": "Contact WhatsApp",
+    "title": "Posez une question rapide via WhatsApp"
   },
 
   "BotProtection": {

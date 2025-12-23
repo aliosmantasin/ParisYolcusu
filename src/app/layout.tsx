@@ -24,12 +24,16 @@ export default async function RootLayout({
   const locale = "tr";
 
   // 📌 JSON dosyasını haritadan al
-  const messages = (messagesMap[locale as keyof typeof messagesMap] || trMessages) as unknown as AbstractIntlMessages;
+  const messages = (messagesMap[locale as keyof typeof messagesMap] ||
+    trMessages) as unknown as AbstractIntlMessages;
 
   return (
     <html lang={locale} suppressHydrationWarning>
         <head>
-        <meta name="facebook-domain-verification" content="8e31me7fwh1ux38rp50z2b4g752sgo" />
+        <meta
+          name="facebook-domain-verification"
+          content="8e31me7fwh1ux38rp50z2b4g752sgo"
+        />
       </head>
       <body className="scroll-smooth">
         <NextIntlClientProvider locale={locale} messages={messages}>

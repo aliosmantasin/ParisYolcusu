@@ -28,7 +28,7 @@ const FirstGlance = () => {
       </div>
 
       {/* Banner Bilgi Alma Formu - Mobilde normal akış, masaüstünde absolute */}
-      <div className="relative px-4 mt-8 sm:absolute sm:bottom-5 sm:left-0 sm:right-0 sm:transform sm:translate-y-1/2 z-20">
+      <div className="relative px-4 mt-8 sm:absolute sm:bottom-5 sm:left-0 sm:right-0 sm:transform sm:translate-y-1/2 ">
         <BannerInfoForm />
       </div>
  
