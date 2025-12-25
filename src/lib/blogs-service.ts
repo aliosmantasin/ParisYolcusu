@@ -5,12 +5,12 @@ import { Prisma } from '@prisma/client';
 export interface CreateBlogInput {
   title: string;
   slug: string;
-  excerpt?: string;
+  excerpt?: string | null;
   content: string;
   category: BlogCategory;
-  imageId?: string;
-  author?: string;
-  authorId?: string;
+  imageId?: string | null;
+  author?: string | null;
+  authorId?: string | null;
   isPublished?: boolean;
   isActive?: boolean;
   publishedAt?: Date;

@@ -1,0 +1,74 @@
+
+> templatewebsite@0.1.0 build /Users/aliosmantasin/Desktop/parisyolcusu-web
+> prisma generate && next build
+
+warn The configuration property `package.json#prisma` is deprecated and will be removed in Prisma 7. Please migrate to a Prisma config file (e.g., `prisma.config.ts`).
+For more information, see: https://pris.ly/prisma-config
+
+Environment variables loaded from .env
+Prisma schema loaded from prisma/schema.prisma
+┌─────────────────────────────────────────────────────────┐
+│  Update available 6.19.1 -> 7.2.0                       │
+│                                                         │
+│  This is a major update - please follow the guide at    │
+│  https://pris.ly/d/major-version-upgrade                │
+│                                                         │
+│  Run the following to update                            │
+│    npm i --save-dev prisma@latest                       │
+│    npm i @prisma/client@latest                          │
+└─────────────────────────────────────────────────────────┘
+
+✔ Generated Prisma Client (v6.19.1) to ./node_modules/.pnpm/@prisma+client@6.19.1_prisma@6.19.1_typescript@5.7.3__typescript@5.7.3/node_modules/@prisma/client in 176ms
+
+Start by importing your Prisma Client (See: https://pris.ly/d/importing-client)
+
+Tip: Need your database queries to be 1000x faster? Accelerate offers you that and more: https://pris.ly/tip-2-accelerate
+
+ ⚠ Warning: Next.js inferred your workspace root, but it may not be correct.
+ We detected multiple lockfiles and selected the directory of /Users/aliosmantasin/package-lock.json as the root directory.
+ To silence this warning, set `outputFileTracingRoot` in your Next.js config, or consider removing one of the lockfiles if it's not needed.
+   See https://nextjs.org/docs/app/api-reference/config/next-config-js/output#caveats for more information.
+ Detected additional lockfiles: 
+   * /Users/aliosmantasin/Desktop/parisyolcusu-web/pnpm-lock.yaml
+
+   ▲ Next.js 15.5.9
+   - Environments: .env.local, .env
+   - Experiments (use with caution):
+     ✓ optimizeCss
+     · optimizePackageImports
+
+   Creating an optimized production build ...
+ ✓ Compiled successfully in 11.1s
+   Linting and checking validity of types ...
+
+./src/components/tracking/ClickTracker.tsx
+199:6  Warning: React Hook useEffect has a missing dependency: 'sendBatchClicks'. Either include it or remove the dependency array.  react-hooks/exhaustive-deps
+
+./src/lib/env.ts
+109:12  Warning: 'error' is defined but never used.  @typescript-eslint/no-unused-vars
+
+./src/lib/ip-geolocation.ts
+71:12  Warning: 'error' is defined but never used.  @typescript-eslint/no-unused-vars
+127:12  Warning: 'error' is defined but never used.  @typescript-eslint/no-unused-vars
+
+./src/lib/traffic-source.ts
+230:14  Warning: 'e' is defined but never used.  @typescript-eslint/no-unused-vars
+
+info  - Need to disable some ESLint rules? Learn more here: https://nextjs.org/docs/app/api-reference/config/eslint#disabling-rules
+Failed to compile.
+
+./src/app/api/admin/blogs/route.ts:69:48
+Type error: Argument of type '{ authorId: string; publishedAt: Date | undefined; title: string; slug: string; content: string; category: "DIYET" | "SAGLIK" | "SUPPLEMENTLER" | "BESLENME" | "PARIS_TRANSFER" | "PARIS_TURLARI" | "PARIS_REHBERI"; ... 4 more ...; isActive?: boolean | undefined; }' is not assignable to parameter of type 'CreateBlogInput'.
+  Types of property 'excerpt' are incompatible.
+    Type 'string | null | undefined' is not assignable to type 'string | undefined'.
+      Type 'null' is not assignable to type 'string | undefined'.
+
+[0m [90m 67 |[39m     console[33m.[39mlog([32m'[Blog POST] Validated data:'[39m[33m,[39m [33mJSON[39m[33m.[39mstringify(validatedData[33m,[39m [36mnull[39m[33m,[39m [35m2[39m))[33m;[39m
+ [90m 68 |[39m     
+[31m[1m>[22m[39m[90m 69 |[39m     [36mconst[39m blog [33m=[39m [36mawait[39m [33mBlogsService[39m[33m.[39mcreateBlog({
+ [90m    |[39m                                                [31m[1m^[22m[39m
+ [90m 70 |[39m       [33m...[39mvalidatedData[33m,[39m
+ [90m 71 |[39m       authorId[33m:[39m validatedData[33m.[39mauthorId [33m||[39m auth[33m.[39muserId[33m,[39m
+ [90m 72 |[39m       publishedAt[33m:[39m validatedData[33m.[39mpublishedAt [33m?[39m [36mnew[39m [33mDate[39m(validatedData[33m.[39mpublishedAt) [33m:[39m undefined[33m,[39m[0m
+Next.js build worker exited with code: 1 and signal: null
+ ELIFECYCLE  Command failed with exit code 1.

@@ -68,6 +68,9 @@ export async function POST(request: NextRequest) {
     
     const blog = await BlogsService.createBlog({
       ...validatedData,
+      excerpt: validatedData.excerpt ?? undefined,
+      imageId: validatedData.imageId ?? undefined,
+      author: validatedData.author ?? undefined,
       authorId: validatedData.authorId || auth.userId,
       publishedAt: validatedData.publishedAt ? new Date(validatedData.publishedAt) : undefined,
     });
