@@ -69,6 +69,7 @@ export function BlogManagement() {
     content: '',
     category: 'PARIS_TRANSFER' as string,
     imageId: '',
+    author: '',
     isPublished: false,
     isActive: true,
   });
@@ -245,6 +246,7 @@ export function BlogManagement() {
         content: blog.content,
         category: blog.category,
         imageId: blog.image?.id || '',
+        author: blog.author || '',
         isPublished: blog.isPublished,
         isActive: blog.isActive,
       });
@@ -258,6 +260,7 @@ export function BlogManagement() {
         content: '',
         category: 'PARIS_TRANSFER',
         imageId: '',
+        author: '',
         isPublished: false,
         isActive: true,
       });
@@ -274,20 +277,39 @@ export function BlogManagement() {
         : '/api/admin/blogs';
       const method = editingBlog ? 'PUT' : 'POST';
 
+      // Boş string'leri null'a çevir (validation için)
+      const payload = {
+        ...formData,
+        excerpt: formData.excerpt || undefined,
+        imageId: formData.imageId || undefined,
+        author: formData.author || undefined,
+      };
+
       const response = await fetch(url, {
         method,
         headers: { 'Content-Type': 'application/json' },
         credentials: 'include',
-        body: JSON.stringify(formData),
+        body: JSON.stringify(payload),
       });
 
-      if (!response.ok) throw new Error('Blog kaydedilemedi');
+      if (!response.ok) {
+        const errorData = await response.json().catch(() => ({ message: 'Blog kaydedilemedi' }));
+        const errorMessage = errorData.errors 
+          ? errorData.errors.map((e: { path: string | string[]; message: string }) => {
+              const path = Array.isArray(e.path) ? e.path.join('.') : e.path;
+              return `${path}: ${e.message}`;
+            }).join(', ')
+          : errorData.message || 'Blog kaydedilemedi';
+        throw new Error(errorMessage);
+      }
       
+      alert('Blog başarıyla kaydedildi!');
       setIsFormOpen(false);
       fetchBlogs();
     } catch (error) {
       console.error('Blog kaydedilemedi:', error);
-      alert('Blog kaydedilemedi');
+      const errorMessage = error instanceof Error ? error.message : 'Blog kaydedilemedi';
+      alert(`Hata: ${errorMessage}`);
     } finally {
       setIsSaving(false);
     }

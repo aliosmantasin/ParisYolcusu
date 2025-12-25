@@ -17,6 +17,10 @@ export async function authenticateToken(request: NextRequest): Promise<{ userId:
     const token = request.cookies.get('admin_token')?.value;
 
     if (!token) {
+      console.log('[Auth] No token found in cookies');
+      // Debug: Tüm cookie'leri logla
+      const allCookies = request.cookies.getAll();
+      console.log('[Auth] All cookies:', allCookies.map(c => c.name));
       return null;
     }
 
@@ -28,11 +32,13 @@ export async function authenticateToken(request: NextRequest): Promise<{ userId:
     });
 
     if (!user || user.status !== 'ACTIVE') {
+      console.log('[Auth] User not found or not active:', { userId: decoded.userId, userExists: !!user, status: user?.status });
       return null;
     }
 
     return { userId: decoded.userId, userRole: decoded.role };
-  } catch {
+  } catch (error) {
+    console.error('[Auth] Token verification error:', error instanceof Error ? error.message : 'Unknown error');
     return null;
   }
 }

@@ -38,15 +38,15 @@ export async function GET(
 const UpdateBlogSchema = z.object({
   title: z.string().min(1).optional(),
   slug: z.string().min(1).optional(),
-  excerpt: z.string().optional(),
+  excerpt: z.string().optional().nullable(),
   content: z.string().min(1).optional(),
   category: z.nativeEnum(BlogCategory).optional(),
-  imageId: z.string().optional(),
-  author: z.string().optional(),
-  authorId: z.string().optional(),
+  imageId: z.string().optional().nullable(),
+  author: z.string().optional().nullable(),
+  authorId: z.string().optional().nullable(),
   isPublished: z.boolean().optional(),
   isActive: z.boolean().optional(),
-  publishedAt: z.string().datetime().optional(),
+  publishedAt: z.string().datetime().optional().nullable(),
 });
 
 export async function PUT(
@@ -64,7 +64,16 @@ export async function PUT(
 
     const { id } = await params;
     const body = await request.json();
-    const validatedData = UpdateBlogSchema.parse(body);
+    
+    // Boş string'leri undefined'a çevir (validation için)
+    const cleanedBody = {
+      ...body,
+      excerpt: body.excerpt && body.excerpt.trim() ? body.excerpt.trim() : undefined,
+      imageId: body.imageId && body.imageId.trim() ? body.imageId.trim() : undefined,
+      author: body.author && body.author.trim() ? body.author.trim() : undefined,
+    };
+    
+    const validatedData = UpdateBlogSchema.parse(cleanedBody);
     const blog = await BlogsService.updateBlog(id, {
       ...validatedData,
       publishedAt: validatedData.publishedAt ? new Date(validatedData.publishedAt) : undefined,

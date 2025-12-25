@@ -79,20 +79,26 @@ export async function POST(request: NextRequest) {
     });
 
     // HTTP-only cookie'ler set et
+    // Production'da secure: true olmalı (HTTPS için)
+    // Domain belirtilmezse otomatik olarak request'in domain'i kullanılır
+    const isProduction = process.env.NODE_ENV === 'production';
+    
     response.cookies.set('admin_token', token, {
       httpOnly: true,
-      secure: process.env.NODE_ENV === 'production',
+      secure: isProduction,
       sameSite: 'lax',
       maxAge: 60 * 15, // 15 dakika
       path: '/',
+      // Domain belirtilmez - otomatik olarak request domain'i kullanılır
     });
 
     response.cookies.set('admin_refresh_token', refreshToken, {
       httpOnly: true,
-      secure: process.env.NODE_ENV === 'production',
+      secure: isProduction,
       sameSite: 'lax',
       maxAge: 60 * 60 * 24 * 7, // 7 gün
       path: '/',
+      // Domain belirtilmez - otomatik olarak request domain'i kullanılır
     });
 
     return response;
