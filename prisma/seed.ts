@@ -7,7 +7,10 @@ async function main() {
   console.log('🌱 Seeding database...');
 
   // İlk admin kullanıcısını oluştur
-  const hashedPassword = await bcrypt.hash('admin123', 10);
+  // ⚠️ PRODUCTION'DA MUTLAKA BU ŞİFREYİ DEĞİŞTİRİN!
+  // Güvenli şifre: En az 12 karakter, büyük/küçük harf, rakam ve özel karakter içermeli
+  const defaultPassword = process.env.ADMIN_DEFAULT_PASSWORD || 'ParisYolcusu2024!Admin';
+  const hashedPassword = await bcrypt.hash(defaultPassword, 10);
 
   const admin = await prisma.user.upsert({
     where: { email: 'admin@parisyolcusu.com' },
@@ -23,7 +26,8 @@ async function main() {
 
   console.log('✅ Admin user created:', admin.email);
   console.log('📧 Email: admin@parisyolcusu.com');
-  console.log('🔑 Password: admin123');
+  console.log('🔑 Password:', defaultPassword);
+  console.log('⚠️  PRODUCTION\'DA MUTLAKA ŞİFREYİ DEĞİŞTİRİN!');
 }
 
 main()
