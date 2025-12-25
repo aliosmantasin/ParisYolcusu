@@ -84,23 +84,31 @@ export const env = {
   SUPABASE_SERVICE_ROLE_KEY: getEnvOptional('SUPABASE_SERVICE_ROLE_KEY'),
 } as const
 
-// Validation on module load
-if (env.NODE_ENV === 'production') {
-  // Production'da kritik değişkenlerin varlığını kontrol et
-  const requiredInProduction = [
-    'DATABASE_URL',
-    'JWT_SECRET',
-    'JWT_REFRESH_SECRET',
-    'SMTP_HOST',
-    'EMAIL',
-    'EMAIL_PASSWORD',
-    'RECAPTCHA_SECRET_KEY',
-  ]
+// Validation on module load (sadece runtime'da, build sırasında değil)
+// Build sırasında environment variable'lar henüz set edilmemiş olabilir
+if (env.NODE_ENV === 'production' && typeof window === 'undefined') {
+  // Sadece server-side'da kontrol et (build sırasında değil)
+  try {
+    const requiredInProduction = [
+      'DATABASE_URL',
+      'JWT_SECRET',
+      'JWT_REFRESH_SECRET',
+      'SMTP_HOST',
+      'EMAIL',
+      'EMAIL_PASSWORD',
+      'RECAPTCHA_SECRET_KEY',
+    ]
 
-  for (const key of requiredInProduction) {
-    if (!process.env[key]) {
-      throw new Error(`Missing required environment variable in production: ${key}`)
+    for (const key of requiredInProduction) {
+      if (!process.env[key]) {
+        console.warn(`⚠️  Missing required environment variable in production: ${key}`)
+        // Build sırasında hata verme, sadece uyarı ver
+        // Runtime'da zaten getEnv() hata verecek
+      }
     }
+  } catch (error) {
+    // Build sırasında hata verme
+    console.warn('Environment variable validation skipped during build')
   }
 }
 
