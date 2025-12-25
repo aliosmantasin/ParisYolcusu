@@ -34,18 +34,84 @@ export function IPTracker() {
     const utmCampaign = urlParams.get('utm_campaign');
     const utmTerm = urlParams.get('utm_term');
     const utmContent = urlParams.get('utm_content');
-    const gclid = urlParams.get('gclid');
-    const fbclid = urlParams.get('fbclid');
+    
+    // gclid ve fbclid'i URL'den al, yoksa sessionStorage'dan kontrol et
+    // Google Ads ve Meta Ads tıklamaları için bu parametreler önemli
+    let gclid = urlParams.get('gclid');
+    let fbclid = urlParams.get('fbclid');
+    
+    // Eğer URL'de gclid varsa, sessionStorage'a kaydet (sonraki sayfa yüklemeleri için)
+    if (gclid) {
+      try {
+        sessionStorage.setItem('gclid', gclid);
+        // gclid'nin geçerlilik süresi: 30 gün (Google Ads standardı)
+        sessionStorage.setItem('gclid_timestamp', Date.now().toString());
+      } catch {
+        // sessionStorage hatası (private mode vb.) - sessizce devam et
+      }
+    } else {
+      // URL'de yoksa sessionStorage'dan kontrol et
+      try {
+        const storedGclid = sessionStorage.getItem('gclid');
+        const storedTimestamp = sessionStorage.getItem('gclid_timestamp');
+        
+        // 30 gün içindeyse kullan (Google Ads attribution window)
+        if (storedGclid && storedTimestamp) {
+          const timestamp = parseInt(storedTimestamp, 10);
+          const thirtyDaysInMs = 30 * 24 * 60 * 60 * 1000;
+          if (Date.now() - timestamp < thirtyDaysInMs) {
+            gclid = storedGclid;
+          } else {
+            // Süresi dolmuş, temizle
+            sessionStorage.removeItem('gclid');
+            sessionStorage.removeItem('gclid_timestamp');
+          }
+        }
+      } catch {
+        // sessionStorage hatası - sessizce devam et
+      }
+    }
+    
+    // Aynı mantık fbclid için
+    if (fbclid) {
+      try {
+        sessionStorage.setItem('fbclid', fbclid);
+        sessionStorage.setItem('fbclid_timestamp', Date.now().toString());
+      } catch {
+        // sessionStorage hatası - sessizce devam et
+      }
+    } else {
+      try {
+        const storedFbclid = sessionStorage.getItem('fbclid');
+        const storedTimestamp = sessionStorage.getItem('fbclid_timestamp');
+        
+        if (storedFbclid && storedTimestamp) {
+          const timestamp = parseInt(storedTimestamp, 10);
+          const thirtyDaysInMs = 30 * 24 * 60 * 60 * 1000;
+          if (Date.now() - timestamp < thirtyDaysInMs) {
+            fbclid = storedFbclid;
+          } else {
+            sessionStorage.removeItem('fbclid');
+            sessionStorage.removeItem('fbclid_timestamp');
+          }
+        }
+      } catch {
+        // sessionStorage hatası - sessizce devam et
+      }
+    }
 
     // Trafik kaynağını belirle (basit client-side logic)
+    // Öncelik: gclid/fbclid > UTM > Referer > Direct
     let trafficSource = 'direct';
     let trafficMedium = 'none';
     let detectionMethod = 'no_referer';
 
+    // gclid varsa (URL'den veya sessionStorage'dan) Google Ads olarak işaretle
     if (gclid) {
       trafficSource = 'google_ads';
       trafficMedium = 'cpc';
-      detectionMethod = 'gclid';
+      // URL'den geldiyse 'gclid', sessionStorage'dan geldiyse 'gclid_stored'
+      detectionMethod = urlParams.get('gclid') ? 'gclid' : 'gclid_stored';
     } else if (fbclid) {
       trafficSource = 'meta_ads';
       trafficMedium = 'cpc';
@@ -119,6 +185,19 @@ export function IPTracker() {
       trafficMedium,
       detectionMethod,
     };
+
+    // Debug: Development'ta trafik kaynağı bilgilerini logla
+    if (process.env.NODE_ENV === 'development') {
+      console.log('[IPTracker] Sending traffic data:', {
+        gclid,
+        fbclid,
+        trafficSource,
+        trafficMedium,
+        detectionMethod,
+        path: window.location.pathname,
+        url: window.location.href,
+      });
+    }
 
     // navigator.sendBeacon kullan (non-blocking, sayfa kapanırken bile gönderir)
     const blob = new Blob([JSON.stringify(logData)], { type: 'application/json' });

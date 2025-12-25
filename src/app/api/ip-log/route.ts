@@ -41,6 +41,20 @@ export async function POST(request: NextRequest) {
       detectionMethod,
     } = body;
 
+    // Debug: Trafik kaynağı bilgilerini logla (production'da kaldırılabilir)
+    if (process.env.NODE_ENV === 'development') {
+      console.log('[IP Log] Traffic source data:', {
+        gclid,
+        fbclid,
+        trafficSource,
+        trafficMedium,
+        detectionMethod,
+        utmSource,
+        utmMedium,
+        path,
+      });
+    }
+
     // IP adresini header'lardan al (client-side'dan gelmez, güvenlik için)
     // Öncelik sırası: x-forwarded-for > x-real-ip > cf-connecting-ip > request.ip
     const forwardedFor = request.headers.get('x-forwarded-for');
@@ -87,16 +101,18 @@ export async function POST(request: NextRequest) {
       userId: userId || null,
       sessionId: sessionId || null,
       // Trafik kaynağı bilgileri
-      utmSource: utmSource || null,
-      utmMedium: utmMedium || null,
-      utmCampaign: utmCampaign || null,
-      utmTerm: utmTerm || null,
-      utmContent: utmContent || null,
-      gclid: gclid || null,
-      fbclid: fbclid || null,
-      trafficSource: trafficSource || null,
-      trafficMedium: trafficMedium || null,
-      detectionMethod: detectionMethod || null,
+      // Boş string'leri null'a çevir, ama undefined'ları da null'a çevir
+      utmSource: utmSource && utmSource.trim() ? utmSource.trim() : null,
+      utmMedium: utmMedium && utmMedium.trim() ? utmMedium.trim() : null,
+      utmCampaign: utmCampaign && utmCampaign.trim() ? utmCampaign.trim() : null,
+      utmTerm: utmTerm && utmTerm.trim() ? utmTerm.trim() : null,
+      utmContent: utmContent && utmContent.trim() ? utmContent.trim() : null,
+      gclid: gclid && gclid.trim() ? gclid.trim() : null,
+      fbclid: fbclid && fbclid.trim() ? fbclid.trim() : null,
+      // trafficSource boş string olsa bile null yapma, sadece undefined/null ise null yap
+      trafficSource: trafficSource && trafficSource.trim() ? trafficSource.trim() : (trafficSource === '' ? null : trafficSource),
+      trafficMedium: trafficMedium && trafficMedium.trim() ? trafficMedium.trim() : (trafficMedium === '' ? null : trafficMedium),
+      detectionMethod: detectionMethod && detectionMethod.trim() ? detectionMethod.trim() : (detectionMethod === '' ? null : detectionMethod),
       // Cihaz bilgileri
       deviceType: deviceInfo.deviceType || null,
       deviceBrand: deviceInfo.deviceBrand || null,
