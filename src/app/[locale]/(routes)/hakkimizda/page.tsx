@@ -34,7 +34,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
-export default async function HakkimizdaPage({ params }: Props) {
+export default async function HakkimizdaPage() {
   return (
     <>
      <AboutComponent/>

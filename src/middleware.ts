@@ -72,16 +72,31 @@ const middleware = createMiddleware({
 
 // Middleware'i dışa aktar
 export default async function middlewareHandler(request: NextRequest) {
+  const pathname = request.nextUrl.pathname;
+  
   // Tarayıcı dilini algıla
   const browserLocale = getBrowserLocale(request);
   
   // Eğer URL'de dil belirtilmemişse, tarayıcı diline göre yönlendir
-  const pathname = request.nextUrl.pathname;
   if (!pathname.startsWith("/tr") && !pathname.startsWith("/en") && !pathname.startsWith("/fr")) {
     return NextResponse.redirect(new URL(`/${browserLocale}${pathname}`, request.url));
   }
 
   const response = await middleware(request);
+  
+  // Admin login sayfası için pathname'i header'a ekle (layout'ta kullanmak için)
+  if (pathname.includes('/admin/login')) {
+    if (response) {
+      const newResponse = new NextResponse(response.body, {
+        status: response.status,
+        statusText: response.statusText,
+        headers: response.headers,
+      });
+      newResponse.headers.set('x-pathname', pathname);
+      return newResponse;
+    }
+  }
+  
   
   // Cache-Control header'larını ekle
   if (response) {

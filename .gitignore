@@ -32,6 +32,7 @@ yarn-error.log*
 
 # env files (can opt-in for committing if needed)
 .env*
+!.env.example
 
 # vercel
 .vercel
@@ -41,15 +42,32 @@ yarn-error.log*
 next-env.d.ts
 build.zip
 
+# Docker volumes (local data)
+postgres_data/
+pgadmin_data/
+
 docs/RULES.md
 .gitignore
 docs/TASK.md
 YazilimTech/
 GDPR-COOKIE-CONSENT.md
-.gitignore
+
 CookieManage.md
 docs/CookieManage.md
 docs/VercelBotProtection.md
 docs/GDPR-COOKIE-CONSENT.md
 docs/CookieManage.md
 H_TAG_SEO_RAPORU.md
+docs/ADMIN_PANEL_DESIGN.md
+docs/TECH_STACK.md
+
+docs/DOCKER_DESIGN.md
+docs/CookieManage.md
+docs/ENV_VARIABLES_DESIGN.md
+
+.env.example
+docs/IPLogs.md
+docs/FAZ1_SUMMARY.md
+docs/CookieManage.md
+docs/ANALYSIS.md
+pnpm-lock.yaml

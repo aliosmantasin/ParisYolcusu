@@ -9,6 +9,7 @@ import RelatedTransfers from "../_components/homepage/RelatedTransfers";
 import { seoData } from "@/lib/seo";
 import { Metadata } from "next";
 import Galery from "../_components/homepage/Galery";
+import BlogCarousel from "../_components/homepage/BlogCarousel";
 import Script from "next/script";
 
 type Props = {
@@ -40,7 +41,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
-export default function Home() {
+export default async function Home({ params }: Props) {
+  const { locale } = await params;
   // Ana sayfa için kapsamlı JSON-LD yapısı
   const homepageJsonLd = {
     "@context": "https://schema.org",
@@ -160,6 +162,7 @@ export default function Home() {
       <AlwaysIncluded/>
       <OurVehicles/>
       <Galery/>
+      <BlogCarousel locale={locale} />
       {/* <ParisAirportTransfer/> */}
       <DisneylandTransferHero/>
       <RelatedTransfers/>

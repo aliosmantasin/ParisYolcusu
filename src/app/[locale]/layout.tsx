@@ -3,8 +3,6 @@ import { notFound } from "next/navigation";
 import { Metadata } from "next";
 import { NextIntlClientProvider, AbstractIntlMessages } from "next-intl";
 
-import Navbar from "./(routes)/_components/menu/Navbar";
-import Footer from "./(routes)/_components/menu/Footer";
 import CookieConsentBanner from "../../components/CookieConsent/CookieConsentBanner";
 import ConditionalScripts from "../../components/CookieConsent/ConditionalScripts";
 import { CookieConsentProvider } from "@/src/components/CookieConsent/CookieConsentContext";
@@ -13,6 +11,10 @@ import TawkTo from "../../components/TawkTo";
 import WhatsAppWidget from "../../components/WhatsAppWidget";
 import { WhatsAppWidgetProvider } from "../../components/WhatsAppContext";
 import WhatsAppIcon from "../../components/WhatsAppIcon";
+import { IPTracker } from "../../components/tracking/IPTracker";
+import { ClickTracker } from "../../components/tracking/ClickTracker";
+import { ConditionalHeaderFooter } from "../../components/layout/ConditionalHeaderFooter";
+import { ToastProvider } from "@/components/ui/toast";
 
 import trMessages from "../../../messages/tr.json";
 import enMessages from "../../../messages/en.json";
@@ -227,17 +229,21 @@ export default async function LocaleLayout({
   return (
     <NextIntlClientProvider locale={locale} messages={messages}>
       <CookieConsentProvider>
-        <Navbar />
-        <div>{children}</div>
-        <Footer />
-        <WhatsAppWidgetProvider>
-          <WhatsAppWidget />
-          <WhatsAppIcon/>
-        </WhatsAppWidgetProvider>
-        <TawkTo />
-        <CookieCleaner />
-        <ConditionalScripts />
-        <CookieConsentBanner />
+        <ToastProvider>
+          <ConditionalHeaderFooter>
+            {children}
+          </ConditionalHeaderFooter>
+          <WhatsAppWidgetProvider>
+            <WhatsAppWidget />
+            <WhatsAppIcon/>
+          </WhatsAppWidgetProvider>
+          <TawkTo />
+          <CookieCleaner />
+          <ConditionalScripts />
+          <CookieConsentBanner />
+          <IPTracker />
+          <ClickTracker />
+        </ToastProvider>
       </CookieConsentProvider>
     </NextIntlClientProvider>
   );

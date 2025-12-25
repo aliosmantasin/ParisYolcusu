@@ -18,7 +18,6 @@ import {
 } from "@/components/ui/accordion"
 import { ModeToggle } from "@/components/ModeToggle"
 import { useTranslations, useLocale } from "next-intl"
-import { ChevronDown } from "lucide-react"
 
 export function MobilMenu() {
   const [open, setOpen] = React.useState(false);
@@ -31,25 +30,6 @@ export function MobilMenu() {
     setMounted(true)
   }, [])
 
-  // 📌 Hash linke tıklandığında ilgili bölüme scroll yap
-  const handleScrollToSection = (id: string) => {
-    setOpen(false);
-
-    const isHomePage = window.location.pathname === '/';
-
-    if (!isHomePage) {
-      window.location.href = '/';
-      localStorage.setItem('scrollToSection', id);
-      return;
-    }
-
-    setTimeout(() => {
-      const section = document.getElementById(id);
-      if (section) {
-        section.scrollIntoView({ behavior: "smooth", block: "start" });
-      }
-    }, 300);
-  };
 
   React.useEffect(() => {
     const sectionToScroll = localStorage.getItem('scrollToSection');

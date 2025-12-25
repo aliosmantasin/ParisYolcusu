@@ -1,0 +1,165 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// Admin User Model (Faz 3'te detaylandırılacak)
+model User {
+  id        String     @id @default(cuid())
+  email     String     @unique
+  password  String // Hashed password
+  name      String?
+  role      UserRole   @default(ADMIN)
+  status    UserStatus @default(ACTIVE)
+  createdAt DateTime   @default(now())
+  updatedAt DateTime   @updatedAt
+
+  // Relations
+  blogPosts Blog[]
+
+  @@map("users")
+}
+
+enum UserRole {
+  SUPER_ADMIN
+  ADMIN
+  CONTENT_ADMIN
+  ANALYST
+}
+
+enum UserStatus {
+  ACTIVE
+  INACTIVE
+  SUSPENDED
+}
+
+// Blog Models (YazilimTech referans alınarak)
+enum BlogCategory {
+  DIYET
+  SAGLIK
+  SUPPLEMENTLER
+  BESLENME
+  // Paris Yolcusu için özel kategoriler eklenebilir
+  PARIS_TRANSFER
+  PARIS_TURLARI
+  PARIS_REHBERI
+}
+
+model Blog {
+  id          String       @id @default(cuid())
+  title       String
+  slug        String       @unique
+  excerpt     String?      @db.Text
+  content     String       @db.Text
+  category    BlogCategory
+  imageId     String?
+  image       Image?       @relation(fields: [imageId], references: [id], onDelete: SetNull)
+  author      String?
+  authorId    String?
+  authorUser  User?        @relation(fields: [authorId], references: [id], onDelete: SetNull)
+  isPublished Boolean      @default(false)
+  isActive    Boolean      @default(true)
+  views       Int          @default(0)
+  publishedAt DateTime?
+  createdAt   DateTime     @default(now())
+  updatedAt   DateTime     @updatedAt
+
+  @@index([slug])
+  @@index([category])
+  @@index([isPublished])
+  @@index([isActive])
+  @@index([publishedAt])
+  @@map("blogs")
+}
+
+// Image model (Blog görselleri için)
+model Image {
+  id     String @id @default(cuid())
+  url    String
+  bucket String @default("blog")
+
+  blogs Blog[]
+
+  createdAt DateTime @default(now())
+
+  @@map("images")
+}
+
+// IP Log Models (YazilimTech referans alınarak)
+model IPLog {
+  id        String  @id @default(cuid())
+  ipAddress String
+  userAgent String?
+  referer   String?
+  path      String
+  method    String
+  userId    String?
+  sessionId String?
+
+  // Trafik Kaynağı Bilgileri
+  utmSource       String?
+  utmMedium       String?
+  utmCampaign     String?
+  utmTerm         String?
+  utmContent      String?
+  gclid           String?
+  fbclid          String?
+  trafficSource   String?
+  trafficMedium   String?
+  detectionMethod String?
+
+  // Bot Tespiti
+  isSuspicious Boolean @default(false)
+  botScore     Int?
+  clickRate    Int?
+
+  // Geolocation bilgileri
+  country     String?
+  countryCode String?
+  city        String?
+  region      String?
+  timezone    String?
+  isp         String?
+
+  // Cihaz bilgileri (User-Agent'tan parse edilir)
+  deviceType     String?
+  deviceBrand    String?
+  deviceModel    String?
+  browserName    String?
+  browserVersion String?
+  osName         String?
+  osVersion      String?
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([ipAddress])
+  @@index([createdAt])
+  @@index([path])
+  @@index([userId])
+  @@index([country])
+  @@index([city])
+  @@index([deviceType])
+  @@index([trafficSource])
+  @@index([isSuspicious])
+  @@index([utmSource])
+  @@map("ip_logs")
+}
+
+// Settings Model (Site ayarları için)
+model Settings {
+  id        String   @id @default(cuid())
+  key       String   @unique
+  value     String   @db.Text
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@map("settings")
+}

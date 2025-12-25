@@ -17,6 +17,11 @@ const nextConfig: NextConfig = {
         hostname: 'res.cloudinary.com',
         pathname: '/dppmtyact/**',
       },
+      {
+        protocol: 'https',
+        hostname: 'ekyknbywrxmvhqvkstic.supabase.co',
+        pathname: '/storage/v1/object/public/**',
+      },
     ],
   },
   experimental: {
@@ -28,7 +33,6 @@ const nextConfig: NextConfig = {
   },
   poweredByHeader: false,
   reactStrictMode: true,
-  swcMinify: true,
   compress: true,
   generateEtags: true,
   onDemandEntries: {
