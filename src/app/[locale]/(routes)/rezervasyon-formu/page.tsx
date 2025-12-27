@@ -23,6 +23,7 @@ import { Button } from "@/components/ui/button";
 import { useTranslations } from "next-intl";
 import { useRouter, useSearchParams } from 'next/navigation';
 import { useTheme } from "next-themes";
+import AlwaysIncluded from "../_components/homepage/AlwaysIncluded";
 
 const formSchema = yup.object().shape({
   firstName: yup.string().min(3, "İsim en az 3 karakter olmalı").required(),
@@ -300,8 +301,9 @@ const ReservationForm = () => {
   }
 
   return (
-    <section className="flex items-center justify-center my-20">
-      <div className="w-full max-w-2xl p-6 rounded shadow-md">
+    <section>
+
+      <div className="container w-auto sm:w-8/12 mx-auto p-6 rounded shadow-md">
         <h2 className="text-2xl font-bold text-center mb-6">{t("reservationForm")}</h2>
         
         <form onSubmit={handleSubmit(sendReservation)} className="space-y-4">
@@ -539,7 +541,16 @@ const ReservationForm = () => {
             </button>
           </div>
         )}
+
       </div>
+      
+      <div className="container w-auto sm:w-8/12 flex mx-auto mt-20">
+
+      <AlwaysIncluded/>
+      </div>
+
+
+   
     </section>
   );
 };

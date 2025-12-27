@@ -5,8 +5,8 @@ import type { NextRequest } from 'next/server';
 // URL yönlendirme kuralları
 const pathnames = {
   '/': '/',
-  '/paris-havalimanlari-transfer': {
-    tr: '/paris-havalimanlari-transfer',
+  '/charles-de-gaulle-havalimani-transfer': {
+    tr: '/charles-de-gaulle-havalimani-transfer',
     en: '/paris-airport-transfer',
     fr: '/transfert-aeroport-paris'
   },

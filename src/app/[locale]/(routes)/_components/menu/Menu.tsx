@@ -50,7 +50,7 @@ export function BigScreenMenu() {
               className="w-56"
             >
               <DropdownMenuItem asChild>
-                <Link href={`/${locale}/paris-havalimanlari-transfer`}>
+                <Link href={`/${locale}/charles-de-gaulle-havalimani-transfer`}>
                   {t("transfers.airportTransfer")}
                 </Link>
               </DropdownMenuItem>
@@ -65,7 +65,7 @@ export function BigScreenMenu() {
                 </Link>
               </DropdownMenuItem>
               <DropdownMenuItem asChild>
-                <Link href={`/${locale}/paris-havalimanlari-transfer`}>
+                <Link href={`/${locale}/charles-de-gaulle-havalimani-transfer`}>
                   {t("transfers.parisTransfer")}
           </Link>
               </DropdownMenuItem>

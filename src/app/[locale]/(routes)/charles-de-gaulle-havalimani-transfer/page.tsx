@@ -1,5 +1,5 @@
 import React from 'react'
-import FirstGlanceAirPort from '../_components/ParisHavalimanıTransfer/FirstGlanceAirPort'
+
 import CDGairport from '../_components/ParisHavalimanıTransfer/CDGairport'
 import OurVehicles from '../_components/homepage/OurVehicles'
 import CallToActionComponent from '../_components/homepage/CallToActionComponent'
@@ -7,6 +7,8 @@ import { seoData } from '@/lib/seo'
 import { Metadata } from 'next'
 import { getLocalizedPath } from '@/lib/i18n'
 import Gallery from '../_components/homepage/Galery'
+import AlwaysIncluded from '../_components/homepage/AlwaysIncluded'
+import Services from '../_components/homepage/Services'
 
 type Props = {
   params: Promise<{ locale: 'tr' | 'en' | 'fr' }>
@@ -47,8 +49,10 @@ const ParisAirPortsTransfer = () => {
   
   return (
     <>
-    <FirstGlanceAirPort/>
+    {/* <FirstGlanceAirPort/> */}
     <CDGairport/>
+     <Services/>
+     <AlwaysIncluded/>
     {/* <ORLYairport/> */}
     {/* <BVAairport/> */}
     <OurVehicles/>

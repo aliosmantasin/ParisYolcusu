@@ -1,8 +1,8 @@
 export const urlMap: Record<string, { tr: string; en: string; fr: string }> = {
     anasayfa: { tr: "/tr", en: "/en", fr: "/fr" },
 
-    "paris-havalimanlari-transfer": { 
-      tr: "paris-havalimanlari-transfer", 
+    "charles-de-gaulle-havalimani-transfer": { 
+      tr: "charles-de-gaulle-havalimani-transfer", 
       en: "paris-airport-transfer",
       fr: "transfert-aeroport-paris"
     },

@@ -6,7 +6,7 @@ const CDGairport = () => {
   const t = useTranslations("ParisHavalimanı");
 
   return (
-    <section className="my-20 cardBgColor m-2 p-10">
+    <section className="my-20 m-2 p-10">
       <div className="max-w-5xl flex flex-wrap mx-auto justify-center rounded-lg overflow-hidden">
         <div className="w-full sm:w-1/2">
           <Image
@@ -19,7 +19,7 @@ const CDGairport = () => {
         </div>
 
         <div className="p-4 w-full sm:w-1/2">
-          <h3 className="text-xl font-semibold HeadStyle">{t("CDGairport.title")}</h3>
+          <h1 className="text-3xl font-semibold HeadStyle">{t("CDGairport.title")}</h1>
 
           <p className="paragraphStyle mt-2">
             {t.rich("CDGairport.description1", {
