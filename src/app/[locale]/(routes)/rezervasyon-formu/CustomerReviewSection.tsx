@@ -52,13 +52,8 @@ const reviewItems = [
 ]
 
 const CustomerReviewSection = () => {
-  const [selectedId, setSelectedId] = useState<number>(reviewItems[0].id)
   const [isModalOpen, setIsModalOpen] = useState(false)
-  const [isImageModalOpen, setIsImageModalOpen] = useState(false)
-  const [activeImage, setActiveImage] = useState<{ src: string; name: string } | null>(null)
   const [toastMessage, setToastMessage] = useState<string | null>(null)
-
-  const selectedReview = reviewItems.find((item) => item.id === selectedId) ?? reviewItems[0]
 
   const { register, handleSubmit, setValue, formState: { errors, isSubmitting }, reset } = useForm<ReviewFormData>({
     resolver: yupResolver(reviewFormSchema),
@@ -114,9 +109,10 @@ const CustomerReviewSection = () => {
           </p>
         </div>
 
-        <div className="flex flex-col gap-8 md:flex-row">
-        {/* Sol taraf: Müşteri yorumları */}
-        <div className="flex-1 overflow-hidden rounded-2xl bg-gradient-to-br from-white to-slate-50 shadow-xl ring-1 ring-slate-200 dark:from-slate-900 dark:to-slate-800 dark:ring-slate-700">
+        {/* Müşteri Yorumları - Tam Genişlik */}
+        <div className="flex flex-col gap-8">
+        {/* Müşteri yorumları bölümü */}
+        <div className="overflow-hidden rounded-2xl bg-gradient-to-br from-white to-slate-50 shadow-xl ring-1 ring-slate-200 dark:from-slate-900 dark:to-slate-800 dark:ring-slate-700">
           <div className="border-b border-slate-200 bg-gradient-to-r from-slate-50 to-white p-5 dark:border-slate-700 dark:from-slate-800 dark:to-slate-900">
             <div className="flex items-center justify-between">
               <h3 className="flex items-center gap-2 text-lg font-bold text-slate-900 dark:text-slate-50">
@@ -195,116 +191,110 @@ const CustomerReviewSection = () => {
             </div>
             
             <p className="mt-2 text-sm text-slate-600 dark:text-slate-400">
-              Gerçek müşteri yorumlarını okuyun
+              Gerçek müşteri deneyimlerini okuyun
             </p>
           </div>
-          <div className="p-5">
-
-          <div className="mb-5 grid grid-cols-1 gap-3 sm:grid-cols-3">
-            {reviewItems.map((item) => {
-              const isActive = item.id === selectedId
-
-              const handleCardClick = () => {
-                setSelectedId(item.id)
-
-                if (typeof window !== 'undefined' && window.innerWidth < 640) {
-                  setActiveImage({ src: item.image, name: item.name })
-                  setIsImageModalOpen(true)
-                }
-              }
-
-              return (
-                <button
-                  key={item.id}
-                  type="button"
-                  onClick={handleCardClick}
-                  className={`group relative flex h-36 flex-col overflow-hidden rounded-xl border-2 text-left shadow-md transition-all focus:outline-none focus-visible:ring-4 focus-visible:ring-emerald-500/50 md:h-44 ${
-                    isActive
-                      ? 'scale-105 border-emerald-500 bg-white shadow-2xl shadow-emerald-500/20 dark:bg-slate-800'
-                      : 'border-slate-200 bg-white shadow-slate-200 hover:scale-[1.02] hover:border-emerald-300 hover:shadow-lg dark:border-slate-700 dark:bg-slate-900'
-                  }`}
-                >
-                  <div className="relative flex-1">
-                    <Image
-                      src={item.image}
-                      alt={item.name}
-                      fill
-                      sizes="(min-width: 1024px) 180px, 33vw"
-                      className="object-cover transition-transform duration-500 group-hover:scale-110"
-                    />
-                    {isActive && (
-                      <div className="absolute inset-0 bg-gradient-to-t from-emerald-500/20 to-transparent" />
-                    )}
-                  </div>
-                  <div className="flex items-center justify-between bg-gradient-to-r from-slate-50 to-white px-3 py-2.5 dark:from-slate-800 dark:to-slate-900">
-                    <span className="text-xs font-bold text-slate-900 dark:text-slate-100">{item.name}</span>
-                    {isActive && (
-                      <span className="flex items-center gap-1 rounded-full bg-emerald-500 px-2 py-0.5 text-[10px] font-bold text-white">
-                        <svg className="h-3 w-3" fill="currentColor" viewBox="0 0 20 20">
-                          <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+          
+          <div className="space-y-6 p-5">
+            {reviewItems.map((item) => (
+              <div
+                key={item.id}
+                className="group overflow-hidden rounded-xl border-2 border-slate-200 bg-white shadow-md transition-all hover:border-emerald-300 hover:shadow-xl dark:border-slate-700 dark:bg-slate-900"
+              >
+                {/* Görsel */}
+                <div className="relative aspect-[16/10] w-full overflow-hidden sm:aspect-[21/9]">
+                  <Image
+                    src={item.image}
+                    alt={item.name}
+                    fill
+                    sizes="(min-width: 1024px) 50vw, 100vw"
+                    className={`transition-transform duration-700 group-hover:scale-105 ${
+                      item.id === 3 ? 'object-contain bg-slate-900' : 'object-cover'
+                    }`}
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
+                  
+                  {/* İsim overlay */}
+                  <div className="absolute bottom-0 left-0 right-0 p-4">
+                    <div className="flex items-center gap-2">
+                      <div className="flex h-10 w-10 items-center justify-center rounded-full bg-emerald-500 shadow-lg">
+                        <svg className="h-5 w-5 text-white" fill="currentColor" viewBox="0 0 20 20">
+                          <path fillRule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clipRule="evenodd" />
                         </svg>
-                        SEÇİLİ
-                      </span>
-                    )}
+                      </div>
+                      <span className="text-lg font-bold text-white drop-shadow-lg">{item.name}</span>
+                    </div>
                   </div>
-                </button>
-              )
-            })}
-          </div>
+                </div>
 
-          <div className="rounded-xl border-2 border-emerald-100 bg-gradient-to-br from-white to-emerald-50/30 p-5 shadow-lg dark:border-emerald-900/30 dark:from-slate-800 dark:to-slate-900">
-            <div className="mb-3 flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-emerald-700 dark:text-emerald-400">
-              <span className="flex h-6 w-6 items-center justify-center rounded-full bg-emerald-500">
-                <svg className="h-4 w-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z" />
-                </svg>
-              </span>
-              Müşteri Yorumu
-            </div>
-            <p className="text-sm leading-relaxed text-slate-800 dark:text-slate-200">{selectedReview.comment}</p>
-          </div>
+                {/* Yorum */}
+                <div className="bg-gradient-to-br from-slate-50 to-white p-5 dark:from-slate-800 dark:to-slate-900">
+                  <div className="mb-2 flex items-center gap-2">
+                    <svg className="h-5 w-5 flex-shrink-0 text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z" />
+                    </svg>
+                    <span className="text-xs font-bold uppercase tracking-wider text-emerald-700 dark:text-emerald-400">
+                      Müşteri Yorumu
+                    </span>
+                  </div>
+                  <p className="text-sm leading-relaxed text-slate-700 dark:text-slate-300">
+                    &ldquo;{item.comment}&rdquo;
+                  </p>
+                  
+                  {/* Yıldızlar */}
+                  <div className="mt-4 flex items-center gap-1">
+                    {[...Array(5)].map((_, i) => (
+                      <svg key={i} className="h-5 w-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                      </svg>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
 
-        {/* Sağ taraf: Karşılama görselleri */}
-        <div className="flex-1 overflow-hidden rounded-2xl bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 shadow-xl ring-1 ring-slate-700">
+        {/* Havalimanı Karşılama Görselleri */}
+        <div className="overflow-hidden rounded-2xl bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 shadow-xl ring-1 ring-slate-700">
           <div className="border-b border-slate-700 bg-gradient-to-r from-slate-800 to-slate-900 p-5">
             <h3 className="flex items-center gap-2 text-lg font-bold text-white">
               <svg className="h-5 w-5 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z" />
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 13a3 3 0 11-6 0 3 3 0 016 0z" />
               </svg>
-              Havalimanı Karşılama Anlarımız
+              Havalimanı Karşılama Anlarımızdan Bazıları
             </h3>
             <p className="mt-2 text-sm text-slate-300">
-              Profesyonel karşılama hizmetimizden örnekler
+              Profesyonel karşılama hizmetimizden 7 özel an
             </p>
           </div>
           <div className="p-5">
-            <div className="mb-4 grid grid-cols-1 gap-4 sm:grid-cols-2">
-              <div className="group relative h-48 overflow-hidden rounded-xl border-2 border-slate-700 shadow-lg transition-all hover:scale-[1.02] hover:border-emerald-500 hover:shadow-2xl hover:shadow-emerald-500/20">
-                <Image
-                  src="/images/karsilama/karsilama1.webp"
-                  alt="Paris havalimanı karşılama görseli 1"
-                  fill
-                  sizes="(min-width: 1024px) 240px, 50vw"
-                  className="object-cover transition-transform duration-500 group-hover:scale-110"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 transition-opacity group-hover:opacity-100" />
-              </div>
-              <div className="group relative h-48 overflow-hidden rounded-xl border-2 border-slate-700 shadow-lg transition-all hover:scale-[1.02] hover:border-emerald-500 hover:shadow-2xl hover:shadow-emerald-500/20">
-                <Image
-                  src="/images/karsilama/karsilama2.webp"
-                  alt="Paris havalimanı karşılama görseli 2"
-                  fill
-                  sizes="(min-width: 1024px) 240px, 50vw"
-                  className="object-cover transition-transform duration-500 group-hover:scale-110"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 transition-opacity group-hover:opacity-100" />
-              </div>
+            {/* Story formatında grid */}
+            <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4">
+              {[1, 3, 4, 5, 6, 7, 8].map((num, index) => (
+                <div
+                  key={num}
+                  className="group relative aspect-[9/16] overflow-hidden rounded-xl border-2 border-slate-700 bg-slate-900 shadow-lg transition-all hover:scale-[1.02] hover:border-emerald-500 hover:shadow-2xl hover:shadow-emerald-500/20"
+                >
+                  <Image
+                    src={`/images/karsilama/karsilama${num}.webp`}
+                    alt={`Paris havalimanı karşılama anı ${index + 1}`}
+                    fill
+                    sizes="(min-width: 1024px) 25vw, (min-width: 640px) 33vw, 50vw"
+                    className="object-cover transition-transform duration-500 group-hover:scale-110"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 transition-opacity group-hover:opacity-100" />
+                  
+                  {/* Story numarası */}
+                  <div className="absolute right-2 top-2 flex h-7 w-7 items-center justify-center rounded-full bg-emerald-500/90 text-xs font-bold text-white shadow-lg backdrop-blur-sm">
+                    {index + 1}
+                  </div>
+                </div>
+              ))}
             </div>
 
-            <div className="rounded-xl bg-gradient-to-br from-slate-800 to-slate-900 p-4 ring-1 ring-slate-700">
+            <div className="mt-5 rounded-xl bg-gradient-to-br from-slate-800 to-slate-900 p-4 ring-1 ring-slate-700">
               <div className="flex items-start gap-3">
                 <svg className="mt-0.5 h-5 w-5 flex-shrink-0 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -318,39 +308,6 @@ const CustomerReviewSection = () => {
         </div>
       </div>
       </div>
-
-      {/* Mobil için büyük görsel önizleme */}
-      {isImageModalOpen && activeImage && (
-        <div className="fixed inset-0 z-40 flex items-center justify-center bg-black/80 px-4 sm:hidden">
-          <div className="relative w-full max-w-sm">
-            <button
-              type="button"
-              onClick={() => setIsImageModalOpen(false)}
-              className="absolute -right-2 -top-2 z-10 flex h-8 w-8 items-center justify-center rounded-full bg-white/90 text-slate-900 shadow-lg"
-            >
-              <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-              </svg>
-            </button>
-            <div className="overflow-hidden rounded-2xl border border-white/20 bg-black/60 shadow-2xl">
-              <div className="relative aspect-[4/3] w-full">
-                <Image
-                  src={activeImage.src}
-                  alt={activeImage.name}
-                  fill
-                  sizes="100vw"
-                  className="object-cover"
-                />
-              </div>
-              <div className="px-4 py-3 text-center">
-                <p className="text-sm font-semibold text-white">
-                  {activeImage.name}
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
 
       {/* Toast Mesajı */}
       {toastMessage && (
