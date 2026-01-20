@@ -15,7 +15,7 @@ const FirstGlance = () => {
       {/* Masaüstü Görünümü */}
       <div className="min-h-[20vh] sm:flex flex-wrap justify-center items-center sm:min-h-[60vh] mx-auto bg-[url(/images/Kapak.webp)] bg-cover bg-center relative sm:pb-32">
         {/* Koyu Katman */}
-        <div className="absolute inset-0 bg-black opacity-50"></div>
+        <div className="absolute inset-0 bg-black opacity-20"></div>
 
         {/* İçerik */}
         <AnimatedFirstGlanceContent

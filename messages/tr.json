@@ -85,15 +85,15 @@
     "reserve_now": "Şimdi Rezervasyon Yap",
     "vehicle1": {
       "name": "Sedan Araç",
-      "description": "Şık tasarımı ve üstün performansıyla öne çıkan sedan araçlarımız, konforlu ve lüks yolculuk deneyimi sunar."
+      "description": "Sedan araçlarımızla konforlu ve güvenli yolculuklar yapabilirsiniz. İş veya tatil seyahatleriniz için sade ve şık bir tercih."
     },
     "vehicle2": {
       "name": "Mercedes-Benz Classe V",
-      "description": "Geniş iç hacmi ve yüksek konforuyla Mercedes-Benz Classe V, grup transferleri için ideal bir seçim."
+      "description": "Geniş iç hacmi ve yüksek konforuyla Mercedes-Benz Classe V, özellikle aileler ve kalabalık gruplar için ideal bir seçenektir. Uzun yolculuklarda bile ferah ve rahat bir deneyim sunar."
     },
     "vehicle3": {
       "name": "Mercedes-Benz Classe S",
-      "description": "Ultra lüks Mercedes-Benz Classe S, en üst düzey konfor ve prestij sunuyor."
+      "description": "Mercedes-Benz Classe S, özellikle iş seyahatleri ve özel davetler için tercih edilen, en üst düzey konfor ve prestij sunan lüks bir seçenektir."
     }
   },
 
