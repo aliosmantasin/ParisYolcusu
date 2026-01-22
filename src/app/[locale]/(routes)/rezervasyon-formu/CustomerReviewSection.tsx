@@ -123,17 +123,22 @@ const CustomerReviewSection = () => {
               </h3>
               
               <Dialog open={isModalOpen} onOpenChange={setIsModalOpen}>
-                <DialogTrigger asChild>
-                  <button
-                    type="button"
-                    className="flex h-8 w-8 items-center justify-center rounded-full bg-emerald-500 text-white shadow-lg transition-all hover:scale-110 hover:bg-emerald-600 hover:shadow-xl focus:outline-none focus:ring-4 focus:ring-emerald-500/50 dark:bg-emerald-600 dark:hover:bg-emerald-700"
-                    title="Yorum Ekle"
-                  >
-                    <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M12 4v16m8-8H4" />
-                    </svg>
-                  </button>
-                </DialogTrigger>
+                <div className="flex items-center gap-3">
+                  <span className="hidden text-sm font-medium text-emerald-700 dark:text-emerald-300 sm:inline">
+                    Yorum Ekle
+                  </span>
+                  <DialogTrigger asChild>
+                    <button
+                      type="button"
+                      className="flex h-9 w-9 items-center justify-center rounded-full bg-emerald-500 text-white shadow-lg ring-2 ring-emerald-400/70 animate-pulse transition-all hover:scale-110 hover:bg-emerald-600 hover:shadow-xl focus:outline-none focus:ring-4 focus:ring-emerald-500/60 dark:bg-emerald-600 dark:hover:bg-emerald-700"
+                      title="Yorum Ekle"
+                    >
+                      <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M12 4v16m8-8H4" />
+                      </svg>
+                    </button>
+                  </DialogTrigger>
+                </div>
                 <DialogContent className="sm:max-w-[500px]">
                   <DialogHeader>
                     <DialogTitle className="text-2xl font-bold text-slate-900 dark:text-white">

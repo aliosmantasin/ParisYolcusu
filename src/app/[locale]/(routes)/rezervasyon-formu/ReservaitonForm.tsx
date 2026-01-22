@@ -51,7 +51,7 @@ type FormData = {
   recaptchaToken: string;
 };
 
-const defaultCenter = { lat: 41.0082, lng: 28.9784 }; // Istanbul center
+const defaultCenter = { lat: 48.8566, lng: 2.3522 }; // Paris center
 
 // Place adresini formatla - havalimanları için name, diğerleri için formatted_address
 const getPlaceDisplayName = (place: google.maps.places.PlaceResult): string => {
