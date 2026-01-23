@@ -23,8 +23,7 @@ const clipPathVariants = {
 };
 
 interface AnimatedFirstGlanceContentProps {
-  brandNameX: string;
-  brandnameY: string;
+
   title: string;
   span: string;
   isMobile?: boolean;

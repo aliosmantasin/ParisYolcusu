@@ -21,12 +21,6 @@ const GoogleAdsQualitySummary = () => {
             <li className="flex items-start gap-3 rounded-lg bg-white p-3 shadow-sm ring-1 ring-slate-200 transition-shadow hover:shadow-md dark:bg-slate-800/50 dark:ring-slate-700">
               <span className="mt-0.5 flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-emerald-500 text-xs font-bold text-white">✓</span>
               <span className="text-sm text-slate-800 dark:text-slate-200">
-                Sabit fiyatlı <strong className="font-semibold text-emerald-700 dark:text-emerald-400">Paris havalimanı transfer</strong> ve otel karşılama hizmeti
-              </span>
-            </li>
-            <li className="flex items-start gap-3 rounded-lg bg-white p-3 shadow-sm ring-1 ring-slate-200 transition-shadow hover:shadow-md dark:bg-slate-800/50 dark:ring-slate-700">
-              <span className="mt-0.5 flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-emerald-500 text-xs font-bold text-white">✓</span>
-              <span className="text-sm text-slate-800 dark:text-slate-200">
                 <strong className="font-semibold text-emerald-700 dark:text-emerald-400">Paris VIP transfer</strong> – özel şoförlü, yeni ve konforlu araçlar
               </span>
             </li>
@@ -42,6 +36,14 @@ const GoogleAdsQualitySummary = () => {
                 Rezervasyon formunu doldurduktan sonra sizinle teyit amaçlı iletişime geçerek bilgi vereceğiz.
               </span>
             </li>
+               <li className="flex items-start gap-3 rounded-lg bg-white p-3 shadow-sm ring-1 ring-slate-200 transition-shadow hover:shadow-md dark:bg-slate-800/50 dark:ring-slate-700">
+              <span className="mt-0.5 flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-emerald-500 text-xs font-bold text-white">✓</span>
+              <span className="text-sm text-slate-800 dark:text-slate-200">
+                Sabit fiyatlı <strong className="font-semibold text-emerald-700 dark:text-emerald-400">Paris havalimanı transfer</strong> ve otel karşılama hizmeti
+                Fiyatlarımız seçtiğiniz araç tipi ve güzergâha göre değişir; formu doldurduğunuzda size <strong className="font-semibold text-emerald-700 dark:text-emerald-400">net ve sabit bir transfer ücreti</strong> sunarız.
+              </span>
+            </li>
+        
           </ul>
         </div>
       </div>

@@ -6,8 +6,9 @@ import axios from "axios";
 import ReCAPTCHA from "react-google-recaptcha";
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
-import DatePicker from "react-datepicker";
+import DatePicker, { registerLocale } from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
+import { tr as trLocale } from "date-fns/locale/tr";
 import { useState, useRef, useEffect, useCallback } from "react";
 import { 
   GoogleMap, 
@@ -19,6 +20,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Button } from "@/components/ui/button";
+import { Textarea } from "@/components/ui/textarea";
 import { useTranslations } from "next-intl";
 import { useRouter, useSearchParams } from 'next/navigation';
 import { useTheme } from "next-themes";
@@ -34,6 +36,8 @@ const formSchema = yup.object().shape({
   // Alış ve varış noktaları opsiyonel
   origin: yup.string().nullable().notRequired(),
   destination: yup.string().nullable().notRequired(),
+  // Ek not alanı opsiyonel
+  notes: yup.string().nullable().notRequired(),
   recaptchaToken: yup.string().required("Lütfen reCAPTCHA doğrulamasını yapın"),
 });
 
@@ -48,6 +52,8 @@ type FormData = {
   // Opsiyonel alanlar: boş, null veya string olabilir (schema ile aynı tip)
   origin: string | null | undefined;
   destination: string | null | undefined;
+  // Kullanıcının isteğine bağlı bırakacak bir not alanı
+  notes?: string | null;
   recaptchaToken: string;
 };
 
@@ -68,6 +74,9 @@ const getPlaceDisplayName = (place: google.maps.places.PlaceResult): string => {
   // Diğer yerler için formatted_address kullan
   return place.formatted_address || place.name || "";
 };
+
+// Tarih seçiciyi Türkçe locale ile kullan
+registerLocale("tr", trLocale);
 
 // Custom PhoneInput component with theme support
 interface PhoneInputFieldProps {
@@ -163,6 +172,7 @@ const ReservationForm = () => {
       date: undefined,
       origin: "",
       destination: "",
+      notes: "",
       recaptchaToken: "",
     },
   });
@@ -387,7 +397,10 @@ const ReservationForm = () => {
                     showTimeSelect
                     timeFormat="HH:mm"
                     timeIntervals={15}
-                    dateFormat="dd/MM/yyyy HH:mm"
+                    dateFormat="dd.MM.yyyy HH:mm"
+                    locale="tr"
+                    timeCaption="Saat"
+                    placeholderText="gg.aa.yyyy ss:dd"
                     className="w-full rounded-md border border-slate-300 p-2 dark:border-slate-700 dark:bg-slate-800 dark:text-white"
                     minDate={new Date()}
                   />
@@ -441,9 +454,24 @@ const ReservationForm = () => {
               </svg>
               Lokasyon Bilgileri
             </h3>
-            <p className="text-xs text-slate-500 dark:text-slate-400">
-              Alış ve varış adresleri opsiyoneldir. Dilerseniz bu bilgileri iletişim durumunda da verebilirsiniz.
-            </p>
+            <div className="flex items-start gap-2 rounded-md bg-amber-50 px-3 py-2 text-sm text-amber-800 dark:bg-amber-900/30 dark:text-amber-200">
+              <svg
+                className="mt-0.5 h-4 w-4 flex-shrink-0 text-amber-500 dark:text-amber-400"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M12 9v4m0 4h.01M10.29 3.86L1.82 18a1 1 0 00.86 1.5h18.64a1 1 0 00.86-1.5L13.71 3.86a1 1 0 00-1.72 0z"
+                />
+              </svg>
+              <p className="text-xs sm:text-sm">
+                Alış ve varış adresleri opsiyoneldir. Dilerseniz bu bilgileri iletişim durumunda da verebilirsiniz.
+              </p>
+            </div>
             <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
               <div>
                 <Label className="text-slate-700 dark:text-slate-300">
@@ -588,8 +616,40 @@ const ReservationForm = () => {
             )}
           </div>
 
+          {/* Ek Notlar (Opsiyonel) */}
+          <div className="space-y-2 border-t border-slate-200 pt-6 dark:border-slate-700">
+            <Label className="text-slate-700 dark:text-slate-300">
+              Rezervasyonunuzla ilgili eklemek istediğiniz notlar
+              <span className="ml-1 text-xs font-normal text-slate-400">(Opsiyonel)</span>
+            </Label>
+            <Textarea
+              {...register("notes")}
+              rows={4}
+              placeholder="Örn: çocuk koltuğu talebi, uçuş numarası, özel istekler..."
+              className="mt-1"
+            />
+          </div>
+
           {/* Güvenlik ve Onay */}
           <div className="space-y-4 border-t border-slate-200 pt-6 dark:border-slate-700">
+            <div className="flex items-start gap-2 rounded-md bg-slate-50 px-3 py-2 text-xs text-slate-600 dark:bg-slate-900/40 dark:text-slate-300 sm:text-sm">
+              <svg
+                className="mt-0.5 h-4 w-4 flex-shrink-0 text-emerald-500 dark:text-emerald-400"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M13 16h-1v-4h-1m1-4h.01M12 2a10 10 0 1010 10A10 10 0 0012 2z"
+                />
+              </svg>
+              <p className="text-sm sm:text-sm">
+                Bu formu doldururken sizden herhangi bir ödeme alınmaz. Rezervasyonunuzu dilediğiniz zaman bizimle iletişime geçerek ücretsiz olarak iptal edebilirsiniz.
+              </p>
+            </div>
             <div className="flex justify-center">
               <ReCAPTCHA
                 sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY || ""}

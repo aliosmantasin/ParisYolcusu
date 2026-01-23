@@ -9,6 +9,12 @@ type WhatsAppOption = { label: string; message: string };
 const optionsByLocale: Record<string, WhatsAppOption[]> = {
   tr: [
     {
+      label: "Bilgi Almak İstiyorum",
+      message:
+        "Merhaba, genel bilgi almak istiyorum?",
+    },
+
+    {
       label: "Havalimanı Transfer",
       message:
         "Merhaba, Paris'te Havalimanı Transfer hizmeti için bilgi almak istiyorum. Uçuş bilgilerimi paylaştıktan sonra fiyat paylaşabilir misiniz?",

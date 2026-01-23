@@ -1,10 +1,10 @@
 import React from 'react'
 
-import { useTranslations } from 'next-intl'
+
 import AnimatedFirstGlanceReservation from './AnimatedFirstGlanceReservation'
 
 const FirstGlanceRezervation = () => {
-  const t = useTranslations('HomePage')
+  // const t = useTranslations('HomePage')
 
   return (
        <section className="relative w-full bg-[#ffffff] dark:bg-black">
@@ -15,10 +15,9 @@ const FirstGlanceRezervation = () => {
 
         {/* İçerik */}
         <AnimatedFirstGlanceReservation
-          brandNameX=""
-          brandnameY=""
-          title={t("firstGlance.title")}
-          span={t("firstGlance.span")}
+    
+          title="Paris VIP Transfer"
+          span="Hızlı Rezervasyon Formu"
           isMobile={false}
         />
       </div>
