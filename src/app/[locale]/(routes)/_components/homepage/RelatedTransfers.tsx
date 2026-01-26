@@ -43,6 +43,14 @@ const RelatedTransfers = () => {
     }
   ];
 
+  const reservationPaths: Record<string, string> = {
+    tr: '/rezervasyon-formu',
+    en: '/reservation-form',
+    fr: '/formulaire-reservation'
+  };
+
+  const reservationPath = reservationPaths[locale as keyof typeof reservationPaths] || '/rezervasyon-formu';
+
   return (
     <section className="py-16 px-4 bg-white dark:bg-gray-900">
       <div className="container mx-auto max-w-7xl">
@@ -64,7 +72,7 @@ const RelatedTransfers = () => {
           {transfers.map((transfer, index) => (
             <Link
               key={index}
-              href={`/${locale}${transfer.link}`}
+              href={`/${locale}${reservationPath}`}
               className="group bg-gray-50 dark:bg-gray-800 rounded-lg p-4 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors flex items-center justify-between border border-gray-200 dark:border-gray-700"
             >
               <span className="text-gray-900 dark:text-white font-medium flex-1 pr-4">
