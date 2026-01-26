@@ -1,4 +1,5 @@
 "use client"
+
 import React from 'react'
 import { motion } from "framer-motion";
 import { MdOutlineArrowLeft, MdOutlineArrowRight } from "react-icons/md";
@@ -30,35 +31,44 @@ interface AnimatedFirstGlanceContentProps {
   isMobile?: boolean;
 }
 
+
 const AnimatedFirstGlanceContent = ({ title, span, isMobile = false }: AnimatedFirstGlanceContentProps) => {
   return (
-    <div className="relative z-10 w-full sm:w-3/5 md:w-6/12 m-auto border-[#d7eae5] dark:border-[#067481] text-white">
-      {/* Orta Kısım Animasyonlu */}
-      <motion.div initial="hidden" animate="visible" custom={0.4} variants={textVariants} className=" flex items-center justify-center relative">
-        {!isMobile && <MdOutlineArrowLeft className="mr-1 text-4xl min-w-8 drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]" />}
-        <h1 className="text-xl sm:text-4xl md:text-4xl text-center font-semibold tracking-[.15em] p-4 sm:p-10 leading-relaxed drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)]">
-          {title}
-        </h1>
-        {!isMobile && <MdOutlineArrowRight className="ml-1 text-4xl min-w-8 drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]" />}
-      </motion.div>
+    <div className="relative w-full min-h-[320px] flex items-center justify-center">
+      {/* Background: mobile image by default, switch to desktop on sm+ */}
+      <div className="absolute inset-0 w-full h-full bg-[url('/images/kapak-mobil.webp')] sm:bg-[url('/images/Kapak.webp')] bg-center bg-cover bg-no-repeat z-0" aria-hidden="true" />
 
-      {/* Alt Yazı Animasyonlu */}
-      <div className="flex justify-center w-full">
-        <motion.div initial="hidden" animate="visible" custom={0.6} variants={textVariants} className="relative inline-block">
+  
+
+      {/* Overlay Content */}
+      <div className="relative z-10 w-full sm:w-3/5 md:w-6/12 text-white text-center p-4 flex flex-col items-center justify-center">
+        {/* Orta Kısım Animasyonlu */}
+        <motion.div initial="hidden" animate="visible" custom={0.4} variants={textVariants} className="flex items-center justify-center">
+          {!isMobile && <MdOutlineArrowLeft className="mr-1 text-4xl min-w-8 drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]" />}
+          <h1 className="text-xl sm:text-4xl md:text-4xl font-semibold tracking-[.15em] p-0 sm:p-0 leading-relaxed">
+            <span className="inline-block bg-black/60 px-4 py-2 sm:px-6 sm:py-3 rounded-md drop-shadow-[0_2px_12px_rgba(0,0,0,0.8)]">
+              {title}
+            </span>
+          </h1>
+          {!isMobile && <MdOutlineArrowRight className="ml-1 text-4xl min-w-8 drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]" />}
+        </motion.div>
+
+        {/* Alt Yazı Animasyonlu */}
+        <motion.div initial="hidden" animate="visible" custom={0.6} variants={textVariants} className="relative inline-block mt-2">
           <p className="text-sm sm:text-xl md:text-2xl font-extralight uppercase tracking-[.25em] drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
             {span}
           </p>
           {/* Clip-path için animasyon - VIP HİZMET altında */}
-      <motion.div
-        initial="hidden"
-        animate="visible"
-        variants={clipPathVariants}
+          <motion.div
+            initial="hidden"
+            animate="visible"
+            variants={clipPathVariants}
             className="absolute z-10 top-full mt-2 left-0 w-full h-2 bg-[#fece47]"
-      ></motion.div>
-      </motion.div>
+          />
+        </motion.div>
       </div>
     </div>
   );
 };
 
-export default AnimatedFirstGlanceContent; 
+export default AnimatedFirstGlanceContent;

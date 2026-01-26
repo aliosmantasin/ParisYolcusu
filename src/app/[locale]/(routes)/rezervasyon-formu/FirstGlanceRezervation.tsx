@@ -11,7 +11,7 @@ const FirstGlanceRezervation = () => {
       {/* Masaüstü Görünümü */}
       <div className="relative mx-auto flex min-h-[30vh] flex-wrap items-center justify-center bg-[url(/images/Kapak.webp)] bg-cover bg-center sm:min-h-[45vh] sm:pb-32">
         {/* Koyu Katman - Fotoğraf net kalsın, yazı hafifçe öne çıksın */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/25 to-black/60" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/15 to-black/60" />
 
         {/* İçerik */}
         <AnimatedFirstGlanceReservation

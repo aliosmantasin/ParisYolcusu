@@ -2,6 +2,7 @@ import React from "react";
 import { useTranslations } from "next-intl";
 import AnimatedFirstGlanceContent from "./AnimatedFirstGlanceContent";
 import BannerInfoForm from "./BannerInfoForm";
+import Image from "next/image";
 // import NewYearPromoBanner from "./NewYearPromoBanner";
 
 const FirstGlance = () => {
@@ -13,10 +14,12 @@ const FirstGlance = () => {
       {/* <NewYearPromoBanner /> */}
       
       {/* Masaüstü Görünümü */}
-      <div className="min-h-[20vh] sm:flex flex-wrap justify-center items-center sm:min-h-[60vh] mx-auto bg-[url(/images/Kapak.webp)] bg-cover bg-center relative sm:pb-32">
+      <div className="min-h-[25vh] sm:flex flex-wrap justify-center items-center bg- sm:min-h-[60vh] mx-auto relative">
         {/* Koyu Katman */}
-        <div className="absolute inset-0 bg-black opacity-20"></div>
-
+        <div className="absolute inset-0 "></div>
+        <div>
+          <Image src="/images/Kapak.webp" alt="Kapak" fill className="object-cover" />
+        </div>
         {/* İçerik */}
         <AnimatedFirstGlanceContent
           brandNameX=""

@@ -2,13 +2,16 @@
 
 import React from 'react';
 import { useTranslations } from 'next-intl';
+import Link from 'next/link';
+
+import { MdArrowForwardIos } from 'react-icons/md';
 
 const ParisAirportTransferHero = () => {
   const t = useTranslations("ParisAirportTransferHero");
 
   return (
     <section className="py-16 px-4 bg-white dark:bg-gray-900">
-      <div className="container mx-auto max-w-7xl p-10">
+      <div className="container mx-auto max-w-7xl p-1">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12">
           {/* Sol Kolon - Ana İçerik */}
           <div className="lg:col-span-2">
@@ -60,6 +63,14 @@ const ParisAirportTransferHero = () => {
                 <p className="text-sm text-white/90">
                   {t("guaranteeDescription")}
                 </p>
+
+                <div className="mt-4 flex justify-center">
+                  <Link href="/rezervasyon-formu">
+                    <span className="text-white border-white hover:bg-white/10 flex items-center gap-2 rounded-full border px-4 py-2 text-sm font-semibold transition">
+                      {t("reserve_now")} <MdArrowForwardIos className="ml-2" />
+                    </span>
+                  </Link>
+                </div>
               </div>
             </div>
           </div>

@@ -51,7 +51,7 @@ const OurVehicles = () => {
           {vehicles.map((vehicle) => (
             <div key={vehicle.id} className='w-full sm:w-1/2 lg:w-2/7 cursor-pointer'>
               <div className='mb-3 sm:mb-0 cardBgColor cardHover max-w-md flex justify-center bg-slate-50 dark:bg-black min-h-[450px]'>
-                <div className='mx-auto p-10'>
+                <div className='mx-auto p-5'>
                   <span className='paragraphStyle text-2xl font-semibold text-center my-4 flex justify-center'>{vehicle.name}</span>
                   <div className='paragraphStyle font-semibold text-center my-4 flex justify-center'>
                     <span className='flex items-center'>
