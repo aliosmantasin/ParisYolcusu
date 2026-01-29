@@ -16,9 +16,12 @@ const FirstGlance = () => {
       {/* Masaüstü Görünümü */}
       <div className="min-h-[25vh] sm:flex flex-wrap justify-center items-center bg- sm:min-h-[60vh] mx-auto relative">
         {/* Koyu Katman */}
-        <div className="absolute inset-0 "></div>
-        <div>
+
+        <div className="hidden sm:flex">
           <Image src="/images/Kapak.webp" alt="Kapak" fill className="object-cover" />
+        </div>
+        <div className="flex sm:hidden">
+          <Image src="/images/kapak-mobil.webp" alt="Kapak" fill className="object-cover" />
         </div>
         {/* İçerik */}
         <AnimatedFirstGlanceContent

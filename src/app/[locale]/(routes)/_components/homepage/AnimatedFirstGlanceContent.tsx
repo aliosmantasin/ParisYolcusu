@@ -36,7 +36,7 @@ const AnimatedFirstGlanceContent = ({ title, span, isMobile = false }: AnimatedF
   return (
     <div className="relative w-full min-h-[320px] flex items-center justify-center">
       {/* Background: mobile image by default, switch to desktop on sm+ */}
-      <div className="absolute inset-0 w-full h-full bg-[url('/images/kapak-mobil.webp')] sm:bg-[url('/images/Kapak.webp')] bg-center bg-cover bg-no-repeat z-0" aria-hidden="true" />
+      <div className="absolute inset-0 w-full h-full bg-center bg-cover bg-no-repeat z-0" aria-hidden="true" />
 
   
 
